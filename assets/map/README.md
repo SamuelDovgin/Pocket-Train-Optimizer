@@ -1,3 +1,7 @@
+# Historical routing map: input audit
+
+This 190-link image omits Nairobi–Zanzibar. It is retained as a historical routing target, not a verified complete game map or profit recommendation. The Operating simulator uses a separate 191-link input and experimental service maps.
+
 # Completed target map
 
 `proposed-completed-world.png` (5200 × 3900) and the scalable SVG show every connection in `analysis/deep_results.json` → `profiles.consolidated.owner`. The SVG is generated from the same renderer used by the site's **World map** tab. No purchased-track flag is inferred from the image.

@@ -1,5 +1,7 @@
 # Pocket Train Optimizer
 
+The inherited 190-track input omits Nairobi–Zanzibar, visible in both supplied human layouts. Historical routing scores below apply only to that input; they do not establish game-map completeness or practical profit. The new [operating model](https://samueldovgin.github.io/Pocket-Train-Optimizer/#operations) adds the pictured link in a separate 191-track experiment with one physical train per railroad. Its job and reward distributions remain assumptions. No experimental ownership plan is automatically applied to the checklist.
+
 [Open the live planner](https://samueldovgin.github.io/Pocket-Train-Optimizer/)
 
 An engine-agnostic route-efficiency model and persistent Pocket Trains expansion checklist. The supplied map contains 139 cities, 190 connections, and 38 available planning labels. New checklists start with the user's 10 original tracks and five completed expansions.

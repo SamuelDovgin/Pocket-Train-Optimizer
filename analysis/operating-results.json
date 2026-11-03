@@ -1,0 +1,4346 @@
+{
+  "version": 1,
+  "core_sha256": "1847eac94035418e519a2f3583e25ff26ebc2fd59e83503fad9924a22f888f6e",
+  "data_sha256": "957549d3b612c2192e4c727f374db43423d5527cc2d27880733da368fc6605ab",
+  "training_seeds": [
+    97011,
+    97012
+  ],
+  "evaluation_seeds": [
+    610003,
+    611000,
+    611997,
+    612994,
+    613991,
+    614988,
+    615985,
+    616982,
+    617979,
+    618976,
+    619973,
+    620970
+  ],
+  "training": [
+    {
+      "plan": "published28",
+      "selected": {
+        "config": {
+          "policy": "patrol",
+          "reserveSlots": 1,
+          "detourLimit": 1.75
+        },
+        "mean": 8350.259758771754
+      },
+      "trials": [
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 1,
+            "detourLimit": 1.75
+          },
+          "mean": 8350.259758771754
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 1,
+            "detourLimit": 1.25
+          },
+          "mean": 8164.358698941953
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 2,
+            "detourLimit": 1.75
+          },
+          "mean": 7720.803579065132
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 2,
+            "detourLimit": 1.25
+          },
+          "mean": 7425.453459101423
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 1,
+            "detourLimit": 1.25
+          },
+          "mean": 5517.816270392359
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 1,
+            "detourLimit": 1.75
+          },
+          "mean": 5517.816270392359
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 2,
+            "detourLimit": 1.25
+          },
+          "mean": 4772.911963676478
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 2,
+            "detourLimit": 1.75
+          },
+          "mean": 4772.911963676478
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 0,
+            "detourLimit": 1.75
+          },
+          "mean": 1548.734705756603
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 0,
+            "detourLimit": 1.25
+          },
+          "mean": 1263.1806200977726
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 0,
+            "detourLimit": 1.25
+          },
+          "mean": 115.49708797242856
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 0,
+            "detourLimit": 1.75
+          },
+          "mean": 115.49708797242856
+        }
+      ]
+    },
+    {
+      "plan": "published38",
+      "selected": {
+        "config": {
+          "policy": "patrol",
+          "reserveSlots": 1,
+          "detourLimit": 1.75
+        },
+        "mean": 7793.665476964963
+      },
+      "trials": [
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 1,
+            "detourLimit": 1.75
+          },
+          "mean": 7793.665476964963
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 1,
+            "detourLimit": 1.25
+          },
+          "mean": 7582.601347148774
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 2,
+            "detourLimit": 1.75
+          },
+          "mean": 7200.461000858932
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 2,
+            "detourLimit": 1.25
+          },
+          "mean": 7073.924459473079
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 2,
+            "detourLimit": 1.25
+          },
+          "mean": 4267.57271436812
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 2,
+            "detourLimit": 1.75
+          },
+          "mean": 4267.57271436812
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 1,
+            "detourLimit": 1.25
+          },
+          "mean": 4221.680653477665
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 1,
+            "detourLimit": 1.75
+          },
+          "mean": 4221.680653477665
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 0,
+            "detourLimit": 1.25
+          },
+          "mean": 881.3126857009297
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 0,
+            "detourLimit": 1.75
+          },
+          "mean": 800.3595482679473
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 0,
+            "detourLimit": 1.25
+          },
+          "mean": 65.14431316353132
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 0,
+            "detourLimit": 1.75
+          },
+          "mean": 65.14431316353132
+        }
+      ]
+    },
+    {
+      "plan": "corridors38",
+      "selected": {
+        "config": {
+          "policy": "patrol",
+          "reserveSlots": 1,
+          "detourLimit": 1.25
+        },
+        "mean": 12051.939599632613
+      },
+      "trials": [
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 1,
+            "detourLimit": 1.25
+          },
+          "mean": 12051.939599632613
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 1,
+            "detourLimit": 1.75
+          },
+          "mean": 11896.795598441959
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 2,
+            "detourLimit": 1.25
+          },
+          "mean": 11573.704708474268
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 2,
+            "detourLimit": 1.75
+          },
+          "mean": 10870.785300573187
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 2,
+            "detourLimit": 1.25
+          },
+          "mean": 6000.0625043570735
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 2,
+            "detourLimit": 1.75
+          },
+          "mean": 6000.0625043570735
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 1,
+            "detourLimit": 1.25
+          },
+          "mean": 5908.411393329336
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 1,
+            "detourLimit": 1.75
+          },
+          "mean": 5908.411393329336
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 0,
+            "detourLimit": 1.75
+          },
+          "mean": 1458.3533521130457
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 0,
+            "detourLimit": 1.25
+          },
+          "mean": 1194.11728246039
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 0,
+            "detourLimit": 1.25
+          },
+          "mean": 108.11665020682409
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 0,
+            "detourLimit": 1.75
+          },
+          "mean": 108.11665020682409
+        }
+      ]
+    },
+    {
+      "plan": "corridors28",
+      "selected": {
+        "config": {
+          "policy": "patrol",
+          "reserveSlots": 1,
+          "detourLimit": 1.25
+        },
+        "mean": 6941.785181908754
+      },
+      "trials": [
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 1,
+            "detourLimit": 1.25
+          },
+          "mean": 6941.785181908754
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 1,
+            "detourLimit": 1.75
+          },
+          "mean": 6718.016448755046
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 2,
+            "detourLimit": 1.25
+          },
+          "mean": 6456.466824964909
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 1,
+            "detourLimit": 1.25
+          },
+          "mean": 6323.759474881075
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 1,
+            "detourLimit": 1.75
+          },
+          "mean": 6323.759474881075
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 2,
+            "detourLimit": 1.25
+          },
+          "mean": 6307.51291285787
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 2,
+            "detourLimit": 1.75
+          },
+          "mean": 6307.51291285787
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 2,
+            "detourLimit": 1.75
+          },
+          "mean": 6285.9346131700295
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 0,
+            "detourLimit": 1.25
+          },
+          "mean": 195.04293220720814
+        },
+        {
+          "config": {
+            "policy": "patrol",
+            "reserveSlots": 0,
+            "detourLimit": 1.75
+          },
+          "mean": 160.59947283438285
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 0,
+            "detourLimit": 1.25
+          },
+          "mean": 59.28005063360208
+        },
+        {
+          "config": {
+            "policy": "cargo",
+            "reserveSlots": 0,
+            "detourLimit": 1.75
+          },
+          "mean": 59.28005063360208
+        }
+      ]
+    }
+  ],
+  "trained": {
+    "published28": {
+      "policy": "patrol",
+      "reserveSlots": 1,
+      "detourLimit": 1.75
+    },
+    "published38": {
+      "policy": "patrol",
+      "reserveSlots": 1,
+      "detourLimit": 1.75
+    },
+    "corridors38": {
+      "policy": "patrol",
+      "reserveSlots": 1,
+      "detourLimit": 1.25
+    },
+    "corridors28": {
+      "policy": "patrol",
+      "reserveSlots": 1,
+      "detourLimit": 1.25
+    }
+  },
+  "scenarios": {
+    "uniform": {
+      "options": {},
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 8090.262370093977,
+          "rewardPerTrain1000Time": 288.93794178907063,
+          "carsPer1000Time": 27.027777777777782,
+          "loadFactor": 0.9091309501947195,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 6379.98793319898,
+          "p95DeliveryTime": 13970.416666666666,
+          "meanYardWait": 4264.026050057049,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 8877.666666666666,
+          "onboardCars": 305.3333333333333,
+          "yardCars": 1030.25,
+          "unroutableOffers": 322.9166666666667,
+          "offeredCars": 40902
+        },
+        "published38": {
+          "rewardPer1000Time": 7512.314612112132,
+          "rewardPerTrain1000Time": 197.69248979242448,
+          "carsPer1000Time": 25.256944444444446,
+          "loadFactor": 0.9111771757278029,
+          "emptyDistanceShare": 0.00001888230487712769,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 6670.654348617564,
+          "p95DeliveryTime": 14200.25,
+          "meanYardWait": 4540.0530569164275,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 17867.833333333332,
+          "onboardCars": 416.75,
+          "yardCars": 1107.25,
+          "unroutableOffers": 323.4166666666667,
+          "offeredCars": 59158
+        },
+        "corridors38": {
+          "rewardPer1000Time": 10901.973171800053,
+          "rewardPerTrain1000Time": 286.89403083684346,
+          "carsPer1000Time": 32.40972222222222,
+          "loadFactor": 0.9129612312022674,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 7399.656832425106,
+          "p95DeliveryTime": 13885.416666666666,
+          "meanYardWait": 5379.465472423675,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 10916.5,
+          "onboardCars": 417.5833333333333,
+          "yardCars": 1405.4166666666667,
+          "unroutableOffers": 955.4166666666666,
+          "offeredCars": 57375
+        },
+        "corridors28": {
+          "rewardPer1000Time": 6500.625206890451,
+          "rewardPerTrain1000Time": 232.16518596037326,
+          "carsPer1000Time": 21.194444444444443,
+          "loadFactor": 0.9070026681749771,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 6659.11014012084,
+          "p95DeliveryTime": 14174.25,
+          "meanYardWait": 3816.9531019176343,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 6552,
+          "onboardCars": 304.3333333333333,
+          "yardCars": 497.0833333333333,
+          "unroutableOffers": 8029.916666666667,
+          "offeredCars": 44593
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -1589.6371632035264,
+          "min": -3092.4333725054094,
+          "max": -346.9608629244267,
+          "observed_range": [
+            -3092.4333725054094,
+            -346.9608629244267
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -19.648771454924532
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 3389.6585596879195,
+          "min": 1179.297092203531,
+          "max": 5102.887935154769,
+          "observed_range": [
+            1179.297092203531,
+            5102.887935154769
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 45.12136052213203
+        }
+      }
+    },
+    "local": {
+      "options": {
+        "scenario": "local"
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 8343.300072830107,
+          "rewardPerTrain1000Time": 297.9750026010752,
+          "carsPer1000Time": 37.47222222222222,
+          "loadFactor": 0.9114030332251,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 5694.821911132446,
+          "p95DeliveryTime": 13589.833333333334,
+          "meanYardWait": 3929.7087460739035,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 8839.916666666666,
+          "onboardCars": 306.8333333333333,
+          "yardCars": 1049.6666666666667,
+          "unroutableOffers": 319.3333333333333,
+          "offeredCars": 40902
+        },
+        "published38": {
+          "rewardPer1000Time": 7996.117257987313,
+          "rewardPerTrain1000Time": 210.42413836808717,
+          "carsPer1000Time": 35.94444444444445,
+          "loadFactor": 0.9127862702004349,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 6014.329990870537,
+          "p95DeliveryTime": 13941.083333333334,
+          "meanYardWait": 4260.2419739399475,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 17771.083333333332,
+          "onboardCars": 416.6666666666667,
+          "yardCars": 1119.4166666666667,
+          "unroutableOffers": 320.1666666666667,
+          "offeredCars": 59158
+        },
+        "corridors38": {
+          "rewardPer1000Time": 12539.761844826862,
+          "rewardPerTrain1000Time": 329.9937327586017,
+          "carsPer1000Time": 49.36805555555555,
+          "loadFactor": 0.9132644020660616,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 6451.305793469139,
+          "p95DeliveryTime": 13227.916666666666,
+          "meanYardWait": 4815.1651489741425,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 10912.666666666666,
+          "onboardCars": 417.25,
+          "yardCars": 1405.3333333333333,
+          "unroutableOffers": 944.6666666666666,
+          "offeredCars": 57375
+        },
+        "corridors28": {
+          "rewardPer1000Time": 7483.70609651428,
+          "rewardPerTrain1000Time": 267.27521773265283,
+          "carsPer1000Time": 34.18055555555555,
+          "loadFactor": 0.90797736384179,
+          "emptyDistanceShare": 0.00003925146222026102,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 5271.795581636253,
+          "p95DeliveryTime": 13680.416666666666,
+          "meanYardWait": 3204.0011562820437,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 6422.666666666667,
+          "onboardCars": 304.6666666666667,
+          "yardCars": 498.75,
+          "unroutableOffers": 8026.916666666667,
+          "offeredCars": 44593
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -859.5939763158245,
+          "min": -2744.545186641234,
+          "max": 1167.2903709946413,
+          "observed_range": [
+            -2744.545186641234,
+            1167.2903709946413
+          ],
+          "fraction_positive": 0.08333333333333333,
+          "percent_gain": -10.30280547040476
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 4543.64458683955,
+          "min": 900.4141651351365,
+          "max": 6904.571779388283,
+          "observed_range": [
+            900.4141651351365,
+            6904.571779388283
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 56.82313603269022
+        }
+      }
+    },
+    "global": {
+      "options": {
+        "scenario": "global"
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 7447.650321610713,
+          "rewardPerTrain1000Time": 265.9875114860969,
+          "carsPer1000Time": 20.854166666666668,
+          "loadFactor": 0.906401139923636,
+          "emptyDistanceShare": 0.00018793771835768315,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 7103.896405716335,
+          "p95DeliveryTime": 14110.833333333334,
+          "meanYardWait": 4651.804850448611,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 8924.666666666666,
+          "onboardCars": 305.75,
+          "yardCars": 1021.3333333333334,
+          "unroutableOffers": 324.0833333333333,
+          "offeredCars": 40902
+        },
+        "published38": {
+          "rewardPer1000Time": 7197.912987901705,
+          "rewardPerTrain1000Time": 189.41876283951854,
+          "carsPer1000Time": 20.17361111111111,
+          "loadFactor": 0.9086524526077623,
+          "emptyDistanceShare": 0.00010281139430272649,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 7664.1007475690385,
+          "p95DeliveryTime": 14429.416666666666,
+          "meanYardWait": 5115.306067113097,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 17881.833333333332,
+          "onboardCars": 416.5,
+          "yardCars": 1094.75,
+          "unroutableOffers": 323.75,
+          "offeredCars": 59158
+        },
+        "corridors38": {
+          "rewardPer1000Time": 11077.204514136589,
+          "rewardPerTrain1000Time": 291.5053819509629,
+          "carsPer1000Time": 29.881944444444446,
+          "loadFactor": 0.9114190676764383,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 7860.101322896324,
+          "p95DeliveryTime": 14139.083333333334,
+          "meanYardWait": 5665.558170664768,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 10973.833333333334,
+          "onboardCars": 417,
+          "yardCars": 1408.75,
+          "unroutableOffers": 958,
+          "offeredCars": 57375
+        },
+        "corridors28": {
+          "rewardPer1000Time": 6100.284278123515,
+          "rewardPerTrain1000Time": 217.86729564726838,
+          "carsPer1000Time": 17.368055555555554,
+          "loadFactor": 0.9048361696215682,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 7406.995870808395,
+          "p95DeliveryTime": 14281.75,
+          "meanYardWait": 4229.020459592461,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 6631.166666666667,
+          "onboardCars": 305,
+          "yardCars": 496.8333333333333,
+          "unroutableOffers": 8033.666666666667,
+          "offeredCars": 44593
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -1347.3660434871988,
+          "min": -2256.1096521224117,
+          "max": -393.2911813973278,
+          "observed_range": [
+            -2256.1096521224117,
+            -393.2911813973278
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -18.091156073447365
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 3879.291526234885,
+          "min": 2317.1454795413547,
+          "max": 5827.438708455811,
+          "observed_range": [
+            2317.1454795413547,
+            5827.438708455811
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 53.894671035273994
+        }
+      }
+    },
+    "longhaul": {
+      "options": {
+        "scenario": "longhaul"
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 7357.734748069652,
+          "rewardPerTrain1000Time": 262.77624100248755,
+          "carsPer1000Time": 18.118055555555554,
+          "loadFactor": 0.9064252668777734,
+          "emptyDistanceShare": 0.00007156606462828264,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 7481.398314871978,
+          "p95DeliveryTime": 14479.25,
+          "meanYardWait": 4815.694301062477,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 8917.166666666666,
+          "onboardCars": 306.0833333333333,
+          "yardCars": 996.0833333333334,
+          "unroutableOffers": 323.5,
+          "offeredCars": 40902
+        },
+        "published38": {
+          "rewardPer1000Time": 6856.599440743127,
+          "rewardPerTrain1000Time": 180.43682738797705,
+          "carsPer1000Time": 16.8125,
+          "loadFactor": 0.9094194944894354,
+          "emptyDistanceShare": 0.00012343225106100055,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 7785.857617285423,
+          "p95DeliveryTime": 14563.916666666666,
+          "meanYardWait": 5009.463504421666,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 17897.083333333332,
+          "onboardCars": 416.4166666666667,
+          "yardCars": 1078.8333333333333,
+          "unroutableOffers": 323.3333333333333,
+          "offeredCars": 59158
+        },
+        "corridors38": {
+          "rewardPer1000Time": 9337.193855988218,
+          "rewardPerTrain1000Time": 245.71562778916362,
+          "carsPer1000Time": 22.875,
+          "loadFactor": 0.9124665330010853,
+          "emptyDistanceShare": 0.000027909506690561954,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 7849.5668146825,
+          "p95DeliveryTime": 14088.583333333334,
+          "meanYardWait": 5515.291844429567,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 11199.916666666666,
+          "onboardCars": 417.8333333333333,
+          "yardCars": 1393.9166666666667,
+          "unroutableOffers": 960,
+          "offeredCars": 57375
+        },
+        "corridors28": {
+          "rewardPer1000Time": 5817.736900329535,
+          "rewardPerTrain1000Time": 207.77631786891197,
+          "carsPer1000Time": 14.27083333333333,
+          "loadFactor": 0.9068672271735636,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 7660.101698200287,
+          "p95DeliveryTime": 14550.5,
+          "meanYardWait": 4278.200087454384,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 6719.416666666667,
+          "onboardCars": 304.5,
+          "yardCars": 496.5833333333333,
+          "unroutableOffers": 8076.75,
+          "offeredCars": 44593
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -1539.9978477401157,
+          "min": -2549.8114401193698,
+          "max": -412.13176471064435,
+          "observed_range": [
+            -2549.8114401193698,
+            -412.13176471064435
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -20.930325711240734
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 2480.5944152450907,
+          "min": 955.2694451246161,
+          "max": 4715.9144603340765,
+          "observed_range": [
+            955.2694451246161,
+            4715.9144603340765
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 36.17820228063725
+        }
+      }
+    },
+    "light": {
+      "options": {
+        "offers": 2
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 7704.959803470418,
+          "rewardPerTrain1000Time": 275.17713583822916,
+          "carsPer1000Time": 30.166666666666668,
+          "loadFactor": 0.7799741402435796,
+          "emptyDistanceShare": 0.009789152550638775,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 5513.424908874699,
+          "p95DeliveryTime": 12867.75,
+          "meanYardWait": 3636.731642954214,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 6939.833333333333,
+          "onboardCars": 290.6666666666667,
+          "yardCars": 931,
+          "unroutableOffers": 53.916666666666664,
+          "offeredCars": 6817
+        },
+        "published38": {
+          "rewardPer1000Time": 7068.537808918968,
+          "rewardPerTrain1000Time": 186.01415286628858,
+          "carsPer1000Time": 26.868055555555557,
+          "loadFactor": 0.8375017974482565,
+          "emptyDistanceShare": 0.006617166319439468,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 6249.958168756468,
+          "p95DeliveryTime": 13483.916666666666,
+          "meanYardWait": 4253.288376827014,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 15586.833333333334,
+          "onboardCars": 405.6666666666667,
+          "yardCars": 1008.25,
+          "unroutableOffers": 54.083333333333336,
+          "offeredCars": 9859.666666666666
+        },
+        "corridors38": {
+          "rewardPer1000Time": 14845.113181954286,
+          "rewardPerTrain1000Time": 390.66087320932326,
+          "carsPer1000Time": 52.770833333333336,
+          "loadFactor": 0.8234326107391499,
+          "emptyDistanceShare": 0.004989311975806278,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 5659.311707061895,
+          "p95DeliveryTime": 12441.25,
+          "meanYardWait": 4038.154667744566,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 8605.416666666666,
+          "onboardCars": 407.9166666666667,
+          "yardCars": 1186.4166666666667,
+          "unroutableOffers": 159,
+          "offeredCars": 9562.5
+        },
+        "corridors28": {
+          "rewardPer1000Time": 5941.378202005567,
+          "rewardPerTrain1000Time": 212.19207864305596,
+          "carsPer1000Time": 21.298611111111114,
+          "loadFactor": 0.8459744807232008,
+          "emptyDistanceShare": 0.01127751365897133,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 6738.513066833191,
+          "p95DeliveryTime": 13896.166666666666,
+          "meanYardWait": 4031.488453682641,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 5380.916666666667,
+          "onboardCars": 302.0833333333333,
+          "yardCars": 489.8333333333333,
+          "unroutableOffers": 1337.9166666666667,
+          "offeredCars": 7432.166666666667
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -1763.5816014648499,
+          "min": -3128.044311831659,
+          "max": -528.7932124951567,
+          "observed_range": [
+            -3128.044311831659,
+            -528.7932124951567
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -22.888913718544114
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 7776.575373035318,
+          "min": 5898.666043892974,
+          "max": 9919.03530324488,
+          "observed_range": [
+            5898.666043892974,
+            9919.03530324488
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 110.01674721500335
+        }
+      }
+    },
+    "heavy": {
+      "options": {
+        "offers": 24
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 8785.626695499925,
+          "rewardPerTrain1000Time": 313.77238198214025,
+          "carsPer1000Time": 25.29861111111111,
+          "loadFactor": 0.9133998906895983,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 6508.389814387894,
+          "p95DeliveryTime": 14189,
+          "meanYardWait": 4266.907558134163,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 8929.5,
+          "onboardCars": 306.9166666666667,
+          "yardCars": 1042.1666666666667,
+          "unroutableOffers": 646,
+          "offeredCars": 81804
+        },
+        "published38": {
+          "rewardPer1000Time": 8203.986963101679,
+          "rewardPerTrain1000Time": 215.8943937658336,
+          "carsPer1000Time": 22.923611111111114,
+          "loadFactor": 0.9142453132758245,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 6648.119323924145,
+          "p95DeliveryTime": 14275.333333333334,
+          "meanYardWait": 4394.207866771725,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 17905.666666666668,
+          "onboardCars": 417.25,
+          "yardCars": 1116.6666666666667,
+          "unroutableOffers": 646.6666666666666,
+          "offeredCars": 118316
+        },
+        "corridors38": {
+          "rewardPer1000Time": 9771.276932090219,
+          "rewardPerTrain1000Time": 257.13886663395317,
+          "carsPer1000Time": 25.23611111111111,
+          "loadFactor": 0.9145959101636757,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 7444.963544118554,
+          "p95DeliveryTime": 13986.083333333334,
+          "meanYardWait": 5360.481909842794,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 11100.75,
+          "onboardCars": 417.5,
+          "yardCars": 1428.25,
+          "unroutableOffers": 1909.3333333333333,
+          "offeredCars": 114750
+        },
+        "corridors28": {
+          "rewardPer1000Time": 7102.492442980208,
+          "rewardPerTrain1000Time": 253.6604443921503,
+          "carsPer1000Time": 20.041666666666668,
+          "loadFactor": 0.9101452260444006,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 6075.377270388525,
+          "p95DeliveryTime": 14076.25,
+          "meanYardWait": 3399.9743478995,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 6647.166666666667,
+          "onboardCars": 305.5,
+          "yardCars": 499.1666666666667,
+          "unroutableOffers": 16068.583333333334,
+          "offeredCars": 89186
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -1683.1342525197178,
+          "min": -3603.095401437028,
+          "max": -609.6136873163405,
+          "observed_range": [
+            -3603.095401437028,
+            -609.6136873163405
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -19.157816634547356
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 1567.2899689885423,
+          "min": -902.2417100330531,
+          "max": 5917.823178635499,
+          "observed_range": [
+            -902.2417100330531,
+            5917.823178635499
+          ],
+          "fraction_positive": 0.8333333333333334,
+          "percent_gain": 19.104003651366085
+        }
+      }
+    },
+    "continuous": {
+      "options": {
+        "checkInterval": 0
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 12533.411800831347,
+          "rewardPerTrain1000Time": 447.62185002969096,
+          "carsPer1000Time": 38.50694444444444,
+          "loadFactor": 0.9108983134138215,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.05759424603174603,
+          "meanDeliveryTime": 6375.015803809562,
+          "p95DeliveryTime": 13931.666666666666,
+          "meanYardWait": 4637.474330786591,
+          "dispatches": 3872.3333333333335,
+          "blockedYardEvents": 13657.083333333334,
+          "onboardCars": 306.6666666666667,
+          "yardCars": 1056.8333333333333,
+          "unroutableOffers": 430,
+          "offeredCars": 62114
+        },
+        "published38": {
+          "rewardPer1000Time": 11867.705476217592,
+          "rewardPerTrain1000Time": 312.3080388478314,
+          "carsPer1000Time": 36.145833333333336,
+          "loadFactor": 0.912927615525998,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.06299195906432749,
+          "meanDeliveryTime": 6666.769914673975,
+          "p95DeliveryTime": 14263.333333333334,
+          "meanYardWait": 4882.059066920212,
+          "dispatches": 5747.25,
+          "blockedYardEvents": 28476.916666666668,
+          "onboardCars": 416.5,
+          "yardCars": 1137.5,
+          "unroutableOffers": 429.5,
+          "offeredCars": 92140
+        },
+        "corridors38": {
+          "rewardPer1000Time": 13532.267602449292,
+          "rewardPerTrain1000Time": 356.1123053276129,
+          "carsPer1000Time": 37.229166666666664,
+          "loadFactor": 0.9143554710129681,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.06167068713450293,
+          "meanDeliveryTime": 7357.053691189947,
+          "p95DeliveryTime": 13898.083333333334,
+          "meanYardWait": 5665.726857093895,
+          "dispatches": 5625.083333333333,
+          "blockedYardEvents": 18412.916666666668,
+          "onboardCars": 417.75,
+          "yardCars": 1427.1666666666667,
+          "unroutableOffers": 1839,
+          "offeredCars": 90215
+        },
+        "corridors28": {
+          "rewardPer1000Time": 10447.925968705871,
+          "rewardPerTrain1000Time": 373.14021316806685,
+          "carsPer1000Time": 29.868055555555554,
+          "loadFactor": 0.9088646275913179,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.06726388888888889,
+          "meanDeliveryTime": 6665.548126824592,
+          "p95DeliveryTime": 14341.75,
+          "meanYardWait": 4090.2531744511543,
+          "dispatches": 4520.75,
+          "blockedYardEvents": 11846.333333333334,
+          "onboardCars": 303.5833333333333,
+          "yardCars": 497.6666666666667,
+          "unroutableOffers": 13739.583333333334,
+          "offeredCars": 72493
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -2085.485832125473,
+          "min": -3880.942025505552,
+          "max": -667.5068672080852,
+          "observed_range": [
+            -3880.942025505552,
+            -667.5068672080852
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -16.639410443588407
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 1664.5621262316956,
+          "min": -3911.850918539356,
+          "max": 6569.902505338943,
+          "observed_range": [
+            -3911.850918539356,
+            6569.902505338943
+          ],
+          "fraction_positive": 0.6666666666666666,
+          "percent_gain": 14.025981092700789
+        }
+      }
+    },
+    "infrequent": {
+      "options": {
+        "checkInterval": 400
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 2234.247150272322,
+          "rewardPerTrain1000Time": 79.79454108115438,
+          "carsPer1000Time": 11.604166666666666,
+          "loadFactor": 0.8902653331196041,
+          "emptyDistanceShare": 0.0015189482728311156,
+          "stationaryShare": 0.7548970734126984,
+          "meanDeliveryTime": 6262.519329890359,
+          "p95DeliveryTime": 13322,
+          "meanYardWait": 3092.1551796698204,
+          "dispatches": 864.5833333333334,
+          "blockedYardEvents": 2488.25,
+          "onboardCars": 301.6666666666667,
+          "yardCars": 914.75,
+          "unroutableOffers": 238.58333333333334,
+          "offeredCars": 13386
+        },
+        "published38": {
+          "rewardPer1000Time": 1897.6603208544586,
+          "rewardPerTrain1000Time": 49.93842949616996,
+          "carsPer1000Time": 9.701388888888891,
+          "loadFactor": 0.896676465297282,
+          "emptyDistanceShare": 0.0007396840638774043,
+          "stationaryShare": 0.7759919590643274,
+          "meanDeliveryTime": 6566.622570142184,
+          "p95DeliveryTime": 13736.25,
+          "meanYardWait": 3246.381900439945,
+          "dispatches": 1174.5833333333333,
+          "blockedYardEvents": 4720.166666666667,
+          "onboardCars": 413,
+          "yardCars": 1015,
+          "unroutableOffers": 238.75,
+          "offeredCars": 18186
+        },
+        "corridors38": {
+          "rewardPer1000Time": 4564.0933300211955,
+          "rewardPerTrain1000Time": 120.10771921108405,
+          "carsPer1000Time": 19.548611111111114,
+          "loadFactor": 0.8982375618192933,
+          "emptyDistanceShare": 0.00039038481921701375,
+          "stationaryShare": 0.7866701388888889,
+          "meanDeliveryTime": 7631.587476407855,
+          "p95DeliveryTime": 13926.333333333334,
+          "meanYardWait": 4369.340598788411,
+          "dispatches": 1174.75,
+          "blockedYardEvents": 2695.0833333333335,
+          "onboardCars": 415,
+          "yardCars": 1340.1666666666667,
+          "unroutableOffers": 239.33333333333334,
+          "offeredCars": 18192
+        },
+        "corridors28": {
+          "rewardPer1000Time": 2040.4858061971627,
+          "rewardPerTrain1000Time": 72.8744930784701,
+          "carsPer1000Time": 13.111111111111112,
+          "loadFactor": 0.8437937682732763,
+          "emptyDistanceShare": 0.010328120937173503,
+          "stationaryShare": 0.8013670634920635,
+          "meanDeliveryTime": 5866.745690620174,
+          "p95DeliveryTime": 13391.333333333334,
+          "meanYardWait": 2673.543539344141,
+          "dispatches": 864.0833333333334,
+          "blockedYardEvents": 1542.25,
+          "onboardCars": 304.5833333333333,
+          "yardCars": 492,
+          "unroutableOffers": 2460.5,
+          "offeredCars": 13383
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -193.76134407515949,
+          "min": -633.3604264608407,
+          "max": 345.83039947563543,
+          "observed_range": [
+            -633.3604264608407,
+            345.83039947563543
+          ],
+          "fraction_positive": 0.3333333333333333,
+          "percent_gain": -8.672332604364867
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 2666.4330091667357,
+          "min": 1677.2660774975757,
+          "max": 3725.41303795528,
+          "observed_range": [
+            1677.2660774975757,
+            3725.41303795528
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 140.51160683836832
+        }
+      }
+    },
+    "small_yards": {
+      "options": {
+        "yardCapacity": 5
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 3774.8475861364873,
+          "rewardPerTrain1000Time": 134.81598521916024,
+          "carsPer1000Time": 11.479166666666666,
+          "loadFactor": 0.9151760092913998,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 7113.513381682369,
+          "p95DeliveryTime": 14484,
+          "meanYardWait": 3804.93149985425,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 9396.583333333334,
+          "onboardCars": 307.1666666666667,
+          "yardCars": 272,
+          "unroutableOffers": 322.9166666666667,
+          "offeredCars": 40902
+        },
+        "published38": {
+          "rewardPer1000Time": 3564.9074487432877,
+          "rewardPerTrain1000Time": 93.81335391429707,
+          "carsPer1000Time": 10.305555555555555,
+          "loadFactor": 0.9156053824556206,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 7114.486004291745,
+          "p95DeliveryTime": 14022.666666666666,
+          "meanYardWait": 3743.8419161821826,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 18573,
+          "onboardCars": 417.6666666666667,
+          "yardCars": 294.9166666666667,
+          "unroutableOffers": 323.4166666666667,
+          "offeredCars": 59158
+        },
+        "corridors38": {
+          "rewardPer1000Time": 6610.847488252733,
+          "rewardPerTrain1000Time": 173.96967074349297,
+          "carsPer1000Time": 18.458333333333332,
+          "loadFactor": 0.915407059630916,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 8282.228126245425,
+          "p95DeliveryTime": 14536.083333333334,
+          "meanYardWait": 4526.897269267266,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 11749.5,
+          "onboardCars": 417.25,
+          "yardCars": 372.75,
+          "unroutableOffers": 955.4166666666666,
+          "offeredCars": 57375
+        },
+        "corridors28": {
+          "rewardPer1000Time": 2936.404562426831,
+          "rewardPerTrain1000Time": 104.87159151524399,
+          "carsPer1000Time": 9.826388888888888,
+          "loadFactor": 0.9129600688119769,
+          "emptyDistanceShare": 0,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 7159.166616136106,
+          "p95DeliveryTime": 14687.583333333334,
+          "meanYardWait": 2673.598655998969,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 7476,
+          "onboardCars": 305.9166666666667,
+          "yardCars": 126.16666666666667,
+          "unroutableOffers": 8029.916666666667,
+          "offeredCars": 44593
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -838.4430237096561,
+          "min": -2119.297217685719,
+          "max": 196.9964424026116,
+          "observed_range": [
+            -2119.297217685719,
+            196.9964424026116
+          ],
+          "fraction_positive": 0.16666666666666666,
+          "percent_gain": -22.211307995292938
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 3045.9400395094435,
+          "min": 1400.7255113306537,
+          "max": 5190.307181156855,
+          "observed_range": [
+            1400.7255113306537,
+            5190.307181156855
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 85.44233148558199
+        }
+      }
+    },
+    "large_yards": {
+      "options": {
+        "yardCapacity": 100
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 11112.201503526807,
+          "rewardPerTrain1000Time": 396.8643394116718,
+          "carsPer1000Time": 45.736111111111114,
+          "loadFactor": 0.8738647005309385,
+          "emptyDistanceShare": 0.0036807701091967327,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 4816.088559989691,
+          "p95DeliveryTime": 13006.833333333334,
+          "meanYardWait": 3485.368105752501,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 7274,
+          "onboardCars": 297.0833333333333,
+          "yardCars": 3824.5833333333335,
+          "unroutableOffers": 322.9166666666667,
+          "offeredCars": 40902
+        },
+        "published38": {
+          "rewardPer1000Time": 9448.748986525663,
+          "rewardPerTrain1000Time": 248.6512891190964,
+          "carsPer1000Time": 39.15972222222222,
+          "loadFactor": 0.8884162495479909,
+          "emptyDistanceShare": 0.0018062462983885555,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 5466.649646972983,
+          "p95DeliveryTime": 13795.5,
+          "meanYardWait": 4050.9182966171534,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 15923.083333333334,
+          "onboardCars": 408.25,
+          "yardCars": 4238.416666666667,
+          "unroutableOffers": 323.4166666666667,
+          "offeredCars": 59158
+        },
+        "corridors38": {
+          "rewardPer1000Time": 24228.316815589587,
+          "rewardPerTrain1000Time": 637.5872846207787,
+          "carsPer1000Time": 80.5625,
+          "loadFactor": 0.8852487158515001,
+          "emptyDistanceShare": 0.0016403994588477567,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 5681.50545595754,
+          "p95DeliveryTime": 12895.833333333334,
+          "meanYardWait": 4386.636668387986,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 8417.333333333334,
+          "onboardCars": 408.9166666666667,
+          "yardCars": 5625.083333333333,
+          "unroutableOffers": 955.4166666666666,
+          "offeredCars": 57375
+        },
+        "corridors28": {
+          "rewardPer1000Time": 9430.317494883944,
+          "rewardPerTrain1000Time": 336.79705338871224,
+          "carsPer1000Time": 49.11111111111111,
+          "loadFactor": 0.8067674687208943,
+          "emptyDistanceShare": 0.03096673130740177,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 3658.5946874527276,
+          "p95DeliveryTime": 11617.916666666666,
+          "meanYardWait": 2451.922562665219,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 4484.333333333333,
+          "onboardCars": 294.9166666666667,
+          "yardCars": 2311.4166666666665,
+          "unroutableOffers": 8029.916666666667,
+          "offeredCars": 44593
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -1681.8840086428652,
+          "min": -2826.9864629689328,
+          "max": -414.3830575613283,
+          "observed_range": [
+            -2826.9864629689328,
+            -414.3830575613283
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -15.135470753559197
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 14779.567829063932,
+          "min": 13774.724930374081,
+          "max": 15920.72816769348,
+          "observed_range": [
+            13774.724930374081,
+            15920.72816769348
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 156.41825018465676
+        }
+      }
+    },
+    "refueling": {
+      "options": {
+        "tank": 600,
+        "refuelRate": 0.5
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 4562.381844927308,
+          "rewardPerTrain1000Time": 162.94220874740384,
+          "carsPer1000Time": 17.819444444444446,
+          "loadFactor": 0.9026522541881287,
+          "emptyDistanceShare": 0.00032688115560579664,
+          "stationaryShare": 0.6660902777777777,
+          "meanDeliveryTime": 6565.811052608445,
+          "p95DeliveryTime": 13940.75,
+          "meanYardWait": 3855.529846664241,
+          "dispatches": 1400.5833333333333,
+          "blockedYardEvents": 4986,
+          "onboardCars": 306.6666666666667,
+          "yardCars": 977,
+          "unroutableOffers": 155.16666666666666,
+          "offeredCars": 23732
+        },
+        "published38": {
+          "rewardPer1000Time": 4189.99583414213,
+          "rewardPerTrain1000Time": 110.26304826689814,
+          "carsPer1000Time": 16.48611111111111,
+          "loadFactor": 0.9066249994930686,
+          "emptyDistanceShare": 0.00018819620170485948,
+          "stationaryShare": 0.6657679093567251,
+          "meanDeliveryTime": 6878.80381618738,
+          "p95DeliveryTime": 14292.083333333334,
+          "meanYardWait": 4107.769204760095,
+          "dispatches": 2092.1666666666665,
+          "blockedYardEvents": 10651.916666666666,
+          "onboardCars": 416.0833333333333,
+          "yardCars": 1066.5,
+          "unroutableOffers": 155.5,
+          "offeredCars": 35479
+        },
+        "corridors38": {
+          "rewardPer1000Time": 6880.425811959867,
+          "rewardPerTrain1000Time": 181.06383715683862,
+          "carsPer1000Time": 23.625000000000004,
+          "loadFactor": 0.9090082216482916,
+          "emptyDistanceShare": 0.00009083964285792461,
+          "stationaryShare": 0.665718567251462,
+          "meanDeliveryTime": 7937.862551632522,
+          "p95DeliveryTime": 14274.583333333334,
+          "meanYardWait": 5308.7148189534555,
+          "dispatches": 2040.4166666666667,
+          "blockedYardEvents": 6470.416666666667,
+          "onboardCars": 416.5833333333333,
+          "yardCars": 1385.8333333333333,
+          "unroutableOffers": 723,
+          "offeredCars": 34530
+        },
+        "corridors28": {
+          "rewardPer1000Time": 3355.982758158567,
+          "rewardPerTrain1000Time": 119.85652707709168,
+          "carsPer1000Time": 14.54166666666667,
+          "loadFactor": 0.8986451134625081,
+          "emptyDistanceShare": 0.0001202517925947788,
+          "stationaryShare": 0.6659375,
+          "meanDeliveryTime": 6449.869686232615,
+          "p95DeliveryTime": 14121.833333333334,
+          "meanYardWait": 3541.1678593961974,
+          "dispatches": 1651.75,
+          "blockedYardEvents": 4231.083333333333,
+          "onboardCars": 305.3333333333333,
+          "yardCars": 497.4166666666667,
+          "unroutableOffers": 5339.833333333333,
+          "offeredCars": 27952
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -1206.399086768741,
+          "min": -2223.9074261301253,
+          "max": -472.7404309241756,
+          "observed_range": [
+            -2223.9074261301253,
+            -472.7404309241756
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -26.442308596113627
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 2690.4299778177374,
+          "min": 1587.2844812185158,
+          "max": 4735.218911852244,
+          "observed_range": [
+            1587.2844812185158,
+            4735.218911852244
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 64.21080316822278
+        }
+      }
+    },
+    "smaller_capacity": {
+      "options": {
+        "capacity": 8
+      },
+      "results": {
+        "published28": {
+          "rewardPer1000Time": 5851.337388757912,
+          "rewardPerTrain1000Time": 208.9763353127826,
+          "carsPer1000Time": 19.006944444444446,
+          "loadFactor": 0.866319789084276,
+          "emptyDistanceShare": 0.00013381667407786138,
+          "stationaryShare": 0.3475880456349207,
+          "meanDeliveryTime": 5864.30540763857,
+          "p95DeliveryTime": 13811.333333333334,
+          "meanYardWait": 4002.979740488831,
+          "dispatches": 2574.75,
+          "blockedYardEvents": 5521.5,
+          "onboardCars": 194.83333333333334,
+          "yardCars": 992.1666666666666,
+          "unroutableOffers": 322.9166666666667,
+          "offeredCars": 40902
+        },
+        "published38": {
+          "rewardPer1000Time": 5376.346212276957,
+          "rewardPerTrain1000Time": 141.48279505991988,
+          "carsPer1000Time": 17.47222222222222,
+          "loadFactor": 0.8680742164258786,
+          "emptyDistanceShare": 0.00014263110490435568,
+          "stationaryShare": 0.36040113304093574,
+          "meanDeliveryTime": 6079.466677925565,
+          "p95DeliveryTime": 14122.333333333334,
+          "meanYardWait": 4173.935644554173,
+          "dispatches": 3723.9166666666665,
+          "blockedYardEvents": 11190.583333333334,
+          "onboardCars": 264.5833333333333,
+          "yardCars": 1069.5833333333333,
+          "unroutableOffers": 323.4166666666667,
+          "offeredCars": 59158
+        },
+        "corridors38": {
+          "rewardPer1000Time": 7240.153133324521,
+          "rewardPerTrain1000Time": 190.53034561380312,
+          "carsPer1000Time": 20.88888888888889,
+          "loadFactor": 0.8701712282128589,
+          "emptyDistanceShare": 0.0001888701391290648,
+          "stationaryShare": 0.38470650584795324,
+          "meanDeliveryTime": 7006.351690519737,
+          "p95DeliveryTime": 13519.25,
+          "meanYardWait": 5312.358651854636,
+          "dispatches": 3613.0833333333335,
+          "blockedYardEvents": 6808,
+          "onboardCars": 265.3333333333333,
+          "yardCars": 1388.25,
+          "unroutableOffers": 955.4166666666666,
+          "offeredCars": 57375
+        },
+        "corridors28": {
+          "rewardPer1000Time": 4612.720946825173,
+          "rewardPerTrain1000Time": 164.74003381518477,
+          "carsPer1000Time": 14.486111111111112,
+          "loadFactor": 0.860204004261503,
+          "emptyDistanceShare": 0.0019010159020124552,
+          "stationaryShare": 0.4003472222222222,
+          "meanDeliveryTime": 6091.945828347913,
+          "p95DeliveryTime": 13901.5,
+          "meanYardWait": 3724.946385894369,
+          "dispatches": 2806.9166666666665,
+          "blockedYardEvents": 3985.4166666666665,
+          "onboardCars": 193.33333333333334,
+          "yardCars": 490.3333333333333,
+          "unroutableOffers": 8029.916666666667,
+          "offeredCars": 44593
+        }
+      },
+      "paired": {
+        "corridors28": {
+          "baseline": "published28",
+          "mean": -1238.616441932738,
+          "min": -2519.7327415136206,
+          "max": -120.26810335504615,
+          "observed_range": [
+            -2519.7327415136206,
+            -120.26810335504615
+          ],
+          "fraction_positive": 0,
+          "percent_gain": -21.168091320669248
+        },
+        "corridors38": {
+          "baseline": "published38",
+          "mean": 1863.806921047563,
+          "min": 141.2817889204407,
+          "max": 4763.178370750472,
+          "observed_range": [
+            141.2817889204407,
+            4763.178370750472
+          ],
+          "fraction_positive": 1,
+          "percent_gain": 34.66679502133876
+        }
+      }
+    }
+  },
+  "examples": {
+    "published28": {
+      "settings": {
+        "seed": 610003,
+        "horizon": 16000,
+        "warmup": 4000,
+        "capacity": 12,
+        "reserveSlots": 1,
+        "offers": 12,
+        "yardCapacity": 20,
+        "checkInterval": 100,
+        "serviceTime": 5,
+        "policy": "patrol",
+        "scenario": "uniform",
+        "tank": 0,
+        "refuelRate": 1,
+        "detourLimit": 1.75
+      },
+      "curve": [
+        {
+          "time": 0,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 400,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 800,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 1200,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 1600,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2000,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2400,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2800,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 3200,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 3600,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 4000,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 4400,
+          "reward": 2158.279789670252,
+          "delivered": 9
+        },
+        {
+          "time": 4800,
+          "reward": 4185.8425356619,
+          "delivered": 18
+        },
+        {
+          "time": 5200,
+          "reward": 6460.933719968024,
+          "delivered": 27
+        },
+        {
+          "time": 5600,
+          "reward": 10815.533587175136,
+          "delivered": 45
+        },
+        {
+          "time": 6000,
+          "reward": 14001.644494402663,
+          "delivered": 60
+        },
+        {
+          "time": 6400,
+          "reward": 17215.02086252717,
+          "delivered": 71
+        },
+        {
+          "time": 6800,
+          "reward": 21015.19823646627,
+          "delivered": 85
+        },
+        {
+          "time": 7200,
+          "reward": 23300.39190094905,
+          "delivered": 95
+        },
+        {
+          "time": 7600,
+          "reward": 26036.74038187251,
+          "delivered": 104
+        },
+        {
+          "time": 8000,
+          "reward": 29148.59304203906,
+          "delivered": 111
+        },
+        {
+          "time": 8400,
+          "reward": 33717.32474775739,
+          "delivered": 123
+        },
+        {
+          "time": 8800,
+          "reward": 36430.78296912353,
+          "delivered": 135
+        },
+        {
+          "time": 9200,
+          "reward": 39029.878767401686,
+          "delivered": 145
+        },
+        {
+          "time": 9600,
+          "reward": 44251.296916389925,
+          "delivered": 159
+        },
+        {
+          "time": 10000,
+          "reward": 48787.64714797321,
+          "delivered": 179
+        },
+        {
+          "time": 10400,
+          "reward": 52342.60455720438,
+          "delivered": 188
+        },
+        {
+          "time": 10800,
+          "reward": 54364.24933358356,
+          "delivered": 194
+        },
+        {
+          "time": 11200,
+          "reward": 56357.43468404523,
+          "delivered": 201
+        },
+        {
+          "time": 11600,
+          "reward": 57541.65268759013,
+          "delivered": 206
+        },
+        {
+          "time": 12000,
+          "reward": 61351.63704593326,
+          "delivered": 218
+        },
+        {
+          "time": 12400,
+          "reward": 62379.30304677375,
+          "delivered": 226
+        },
+        {
+          "time": 12800,
+          "reward": 65842.27313160106,
+          "delivered": 234
+        },
+        {
+          "time": 13200,
+          "reward": 72180.87869625367,
+          "delivered": 252
+        },
+        {
+          "time": 13600,
+          "reward": 73949.83437520446,
+          "delivered": 263
+        },
+        {
+          "time": 14000,
+          "reward": 77097.3227158713,
+          "delivered": 270
+        },
+        {
+          "time": 14400,
+          "reward": 81491.70492765999,
+          "delivered": 280
+        },
+        {
+          "time": 14800,
+          "reward": 84774.73139406076,
+          "delivered": 291
+        },
+        {
+          "time": 15200,
+          "reward": 86378.92103048072,
+          "delivered": 298
+        },
+        {
+          "time": 15600,
+          "reward": 92631.2822387837,
+          "delivered": 313
+        },
+        {
+          "time": 16000,
+          "reward": 94682.1182718228,
+          "delivered": 322
+        }
+      ],
+      "lines": [
+        {
+          "name": "Oceania West",
+          "distance": 6956,
+          "empty": 0,
+          "loadedCarDistance": 69515,
+          "stationaryTime": 5044,
+          "refuelWait": 0,
+          "departures": 97,
+          "blockedYardEvents": 2,
+          "onboard": 11,
+          "city": "Christchurch",
+          "inTransit": true
+        },
+        {
+          "name": "North America East",
+          "distance": 7142,
+          "empty": 0,
+          "loadedCarDistance": 76494,
+          "stationaryTime": 4858,
+          "refuelWait": 0,
+          "departures": 96,
+          "blockedYardEvents": 12,
+          "onboard": 11,
+          "city": "Rome",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania Central",
+          "distance": 9600,
+          "empty": 0,
+          "loadedCarDistance": 105600,
+          "stationaryTime": 2400,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 858,
+          "onboard": 11,
+          "city": "Darwin",
+          "inTransit": true
+        },
+        {
+          "name": "Africa Cross",
+          "distance": 7900,
+          "empty": 0,
+          "loadedCarDistance": 86656,
+          "stationaryTime": 4100,
+          "refuelWait": 0,
+          "departures": 97,
+          "blockedYardEvents": 32,
+          "onboard": 11,
+          "city": "St. Petersburg",
+          "inTransit": true
+        },
+        {
+          "name": "Cyan",
+          "distance": 7460,
+          "empty": 0,
+          "loadedCarDistance": 81400,
+          "stationaryTime": 4540,
+          "refuelWait": 0,
+          "departures": 100,
+          "blockedYardEvents": 1,
+          "onboard": 11,
+          "city": "Casablanca",
+          "inTransit": true
+        },
+        {
+          "name": "Blue",
+          "distance": 7306,
+          "empty": 0,
+          "loadedCarDistance": 80366,
+          "stationaryTime": 4694,
+          "refuelWait": 0,
+          "departures": 93,
+          "blockedYardEvents": 106,
+          "onboard": 11,
+          "city": "Montreal",
+          "inTransit": true
+        },
+        {
+          "name": "Asia South",
+          "distance": 8895,
+          "empty": 0,
+          "loadedCarDistance": 97173,
+          "stationaryTime": 3105,
+          "refuelWait": 0,
+          "departures": 44,
+          "blockedYardEvents": 115,
+          "onboard": 11,
+          "city": "Yakutsk",
+          "inTransit": false
+        },
+        {
+          "name": "South Atlantic Bridge",
+          "distance": 8144,
+          "empty": 0,
+          "loadedCarDistance": 86058,
+          "stationaryTime": 3856,
+          "refuelWait": 0,
+          "departures": 81,
+          "blockedYardEvents": 26,
+          "onboard": 11,
+          "city": "Managua",
+          "inTransit": true
+        },
+        {
+          "name": "Africa South",
+          "distance": 8400,
+          "empty": 0,
+          "loadedCarDistance": 92400,
+          "stationaryTime": 3600,
+          "refuelWait": 0,
+          "departures": 64,
+          "blockedYardEvents": 16,
+          "onboard": 11,
+          "city": "Antananarivo",
+          "inTransit": true
+        },
+        {
+          "name": "Southeast Islands",
+          "distance": 6600,
+          "empty": 0,
+          "loadedCarDistance": 72600,
+          "stationaryTime": 5400,
+          "refuelWait": 0,
+          "departures": 81,
+          "blockedYardEvents": 440,
+          "onboard": 11,
+          "city": "Antananarivo",
+          "inTransit": true
+        },
+        {
+          "name": "Easter Island",
+          "distance": 9137,
+          "empty": 0,
+          "loadedCarDistance": 100507,
+          "stationaryTime": 2863,
+          "refuelWait": 0,
+          "departures": 70,
+          "blockedYardEvents": 55,
+          "onboard": 11,
+          "city": "Porto Alegre",
+          "inTransit": true
+        },
+        {
+          "name": "South America Inland",
+          "distance": 6130,
+          "empty": 0,
+          "loadedCarDistance": 65517,
+          "stationaryTime": 5870,
+          "refuelWait": 0,
+          "departures": 109,
+          "blockedYardEvents": 16,
+          "onboard": 11,
+          "city": "Toronto",
+          "inTransit": true
+        },
+        {
+          "name": "Green",
+          "distance": 6564,
+          "empty": 0,
+          "loadedCarDistance": 72185,
+          "stationaryTime": 5436,
+          "refuelWait": 0,
+          "departures": 91,
+          "blockedYardEvents": 0,
+          "onboard": 11,
+          "city": "New York",
+          "inTransit": true
+        },
+        {
+          "name": "North Canada",
+          "distance": 6787,
+          "empty": 0,
+          "loadedCarDistance": 74512,
+          "stationaryTime": 5213,
+          "refuelWait": 0,
+          "departures": 83,
+          "blockedYardEvents": 9,
+          "onboard": 11,
+          "city": "Tehran",
+          "inTransit": true
+        },
+        {
+          "name": "Arctic Bridge",
+          "distance": 9040,
+          "empty": 0,
+          "loadedCarDistance": 99440,
+          "stationaryTime": 2960,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 561,
+          "onboard": 11,
+          "city": "Chengdu",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania Pacific",
+          "distance": 7628,
+          "empty": 0,
+          "loadedCarDistance": 82209,
+          "stationaryTime": 4372,
+          "refuelWait": 0,
+          "departures": 95,
+          "blockedYardEvents": 38,
+          "onboard": 11,
+          "city": "New Delhi",
+          "inTransit": true
+        },
+        {
+          "name": "Pink",
+          "distance": 8107,
+          "empty": 0,
+          "loadedCarDistance": 87882,
+          "stationaryTime": 3893,
+          "refuelWait": 0,
+          "departures": 90,
+          "blockedYardEvents": 34,
+          "onboard": 11,
+          "city": "Harbin",
+          "inTransit": true
+        },
+        {
+          "name": "China Central",
+          "distance": 11040,
+          "empty": 0,
+          "loadedCarDistance": 121440,
+          "stationaryTime": 960,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 854,
+          "onboard": 11,
+          "city": "Beijing",
+          "inTransit": true
+        },
+        {
+          "name": "Atlantic Link",
+          "distance": 7560,
+          "empty": 0,
+          "loadedCarDistance": 83160,
+          "stationaryTime": 4440,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 416,
+          "onboard": 11,
+          "city": "Brisbane",
+          "inTransit": true
+        },
+        {
+          "name": "South America West",
+          "distance": 9960,
+          "empty": 0,
+          "loadedCarDistance": 109560,
+          "stationaryTime": 2040,
+          "refuelWait": 0,
+          "departures": 60,
+          "blockedYardEvents": 415,
+          "onboard": 11,
+          "city": "Luanda",
+          "inTransit": true
+        },
+        {
+          "name": "Africa North",
+          "distance": 5160,
+          "empty": 0,
+          "loadedCarDistance": 56760,
+          "stationaryTime": 6840,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 856,
+          "onboard": 11,
+          "city": "Oslo",
+          "inTransit": true
+        },
+        {
+          "name": "China North",
+          "distance": 9600,
+          "empty": 0,
+          "loadedCarDistance": 105600,
+          "stationaryTime": 2400,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 857,
+          "onboard": 11,
+          "city": "Phoenix",
+          "inTransit": true
+        },
+        {
+          "name": "Siberian Far East",
+          "distance": 8544,
+          "empty": 0,
+          "loadedCarDistance": 93984,
+          "stationaryTime": 3456,
+          "refuelWait": 0,
+          "departures": 48,
+          "blockedYardEvents": 163,
+          "onboard": 11,
+          "city": "Honolulu",
+          "inTransit": true
+        },
+        {
+          "name": "Africa Sahel",
+          "distance": 8800,
+          "empty": 0,
+          "loadedCarDistance": 96140,
+          "stationaryTime": 3200,
+          "refuelWait": 0,
+          "departures": 41,
+          "blockedYardEvents": 250,
+          "onboard": 11,
+          "city": "Easter Island",
+          "inTransit": true
+        },
+        {
+          "name": "South America East",
+          "distance": 4320,
+          "empty": 0,
+          "loadedCarDistance": 47520,
+          "stationaryTime": 7680,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 857,
+          "onboard": 11,
+          "city": "Vladivostok",
+          "inTransit": true
+        },
+        {
+          "name": "Siberian",
+          "distance": 8080,
+          "empty": 0,
+          "loadedCarDistance": 88880,
+          "stationaryTime": 3920,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 841,
+          "onboard": 11,
+          "city": "Kyiv",
+          "inTransit": true
+        },
+        {
+          "name": "Africa West",
+          "distance": 6480,
+          "empty": 0,
+          "loadedCarDistance": 71280,
+          "stationaryTime": 5520,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 849,
+          "onboard": 11,
+          "city": "Karachi",
+          "inTransit": true
+        },
+        {
+          "name": "Purple",
+          "distance": 8040,
+          "empty": 0,
+          "loadedCarDistance": 88440,
+          "stationaryTime": 3960,
+          "refuelWait": 0,
+          "departures": 41,
+          "blockedYardEvents": 262,
+          "onboard": 11,
+          "city": "Khartoum",
+          "inTransit": true
+        }
+      ]
+    },
+    "published38": {
+      "settings": {
+        "seed": 610003,
+        "horizon": 16000,
+        "warmup": 4000,
+        "capacity": 12,
+        "reserveSlots": 1,
+        "offers": 12,
+        "yardCapacity": 20,
+        "checkInterval": 100,
+        "serviceTime": 5,
+        "policy": "patrol",
+        "scenario": "uniform",
+        "tank": 0,
+        "refuelRate": 1,
+        "detourLimit": 1.75
+      },
+      "curve": [
+        {
+          "time": 0,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 400,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 800,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 1200,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 1600,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2000,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2400,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2800,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 3200,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 3600,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 4000,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 4400,
+          "reward": 3324.0013024362665,
+          "delivered": 12
+        },
+        {
+          "time": 4800,
+          "reward": 5828.536509945436,
+          "delivered": 22
+        },
+        {
+          "time": 5200,
+          "reward": 9973.673787619957,
+          "delivered": 38
+        },
+        {
+          "time": 5600,
+          "reward": 12695.126530373866,
+          "delivered": 50
+        },
+        {
+          "time": 6000,
+          "reward": 14712.373401487854,
+          "delivered": 57
+        },
+        {
+          "time": 6400,
+          "reward": 18629.341236163982,
+          "delivered": 70
+        },
+        {
+          "time": 6800,
+          "reward": 20860.19331931946,
+          "delivered": 81
+        },
+        {
+          "time": 7200,
+          "reward": 24102.283011611362,
+          "delivered": 91
+        },
+        {
+          "time": 7600,
+          "reward": 26248.267112490128,
+          "delivered": 104
+        },
+        {
+          "time": 8000,
+          "reward": 28310.92345016514,
+          "delivered": 112
+        },
+        {
+          "time": 8400,
+          "reward": 31128.914691234066,
+          "delivered": 121
+        },
+        {
+          "time": 8800,
+          "reward": 35591.23776213711,
+          "delivered": 137
+        },
+        {
+          "time": 9200,
+          "reward": 36642.88759095646,
+          "delivered": 142
+        },
+        {
+          "time": 9600,
+          "reward": 39639.490839219434,
+          "delivered": 152
+        },
+        {
+          "time": 10000,
+          "reward": 43086.40606647032,
+          "delivered": 164
+        },
+        {
+          "time": 10400,
+          "reward": 49599.52124822501,
+          "delivered": 184
+        },
+        {
+          "time": 10800,
+          "reward": 51843.01837258027,
+          "delivered": 190
+        },
+        {
+          "time": 11200,
+          "reward": 54273.782532326375,
+          "delivered": 198
+        },
+        {
+          "time": 11600,
+          "reward": 57302.771439072385,
+          "delivered": 205
+        },
+        {
+          "time": 12000,
+          "reward": 60759.22585441862,
+          "delivered": 217
+        },
+        {
+          "time": 12400,
+          "reward": 63865.63287352762,
+          "delivered": 228
+        },
+        {
+          "time": 12800,
+          "reward": 66871.69507672344,
+          "delivered": 236
+        },
+        {
+          "time": 13200,
+          "reward": 69965.03682716643,
+          "delivered": 245
+        },
+        {
+          "time": 13600,
+          "reward": 72342.24360221326,
+          "delivered": 254
+        },
+        {
+          "time": 14000,
+          "reward": 74066.38695853481,
+          "delivered": 259
+        },
+        {
+          "time": 14400,
+          "reward": 76870.25099160259,
+          "delivered": 271
+        },
+        {
+          "time": 14800,
+          "reward": 82923.28452558778,
+          "delivered": 290
+        },
+        {
+          "time": 15200,
+          "reward": 86085.9415810677,
+          "delivered": 299
+        },
+        {
+          "time": 15600,
+          "reward": 91597.30487630398,
+          "delivered": 318
+        },
+        {
+          "time": 16000,
+          "reward": 94279.22322434316,
+          "delivered": 331
+        }
+      ],
+      "lines": [
+        {
+          "name": "Oceania West",
+          "distance": 6956,
+          "empty": 0,
+          "loadedCarDistance": 72453,
+          "stationaryTime": 5044,
+          "refuelWait": 0,
+          "departures": 97,
+          "blockedYardEvents": 33,
+          "onboard": 11,
+          "city": "Christchurch",
+          "inTransit": true
+        },
+        {
+          "name": "North America East",
+          "distance": 7500,
+          "empty": 0,
+          "loadedCarDistance": 80785,
+          "stationaryTime": 4500,
+          "refuelWait": 0,
+          "departures": 96,
+          "blockedYardEvents": 12,
+          "onboard": 11,
+          "city": "Rome",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania Central",
+          "distance": 9600,
+          "empty": 0,
+          "loadedCarDistance": 105600,
+          "stationaryTime": 2400,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 858,
+          "onboard": 11,
+          "city": "Darwin",
+          "inTransit": true
+        },
+        {
+          "name": "Africa Cross",
+          "distance": 7802,
+          "empty": 0,
+          "loadedCarDistance": 85456,
+          "stationaryTime": 4198,
+          "refuelWait": 0,
+          "departures": 100,
+          "blockedYardEvents": 31,
+          "onboard": 11,
+          "city": "Volgograd",
+          "inTransit": true
+        },
+        {
+          "name": "Cyan",
+          "distance": 7460,
+          "empty": 0,
+          "loadedCarDistance": 81080,
+          "stationaryTime": 4540,
+          "refuelWait": 0,
+          "departures": 100,
+          "blockedYardEvents": 0,
+          "onboard": 11,
+          "city": "Casablanca",
+          "inTransit": true
+        },
+        {
+          "name": "Alaska",
+          "distance": 6120,
+          "empty": 0,
+          "loadedCarDistance": 67320,
+          "stationaryTime": 5880,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 858,
+          "onboard": 11,
+          "city": "Munich",
+          "inTransit": true
+        },
+        {
+          "name": "Asia South",
+          "distance": 8895,
+          "empty": 0,
+          "loadedCarDistance": 97173,
+          "stationaryTime": 3105,
+          "refuelWait": 0,
+          "departures": 44,
+          "blockedYardEvents": 96,
+          "onboard": 11,
+          "city": "Yakutsk",
+          "inTransit": false
+        },
+        {
+          "name": "South Atlantic Bridge",
+          "distance": 8144,
+          "empty": 0,
+          "loadedCarDistance": 83929,
+          "stationaryTime": 3856,
+          "refuelWait": 0,
+          "departures": 81,
+          "blockedYardEvents": 31,
+          "onboard": 11,
+          "city": "Managua",
+          "inTransit": true
+        },
+        {
+          "name": "Africa South",
+          "distance": 8400,
+          "empty": 0,
+          "loadedCarDistance": 92274,
+          "stationaryTime": 3600,
+          "refuelWait": 0,
+          "departures": 64,
+          "blockedYardEvents": 18,
+          "onboard": 11,
+          "city": "Antananarivo",
+          "inTransit": true
+        },
+        {
+          "name": "Southeast Islands",
+          "distance": 6600,
+          "empty": 0,
+          "loadedCarDistance": 72600,
+          "stationaryTime": 5400,
+          "refuelWait": 0,
+          "departures": 81,
+          "blockedYardEvents": 463,
+          "onboard": 11,
+          "city": "Antananarivo",
+          "inTransit": true
+        },
+        {
+          "name": "Easter Island",
+          "distance": 9137,
+          "empty": 0,
+          "loadedCarDistance": 100409,
+          "stationaryTime": 2863,
+          "refuelWait": 0,
+          "departures": 70,
+          "blockedYardEvents": 55,
+          "onboard": 11,
+          "city": "Porto Alegre",
+          "inTransit": true
+        },
+        {
+          "name": "South America Inland",
+          "distance": 6130,
+          "empty": 0,
+          "loadedCarDistance": 64443,
+          "stationaryTime": 5870,
+          "refuelWait": 0,
+          "departures": 109,
+          "blockedYardEvents": 6,
+          "onboard": 11,
+          "city": "Toronto",
+          "inTransit": true
+        },
+        {
+          "name": "Green",
+          "distance": 6432,
+          "empty": 0,
+          "loadedCarDistance": 70550,
+          "stationaryTime": 5568,
+          "refuelWait": 0,
+          "departures": 91,
+          "blockedYardEvents": 0,
+          "onboard": 11,
+          "city": "New York",
+          "inTransit": true
+        },
+        {
+          "name": "North Canada",
+          "distance": 6787,
+          "empty": 0,
+          "loadedCarDistance": 74657,
+          "stationaryTime": 5213,
+          "refuelWait": 0,
+          "departures": 83,
+          "blockedYardEvents": 8,
+          "onboard": 11,
+          "city": "Tehran",
+          "inTransit": true
+        },
+        {
+          "name": "North America South",
+          "distance": 10320,
+          "empty": 0,
+          "loadedCarDistance": 113520,
+          "stationaryTime": 1680,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 856,
+          "onboard": 11,
+          "city": "Bangalore",
+          "inTransit": true
+        },
+        {
+          "name": "Arctic Bridge",
+          "distance": 5520,
+          "empty": 0,
+          "loadedCarDistance": 60720,
+          "stationaryTime": 6480,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 837,
+          "onboard": 11,
+          "city": "Bangalore",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania Pacific",
+          "distance": 7918,
+          "empty": 0,
+          "loadedCarDistance": 86878,
+          "stationaryTime": 4082,
+          "refuelWait": 0,
+          "departures": 101,
+          "blockedYardEvents": 44,
+          "onboard": 11,
+          "city": "Shanghai",
+          "inTransit": true
+        },
+        {
+          "name": "Pink",
+          "distance": 8235,
+          "empty": 0,
+          "loadedCarDistance": 89929,
+          "stationaryTime": 3765,
+          "refuelWait": 0,
+          "departures": 90,
+          "blockedYardEvents": 41,
+          "onboard": 11,
+          "city": "Tokyo",
+          "inTransit": true
+        },
+        {
+          "name": "China Central",
+          "distance": 11040,
+          "empty": 0,
+          "loadedCarDistance": 121440,
+          "stationaryTime": 960,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 857,
+          "onboard": 11,
+          "city": "Beijing",
+          "inTransit": true
+        },
+        {
+          "name": "North America West",
+          "distance": 6600,
+          "empty": 0,
+          "loadedCarDistance": 72600,
+          "stationaryTime": 5400,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 867,
+          "onboard": 11,
+          "city": "Milan",
+          "inTransit": true
+        },
+        {
+          "name": "Europe Nordic",
+          "distance": 10200,
+          "empty": 0,
+          "loadedCarDistance": 112200,
+          "stationaryTime": 1800,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 856,
+          "onboard": 11,
+          "city": "Cairns",
+          "inTransit": true
+        },
+        {
+          "name": "Atlantic Link",
+          "distance": 4920,
+          "empty": 0,
+          "loadedCarDistance": 54120,
+          "stationaryTime": 7080,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 858,
+          "onboard": 11,
+          "city": "Sydney",
+          "inTransit": true
+        },
+        {
+          "name": "South America West",
+          "distance": 9960,
+          "empty": 0,
+          "loadedCarDistance": 109560,
+          "stationaryTime": 2040,
+          "refuelWait": 0,
+          "departures": 60,
+          "blockedYardEvents": 419,
+          "onboard": 11,
+          "city": "Cape Town",
+          "inTransit": true
+        },
+        {
+          "name": "India Express",
+          "distance": 11280,
+          "empty": 0,
+          "loadedCarDistance": 124080,
+          "stationaryTime": 720,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 860,
+          "onboard": 11,
+          "city": "Chengdu",
+          "inTransit": true
+        },
+        {
+          "name": "Africa North",
+          "distance": 5160,
+          "empty": 0,
+          "loadedCarDistance": 56760,
+          "stationaryTime": 6840,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 841,
+          "onboard": 11,
+          "city": "Oslo",
+          "inTransit": true
+        },
+        {
+          "name": "China North",
+          "distance": 9600,
+          "empty": 0,
+          "loadedCarDistance": 105600,
+          "stationaryTime": 2400,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 851,
+          "onboard": 11,
+          "city": "Phoenix",
+          "inTransit": true
+        },
+        {
+          "name": "Siberian Far East",
+          "distance": 8544,
+          "empty": 0,
+          "loadedCarDistance": 93480,
+          "stationaryTime": 3456,
+          "refuelWait": 0,
+          "departures": 48,
+          "blockedYardEvents": 165,
+          "onboard": 11,
+          "city": "Denver",
+          "inTransit": true
+        },
+        {
+          "name": "Blue",
+          "distance": 7410,
+          "empty": 0,
+          "loadedCarDistance": 81510,
+          "stationaryTime": 4590,
+          "refuelWait": 0,
+          "departures": 91,
+          "blockedYardEvents": 70,
+          "onboard": 11,
+          "city": "Tasiilaq",
+          "inTransit": true
+        },
+        {
+          "name": "Africa Sahel",
+          "distance": 8800,
+          "empty": 0,
+          "loadedCarDistance": 96360,
+          "stationaryTime": 3200,
+          "refuelWait": 0,
+          "departures": 41,
+          "blockedYardEvents": 262,
+          "onboard": 11,
+          "city": "Lima",
+          "inTransit": true
+        },
+        {
+          "name": "South America East",
+          "distance": 4320,
+          "empty": 0,
+          "loadedCarDistance": 47520,
+          "stationaryTime": 7680,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 848,
+          "onboard": 11,
+          "city": "Harbin",
+          "inTransit": true
+        },
+        {
+          "name": "Euro Balkans",
+          "distance": 8520,
+          "empty": 0,
+          "loadedCarDistance": 93720,
+          "stationaryTime": 3480,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 868,
+          "onboard": 11,
+          "city": "Kyiv",
+          "inTransit": true
+        },
+        {
+          "name": "Africa West",
+          "distance": 6480,
+          "empty": 0,
+          "loadedCarDistance": 71280,
+          "stationaryTime": 5520,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 857,
+          "onboard": 11,
+          "city": "Karachi",
+          "inTransit": true
+        },
+        {
+          "name": "Purple",
+          "distance": 8040,
+          "empty": 0,
+          "loadedCarDistance": 88440,
+          "stationaryTime": 3960,
+          "refuelWait": 0,
+          "departures": 41,
+          "blockedYardEvents": 264,
+          "onboard": 11,
+          "city": "Khartoum",
+          "inTransit": true
+        },
+        {
+          "name": "China–India",
+          "distance": 6360,
+          "empty": 0,
+          "loadedCarDistance": 69960,
+          "stationaryTime": 5640,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 869,
+          "onboard": 11,
+          "city": "Kyiv",
+          "inTransit": true
+        },
+        {
+          "name": "Siberian",
+          "distance": 9360,
+          "empty": 0,
+          "loadedCarDistance": 102960,
+          "stationaryTime": 2640,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 879,
+          "onboard": 11,
+          "city": "Kyiv",
+          "inTransit": true
+        },
+        {
+          "name": "Pacific Crossing",
+          "distance": 6120,
+          "empty": 0,
+          "loadedCarDistance": 67320,
+          "stationaryTime": 5880,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 868,
+          "onboard": 11,
+          "city": "Milan",
+          "inTransit": true
+        },
+        {
+          "name": "SA–Africa Bridge",
+          "distance": 5760,
+          "empty": 0,
+          "loadedCarDistance": 63360,
+          "stationaryTime": 6240,
+          "refuelWait": 0,
+          "departures": 60,
+          "blockedYardEvents": 417,
+          "onboard": 11,
+          "city": "Novosibirsk",
+          "inTransit": false
+        },
+        {
+          "name": "Oceania East",
+          "distance": 5400,
+          "empty": 0,
+          "loadedCarDistance": 59400,
+          "stationaryTime": 6600,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 857,
+          "onboard": 11,
+          "city": "Stockholm",
+          "inTransit": true
+        }
+      ]
+    },
+    "corridors38": {
+      "settings": {
+        "seed": 610003,
+        "horizon": 16000,
+        "warmup": 4000,
+        "capacity": 12,
+        "reserveSlots": 1,
+        "offers": 12,
+        "yardCapacity": 20,
+        "checkInterval": 100,
+        "serviceTime": 5,
+        "policy": "patrol",
+        "scenario": "uniform",
+        "tank": 0,
+        "refuelRate": 1,
+        "detourLimit": 1.25
+      },
+      "curve": [
+        {
+          "time": 0,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 400,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 800,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 1200,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 1600,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2000,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2400,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2800,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 3200,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 3600,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 4000,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 4400,
+          "reward": 2191.5565105814862,
+          "delivered": 11
+        },
+        {
+          "time": 4800,
+          "reward": 9157.21074798812,
+          "delivered": 34
+        },
+        {
+          "time": 5200,
+          "reward": 13755.226109681855,
+          "delivered": 50
+        },
+        {
+          "time": 5600,
+          "reward": 18599.41248602833,
+          "delivered": 67
+        },
+        {
+          "time": 6000,
+          "reward": 24305.157239936583,
+          "delivered": 84
+        },
+        {
+          "time": 6400,
+          "reward": 26509.957295480468,
+          "delivered": 94
+        },
+        {
+          "time": 6800,
+          "reward": 29735.156135113128,
+          "delivered": 106
+        },
+        {
+          "time": 7200,
+          "reward": 35722.01746252432,
+          "delivered": 124
+        },
+        {
+          "time": 7600,
+          "reward": 41267.518565583254,
+          "delivered": 143
+        },
+        {
+          "time": 8000,
+          "reward": 45153.579779737775,
+          "delivered": 156
+        },
+        {
+          "time": 8400,
+          "reward": 49008.92170212116,
+          "delivered": 170
+        },
+        {
+          "time": 8800,
+          "reward": 54834.07867765097,
+          "delivered": 185
+        },
+        {
+          "time": 9200,
+          "reward": 57800.95816509586,
+          "delivered": 191
+        },
+        {
+          "time": 9600,
+          "reward": 62075.99529487685,
+          "delivered": 204
+        },
+        {
+          "time": 10000,
+          "reward": 65503.59986705161,
+          "delivered": 214
+        },
+        {
+          "time": 10400,
+          "reward": 67699.51314290565,
+          "delivered": 219
+        },
+        {
+          "time": 10800,
+          "reward": 71447.33839914891,
+          "delivered": 229
+        },
+        {
+          "time": 11200,
+          "reward": 73744.80694196641,
+          "delivered": 237
+        },
+        {
+          "time": 11600,
+          "reward": 78660.7114028941,
+          "delivered": 252
+        },
+        {
+          "time": 12000,
+          "reward": 84107.14246980094,
+          "delivered": 264
+        },
+        {
+          "time": 12400,
+          "reward": 89608.8295812052,
+          "delivered": 278
+        },
+        {
+          "time": 12800,
+          "reward": 93540.96507756764,
+          "delivered": 292
+        },
+        {
+          "time": 13200,
+          "reward": 95197.57753467331,
+          "delivered": 297
+        },
+        {
+          "time": 13600,
+          "reward": 96735.20098072443,
+          "delivered": 302
+        },
+        {
+          "time": 14000,
+          "reward": 98446.95987924676,
+          "delivered": 306
+        },
+        {
+          "time": 14400,
+          "reward": 100091.66110785287,
+          "delivered": 311
+        },
+        {
+          "time": 14800,
+          "reward": 103998.52185954773,
+          "delivered": 320
+        },
+        {
+          "time": 15200,
+          "reward": 106359.8442678917,
+          "delivered": 329
+        },
+        {
+          "time": 15600,
+          "reward": 107649.62112698088,
+          "delivered": 332
+        },
+        {
+          "time": 16000,
+          "reward": 108430.78833078554,
+          "delivered": 336
+        }
+      ],
+      "lines": [
+        {
+          "name": "China–India",
+          "distance": 9480,
+          "empty": 0,
+          "loadedCarDistance": 104280,
+          "stationaryTime": 2520,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 812,
+          "onboard": 11,
+          "city": "Adelaide",
+          "inTransit": true
+        },
+        {
+          "name": "China North",
+          "distance": 7647,
+          "empty": 0,
+          "loadedCarDistance": 83076,
+          "stationaryTime": 4353,
+          "refuelWait": 0,
+          "departures": 65,
+          "blockedYardEvents": 14,
+          "onboard": 11,
+          "city": "Auckland",
+          "inTransit": true
+        },
+        {
+          "name": "India Express",
+          "distance": 6551,
+          "empty": 0,
+          "loadedCarDistance": 72061,
+          "stationaryTime": 5449,
+          "refuelWait": 0,
+          "departures": 104,
+          "blockedYardEvents": 67,
+          "onboard": 11,
+          "city": "Baghdad",
+          "inTransit": true
+        },
+        {
+          "name": "North America South",
+          "distance": 7939,
+          "empty": 0,
+          "loadedCarDistance": 87329,
+          "stationaryTime": 4061,
+          "refuelWait": 0,
+          "departures": 101,
+          "blockedYardEvents": 43,
+          "onboard": 11,
+          "city": "Hanoi",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania West",
+          "distance": 7494,
+          "empty": 0,
+          "loadedCarDistance": 82434,
+          "stationaryTime": 4506,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 190,
+          "onboard": 11,
+          "city": "Munich",
+          "inTransit": true
+        },
+        {
+          "name": "Euro Balkans",
+          "distance": 8310,
+          "empty": 0,
+          "loadedCarDistance": 91410,
+          "stationaryTime": 3690,
+          "refuelWait": 0,
+          "departures": 93,
+          "blockedYardEvents": 82,
+          "onboard": 11,
+          "city": "Perm",
+          "inTransit": true
+        },
+        {
+          "name": "Cyan",
+          "distance": 6020,
+          "empty": 0,
+          "loadedCarDistance": 66220,
+          "stationaryTime": 5980,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 212,
+          "onboard": 11,
+          "city": "Paris",
+          "inTransit": true
+        },
+        {
+          "name": "Alaska",
+          "distance": 8865,
+          "empty": 0,
+          "loadedCarDistance": 97347,
+          "stationaryTime": 3135,
+          "refuelWait": 0,
+          "departures": 45,
+          "blockedYardEvents": 134,
+          "onboard": 11,
+          "city": "Anadyr",
+          "inTransit": true
+        },
+        {
+          "name": "China Central",
+          "distance": 5640,
+          "empty": 0,
+          "loadedCarDistance": 62040,
+          "stationaryTime": 6360,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 852,
+          "onboard": 11,
+          "city": "Anchorage",
+          "inTransit": true
+        },
+        {
+          "name": "South America West",
+          "distance": 8680,
+          "empty": 0,
+          "loadedCarDistance": 94045,
+          "stationaryTime": 3320,
+          "refuelWait": 0,
+          "departures": 78,
+          "blockedYardEvents": 50,
+          "onboard": 11,
+          "city": "Mexico City",
+          "inTransit": true
+        },
+        {
+          "name": "South Atlantic Bridge",
+          "distance": 7800,
+          "empty": 0,
+          "loadedCarDistance": 85800,
+          "stationaryTime": 4200,
+          "refuelWait": 0,
+          "departures": 60,
+          "blockedYardEvents": 402,
+          "onboard": 11,
+          "city": "Antananarivo",
+          "inTransit": true
+        },
+        {
+          "name": "Africa West",
+          "distance": 8896,
+          "empty": 0,
+          "loadedCarDistance": 95078,
+          "stationaryTime": 3104,
+          "refuelWait": 0,
+          "departures": 65,
+          "blockedYardEvents": 16,
+          "onboard": 11,
+          "city": "Porto Alegre",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania Pacific",
+          "distance": 7360,
+          "empty": 0,
+          "loadedCarDistance": 80327,
+          "stationaryTime": 4640,
+          "refuelWait": 0,
+          "departures": 89,
+          "blockedYardEvents": 36,
+          "onboard": 11,
+          "city": "Santiago",
+          "inTransit": false
+        },
+        {
+          "name": "Green",
+          "distance": 6941,
+          "empty": 0,
+          "loadedCarDistance": 76216,
+          "stationaryTime": 5059,
+          "refuelWait": 0,
+          "departures": 86,
+          "blockedYardEvents": 14,
+          "onboard": 11,
+          "city": "Madrid",
+          "inTransit": true
+        },
+        {
+          "name": "Purple",
+          "distance": 7320,
+          "empty": 0,
+          "loadedCarDistance": 80520,
+          "stationaryTime": 4680,
+          "refuelWait": 0,
+          "departures": 80,
+          "blockedYardEvents": 364,
+          "onboard": 11,
+          "city": "Baghdad",
+          "inTransit": true
+        },
+        {
+          "name": "North America East",
+          "distance": 7380,
+          "empty": 0,
+          "loadedCarDistance": 81180,
+          "stationaryTime": 4620,
+          "refuelWait": 0,
+          "departures": 80,
+          "blockedYardEvents": 108,
+          "onboard": 11,
+          "city": "Lagos",
+          "inTransit": true
+        },
+        {
+          "name": "Siberian Far East",
+          "distance": 7370,
+          "empty": 0,
+          "loadedCarDistance": 81070,
+          "stationaryTime": 4630,
+          "refuelWait": 0,
+          "departures": 105,
+          "blockedYardEvents": 72,
+          "onboard": 11,
+          "city": "Stockholm",
+          "inTransit": true
+        },
+        {
+          "name": "Africa Cross",
+          "distance": 7860,
+          "empty": 0,
+          "loadedCarDistance": 86460,
+          "stationaryTime": 4140,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 216,
+          "onboard": 11,
+          "city": "Jakarta",
+          "inTransit": true
+        },
+        {
+          "name": "SA–Africa Bridge",
+          "distance": 6041,
+          "empty": 0,
+          "loadedCarDistance": 66348,
+          "stationaryTime": 5959,
+          "refuelWait": 0,
+          "departures": 69,
+          "blockedYardEvents": 58,
+          "onboard": 11,
+          "city": "Bangkok",
+          "inTransit": true
+        },
+        {
+          "name": "Pink",
+          "distance": 7868,
+          "empty": 0,
+          "loadedCarDistance": 86548,
+          "stationaryTime": 4132,
+          "refuelWait": 0,
+          "departures": 96,
+          "blockedYardEvents": 24,
+          "onboard": 11,
+          "city": "Beijing",
+          "inTransit": true
+        },
+        {
+          "name": "Africa Sahel",
+          "distance": 7848,
+          "empty": 0,
+          "loadedCarDistance": 86210,
+          "stationaryTime": 4152,
+          "refuelWait": 0,
+          "departures": 97,
+          "blockedYardEvents": 194,
+          "onboard": 11,
+          "city": "New Delhi",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania Central",
+          "distance": 7240,
+          "empty": 0,
+          "loadedCarDistance": 79640,
+          "stationaryTime": 4760,
+          "refuelWait": 0,
+          "departures": 81,
+          "blockedYardEvents": 91,
+          "onboard": 11,
+          "city": "Belem",
+          "inTransit": true
+        },
+        {
+          "name": "Europe Nordic",
+          "distance": 7296,
+          "empty": 0,
+          "loadedCarDistance": 78158,
+          "stationaryTime": 4704,
+          "refuelWait": 0,
+          "departures": 73,
+          "blockedYardEvents": 109,
+          "onboard": 11,
+          "city": "Boston",
+          "inTransit": true
+        },
+        {
+          "name": "South America Inland",
+          "distance": 7840,
+          "empty": 0,
+          "loadedCarDistance": 85750,
+          "stationaryTime": 4160,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 468,
+          "onboard": 11,
+          "city": "Brisbane",
+          "inTransit": true
+        },
+        {
+          "name": "Asia South",
+          "distance": 7080,
+          "empty": 0,
+          "loadedCarDistance": 77682,
+          "stationaryTime": 4920,
+          "refuelWait": 0,
+          "departures": 73,
+          "blockedYardEvents": 267,
+          "onboard": 11,
+          "city": "Darwin",
+          "inTransit": true
+        },
+        {
+          "name": "North Canada",
+          "distance": 8577,
+          "empty": 0,
+          "loadedCarDistance": 93826,
+          "stationaryTime": 3423,
+          "refuelWait": 0,
+          "departures": 93,
+          "blockedYardEvents": 44,
+          "onboard": 11,
+          "city": "Porto Alegre",
+          "inTransit": true
+        },
+        {
+          "name": "Siberian",
+          "distance": 6930,
+          "empty": 0,
+          "loadedCarDistance": 76230,
+          "stationaryTime": 5070,
+          "refuelWait": 0,
+          "departures": 90,
+          "blockedYardEvents": 51,
+          "onboard": 11,
+          "city": "Harare",
+          "inTransit": true
+        },
+        {
+          "name": "Arctic Bridge",
+          "distance": 6240,
+          "empty": 0,
+          "loadedCarDistance": 68640,
+          "stationaryTime": 5760,
+          "refuelWait": 0,
+          "departures": 91,
+          "blockedYardEvents": 396,
+          "onboard": 11,
+          "city": "Calgary",
+          "inTransit": true
+        },
+        {
+          "name": "Easter Island",
+          "distance": 7192,
+          "empty": 0,
+          "loadedCarDistance": 76856,
+          "stationaryTime": 4808,
+          "refuelWait": 0,
+          "departures": 99,
+          "blockedYardEvents": 47,
+          "onboard": 11,
+          "city": "Tasiilaq",
+          "inTransit": true
+        },
+        {
+          "name": "North America West",
+          "distance": 5280,
+          "empty": 0,
+          "loadedCarDistance": 58080,
+          "stationaryTime": 6720,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 834,
+          "onboard": 11,
+          "city": "New Orleans",
+          "inTransit": true
+        },
+        {
+          "name": "South America East",
+          "distance": 7080,
+          "empty": 0,
+          "loadedCarDistance": 77844,
+          "stationaryTime": 4920,
+          "refuelWait": 0,
+          "departures": 90,
+          "blockedYardEvents": 396,
+          "onboard": 11,
+          "city": "Yakutsk",
+          "inTransit": true
+        },
+        {
+          "name": "Southeast Islands",
+          "distance": 4320,
+          "empty": 0,
+          "loadedCarDistance": 47520,
+          "stationaryTime": 7680,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 850,
+          "onboard": 11,
+          "city": "Harbin",
+          "inTransit": true
+        },
+        {
+          "name": "Africa North",
+          "distance": 7920,
+          "empty": 0,
+          "loadedCarDistance": 87120,
+          "stationaryTime": 4080,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 848,
+          "onboard": 11,
+          "city": "Houston",
+          "inTransit": true
+        },
+        {
+          "name": "Atlantic Link",
+          "distance": 7440,
+          "empty": 0,
+          "loadedCarDistance": 81840,
+          "stationaryTime": 4560,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 854,
+          "onboard": 11,
+          "city": "Minsk",
+          "inTransit": true
+        },
+        {
+          "name": "Africa South",
+          "distance": 8040,
+          "empty": 0,
+          "loadedCarDistance": 88440,
+          "stationaryTime": 3960,
+          "refuelWait": 0,
+          "departures": 41,
+          "blockedYardEvents": 258,
+          "onboard": 11,
+          "city": "Khartoum",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania East",
+          "distance": 9360,
+          "empty": 0,
+          "loadedCarDistance": 102960,
+          "stationaryTime": 2640,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 865,
+          "onboard": 11,
+          "city": "Kyiv",
+          "inTransit": true
+        },
+        {
+          "name": "Blue",
+          "distance": 6560,
+          "empty": 0,
+          "loadedCarDistance": 72160,
+          "stationaryTime": 5440,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 388,
+          "onboard": 11,
+          "city": "Paris",
+          "inTransit": true
+        },
+        {
+          "name": "Pacific Crossing",
+          "distance": 6750,
+          "empty": 0,
+          "loadedCarDistance": 74012,
+          "stationaryTime": 5250,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 382,
+          "onboard": 11,
+          "city": "Tokyo",
+          "inTransit": true
+        }
+      ]
+    },
+    "corridors28": {
+      "settings": {
+        "seed": 610003,
+        "horizon": 16000,
+        "warmup": 4000,
+        "capacity": 12,
+        "reserveSlots": 1,
+        "offers": 12,
+        "yardCapacity": 20,
+        "checkInterval": 100,
+        "serviceTime": 5,
+        "policy": "patrol",
+        "scenario": "uniform",
+        "tank": 0,
+        "refuelRate": 1,
+        "detourLimit": 1.25
+      },
+      "curve": [
+        {
+          "time": 0,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 400,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 800,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 1200,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 1600,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2000,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2400,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 2800,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 3200,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 3600,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 4000,
+          "reward": 0,
+          "delivered": 0
+        },
+        {
+          "time": 4400,
+          "reward": 1527.778698518017,
+          "delivered": 14
+        },
+        {
+          "time": 4800,
+          "reward": 3379.690769240864,
+          "delivered": 24
+        },
+        {
+          "time": 5200,
+          "reward": 6736.759143811385,
+          "delivered": 37
+        },
+        {
+          "time": 5600,
+          "reward": 10305.97538905051,
+          "delivered": 51
+        },
+        {
+          "time": 6000,
+          "reward": 11813.41221739449,
+          "delivered": 62
+        },
+        {
+          "time": 6400,
+          "reward": 13208.423312470217,
+          "delivered": 68
+        },
+        {
+          "time": 6800,
+          "reward": 17165.198327842863,
+          "delivered": 80
+        },
+        {
+          "time": 7200,
+          "reward": 18628.608785716973,
+          "delivered": 86
+        },
+        {
+          "time": 7600,
+          "reward": 23184.387893211857,
+          "delivered": 97
+        },
+        {
+          "time": 8000,
+          "reward": 24981.57061298192,
+          "delivered": 105
+        },
+        {
+          "time": 8400,
+          "reward": 27966.307457872746,
+          "delivered": 113
+        },
+        {
+          "time": 8800,
+          "reward": 29668.686474353985,
+          "delivered": 120
+        },
+        {
+          "time": 9200,
+          "reward": 31597.31920327853,
+          "delivered": 125
+        },
+        {
+          "time": 9600,
+          "reward": 33929.667009174016,
+          "delivered": 131
+        },
+        {
+          "time": 10000,
+          "reward": 40692.90536875894,
+          "delivered": 148
+        },
+        {
+          "time": 10400,
+          "reward": 41805.12126503794,
+          "delivered": 154
+        },
+        {
+          "time": 10800,
+          "reward": 46017.36232515179,
+          "delivered": 166
+        },
+        {
+          "time": 11200,
+          "reward": 48078.49703929015,
+          "delivered": 172
+        },
+        {
+          "time": 11600,
+          "reward": 49024.64350101691,
+          "delivered": 177
+        },
+        {
+          "time": 12000,
+          "reward": 49556.938826743026,
+          "delivered": 181
+        },
+        {
+          "time": 12400,
+          "reward": 55002.17477693396,
+          "delivered": 195
+        },
+        {
+          "time": 12800,
+          "reward": 58123.89718966816,
+          "delivered": 203
+        },
+        {
+          "time": 13200,
+          "reward": 58462.26027285823,
+          "delivered": 206
+        },
+        {
+          "time": 13600,
+          "reward": 64827.509521385524,
+          "delivered": 223
+        },
+        {
+          "time": 14000,
+          "reward": 67159.22401185756,
+          "delivered": 229
+        },
+        {
+          "time": 14400,
+          "reward": 69117.70876641612,
+          "delivered": 235
+        },
+        {
+          "time": 14800,
+          "reward": 71145.3319423752,
+          "delivered": 242
+        },
+        {
+          "time": 15200,
+          "reward": 71989.80365795738,
+          "delivered": 245
+        },
+        {
+          "time": 15600,
+          "reward": 74593.44567782586,
+          "delivered": 253
+        },
+        {
+          "time": 16000,
+          "reward": 79097.80717560297,
+          "delivered": 265
+        }
+      ],
+      "lines": [
+        {
+          "name": "China–India",
+          "distance": 8496,
+          "empty": 0,
+          "loadedCarDistance": 93000,
+          "stationaryTime": 3504,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 258,
+          "onboard": 11,
+          "city": "Darwin",
+          "inTransit": true
+        },
+        {
+          "name": "Africa South",
+          "distance": 8087,
+          "empty": 0,
+          "loadedCarDistance": 82517,
+          "stationaryTime": 3913,
+          "refuelWait": 0,
+          "departures": 62,
+          "blockedYardEvents": 62,
+          "onboard": 8,
+          "city": "Sydney",
+          "inTransit": true
+        },
+        {
+          "name": "North America West",
+          "distance": 6906,
+          "empty": 0,
+          "loadedCarDistance": 75440,
+          "stationaryTime": 5094,
+          "refuelWait": 0,
+          "departures": 93,
+          "blockedYardEvents": 53,
+          "onboard": 11,
+          "city": "Tripoli",
+          "inTransit": true
+        },
+        {
+          "name": "Purple",
+          "distance": 9200,
+          "empty": 0,
+          "loadedCarDistance": 101060,
+          "stationaryTime": 2800,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 550,
+          "onboard": 11,
+          "city": "Dubai",
+          "inTransit": true
+        },
+        {
+          "name": "Cyan",
+          "distance": 6040,
+          "empty": 0,
+          "loadedCarDistance": 65360,
+          "stationaryTime": 5960,
+          "refuelWait": 0,
+          "departures": 111,
+          "blockedYardEvents": 113,
+          "onboard": 11,
+          "city": "Bordeaux",
+          "inTransit": true
+        },
+        {
+          "name": "India Express",
+          "distance": 7610,
+          "empty": 0,
+          "loadedCarDistance": 81647,
+          "stationaryTime": 4390,
+          "refuelWait": 0,
+          "departures": 91,
+          "blockedYardEvents": 8,
+          "onboard": 11,
+          "city": "Harbin",
+          "inTransit": true
+        },
+        {
+          "name": "Africa West",
+          "distance": 5640,
+          "empty": 0,
+          "loadedCarDistance": 62040,
+          "stationaryTime": 6360,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 844,
+          "onboard": 11,
+          "city": "Fairbanks",
+          "inTransit": true
+        },
+        {
+          "name": "Africa Sahel",
+          "distance": 7192,
+          "empty": 0,
+          "loadedCarDistance": 75724,
+          "stationaryTime": 4808,
+          "refuelWait": 0,
+          "departures": 87,
+          "blockedYardEvents": 0,
+          "onboard": 10,
+          "city": "Anchorage",
+          "inTransit": true
+        },
+        {
+          "name": "Africa Cross",
+          "distance": 7720,
+          "empty": 0,
+          "loadedCarDistance": 84831,
+          "stationaryTime": 4280,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 224,
+          "onboard": 11,
+          "city": "Arequipa",
+          "inTransit": true
+        },
+        {
+          "name": "Euro Balkans",
+          "distance": 7128,
+          "empty": 0,
+          "loadedCarDistance": 78386,
+          "stationaryTime": 4872,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 117,
+          "onboard": 11,
+          "city": "San Juan",
+          "inTransit": true
+        },
+        {
+          "name": "Southeast Islands",
+          "distance": 6280,
+          "empty": 0,
+          "loadedCarDistance": 68144,
+          "stationaryTime": 5720,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 89,
+          "onboard": 9,
+          "city": "Houston",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania Central",
+          "distance": 6360,
+          "empty": 0,
+          "loadedCarDistance": 69960,
+          "stationaryTime": 5640,
+          "refuelWait": 0,
+          "departures": 60,
+          "blockedYardEvents": 419,
+          "onboard": 11,
+          "city": "Baghdad",
+          "inTransit": true
+        },
+        {
+          "name": "Siberian Far East",
+          "distance": 6720,
+          "empty": 0,
+          "loadedCarDistance": 72549,
+          "stationaryTime": 5280,
+          "refuelWait": 0,
+          "departures": 96,
+          "blockedYardEvents": 128,
+          "onboard": 11,
+          "city": "Kinshasa",
+          "inTransit": true
+        },
+        {
+          "name": "North America South",
+          "distance": 7020,
+          "empty": 0,
+          "loadedCarDistance": 76908,
+          "stationaryTime": 4980,
+          "refuelWait": 0,
+          "departures": 90,
+          "blockedYardEvents": 201,
+          "onboard": 10,
+          "city": "Tehran",
+          "inTransit": true
+        },
+        {
+          "name": "Europe Nordic",
+          "distance": 6408,
+          "empty": 0,
+          "loadedCarDistance": 69906,
+          "stationaryTime": 5592,
+          "refuelWait": 0,
+          "departures": 84,
+          "blockedYardEvents": 43,
+          "onboard": 11,
+          "city": "New Delhi",
+          "inTransit": true
+        },
+        {
+          "name": "China North",
+          "distance": 8320,
+          "empty": 0,
+          "loadedCarDistance": 91458,
+          "stationaryTime": 3680,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 245,
+          "onboard": 11,
+          "city": "Bangkok",
+          "inTransit": true
+        },
+        {
+          "name": "Green",
+          "distance": 5928,
+          "empty": 0,
+          "loadedCarDistance": 64904,
+          "stationaryTime": 6072,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 318,
+          "onboard": 11,
+          "city": "Barcelona",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania Pacific",
+          "distance": 7937,
+          "empty": 0,
+          "loadedCarDistance": 86547,
+          "stationaryTime": 4063,
+          "refuelWait": 0,
+          "departures": 103,
+          "blockedYardEvents": 213,
+          "onboard": 11,
+          "city": "Beijing",
+          "inTransit": true
+        },
+        {
+          "name": "Pink",
+          "distance": 9227,
+          "empty": 0,
+          "loadedCarDistance": 101497,
+          "stationaryTime": 2773,
+          "refuelWait": 0,
+          "departures": 80,
+          "blockedYardEvents": 19,
+          "onboard": 11,
+          "city": "Paris",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania East",
+          "distance": 8587,
+          "empty": 0,
+          "loadedCarDistance": 90426,
+          "stationaryTime": 3413,
+          "refuelWait": 0,
+          "departures": 105,
+          "blockedYardEvents": 120,
+          "onboard": 11,
+          "city": "Buenos Aires",
+          "inTransit": true
+        },
+        {
+          "name": "Siberian",
+          "distance": 7980,
+          "empty": 0,
+          "loadedCarDistance": 87350,
+          "stationaryTime": 4020,
+          "refuelWait": 0,
+          "departures": 60,
+          "blockedYardEvents": 92,
+          "onboard": 10,
+          "city": "Bogota",
+          "inTransit": true
+        },
+        {
+          "name": "North America East",
+          "distance": 7840,
+          "empty": 0,
+          "loadedCarDistance": 86015,
+          "stationaryTime": 4160,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 259,
+          "onboard": 11,
+          "city": "Cairns",
+          "inTransit": true
+        },
+        {
+          "name": "Africa North",
+          "distance": 7106,
+          "empty": 0,
+          "loadedCarDistance": 76466,
+          "stationaryTime": 4894,
+          "refuelWait": 0,
+          "departures": 92,
+          "blockedYardEvents": 79,
+          "onboard": 11,
+          "city": "Khartoum",
+          "inTransit": false
+        },
+        {
+          "name": "Atlantic Link",
+          "distance": 5664,
+          "empty": 0,
+          "loadedCarDistance": 61724,
+          "stationaryTime": 6336,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 146,
+          "onboard": 11,
+          "city": "Minneapolis",
+          "inTransit": true
+        },
+        {
+          "name": "Blue",
+          "distance": 6798,
+          "empty": 0,
+          "loadedCarDistance": 74778,
+          "stationaryTime": 5202,
+          "refuelWait": 0,
+          "departures": 96,
+          "blockedYardEvents": 0,
+          "onboard": 11,
+          "city": "Glasgow",
+          "inTransit": true
+        },
+        {
+          "name": "Asia South",
+          "distance": 5400,
+          "empty": 0,
+          "loadedCarDistance": 59310,
+          "stationaryTime": 6600,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 857,
+          "onboard": 11,
+          "city": "London",
+          "inTransit": true
+        },
+        {
+          "name": "China Central",
+          "distance": 10080,
+          "empty": 0,
+          "loadedCarDistance": 110880,
+          "stationaryTime": 1920,
+          "refuelWait": 0,
+          "departures": 41,
+          "blockedYardEvents": 261,
+          "onboard": 11,
+          "city": "Honolulu",
+          "inTransit": true
+        },
+        {
+          "name": "Oceania West",
+          "distance": 4320,
+          "empty": 0,
+          "loadedCarDistance": 47520,
+          "stationaryTime": 7680,
+          "refuelWait": 0,
+          "departures": 121,
+          "blockedYardEvents": 845,
+          "onboard": 11,
+          "city": "Seoul",
+          "inTransit": true
+        }
+      ]
+    }
+  },
+  "run_count": 768,
+  "scenario_count": 12,
+  "interpretation": "Assumed-demand operating experiments, not calibrated Pocket Trains profit predictions. Paired ranges describe only the observed synthetic seeds, not confidence intervals. Twelve policy configurations per plan were tuned on separate training seeds; layout geometry was not tuned on evaluation outcomes.",
+  "mechanics": {
+    "documented": [
+      "Per-engine job boards refreshed on station arrival, not while waiting",
+      "Only yard cargo is shared; no unloading into cargo origin yard"
+    ],
+    "assumed": [
+      "One identical generic train per active owner, speed 1 distance unit per time unit",
+      "Fixed independent one-car offers per arrival; selectable hypothetical destination priors",
+      "Uniform 1–4 reward multipliers; reward index uses approximate Mercator city-coordinate separation, not actual coin prices",
+      "Route choice uses distance + 40 per owner handoff, with origin transfers forbidden; income objective counts only delivered reward",
+      "Patrols use minimum route-inspection walks; cargo-directed policy chooses the next neighboring station by onboard priority",
+      "All stations are visited/stopped at; load handling time and shared check-in ticks are configurable",
+      "Finite yard capacity; reserved cargo slots permit feasible pickup-before-unload exchanges; yard cargo is prioritized",
+      "Optional generic tank and stationary fuel regeneration; no game train statistics are inferred"
+    ],
+    "omitted": [
+      "Measured destination/job-count probabilities, cargo batch sizes, Bux/crate/event jobs and expiry",
+      "Engine-specific speed, capacity, repair costs, electrification, actual fuel, new-railroad/track costs",
+      "Player action budget per check-in and manual optimal routing; no automatic construction instructions"
+    ]
+  }
+}

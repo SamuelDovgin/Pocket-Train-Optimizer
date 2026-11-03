@@ -1,0 +1,4 @@
+'use strict';
+importScripts('./operating-core.js?v=ops1');
+let data,report;const compiled=new Map();
+self.onmessage=async event=>{try{if(!data){[data,report]=await Promise.all(['operating-data','operating-results'].map(p=>fetch(`./${p}.json?v=ops1`).then(r=>{if(!r.ok)throw Error('Could not load operating inputs');return r.json()})))}const options=event.data,results={};for(const [id,plan] of Object.entries(data.plans)){if(!compiled.has(id))compiled.set(id,TrainOperatingCore.compile(data,plan));const selected=options.policy==='trained'?{...options,...report.trained[id]}:options;const r=TrainOperatingCore.simulate(compiled.get(id),selected,p=>self.postMessage({type:'progress',plan:plan.label,...p}));delete r.inventory;results[id]=r;self.postMessage({type:'plan',id,result:r})}self.postMessage({type:'complete',results})}catch(error){self.postMessage({type:'error',message:error.message})}};

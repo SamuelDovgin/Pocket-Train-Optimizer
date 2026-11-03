@@ -2,6 +2,8 @@
 
 The original bundle and previously published scores were reproduced before the broader search. The previous published target scored 926.3084141382546. The lowest current routing-score target scores **906.623292670212** with **28** railroads. All 9,591 city pairs remain reachable.
 
+The inherited 190-track input omits Nairobi–Zanzibar, visible in both supplied human layouts. Historical routing scores below apply only to that input; they do not establish game-map completeness or practical profit. The new [operating model](https://samueldovgin.github.io/Pocket-Train-Optimizer/#operations) adds the pictured link in a separate 191-track experiment with one physical train per railroad. Its job and reward distributions remain assumptions. No experimental ownership plan is automatically applied to the checklist.
+
 ## Comparison at transfer penalty 40
 
 | Scenario | Railroads | Fuel/job | Transfers/job | Effort/job | Initial owner changes |

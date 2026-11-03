@@ -187,6 +187,9 @@ This is an approximate geographic diagram, not an exact game screenshot or dista
 '''
 readme=readme.replace('## Trains and progression',map_notes+'\n'+extra+'\n## Trains and progression')
 notes=notes.replace('## Progression research',map_notes+'\n'+extra+'\n## Progression research')
+audit_note='The inherited 190-track input omits Nairobi–Zanzibar, visible in both supplied human layouts. Historical routing scores below apply only to that input; they do not establish game-map completeness or practical profit. The new [operating model](https://samueldovgin.github.io/Pocket-Train-Optimizer/#operations) adds the pictured link in a separate 191-track experiment with one physical train per railroad. Its job and reward distributions remain assumptions. No experimental ownership plan is automatically applied to the checklist.'
+readme=readme.replace('# Pocket Train Optimizer\n','# Pocket Train Optimizer\n\n'+audit_note+'\n',1)
+notes=notes.replace('## Comparison at transfer penalty 40',audit_note+'\n\n## Comparison at transfer penalty 40',1)
 (root/'README.md').write_text(readme)
 (root/'docs/verification.md').write_text(notes)
 def inline(s):

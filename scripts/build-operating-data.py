@@ -118,5 +118,6 @@ for key,count,sparse,seed in [('corridors38',38,False,202611031),('corridors28',
  for l in plans[key]['lines']:
   assert l['branches']==0 and l['cycles']==0 and l['length']<=1100
 out={'version':1,'cities':cities,'regions':D['regions'],'coordinates':geo,'edges':edges,'plans':plans,'audit':{'historical_tracks':190,'operating_tracks':191,'added_track':{'id':'Nairobi|Zanzibar','fuel':35,'basis':'Visible in both supplied human layout images; verify against current game. Price is not inferred.'},'odd_degree_stations':sum(d%2 for _,d in G.degree),'minimum_unbranched_full_coverage_lines':sum(d%2 for _,d in G.degree)//2,'unverified_distances':imputed,'historical_targets_recomputed':False},'sources':[{'title':'NimbleBit: per-engine jobs, arrival refresh, shared yards and origin restriction','url':'https://support.nimblebit.com/support/solutions/articles/150000013209-refreshing-sharing-and-laying-over-jobs'}],'interpretation':'Operating experiments with assumed demand and generic identical trains; not calibrated coins/hour, an exact game recreation or a construction recommendation.'}
+out['reward_geometry']=json.loads((root/'assets/map/game-reward-coordinates.json').read_text())
 (root/'assets/operating-data.json').write_text(json.dumps(out,separators=(',',':')))
 print('WROTE operating-data.json',[(k,p['fleet'],p['tracks'],p['branches']) for k,p in plans.items()])

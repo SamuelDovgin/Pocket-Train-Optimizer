@@ -23,7 +23,8 @@ test('correction batch has a connected claim order and keeps the donor train con
  }
 });
 test('correction can be undone as a whole without restoring purchases',()=>{
- const p=R.profiles.rework,state=Core.sanitizeSave({done:{}},D),owner=e=>state.done[e.id]?(state.owners[e.id]||e.owner):p.owner[e.id];
+ const historical=JSON.parse(fs.readFileSync('analysis/monte_carlo_baseline.json')).profiles.rework;
+ const p={...historical,correction_schedule:[]},state=Core.sanitizeSave({done:{}},D),owner=e=>state.done[e.id]?(state.owners[e.id]||e.owner):p.owner[e.id];
  const batch=Core.buildQueue(D,state,owner,p.owner,p.correction_schedule||[]).find(x=>x.kind==='reassign'&&x.trackIds.length>1);assert.ok(batch);
  const before=JSON.stringify(state.done);Core.applyCorrection(state,batch);for(const id of batch.trackIds)assert.equal(state.owners[id],batch.to);
  Core.undoCorrection(state,0);for(const id of batch.trackIds)assert.equal(state.owners[id],batch.from);
@@ -55,7 +56,7 @@ test('gateway corrections stay deferred until their purchase prerequisites are r
  const p=R.profiles.consolidated,state=Core.sanitizeSave({done:{}},D),owner=e=>state.done[e.id]?(state.owners[e.id]||e.owner):p.owner[e.id];
  let queue=Core.buildQueue(D,state,owner,p.owner,p.correction_schedule);let delayed=queue.find(x=>x.kind==='reassign'&&x.requires.length);
  assert.ok(delayed);assert.ok(delayed.blocked.some(s=>s.startsWith('Timing:')));assert.equal(delayed.cost,null);
- for(const id of delayed.requires){state.done[id]=true;if(p.owner[id])state.owners[id]=p.owner[id]}
+ for(const id of delayed.requires){state.done[id]=true;if(p.owner[id])state.owners[id]=p.owner[id]}for(const [id,line] of Object.entries(delayed.ownerPrerequisites||{}))state.owners[id]=line;
  queue=Core.buildQueue(D,state,owner,p.owner,p.correction_schedule);delayed=queue.find(x=>x.id===delayed.id);assert.ok(delayed);assert.ok(delayed.blocked.every(s=>!s.startsWith('Timing:')));
 });
 test('published deep results match the source and finish a stable cross-seeding cycle',()=>{

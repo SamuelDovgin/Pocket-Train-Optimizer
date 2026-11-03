@@ -2,15 +2,15 @@
 
 A strict local-search stop, not a claim of global optimality. This never publishes.
 """
-import json,subprocess,sys
+import json,subprocess,sys,time
 from pathlib import Path
 root=Path(__file__).resolve().parents[1];sys.path.insert(0,str(root/'analysis'))
 import deep_search as d
-folder=root/'analysis';archive=folder/'search_campaigns';archive.mkdir(exist_ok=True)
+folder=root/'analysis';archive=folder/'search_campaigns';archive.mkdir(exist_ok=True);stamp=time.time_ns()
 trace=[]
 def read(mode):return json.loads((folder/f'deep_{mode}.json').read_text())
 def save_archive(mode,cycle):
- data=read(mode);(archive/f'{mode}-cross-cycle-{cycle}.json').write_text(json.dumps(data,indent=2))
+ data=read(mode);(archive/f'{mode}-cross-cycle-{stamp}-{cycle}.json').write_text(json.dumps(data,indent=2))
 def run(*args):subprocess.run([sys.executable,*args],cwd=root,check=True)
 cycle=0
 while True:

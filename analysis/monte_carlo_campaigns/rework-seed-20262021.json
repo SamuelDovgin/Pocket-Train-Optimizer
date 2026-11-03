@@ -1,0 +1,892 @@
+{
+  "profile": "rework",
+  "method": "Replica-exchange annealing with uniform-spanning-tree repartition, split/merge moves and exact all-pairs scoring",
+  "seed": 20262021,
+  "baseline_score": 912.1924721092691,
+  "campaign_start_score": 910.8909394223751,
+  "score": 909.9241997706183,
+  "owner": {
+    "Adelaide|Alice Springs": "Southeast Islands",
+    "Adelaide|Melbourne": "Southeast Islands",
+    "Adelaide|Perth": "Southeast Islands",
+    "Algiers|Casablanca": "Cyan",
+    "Algiers|Tripoli": "North Canada",
+    "Alice Springs|Broome": "Southeast Islands",
+    "Alice Springs|Darwin": "Oceania Central",
+    "Amman|Athens": "North Canada",
+    "Amman|Baghdad": "North America South",
+    "Amman|Cairo": "North Canada",
+    "Amman|Riyadh": "North Canada",
+    "Amsterdam|Berlin": "Purple",
+    "Amsterdam|Copenhagen": "Cyan",
+    "Amsterdam|Munich": "Africa Cross",
+    "Amsterdam|Paris": "Cyan",
+    "Anadyr|Magadan": "Arctic Bridge",
+    "Anchorage|Fairbanks": "Africa Sahel",
+    "Anchorage|Nome": "Africa Sahel",
+    "Anchorage|Vancouver": "Africa Sahel",
+    "Antananarivo|Harare": "North America East",
+    "Antananarivo|Perth": "North America East",
+    "Antananarivo|Zanzibar": "Africa South",
+    "Arequipa|Asuncion": "South Atlantic Bridge",
+    "Arequipa|Lima": "South Atlantic Bridge",
+    "Arequipa|Manaus": "Easter Island",
+    "Arequipa|Santiago": "South Atlantic Bridge",
+    "Asuncion|Porto Alegre": "South Atlantic Bridge",
+    "Athens|Budapest": "Pink",
+    "Atlanta|Miami": "Easter Island",
+    "Atlanta|New Orleans": "Easter Island",
+    "Atlanta|Washington DC": "Green",
+    "Auckland|Sydney": "Southeast Islands",
+    "Auckland|Wellington": "Southeast Islands",
+    "Baghdad|Istanbul": "North America South",
+    "Baghdad|Tehran": "North America South",
+    "Bamako|Dakar": "Cyan",
+    "Bamako|Lagos": "North America East",
+    "Bangalore|Kolkata": "North America South",
+    "Bangalore|Mumbai": "North America South",
+    "Bangkok|Hanoi": "China Central",
+    "Bangkok|Kolkata": "North America South",
+    "Bangkok|Singapore": "North America South",
+    "Barcelona|Madrid": "Green",
+    "Barcelona|Milan": "Green",
+    "Beijing|Shanghai": "China Central",
+    "Beijing|Shenyang": "Pink",
+    "Beijing|Ulan Bator": "Purple",
+    "Beijing|Urumqi": "Pink",
+    "Beijing|Xi'An": "China Central",
+    "Belem|Caracas": "Cyan",
+    "Belem|Fortaleza": "Cyan",
+    "Berlin|Budapest": "SA\u2013Africa Bridge",
+    "Berlin|Minsk": "Purple",
+    "Berlin|Munich": "Purple",
+    "Bogota|Caracas": "Africa Sahel",
+    "Bogota|Lima": "Africa Sahel",
+    "Bogota|Managua": "Africa Sahel",
+    "Bordeaux|Madrid": "Cyan",
+    "Bordeaux|Milan": "Africa North",
+    "Bordeaux|Paris": "Cyan",
+    "Boston|Montreal": "Green",
+    "Boston|New York": "Green",
+    "Brisbane|Cairns": "Atlantic Link",
+    "Brisbane|Sydney": "Oceania West",
+    "Broome|Darwin": "Southeast Islands",
+    "Broome|Kupang": "Southeast Islands",
+    "Broome|Perth": "Southeast Islands",
+    "Budapest|Istanbul": "Pink",
+    "Budapest|Kyiv": "Pink",
+    "Budapest|Munich": "Pink",
+    "Buenos Aires|Porto Alegre": "South Atlantic Bridge",
+    "Buenos Aires|Santiago": "South Atlantic Bridge",
+    "Cairns|Darwin": "Southeast Islands",
+    "Cairns|Port Moresby": "Southeast Islands",
+    "Cairo|Khartoum": "North Canada",
+    "Cairo|Tripoli": "North Canada",
+    "Calgary|Denver": "Green",
+    "Calgary|Edmonton": "Green",
+    "Calgary|Vancouver": "Africa Sahel",
+    "Calgary|Winnipeg": "South America Inland",
+    "Cape Town|Luanda": "South America West",
+    "Cape Town|Porto Alegre": "South Atlantic Bridge",
+    "Cape Town|Pretoria": "South Atlantic Bridge",
+    "Caracas|Manaus": "Easter Island",
+    "Caracas|San Juan": "Easter Island",
+    "Casablanca|Dakar": "Cyan",
+    "Casablanca|Madrid": "Cyan",
+    "Chengdu|Hanoi": "China Central",
+    "Chengdu|Kolkata": "India Express",
+    "Chengdu|New Delhi": "China Central",
+    "Chengdu|Urumqi": "China Central",
+    "Chengdu|Xi'An": "China Central",
+    "Chicago|Detroit": "Easter Island",
+    "Chicago|Minneapolis": "Easter Island",
+    "Chicago|St. Louis": "Easter Island",
+    "Christchurch|Wellington": "Southeast Islands",
+    "Copenhagen|Oslo": "Europe Nordic",
+    "Copenhagen|Stockholm": "Asia South",
+    "Dakar|Fortaleza": "Cyan",
+    "Denver|Phoenix": "North America West",
+    "Denver|San Francisco": "Siberian Far East",
+    "Denver|St. Louis": "Green",
+    "Detroit|Toronto": "Green",
+    "Dubai|Riyadh": "North Canada",
+    "Dublin|London": "Blue",
+    "Easter Island|Lima": "Alaska",
+    "Fortaleza|Salvador": "Cyan",
+    "Glasgow|London": "Blue",
+    "Glasgow|Reykjavik": "Blue",
+    "Goose Bay|Montreal": "Blue",
+    "Goose Bay|Nuuk": "Blue",
+    "Hanoi|Hong Kong": "China Central",
+    "Harare|Luanda": "North America East",
+    "Harare|Pretoria": "North America East",
+    "Harare|Zanzibar": "North America East",
+    "Harbin|Shenyang": "Pink",
+    "Harbin|Vladivostok": "China\u2013India",
+    "Harbin|Yakutsk": "Arctic Bridge",
+    "Havana|Miami": "Easter Island",
+    "Havana|San Juan": "Easter Island",
+    "Helsinki|St. Petersburg": "Asia South",
+    "Helsinki|Stockholm": "Asia South",
+    "Hong Kong|Manila": "China Central",
+    "Hong Kong|Shanghai": "China Central",
+    "Honolulu|San Francisco": "Siberian Far East",
+    "Houston|Mexico City": "Easter Island",
+    "Houston|New Orleans": "Easter Island",
+    "Houston|Phoenix": "Easter Island",
+    "Istanbul|Kyiv": "Oceania East",
+    "Jakarta|Kupang": "North America South",
+    "Jakarta|Singapore": "North America South",
+    "Kabul|New Delhi": "North America South",
+    "Kabul|Tehran": "North America South",
+    "Karachi|Mumbai": "North America South",
+    "Karachi|New Delhi": "Africa West",
+    "Karachi|Tehran": "North America South",
+    "Khartoum|Lagos": "North Canada",
+    "Khartoum|Nairobi": "North Canada",
+    "Kinshasa|Lagos": "North America East",
+    "Kinshasa|Luanda": "North America East",
+    "Kinshasa|Nairobi": "North Canada",
+    "Kolkata|New Delhi": "North America South",
+    "Kupang|Manado": "Southeast Islands",
+    "Kyiv|Minsk": "Pacific Crossing",
+    "Kyiv|Moscow": "Euro Balkans",
+    "Kyiv|Volgograd": "Pink",
+    "Lisbon|Madrid": "Green",
+    "Lisbon|New York": "Green",
+    "London|Paris": "Blue",
+    "Los Angeles|Mexico City": "Africa Sahel",
+    "Los Angeles|Phoenix": "Easter Island",
+    "Los Angeles|San Francisco": "Africa Sahel",
+    "Magadan|Yakutsk": "Arctic Bridge",
+    "Manado|Manila": "China Central",
+    "Managua|Mexico City": "Africa Sahel",
+    "Melbourne|Sydney": "Southeast Islands",
+    "Milan|Munich": "Green",
+    "Milan|Paris": "China North",
+    "Milan|Rome": "Green",
+    "Minneapolis|Winnipeg": "Easter Island",
+    "Minsk|Moscow": "Purple",
+    "Montreal|Toronto": "Green",
+    "Moscow|Perm": "Purple",
+    "Moscow|St. Petersburg": "Asia South",
+    "Moscow|Volgograd": "Asia South",
+    "Munich|Paris": "Pink",
+    "Nagasaki|Shanghai": "China Central",
+    "Nagasaki|Tokyo": "China Central",
+    "New Orleans|St. Louis": "Easter Island",
+    "New York|St. Louis": "Green",
+    "New York|Washington DC": "Green",
+    "Novosibirsk|Perm": "Purple",
+    "Novosibirsk|Ulan Bator": "Purple",
+    "Novosibirsk|Urumqi": "Oceania Pacific",
+    "Novosibirsk|Yakutsk": "Purple",
+    "Nuuk|Tasiilaq": "Blue",
+    "Oslo|Stockholm": "South America East",
+    "Porto Alegre|Rio de Janeiro": "Cyan",
+    "Punta Arenas|Santiago": "South Atlantic Bridge",
+    "Reykjavik|Tasiilaq": "Blue",
+    "Rio de Janeiro|Salvador": "Cyan",
+    "Rome|Tripoli": "North Canada",
+    "San Francisco|Vancouver": "Africa Sahel",
+    "Sendai|Tokyo": "Siberian",
+    "Sendai|Vladivostok": "Pink",
+    "Seoul|Shenyang": "Pink",
+    "Shanghai|Xi'An": "China Central",
+    "Shenyang|Vladivostok": "Pink",
+    "Tehran|Volgograd": "Asia South",
+    "Urumqi|Volgograd": "Pink"
+  },
+  "line_count": 38,
+  "counts": {
+    "attempts": 290300,
+    "invalid_or_unchanged": 168800,
+    "valid_proposals": 121500,
+    "accepted": 58895
+  },
+  "proposal_kinds": {
+    "repartition": 82340,
+    "swap": 12627,
+    "relocate": 26533
+  },
+  "uphill_accepted": 29242,
+  "replica_exchanges": 798,
+  "temperatures": [
+    0.02,
+    0.12,
+    0.6,
+    2.5,
+    8.0
+  ],
+  "epochs": [
+    {
+      "epoch": 1,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 1,
+      "valid_proposals": 1500,
+      "exact_evaluations": 1418
+    },
+    {
+      "epoch": 2,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 2,
+      "valid_proposals": 3000,
+      "exact_evaluations": 2858
+    },
+    {
+      "epoch": 3,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 3,
+      "valid_proposals": 4500,
+      "exact_evaluations": 4241
+    },
+    {
+      "epoch": 4,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 4,
+      "valid_proposals": 6000,
+      "exact_evaluations": 5590
+    },
+    {
+      "epoch": 5,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 5,
+      "valid_proposals": 7500,
+      "exact_evaluations": 7193
+    },
+    {
+      "epoch": 6,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 6,
+      "valid_proposals": 9000,
+      "exact_evaluations": 8483
+    },
+    {
+      "epoch": 7,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 7,
+      "valid_proposals": 10500,
+      "exact_evaluations": 9823
+    },
+    {
+      "epoch": 8,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 8,
+      "valid_proposals": 12000,
+      "exact_evaluations": 11171
+    },
+    {
+      "epoch": 9,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 9,
+      "valid_proposals": 13500,
+      "exact_evaluations": 12572
+    },
+    {
+      "epoch": 10,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 10,
+      "valid_proposals": 15000,
+      "exact_evaluations": 13886
+    },
+    {
+      "epoch": 11,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 11,
+      "valid_proposals": 16500,
+      "exact_evaluations": 15150
+    },
+    {
+      "epoch": 12,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 12,
+      "valid_proposals": 18000,
+      "exact_evaluations": 16438
+    },
+    {
+      "epoch": 13,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 13,
+      "valid_proposals": 19500,
+      "exact_evaluations": 17703
+    },
+    {
+      "epoch": 14,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 14,
+      "valid_proposals": 21000,
+      "exact_evaluations": 19117
+    },
+    {
+      "epoch": 15,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 15,
+      "valid_proposals": 22500,
+      "exact_evaluations": 20387
+    },
+    {
+      "epoch": 16,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 16,
+      "valid_proposals": 24000,
+      "exact_evaluations": 21751
+    },
+    {
+      "epoch": 17,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 17,
+      "valid_proposals": 25500,
+      "exact_evaluations": 23000
+    },
+    {
+      "epoch": 18,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 18,
+      "valid_proposals": 27000,
+      "exact_evaluations": 24268
+    },
+    {
+      "epoch": 19,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 19,
+      "valid_proposals": 28500,
+      "exact_evaluations": 25552
+    },
+    {
+      "epoch": 20,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 20,
+      "valid_proposals": 30000,
+      "exact_evaluations": 26889
+    },
+    {
+      "epoch": 21,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 21,
+      "valid_proposals": 31500,
+      "exact_evaluations": 28212
+    },
+    {
+      "epoch": 22,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 22,
+      "valid_proposals": 33000,
+      "exact_evaluations": 29499
+    },
+    {
+      "epoch": 23,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 23,
+      "valid_proposals": 34500,
+      "exact_evaluations": 30774
+    },
+    {
+      "epoch": 24,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 24,
+      "valid_proposals": 36000,
+      "exact_evaluations": 32031
+    },
+    {
+      "epoch": 25,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 25,
+      "valid_proposals": 37500,
+      "exact_evaluations": 33282
+    },
+    {
+      "epoch": 26,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 26,
+      "valid_proposals": 39000,
+      "exact_evaluations": 34529
+    },
+    {
+      "epoch": 27,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 27,
+      "valid_proposals": 40500,
+      "exact_evaluations": 35795
+    },
+    {
+      "epoch": 28,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 28,
+      "valid_proposals": 42000,
+      "exact_evaluations": 37087
+    },
+    {
+      "epoch": 29,
+      "score": 910.8909394223751,
+      "improved": false,
+      "stale_epochs": 29,
+      "valid_proposals": 43500,
+      "exact_evaluations": 38331
+    },
+    {
+      "epoch": 30,
+      "score": 910.3776457095194,
+      "improved": true,
+      "stale_epochs": 0,
+      "valid_proposals": 45000,
+      "exact_evaluations": 39989
+    },
+    {
+      "epoch": 31,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 1,
+      "valid_proposals": 46500,
+      "exact_evaluations": 41407
+    },
+    {
+      "epoch": 32,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 2,
+      "valid_proposals": 48000,
+      "exact_evaluations": 42759
+    },
+    {
+      "epoch": 33,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 3,
+      "valid_proposals": 49500,
+      "exact_evaluations": 44120
+    },
+    {
+      "epoch": 34,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 4,
+      "valid_proposals": 51000,
+      "exact_evaluations": 45466
+    },
+    {
+      "epoch": 35,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 5,
+      "valid_proposals": 52500,
+      "exact_evaluations": 46771
+    },
+    {
+      "epoch": 36,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 6,
+      "valid_proposals": 54000,
+      "exact_evaluations": 48116
+    },
+    {
+      "epoch": 37,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 7,
+      "valid_proposals": 55500,
+      "exact_evaluations": 49488
+    },
+    {
+      "epoch": 38,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 8,
+      "valid_proposals": 57000,
+      "exact_evaluations": 50846
+    },
+    {
+      "epoch": 39,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 9,
+      "valid_proposals": 58500,
+      "exact_evaluations": 52246
+    },
+    {
+      "epoch": 40,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 10,
+      "valid_proposals": 60000,
+      "exact_evaluations": 53511
+    },
+    {
+      "epoch": 41,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 11,
+      "valid_proposals": 61500,
+      "exact_evaluations": 54822
+    },
+    {
+      "epoch": 42,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 12,
+      "valid_proposals": 63000,
+      "exact_evaluations": 56137
+    },
+    {
+      "epoch": 43,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 13,
+      "valid_proposals": 64500,
+      "exact_evaluations": 57427
+    },
+    {
+      "epoch": 44,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 14,
+      "valid_proposals": 66000,
+      "exact_evaluations": 58795
+    },
+    {
+      "epoch": 45,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 15,
+      "valid_proposals": 67500,
+      "exact_evaluations": 60083
+    },
+    {
+      "epoch": 46,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 16,
+      "valid_proposals": 69000,
+      "exact_evaluations": 61350
+    },
+    {
+      "epoch": 47,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 17,
+      "valid_proposals": 70500,
+      "exact_evaluations": 62683
+    },
+    {
+      "epoch": 48,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 18,
+      "valid_proposals": 72000,
+      "exact_evaluations": 63950
+    },
+    {
+      "epoch": 49,
+      "score": 910.3776457095194,
+      "improved": false,
+      "stale_epochs": 19,
+      "valid_proposals": 73500,
+      "exact_evaluations": 65288
+    },
+    {
+      "epoch": 50,
+      "score": 910.3072672296945,
+      "improved": true,
+      "stale_epochs": 0,
+      "valid_proposals": 75000,
+      "exact_evaluations": 67046
+    },
+    {
+      "epoch": 51,
+      "score": 910.3072672296945,
+      "improved": false,
+      "stale_epochs": 1,
+      "valid_proposals": 76500,
+      "exact_evaluations": 68419
+    },
+    {
+      "epoch": 52,
+      "score": 910.3072672296945,
+      "improved": false,
+      "stale_epochs": 2,
+      "valid_proposals": 78000,
+      "exact_evaluations": 69753
+    },
+    {
+      "epoch": 53,
+      "score": 910.3072672296945,
+      "improved": false,
+      "stale_epochs": 3,
+      "valid_proposals": 79500,
+      "exact_evaluations": 71152
+    },
+    {
+      "epoch": 54,
+      "score": 910.3072672296945,
+      "improved": false,
+      "stale_epochs": 4,
+      "valid_proposals": 81000,
+      "exact_evaluations": 72463
+    },
+    {
+      "epoch": 55,
+      "score": 910.0836200604733,
+      "improved": true,
+      "stale_epochs": 0,
+      "valid_proposals": 82500,
+      "exact_evaluations": 74441
+    },
+    {
+      "epoch": 56,
+      "score": 909.9241997706183,
+      "improved": true,
+      "stale_epochs": 0,
+      "valid_proposals": 84000,
+      "exact_evaluations": 76211
+    },
+    {
+      "epoch": 57,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 1,
+      "valid_proposals": 85500,
+      "exact_evaluations": 77610
+    },
+    {
+      "epoch": 58,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 2,
+      "valid_proposals": 87000,
+      "exact_evaluations": 78937
+    },
+    {
+      "epoch": 59,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 3,
+      "valid_proposals": 88500,
+      "exact_evaluations": 80243
+    },
+    {
+      "epoch": 60,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 4,
+      "valid_proposals": 90000,
+      "exact_evaluations": 81535
+    },
+    {
+      "epoch": 61,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 5,
+      "valid_proposals": 91500,
+      "exact_evaluations": 82831
+    },
+    {
+      "epoch": 62,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 6,
+      "valid_proposals": 93000,
+      "exact_evaluations": 84123
+    },
+    {
+      "epoch": 63,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 7,
+      "valid_proposals": 94500,
+      "exact_evaluations": 85531
+    },
+    {
+      "epoch": 64,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 8,
+      "valid_proposals": 96000,
+      "exact_evaluations": 86806
+    },
+    {
+      "epoch": 65,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 9,
+      "valid_proposals": 97500,
+      "exact_evaluations": 88077
+    },
+    {
+      "epoch": 66,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 10,
+      "valid_proposals": 99000,
+      "exact_evaluations": 89340
+    },
+    {
+      "epoch": 67,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 11,
+      "valid_proposals": 100500,
+      "exact_evaluations": 90593
+    },
+    {
+      "epoch": 68,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 12,
+      "valid_proposals": 102000,
+      "exact_evaluations": 91863
+    },
+    {
+      "epoch": 69,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 13,
+      "valid_proposals": 103500,
+      "exact_evaluations": 93114
+    },
+    {
+      "epoch": 70,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 14,
+      "valid_proposals": 105000,
+      "exact_evaluations": 94350
+    },
+    {
+      "epoch": 71,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 15,
+      "valid_proposals": 106500,
+      "exact_evaluations": 95669
+    },
+    {
+      "epoch": 72,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 16,
+      "valid_proposals": 108000,
+      "exact_evaluations": 96916
+    },
+    {
+      "epoch": 73,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 17,
+      "valid_proposals": 109500,
+      "exact_evaluations": 98164
+    },
+    {
+      "epoch": 74,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 18,
+      "valid_proposals": 111000,
+      "exact_evaluations": 99512
+    },
+    {
+      "epoch": 75,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 19,
+      "valid_proposals": 112500,
+      "exact_evaluations": 100769
+    },
+    {
+      "epoch": 76,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 20,
+      "valid_proposals": 114000,
+      "exact_evaluations": 102095
+    },
+    {
+      "epoch": 77,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 21,
+      "valid_proposals": 115500,
+      "exact_evaluations": 103387
+    },
+    {
+      "epoch": 78,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 22,
+      "valid_proposals": 117000,
+      "exact_evaluations": 104641
+    },
+    {
+      "epoch": 79,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 23,
+      "valid_proposals": 118500,
+      "exact_evaluations": 105887
+    },
+    {
+      "epoch": 80,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 24,
+      "valid_proposals": 120000,
+      "exact_evaluations": 107114
+    },
+    {
+      "epoch": 81,
+      "score": 909.9241997706183,
+      "improved": false,
+      "stale_epochs": 25,
+      "valid_proposals": 121500,
+      "exact_evaluations": 108375
+    }
+  ],
+  "stopping_rule": {
+    "minimum_valid_proposals": 50000,
+    "consecutive_nonimproving_epochs": 25,
+    "valid_proposals_per_epoch": 1500
+  },
+  "cache": {
+    "hits": 25418,
+    "misses": 108473,
+    "maxsize": 60000,
+    "currsize": 60000
+  },
+  "final_audit": {
+    "exhausted": true,
+    "candidates_checked": 676,
+    "score": 909.9241997706183,
+    "group_size": 6,
+    "swap_size": 3
+  },
+  "complete": true,
+  "elapsed_seconds": 285.61,
+  "interpretation": "Heuristic optimization, not posterior sampling or proof of global optimality. Asymmetric proposals are not claimed to sample a stationary target distribution."
+}

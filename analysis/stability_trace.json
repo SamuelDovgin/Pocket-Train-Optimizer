@@ -3,14 +3,14 @@
     {
       "cycle": 1,
       "before": {
-        "rework": 912.1924721092691,
-        "consolidated": 910.3696173495986
+        "rework": 907.7932436659369,
+        "consolidated": 906.6232926702116
       },
-      "expanded_38_probe": 912.5389427588364,
-      "merged_probe": 910.7557084766969,
+      "expanded_38_probe": 907.7932436659369,
+      "merged_probe": 906.7632155145449,
       "after": {
-        "rework": 912.1924721092691,
-        "consolidated": 910.3696173495986
+        "rework": 907.7932436659369,
+        "consolidated": 906.6232926702116
       },
       "no_improvement": true
     }

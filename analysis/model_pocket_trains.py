@@ -103,7 +103,7 @@ def paths(owner,transfer_penalty=40, allow_edges=None, return_detail=False):
 
 def fast_score(owner,penalty=40,city_filter=None):
  mat,states=build(owner,penalty)
- reached=[city for city in CITIES if any(c==city for c,_ in states)]
+ reached=sorted({city for city,_ in states})
  if city_filter:reached=[city for city in reached if city in city_filter]
  if len(reached)<2:return float('inf')
  origins=np.array([CI[x] for x in reached],dtype=int);dests=np.array([CI[x]+N for x in reached],dtype=int);

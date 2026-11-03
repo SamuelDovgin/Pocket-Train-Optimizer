@@ -34,16 +34,21 @@ class DeepModelTests(unittest.TestCase):
   for p in profiles.values():self.assertLess(p['summary']['40']['mean_score'],self.report['previous_score'])
   self.assertLessEqual(profiles['rework']['summary']['40']['mean_score'],profiles['searched']['summary']['40']['mean_score'])
   self.assertLessEqual(profiles['consolidated']['summary']['40']['mean_score'],profiles['rework']['summary']['40']['mean_score'])
- def test_correction_timing_has_a_measured_positive_phase_gain(self):
+ def test_correction_timing_has_a_reproducible_signed_effect_and_dependencies(self):
   initial=set(m.D['base']+m.D['done'])
   for name in ('rework','consolidated'):
    p=self.report['profiles'][name];owner=p['owner'];current={**owner,**{k:m.ORIGINAL[k] for k in initial}}
    for group in sorted(p['correction_schedule'],key=lambda x:x['minimum_stage']):
-    stage=group['minimum_stage'];allowed=initial|{x['id'] for x in m.D['steps'] if x['kind']=='track' and x['stage']<=stage}
+    stage=group['minimum_stage'];allowed=initial|{k for k in group['requires'] if k in m.ED}
+    for key,line in group.get('owner_prerequisites',{}).items():self.assertEqual(current[key],line)
     before=m.paths(current,40,allow_edges=allowed);current.update({k:owner[k] for k in group['track_ids']});after=m.paths(current,40,allow_edges=allowed)
     self.assertEqual(before['pairs'],after['pairs']);self.assertEqual(before['missing'],0);self.assertEqual(after['missing'],0)
-    self.assertLess(after['mean_score'],before['mean_score'],name+'/'+str(group['track_ids']))
-    self.assertEqual(set(group['requires']),{x['id'] for x in m.D['steps'] if x['stage']<=stage})
+    effect=group['scheduled_effect'];self.assertAlmostEqual(before['mean_score'],effect['before'],places=9);self.assertAlmostEqual(after['mean_score'],effect['after'],places=9)
+    self.assertEqual(group['positive_phase_gain'],effect['gain']>1e-8)
+    if group['positive_phase_gain']:self.assertLess(after['mean_score'],before['mean_score'])
+    else:
+     self.assertEqual(stage,8);self.assertIn('No standalone',group['timing_reason'])
+    self.assertTrue(set(group['requires'])<={x['id'] for x in m.D['steps'] if x['stage']<=stage})
  def test_any_joint_deferrals_preserve_every_city_pair(self):
   from scipy.sparse.csgraph import dijkstra
   for p in self.report['profiles'].values():

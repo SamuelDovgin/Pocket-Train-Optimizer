@@ -72,9 +72,9 @@ function buildQueue(D,state,owner,targets=null,correctionRules=[]){
     for(const e of changes)if(remainingChanges.has(e.id)&&owner(e)===from&&goal(e)===to&&(nodes.has(e.a)||nodes.has(e.b))){batch.push(e);remainingChanges.delete(e.id);added=true}
    }
    const ids=batch.map(e=>e.id).sort();
-   const rule=correctionRules.find(r=>ids.every(id=>r.track_ids.includes(id))&&r.to===to);
+   const rule=correctionRules.find(r=>ids.length===r.track_ids.length&&ids.every(id=>r.track_ids.includes(id))&&r.to===to&&r.from===from);
    steps.push({id:'reassign:'+from+':'+to+':'+ids.join(';'),trackId:first.id,trackIds:ids,tracks:batch,
-    a:first.a,b:first.b,kind:'reassign',from,to,owner:to,rank:-1,stage:rule?.minimum_stage||0,requires:rule?.requires||[],timing:rule||null,cost:null,
+    a:first.a,b:first.b,kind:'reassign',from,to,owner:to,rank:-1,stage:rule?.minimum_stage||0,requires:rule?.requires||[],ownerPrerequisites:rule?.owner_prerequisites||{},timing:rule||{minimum_stage:null,timing_reason:'Your saved owner differs from the reference starting map. No phase-specific gain was measured for this exact change; verify its timing.'},cost:null,
     tier:'CORRECT EXISTING OWNERSHIP',why:'Reclaim these built connections together for the target railroad. Keep the physical tracks built; verify the live fees and park the donor train safely first.'});
   }
  }
@@ -98,7 +98,8 @@ function buildQueue(D,state,owner,targets=null,correctionRules=[]){
   if(nodes.size&&!endpoints.some(c=>nodes.has(c)))why.push('Extend '+target+' to an endpoint first');
   if(s.kind==='reassign'){
    const needed=(s.requires||[]).filter(id=>!complete.has(id));
-   if(needed.length)why.push('Timing: finish '+needed.length+' gateway prerequisite'+(needed.length===1?'':'s')+' first');
+   if(needed.length)why.push('Timing: finish '+needed.length+' purchase prerequisite'+(needed.length===1?'':'s')+' first');
+   const prior=Object.entries(s.ownerPrerequisites||{}).filter(([id,line])=>simOwner.get(id)!==line);if(prior.length)why.push('Timing: record '+prior.length+' earlier ownership correction'+(prior.length===1?'':'s')+' first');
    const old=simOwner.get(s.trackId),left=built.filter(e=>!s.trackIds.includes(e.id)&&simOwner.get(e.id)===old);
    if(!connected(left))why.push('Build an alternate connection for '+old+' first');
   }

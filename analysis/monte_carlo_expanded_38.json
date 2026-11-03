@@ -1,0 +1,270 @@
+{
+  "owner": {
+    "Adelaide|Alice Springs": "Oceania West",
+    "Adelaide|Melbourne": "Oceania West",
+    "Adelaide|Perth": "Oceania West",
+    "Algiers|Casablanca": "North America East",
+    "Algiers|Tripoli": "North America East",
+    "Alice Springs|Broome": "Oceania West",
+    "Alice Springs|Darwin": "Oceania Central",
+    "Amman|Athens": "North America East",
+    "Amman|Baghdad": "North America East",
+    "Amman|Cairo": "North America East",
+    "Amman|Riyadh": "North America East",
+    "Amsterdam|Berlin": "Africa Cross",
+    "Amsterdam|Copenhagen": "Cyan",
+    "Amsterdam|Munich": "Alaska",
+    "Amsterdam|Paris": "Cyan",
+    "Anadyr|Magadan": "Asia South",
+    "Anchorage|Fairbanks": "South Atlantic Bridge",
+    "Anchorage|Nome": "South Atlantic Bridge",
+    "Anchorage|Vancouver": "South Atlantic Bridge",
+    "Antananarivo|Harare": "Africa South",
+    "Antananarivo|Perth": "Africa South",
+    "Antananarivo|Zanzibar": "Southeast Islands",
+    "Arequipa|Asuncion": "Easter Island",
+    "Arequipa|Lima": "Easter Island",
+    "Arequipa|Manaus": "South America Inland",
+    "Arequipa|Santiago": "Easter Island",
+    "Asuncion|Porto Alegre": "Easter Island",
+    "Athens|Budapest": "North America East",
+    "Atlanta|Miami": "South America Inland",
+    "Atlanta|New Orleans": "South America Inland",
+    "Atlanta|Washington DC": "Green",
+    "Auckland|Sydney": "Oceania West",
+    "Auckland|Wellington": "Oceania West",
+    "Baghdad|Istanbul": "North Canada",
+    "Baghdad|Tehran": "North Canada",
+    "Bamako|Dakar": "Cyan",
+    "Bamako|Lagos": "Cyan",
+    "Bangalore|Kolkata": "North America South",
+    "Bangalore|Mumbai": "Arctic Bridge",
+    "Bangkok|Hanoi": "Oceania Pacific",
+    "Bangkok|Kolkata": "North Canada",
+    "Bangkok|Singapore": "North Canada",
+    "Barcelona|Madrid": "Green",
+    "Barcelona|Milan": "Green",
+    "Beijing|Shanghai": "Pink",
+    "Beijing|Shenyang": "Pink",
+    "Beijing|Ulan Bator": "China Central",
+    "Beijing|Urumqi": "Pink",
+    "Beijing|Xi'An": "Oceania Pacific",
+    "Belem|Caracas": "Cyan",
+    "Belem|Fortaleza": "Cyan",
+    "Berlin|Budapest": "Africa Cross",
+    "Berlin|Minsk": "Africa Cross",
+    "Berlin|Munich": "Africa Cross",
+    "Bogota|Caracas": "Cyan",
+    "Bogota|Lima": "South Atlantic Bridge",
+    "Bogota|Managua": "South Atlantic Bridge",
+    "Bordeaux|Madrid": "Cyan",
+    "Bordeaux|Milan": "North America West",
+    "Bordeaux|Paris": "Cyan",
+    "Boston|Montreal": "Green",
+    "Boston|New York": "Green",
+    "Brisbane|Cairns": "Europe Nordic",
+    "Brisbane|Sydney": "Atlantic Link",
+    "Broome|Darwin": "Oceania West",
+    "Broome|Kupang": "Oceania West",
+    "Broome|Perth": "Oceania West",
+    "Budapest|Istanbul": "North Canada",
+    "Budapest|Kyiv": "Pink",
+    "Budapest|Munich": "Green",
+    "Buenos Aires|Porto Alegre": "Easter Island",
+    "Buenos Aires|Santiago": "Easter Island",
+    "Cairns|Darwin": "Oceania West",
+    "Cairns|Port Moresby": "Oceania West",
+    "Cairo|Khartoum": "North America East",
+    "Cairo|Tripoli": "North America East",
+    "Calgary|Denver": "Green",
+    "Calgary|Edmonton": "Green",
+    "Calgary|Vancouver": "South Atlantic Bridge",
+    "Calgary|Winnipeg": "South America Inland",
+    "Cape Town|Luanda": "South America West",
+    "Cape Town|Porto Alegre": "Easter Island",
+    "Cape Town|Pretoria": "Africa South",
+    "Caracas|Manaus": "South America Inland",
+    "Caracas|San Juan": "South America Inland",
+    "Casablanca|Dakar": "Cyan",
+    "Casablanca|Madrid": "Cyan",
+    "Chengdu|Hanoi": "Oceania Pacific",
+    "Chengdu|Kolkata": "India Express",
+    "Chengdu|New Delhi": "Oceania Pacific",
+    "Chengdu|Urumqi": "Oceania Pacific",
+    "Chengdu|Xi'An": "Oceania Pacific",
+    "Chicago|Detroit": "South America Inland",
+    "Chicago|Minneapolis": "South America Inland",
+    "Chicago|St. Louis": "South America Inland",
+    "Christchurch|Wellington": "Oceania West",
+    "Copenhagen|Oslo": "Africa North",
+    "Copenhagen|Stockholm": "Africa Cross",
+    "Dakar|Fortaleza": "Cyan",
+    "Denver|Phoenix": "China North",
+    "Denver|San Francisco": "Siberian Far East",
+    "Denver|St. Louis": "Green",
+    "Detroit|Toronto": "South America Inland",
+    "Dubai|Riyadh": "North America East",
+    "Dublin|London": "Blue",
+    "Easter Island|Lima": "Africa Sahel",
+    "Fortaleza|Salvador": "Cyan",
+    "Glasgow|London": "Blue",
+    "Glasgow|Reykjavik": "Blue",
+    "Goose Bay|Montreal": "Blue",
+    "Goose Bay|Nuuk": "Blue",
+    "Hanoi|Hong Kong": "Oceania Pacific",
+    "Harare|Luanda": "Africa South",
+    "Harare|Pretoria": "Africa South",
+    "Harare|Zanzibar": "Africa South",
+    "Harbin|Shenyang": "Pink",
+    "Harbin|Vladivostok": "South America East",
+    "Harbin|Yakutsk": "Pink",
+    "Havana|Miami": "South America Inland",
+    "Havana|San Juan": "South America Inland",
+    "Helsinki|St. Petersburg": "Africa Cross",
+    "Helsinki|Stockholm": "Africa Cross",
+    "Hong Kong|Manila": "Oceania Pacific",
+    "Hong Kong|Shanghai": "Oceania Pacific",
+    "Honolulu|San Francisco": "Siberian Far East",
+    "Houston|Mexico City": "South America Inland",
+    "Houston|New Orleans": "South America Inland",
+    "Houston|Phoenix": "South America Inland",
+    "Istanbul|Kyiv": "Euro Balkans",
+    "Jakarta|Kupang": "North Canada",
+    "Jakarta|Singapore": "North Canada",
+    "Kabul|New Delhi": "North Canada",
+    "Kabul|Tehran": "North Canada",
+    "Karachi|Mumbai": "North Canada",
+    "Karachi|New Delhi": "Africa West",
+    "Karachi|Tehran": "North Canada",
+    "Khartoum|Lagos": "Purple",
+    "Khartoum|Nairobi": "North America East",
+    "Kinshasa|Lagos": "Africa South",
+    "Kinshasa|Luanda": "Africa South",
+    "Kinshasa|Nairobi": "North America East",
+    "Kolkata|New Delhi": "North Canada",
+    "Kupang|Manado": "Oceania West",
+    "Kyiv|Minsk": "China\u2013India",
+    "Kyiv|Moscow": "Siberian",
+    "Kyiv|Volgograd": "Pink",
+    "Lisbon|Madrid": "Green",
+    "Lisbon|New York": "Green",
+    "London|Paris": "Blue",
+    "Los Angeles|Mexico City": "South Atlantic Bridge",
+    "Los Angeles|Phoenix": "South America Inland",
+    "Los Angeles|San Francisco": "South Atlantic Bridge",
+    "Magadan|Yakutsk": "Asia South",
+    "Manado|Manila": "Oceania Pacific",
+    "Managua|Mexico City": "South Atlantic Bridge",
+    "Melbourne|Sydney": "Oceania West",
+    "Milan|Munich": "Green",
+    "Milan|Paris": "Pacific Crossing",
+    "Milan|Rome": "Green",
+    "Minneapolis|Winnipeg": "South America Inland",
+    "Minsk|Moscow": "Africa Cross",
+    "Montreal|Toronto": "South America Inland",
+    "Moscow|Perm": "Africa Cross",
+    "Moscow|St. Petersburg": "Africa Cross",
+    "Moscow|Volgograd": "Africa Cross",
+    "Munich|Paris": "Blue",
+    "Nagasaki|Shanghai": "Oceania Pacific",
+    "Nagasaki|Tokyo": "Oceania Pacific",
+    "New Orleans|St. Louis": "South America Inland",
+    "New York|St. Louis": "Green",
+    "New York|Washington DC": "Green",
+    "Novosibirsk|Perm": "Africa Cross",
+    "Novosibirsk|Ulan Bator": "Africa Cross",
+    "Novosibirsk|Urumqi": "SA\u2013Africa Bridge",
+    "Novosibirsk|Yakutsk": "Asia South",
+    "Nuuk|Tasiilaq": "Blue",
+    "Oslo|Stockholm": "Oceania East",
+    "Porto Alegre|Rio de Janeiro": "Easter Island",
+    "Punta Arenas|Santiago": "Easter Island",
+    "Reykjavik|Tasiilaq": "Blue",
+    "Rio de Janeiro|Salvador": "Cyan",
+    "Rome|Tripoli": "North America East",
+    "San Francisco|Vancouver": "South Atlantic Bridge",
+    "Sendai|Tokyo": "Pink",
+    "Sendai|Vladivostok": "Pink",
+    "Seoul|Shenyang": "Pink",
+    "Shanghai|Xi'An": "Oceania Pacific",
+    "Shenyang|Vladivostok": "Pink",
+    "Tehran|Volgograd": "North Canada",
+    "Urumqi|Volgograd": "Pink"
+  },
+  "score": 907.7932436659369,
+  "splits": [
+    {
+      "tracks": [
+        "Amsterdam|Munich"
+      ],
+      "score": 906.6232926702116
+    },
+    {
+      "tracks": [
+        "Kyiv|Minsk"
+      ],
+      "score": 906.6343446981546
+    },
+    {
+      "tracks": [
+        "Istanbul|Kyiv"
+      ],
+      "score": 906.6760504639766
+    },
+    {
+      "tracks": [
+        "Brisbane|Cairns"
+      ],
+      "score": 906.7272442915233
+    },
+    {
+      "tracks": [
+        "Chengdu|Kolkata"
+      ],
+      "score": 906.8890626629131
+    },
+    {
+      "tracks": [
+        "Bangalore|Kolkata"
+      ],
+      "score": 907.0517151496194
+    },
+    {
+      "tracks": [
+        "Bordeaux|Milan"
+      ],
+      "score": 907.2498175372746
+    },
+    {
+      "tracks": [
+        "Oslo|Stockholm"
+      ],
+      "score": 907.467313106037
+    },
+    {
+      "tracks": [
+        "Milan|Paris"
+      ],
+      "score": 907.6895005734543
+    },
+    {
+      "tracks": [
+        "Novosibirsk|Urumqi"
+      ],
+      "score": 907.9375456156814
+    }
+  ],
+  "descent": [
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Milan|Rome"
+      ],
+      "from": "North America East",
+      "to": "Green",
+      "before": 907.9375456156814,
+      "after": 907.7932436659369
+    }
+  ],
+  "elapsed_seconds": 5.870129916002043
+}

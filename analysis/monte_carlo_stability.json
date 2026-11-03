@@ -1,0 +1,104 @@
+{
+  "stable": true,
+  "campaigns": [
+    {
+      "campaign": 1,
+      "before": {
+        "fixed": 913.0392034198728,
+        "rework": 910.8909394223751,
+        "consolidated": 908.7593577312064
+      },
+      "after": {
+        "fixed": 911.0145970180378,
+        "rework": 910.8909394223751,
+        "consolidated": 908.697528933375
+      },
+      "no_improvement": false
+    },
+    {
+      "campaign": 2,
+      "before": {
+        "fixed": 911.0145970180378,
+        "rework": 910.8909394223751,
+        "consolidated": 908.697528933375
+      },
+      "after": {
+        "fixed": 910.9424460431654,
+        "rework": 909.9241997706183,
+        "consolidated": 908.5468668543426
+      },
+      "no_improvement": false
+    },
+    {
+      "campaign": 3,
+      "before": {
+        "fixed": 910.9424460431654,
+        "rework": 909.9241997706183,
+        "consolidated": 908.5468668543426
+      },
+      "after": {
+        "fixed": 910.2485663642999,
+        "rework": 909.8531957043061,
+        "consolidated": 908.5468668543426
+      },
+      "no_improvement": false
+    },
+    {
+      "campaign": 4,
+      "before": {
+        "fixed": 910.2485663642999,
+        "rework": 909.8531957043061,
+        "consolidated": 908.5468668543426
+      },
+      "after": {
+        "fixed": 910.2485663642999,
+        "rework": 908.3039307684287,
+        "consolidated": 908.5468668543426
+      },
+      "no_improvement": false
+    },
+    {
+      "campaign": 5,
+      "before": {
+        "fixed": 910.2485663642999,
+        "rework": 908.3039307684287,
+        "consolidated": 908.5468668543426
+      },
+      "after": {
+        "fixed": 910.2485663642999,
+        "rework": 907.9278490251277,
+        "consolidated": 906.6232926702116
+      },
+      "no_improvement": false
+    },
+    {
+      "campaign": 6,
+      "before": {
+        "fixed": 910.2485663642999,
+        "rework": 907.9278490251277,
+        "consolidated": 906.6232926702116
+      },
+      "after": {
+        "fixed": 910.2319883223855,
+        "rework": 907.7932436659369,
+        "consolidated": 906.6232926702116
+      },
+      "no_improvement": false
+    },
+    {
+      "campaign": 7,
+      "before": {
+        "fixed": 910.2319883223855,
+        "rework": 907.7932436659369,
+        "consolidated": 906.6232926702116
+      },
+      "after": {
+        "fixed": 910.2319883223855,
+        "rework": 907.7932436659369,
+        "consolidated": 906.6232926702116
+      },
+      "no_improvement": true
+    }
+  ],
+  "stop": "A complete independent seeded campaign across every profile made no nominal improvement; every profile also stopped after at least 50,000 valid proposals and 25 non-improving epochs plus exact neighborhood audit."
+}

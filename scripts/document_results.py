@@ -8,7 +8,7 @@ for name,p in profiles.items():
  s=p['summary']['40'];rows.append(f"| {p['label']} | {p['line_count']} | {s['mean_fuel']:.2f} | {s['mean_transfers']:.3f} | {s['mean_score']:.2f} | {len(p['initial_changes'])} |")
 comparison='\n'.join(rows)
 corrections='\n'.join(f"- {x['track'].replace('|',' ↔ ')}: **{x['from']} → {x['to']}**." for x in best['initial_changes'])
-timing='\n'.join(f"- {', '.join(k.replace('|',' ↔ ') for k in g['track_ids'])}: {'starting network' if g['minimum_stage']==0 else 'after stage '+str(g['minimum_stage'])+' gateway prerequisites'}." for g in best['correction_schedule'])
+timing='\n'.join(f"- {', '.join(k.replace('|',' ↔ ') for k in g['track_ids'])}: stage {g['minimum_stage']}; partial-network effort {g['scheduled_effect']['before']:.3f} → {g['scheduled_effect']['after']:.3f}. {'Positive standalone gain.' if g['positive_phase_gain'] else 'Endgame target alignment; no standalone gain. This is part of completing the joint target.'}" for g in best['correction_schedule'])
 counts={k:p['campaign_totals'] for k,p in profiles.items()};starts=sum(x['starts'] for x in counts.values());evaluations=sum(x['scored_layout_evaluations'] for x in counts.values())
 readme=f'''# Pocket Train Optimizer
 
@@ -36,7 +36,7 @@ The default target proposes these changes:
 
 These are track-owner changes, not instructions to demolish/rebuild tracks. Connected claims are grouped into an ordered batch. Park the donor train safely and have the recipient railroad ready; complete every listed claim in game before confirming the batch in the tracker. Claimed tracks remain checked. Completed correction batches have a separate history and undo control. Undo edits the tracker record only.
 
-Correction timing is tested separately from the final-world score. A change that helps the endgame can hurt the starting phase. The queue delays it until the first tested gateway stage with a positive matched-job routing benefit:
+Correction timing is tested separately from the final-world score. A change that helps the endgame can hurt the starting phase. The queue measures changes on executable partial networks and records purchase and earlier-correction dependencies. Positive standalone changes run when they help. Remaining joint-target alignment changes wait until endgame and explicitly show any individual increase in routing effort:
 
 {timing}
 
@@ -72,7 +72,7 @@ npm run build
 npm start
 ```
 
-Open http://127.0.0.1:8765. Use Node 20+ and Python 3.11+. Regression checks recompute all published metrics, independently compare routes, exhaust the final neighborhoods, test phase timing, simulate every construction/correction action, and compare all 9,591 browser routes with Python for each new target.
+Open http://127.0.0.1:8765. Use Node 20+ and Python 3.11+. Regression checks recompute all published metrics, independently compare routes, exhaust the final neighborhoods, test executable phase timing and signed gains, simulate every construction/correction action, and compare all 9,591 browser routes with Python for each new target.
 
 ## Continue or reproduce research
 
@@ -91,7 +91,7 @@ Search resumes from stored incumbents; outcomes may improve with additional camp
 
 The game map/prices are inherited, not independently measured in the latest game. Eight fuel values and eight prices are provisional. The model does not predict coins/hour or simulate cargo spawning, train positions, capacity, waiting, congestion or fuel regeneration. This unofficial fan tool is not affiliated with NimbleBit. See [verification notes](docs/verification.md).
 '''
-(root/'README.md').write_text(readme)
+# Write after adding the completed randomized campaign report below.
 notes=f'''# Verification and iterative search — November 3, 2026
 
 The original bundle and previously published scores were reproduced before the broader search. The previous published target scored 926.3084141382546. The lowest current routing-score target scores **{best['summary']['40']['mean_score']:.12f}** with **{best['line_count']}** railroads. All 9,591 city pairs remain reachable.
@@ -112,7 +112,7 @@ The queue shows each current owner and target owner, groups connected claims int
 
 {timing}
 
-Timing is based on matched jobs within the same stage's physical network, with earlier scheduled corrections included. Live claim fees and train availability are additional considerations. No track demolition/rebuild, engine sale, or railroad shutdown is assumed. Historical claim prices are references, not asserted live reassignment fees.
+Timing is based on matched jobs on the physical network actually buildable before the correction, with earlier scheduled corrections included. Not every individual step improves routing: endgame alignment steps explicitly show their signed effect and can enable the stronger joint layout. Prerequisites never include a purchase that needs the pending correction first. Live claim fees and train availability are additional considerations. No track demolition/rebuild, engine sale, or railroad shutdown is assumed. Historical claim prices are references, not asserted live reassignment fees.
 
 ## Evidence and stop rule
 
@@ -124,7 +124,7 @@ This is a local-search stopping criterion, not a proof of global optimality. The
 
 The joint deferral audit preserves all 139 cities and all 9,591 city-pair costs at handoff penalty 40, along with connected railroad ownership. It found no removable future tracks for these targets. The audit does not treat dropping a city or ignoring unreachable jobs as a benefit.
 
-Python tests reproduce every new metric at penalties 0, 20, 40 and 80, check line constraints, re-enumerate the final move neighborhoods, and verify positive phase gains at scheduled correction stages. JavaScript tests compare every route against Python at penalty 40 for all three targets and simulate all 180 remaining purchases plus every correction batch. Tests also cover batch undo, backup migration/history, invalid imports, restored initial tracks, same-station/disconnected routes, tie-breaking, and route symmetry.
+Python tests reproduce every new metric at penalties 0, 20, 40 and 80, check line constraints, re-enumerate the final move neighborhoods, and reproduce signed effects and prerequisites at scheduled correction stages. JavaScript tests compare every route against Python at penalty 40 for all three targets and simulate all 180 remaining purchases plus every correction batch. Tests also cover batch undo, backup migration/history, invalid imports, restored initial tracks, same-station/disconnected routes, tie-breaking, and route symmetry.
 
 Browser QA verifies that recording a correction leaves the physical track count unchanged, saves across reload, and supports whole-batch undo. It checks plan selection, current versus target route scopes, scenario comparisons and narrow-screen layout. The previous browser file-picker/download automation limit remains: backup parsing/migration is tested in JavaScript, while transferring a save from a downloaded HTML tracker may require manual Export/Import.
 
@@ -136,6 +136,50 @@ The [Wiki train table](https://pocket-trains.fandom.com/wiki/Train) and [Reddit 
 
 Map and costs come from the supplied tracker. Eight fuel lengths and eight prices are unverified. Job probabilities, transfer friction and the 1,100-unit bound are assumptions. Real operation depends on engines, train positions, speed, cargo, yards, refueling and player attention. Lower modeled effort does not prove higher profit. Progress is browser-local and needs a JSON backup to transfer.
 '''
+mc=json.loads((root/'analysis/monte_carlo_validation.json').read_text());total=mc['search_totals']
+random_rows='\n'.join(f"| {name} | {mc['nominal_scores']['before_'+name]:.6f} | {mc['nominal_scores']['after_'+name]:.6f} | {mc['demand']['scenarios']['uniform']['paired_gains'][name]['mean_gain']:.3f} |" for name in ['fixed','rework','consolidated'])
+research='\n'.join(f"- [{x['title']}]({x['url']}): {x['finding']} {x['applied']}" for x in mc['research'])
+extra=f'''## Monte Carlo search and independent simulation
+
+The latest search evaluated {total['valid_proposals']:,} valid randomized proposals in {total['campaigns']} completed profile campaigns, with {total['exact_evaluations']:,} exact scored layouts and {total['uphill_accepted']:,} accepted uphill moves. Counts include repeated layouts across separate campaign caches. Five temperature replicas explore connected track moves, exchanges, random-spanning-tree repartitions of neighboring lines, and variable-count splits/merges. Asymmetric proposal probabilities make this a heuristic optimizer, not a stationary posterior sampler.
+
+Each profile campaign requires at least 50,000 valid proposals and 25 consecutive non-improving annealing rounds, then exhausts connected relocation groups through six tracks and exchanges through three tracks each way (plus whole-line merges when allowed). A further independent seeded campaign repeats across all profiles until none improves. The final of {len(mc['stability']['campaigns'])} follow-up campaigns made no gain. A separate final merge/split cross-seed audit also completed. These are explicit search plateaus, not proof that no better global layout exists.
+
+| Profile | Before this Monte Carlo search | Current exact score | Synthetic uniform mean gain |
+| --- | ---: | ---: | ---: |
+{random_rows}
+
+Independent evaluation used seed {mc['demand']['seed']}, {mc['demand']['virtual_days']:,} synthetic job batches and {mc['demand']['sampled_jobs']:,} jobs across five demand mixes. Every plan sees identical sampled jobs. Poisson batch size, lognormal city hotspots and Gamma pair variation are assumptions, not measured Pocket Trains spawning rules. The 90% simulation intervals and lower-cost fractions describe these synthetic draws, not confidence intervals or success probabilities for real play.
+
+A further {mc['uncertain_distances']['draws']} shared distance draws vary only the eight provisional lengths between 70% and 130% of their estimates, then recompute all routes. The site reports how often each line exceeds the nominal planning bound under those assumptions; it does not interpret that bound as a fuel-tank specification. Peak handoff-station counts are workload indicators, not simulated congestion or yard limits.
+
+The **Monte Carlo** tab includes the stored experiment results, convergence plot, and a seeded browser worker for fresh paired job batches. The lighter browser version uses fixed job counts and city hotspots, without Gamma pair variation. It compares the published reference plans, not custom tracker edits, and does not write to tracker progress. Engine choice remains outside the objective; actual waiting, capacity, positions, dispatch policy and earnings need measured data before credible simulation.
+
+Reproduce the added work after installing requirements:
+
+```sh
+python3 scripts/monte_carlo_until_stable.py
+python3 scripts/promote_monte_carlo.py
+python3 scripts/refine_until_stable.py
+python3 scripts/analyze_deep.py
+python3 analysis/monte_carlo_validation.py
+python3 scripts/document_results.py
+```
+
+If deterministic refinement finds a better endpoint, repeat the randomized campaign from that incumbent before republishing. Promotion refuses unfinished or infeasible searches. Independent Python and browser checks verify the exact scores, full coverage, connected lines, construction/correction sequence, saved ownership and seeded sampling behavior.
+
+## Related projects inspected
+
+{research}
+
+No external project code was copied or executed. These sources inform experimental design; Pocket Planes airport/population rules, bonuses and flight economics are not imported into Pocket Trains. Direct Pocket Trains repository searches found game implementations but did not establish an existing complete global layout solver. Research observations refer to the inspected versions, not a claim that these projects can never improve.
+'''
+# Distinguish earlier deterministic evidence from the latest MC stopping rule.
+readme=readme.replace('## Search and stopping criteria','## Earlier deterministic search evidence').replace('Each final campaign stops after 20','Each earlier deterministic campaign stops after 20')
+notes=notes.replace('## Evidence and stop rule','## Earlier deterministic search evidence').replace('Final campaigns stop after 20','Earlier deterministic campaigns stop after 20')
+readme=readme.replace('## Trains and progression',extra+'\n## Trains and progression')
+notes=notes.replace('## Progression research',extra+'\n## Progression research')
+(root/'README.md').write_text(readme)
 (root/'docs/verification.md').write_text(notes)
 def inline(s):
  s=escape(s)

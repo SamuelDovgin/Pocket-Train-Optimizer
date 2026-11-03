@@ -1,0 +1,1033 @@
+{
+  "profile": "fixed",
+  "owner": {
+    "Adelaide|Alice Springs": "Southeast Islands",
+    "Adelaide|Melbourne": "Southeast Islands",
+    "Adelaide|Perth": "Southeast Islands",
+    "Algiers|Casablanca": "Africa North",
+    "Algiers|Tripoli": "Africa North",
+    "Alice Springs|Broome": "Southeast Islands",
+    "Alice Springs|Darwin": "Oceania Central",
+    "Amman|Athens": "Euro Balkans",
+    "Amman|Baghdad": "Euro Balkans",
+    "Amman|Cairo": "Euro Balkans",
+    "Amman|Riyadh": "Euro Balkans",
+    "Amsterdam|Berlin": "Cyan",
+    "Amsterdam|Copenhagen": "Cyan",
+    "Amsterdam|Munich": "Pink",
+    "Amsterdam|Paris": "Cyan",
+    "Anadyr|Magadan": "Purple",
+    "Anchorage|Fairbanks": "Alaska",
+    "Anchorage|Nome": "Alaska",
+    "Anchorage|Vancouver": "Alaska",
+    "Antananarivo|Harare": "SA\u2013Africa Bridge",
+    "Antananarivo|Perth": "SA\u2013Africa Bridge",
+    "Antananarivo|Zanzibar": "Africa West",
+    "Arequipa|Asuncion": "North America East",
+    "Arequipa|Lima": "North America East",
+    "Arequipa|Manaus": "South America Inland",
+    "Arequipa|Santiago": "South America West",
+    "Asuncion|Porto Alegre": "North America East",
+    "Athens|Budapest": "Pink",
+    "Atlanta|Miami": "Atlantic Link",
+    "Atlanta|New Orleans": "North America East",
+    "Atlanta|Washington DC": "Green",
+    "Auckland|Sydney": "Southeast Islands",
+    "Auckland|Wellington": "Southeast Islands",
+    "Baghdad|Istanbul": "Euro Balkans",
+    "Baghdad|Tehran": "Euro Balkans",
+    "Bamako|Dakar": "Africa North",
+    "Bamako|Lagos": "Africa North",
+    "Bangalore|Kolkata": "India Express",
+    "Bangalore|Mumbai": "Euro Balkans",
+    "Bangkok|Hanoi": "China Central",
+    "Bangkok|Kolkata": "Asia South",
+    "Bangkok|Singapore": "Asia South",
+    "Barcelona|Madrid": "Green",
+    "Barcelona|Milan": "Green",
+    "Beijing|Shanghai": "China Central",
+    "Beijing|Shenyang": "China Central",
+    "Beijing|Ulan Bator": "China Central",
+    "Beijing|Urumqi": "Pink",
+    "Beijing|Xi'An": "Asia South",
+    "Belem|Caracas": "Africa North",
+    "Belem|Fortaleza": "Africa North",
+    "Berlin|Budapest": "Pink",
+    "Berlin|Minsk": "Cyan",
+    "Berlin|Munich": "Green",
+    "Bogota|Caracas": "Africa North",
+    "Bogota|Lima": "North America East",
+    "Bogota|Managua": "North America East",
+    "Bordeaux|Madrid": "Cyan",
+    "Bordeaux|Milan": "Blue",
+    "Bordeaux|Paris": "Cyan",
+    "Boston|Montreal": "Green",
+    "Boston|New York": "Green",
+    "Brisbane|Cairns": "Oceania West",
+    "Brisbane|Sydney": "Oceania East",
+    "Broome|Darwin": "Southeast Islands",
+    "Broome|Kupang": "Southeast Islands",
+    "Broome|Perth": "Southeast Islands",
+    "Budapest|Istanbul": "Pink",
+    "Budapest|Kyiv": "Pink",
+    "Budapest|Munich": "Pink",
+    "Buenos Aires|Porto Alegre": "South America East",
+    "Buenos Aires|Santiago": "South America East",
+    "Cairns|Darwin": "Southeast Islands",
+    "Cairns|Port Moresby": "Southeast Islands",
+    "Cairo|Khartoum": "Euro Balkans",
+    "Cairo|Tripoli": "Euro Balkans",
+    "Calgary|Denver": "Green",
+    "Calgary|Edmonton": "North Canada",
+    "Calgary|Vancouver": "Alaska",
+    "Calgary|Winnipeg": "North America East",
+    "Cape Town|Luanda": "Africa Cross",
+    "Cape Town|Porto Alegre": "SA\u2013Africa Bridge",
+    "Cape Town|Pretoria": "SA\u2013Africa Bridge",
+    "Caracas|Manaus": "North America South",
+    "Caracas|San Juan": "Atlantic Link",
+    "Casablanca|Dakar": "Africa North",
+    "Casablanca|Madrid": "Africa North",
+    "Chengdu|Hanoi": "China Central",
+    "Chengdu|Kolkata": "China\u2013India",
+    "Chengdu|New Delhi": "Asia South",
+    "Chengdu|Urumqi": "Pink",
+    "Chengdu|Xi'An": "Asia South",
+    "Chicago|Detroit": "North America East",
+    "Chicago|Minneapolis": "North America East",
+    "Chicago|St. Louis": "North America East",
+    "Christchurch|Wellington": "Oceania Pacific",
+    "Copenhagen|Oslo": "Cyan",
+    "Copenhagen|Stockholm": "Cyan",
+    "Dakar|Fortaleza": "Africa North",
+    "Denver|Phoenix": "North America West",
+    "Denver|San Francisco": "Pacific Crossing",
+    "Denver|St. Louis": "Green",
+    "Detroit|Toronto": "Green",
+    "Dubai|Riyadh": "Euro Balkans",
+    "Dublin|London": "Blue",
+    "Easter Island|Lima": "Easter Island",
+    "Fortaleza|Salvador": "Africa North",
+    "Glasgow|London": "Blue",
+    "Glasgow|Reykjavik": "Blue",
+    "Goose Bay|Montreal": "Arctic Bridge",
+    "Goose Bay|Nuuk": "Blue",
+    "Hanoi|Hong Kong": "China Central",
+    "Harare|Luanda": "South Atlantic Bridge",
+    "Harare|Pretoria": "SA\u2013Africa Bridge",
+    "Harare|Zanzibar": "Africa South",
+    "Harbin|Shenyang": "China Central",
+    "Harbin|Vladivostok": "China North",
+    "Harbin|Yakutsk": "Purple",
+    "Havana|Miami": "Atlantic Link",
+    "Havana|San Juan": "Atlantic Link",
+    "Helsinki|St. Petersburg": "Cyan",
+    "Helsinki|Stockholm": "Cyan",
+    "Hong Kong|Manila": "China Central",
+    "Hong Kong|Shanghai": "China Central",
+    "Honolulu|San Francisco": "Pacific Crossing",
+    "Houston|Mexico City": "North America East",
+    "Houston|New Orleans": "North America East",
+    "Houston|Phoenix": "North America East",
+    "Istanbul|Kyiv": "Euro Balkans",
+    "Jakarta|Kupang": "Asia South",
+    "Jakarta|Singapore": "Asia South",
+    "Kabul|New Delhi": "Asia South",
+    "Kabul|Tehran": "Asia South",
+    "Karachi|Mumbai": "Euro Balkans",
+    "Karachi|New Delhi": "Asia South",
+    "Karachi|Tehran": "Euro Balkans",
+    "Khartoum|Lagos": "Africa Sahel",
+    "Khartoum|Nairobi": "Euro Balkans",
+    "Kinshasa|Lagos": "South Atlantic Bridge",
+    "Kinshasa|Luanda": "South Atlantic Bridge",
+    "Kinshasa|Nairobi": "South Atlantic Bridge",
+    "Kolkata|New Delhi": "Asia South",
+    "Kupang|Manado": "Southeast Islands",
+    "Kyiv|Minsk": "Cyan",
+    "Kyiv|Moscow": "Cyan",
+    "Kyiv|Volgograd": "Pink",
+    "Lisbon|Madrid": "Green",
+    "Lisbon|New York": "Green",
+    "London|Paris": "Blue",
+    "Los Angeles|Mexico City": "Alaska",
+    "Los Angeles|Phoenix": "North America East",
+    "Los Angeles|San Francisco": "Alaska",
+    "Magadan|Yakutsk": "Purple",
+    "Manado|Manila": "China Central",
+    "Managua|Mexico City": "North America East",
+    "Melbourne|Sydney": "Southeast Islands",
+    "Milan|Munich": "Green",
+    "Milan|Paris": "Blue",
+    "Milan|Rome": "Blue",
+    "Minneapolis|Winnipeg": "North America East",
+    "Minsk|Moscow": "Cyan",
+    "Montreal|Toronto": "Green",
+    "Moscow|Perm": "Cyan",
+    "Moscow|St. Petersburg": "Cyan",
+    "Moscow|Volgograd": "Asia South",
+    "Munich|Paris": "Pink",
+    "Nagasaki|Shanghai": "China Central",
+    "Nagasaki|Tokyo": "China Central",
+    "New Orleans|St. Louis": "North America East",
+    "New York|St. Louis": "Green",
+    "New York|Washington DC": "Green",
+    "Novosibirsk|Perm": "Cyan",
+    "Novosibirsk|Ulan Bator": "China Central",
+    "Novosibirsk|Urumqi": "Siberian Far East",
+    "Novosibirsk|Yakutsk": "Purple",
+    "Nuuk|Tasiilaq": "Blue",
+    "Oslo|Stockholm": "Europe Nordic",
+    "Porto Alegre|Rio de Janeiro": "Africa North",
+    "Punta Arenas|Santiago": "South America East",
+    "Reykjavik|Tasiilaq": "Blue",
+    "Rio de Janeiro|Salvador": "Africa North",
+    "Rome|Tripoli": "Blue",
+    "San Francisco|Vancouver": "Alaska",
+    "Sendai|Tokyo": "China Central",
+    "Sendai|Vladivostok": "China Central",
+    "Seoul|Shenyang": "China Central",
+    "Shanghai|Xi'An": "Siberian",
+    "Shenyang|Vladivostok": "China Central",
+    "Tehran|Volgograd": "Asia South",
+    "Urumqi|Volgograd": "Pink"
+  },
+  "score": 915.6221457616515,
+  "initial_score": 926.3084141382546,
+  "line_count": 38,
+  "fixed_initial_owners": true,
+  "initial_owner_changes": [],
+  "restarts": [
+    {
+      "attempt": 1,
+      "source": "supplied_seed",
+      "score": 917.1281409654885,
+      "improved": false,
+      "moves": 0,
+      "stale": 1
+    },
+    {
+      "attempt": 2,
+      "source": "supplied_seed",
+      "score": 917.1281409654885,
+      "improved": false,
+      "moves": 0,
+      "stale": 2
+    },
+    {
+      "attempt": 3,
+      "source": "supplied_seed",
+      "score": 922.945365446773,
+      "improved": false,
+      "moves": 13,
+      "stale": 3
+    },
+    {
+      "attempt": 4,
+      "source": "supplied_seed",
+      "score": 918.8810343029924,
+      "improved": false,
+      "moves": 63,
+      "stale": 4
+    },
+    {
+      "attempt": 5,
+      "source": "supplied_seed",
+      "score": 919.3745177770827,
+      "improved": false,
+      "moves": 63,
+      "stale": 5
+    },
+    {
+      "attempt": 6,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": true,
+      "moves": 9,
+      "stale": 0
+    },
+    {
+      "attempt": 7,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 8,
+      "stale": 1
+    },
+    {
+      "attempt": 8,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 5,
+      "stale": 2
+    },
+    {
+      "attempt": 9,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 5,
+      "stale": 3
+    },
+    {
+      "attempt": 10,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 2,
+      "stale": 4
+    },
+    {
+      "attempt": 11,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 5,
+      "stale": 5
+    },
+    {
+      "attempt": 12,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 4,
+      "stale": 6
+    },
+    {
+      "attempt": 13,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 6,
+      "stale": 7
+    },
+    {
+      "attempt": 14,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 3,
+      "stale": 8
+    },
+    {
+      "attempt": 15,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 3,
+      "stale": 9
+    },
+    {
+      "attempt": 16,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 5,
+      "stale": 10
+    },
+    {
+      "attempt": 17,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 7,
+      "stale": 11
+    },
+    {
+      "attempt": 18,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 4,
+      "stale": 12
+    },
+    {
+      "attempt": 19,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 5,
+      "stale": 13
+    },
+    {
+      "attempt": 20,
+      "source": "perturbation",
+      "score": 917.0376394536545,
+      "improved": false,
+      "moves": 2,
+      "stale": 14
+    },
+    {
+      "attempt": 21,
+      "source": "perturbation",
+      "score": 916.6897091022834,
+      "improved": true,
+      "moves": 9,
+      "stale": 0
+    },
+    {
+      "attempt": 22,
+      "source": "perturbation",
+      "score": 916.6493587738505,
+      "improved": true,
+      "moves": 10,
+      "stale": 0
+    },
+    {
+      "attempt": 23,
+      "source": "perturbation",
+      "score": 916.6493587738505,
+      "improved": false,
+      "moves": 1,
+      "stale": 1
+    },
+    {
+      "attempt": 24,
+      "source": "perturbation",
+      "score": 916.3991241789178,
+      "improved": true,
+      "moves": 8,
+      "stale": 0
+    },
+    {
+      "attempt": 25,
+      "source": "perturbation",
+      "score": 917.2092586800126,
+      "improved": false,
+      "moves": 8,
+      "stale": 1
+    },
+    {
+      "attempt": 26,
+      "source": "perturbation",
+      "score": 916.3991241789178,
+      "improved": false,
+      "moves": 6,
+      "stale": 2
+    },
+    {
+      "attempt": 27,
+      "source": "perturbation",
+      "score": 917.4587634240434,
+      "improved": false,
+      "moves": 5,
+      "stale": 3
+    },
+    {
+      "attempt": 28,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": true,
+      "moves": 5,
+      "stale": 0
+    },
+    {
+      "attempt": 29,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 5,
+      "stale": 1
+    },
+    {
+      "attempt": 30,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 3,
+      "stale": 2
+    },
+    {
+      "attempt": 31,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 3,
+      "stale": 3
+    },
+    {
+      "attempt": 32,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 5,
+      "stale": 4
+    },
+    {
+      "attempt": 33,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 3,
+      "stale": 5
+    },
+    {
+      "attempt": 34,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 6,
+      "stale": 6
+    },
+    {
+      "attempt": 35,
+      "source": "perturbation",
+      "score": 916.6404962986132,
+      "improved": false,
+      "moves": 5,
+      "stale": 7
+    },
+    {
+      "attempt": 36,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 2,
+      "stale": 8
+    },
+    {
+      "attempt": 37,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 4,
+      "stale": 9
+    },
+    {
+      "attempt": 38,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 3,
+      "stale": 10
+    },
+    {
+      "attempt": 39,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 2,
+      "stale": 11
+    },
+    {
+      "attempt": 40,
+      "source": "perturbation",
+      "score": 916.3902617036805,
+      "improved": false,
+      "moves": 3,
+      "stale": 12
+    },
+    {
+      "attempt": 41,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": true,
+      "moves": 15,
+      "stale": 0
+    },
+    {
+      "attempt": 42,
+      "source": "perturbation",
+      "score": 917.3328120112606,
+      "improved": false,
+      "moves": 9,
+      "stale": 1
+    },
+    {
+      "attempt": 43,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": false,
+      "moves": 2,
+      "stale": 2
+    },
+    {
+      "attempt": 44,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": false,
+      "moves": 2,
+      "stale": 3
+    },
+    {
+      "attempt": 45,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": false,
+      "moves": 4,
+      "stale": 4
+    },
+    {
+      "attempt": 46,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": false,
+      "moves": 5,
+      "stale": 5
+    },
+    {
+      "attempt": 47,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": false,
+      "moves": 2,
+      "stale": 6
+    },
+    {
+      "attempt": 48,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": false,
+      "moves": 9,
+      "stale": 7
+    },
+    {
+      "attempt": 49,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": false,
+      "moves": 2,
+      "stale": 8
+    },
+    {
+      "attempt": 50,
+      "source": "perturbation",
+      "score": 916.3019497445522,
+      "improved": false,
+      "moves": 4,
+      "stale": 9
+    },
+    {
+      "attempt": 51,
+      "source": "perturbation",
+      "score": 916.2512772390783,
+      "improved": true,
+      "moves": 8,
+      "stale": 0
+    },
+    {
+      "attempt": 52,
+      "source": "perturbation",
+      "score": 916.2512772390783,
+      "improved": false,
+      "moves": 4,
+      "stale": 1
+    },
+    {
+      "attempt": 53,
+      "source": "perturbation",
+      "score": 916.2512772390783,
+      "improved": false,
+      "moves": 2,
+      "stale": 2
+    },
+    {
+      "attempt": 54,
+      "source": "perturbation",
+      "score": 916.1778750912314,
+      "improved": true,
+      "moves": 6,
+      "stale": 0
+    },
+    {
+      "attempt": 55,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": true,
+      "moves": 9,
+      "stale": 0
+    },
+    {
+      "attempt": 56,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": false,
+      "moves": 2,
+      "stale": 1
+    },
+    {
+      "attempt": 57,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": false,
+      "moves": 2,
+      "stale": 2
+    },
+    {
+      "attempt": 58,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": false,
+      "moves": 2,
+      "stale": 3
+    },
+    {
+      "attempt": 59,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": false,
+      "moves": 2,
+      "stale": 4
+    },
+    {
+      "attempt": 60,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": false,
+      "moves": 3,
+      "stale": 5
+    },
+    {
+      "attempt": 61,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": false,
+      "moves": 6,
+      "stale": 6
+    },
+    {
+      "attempt": 62,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": false,
+      "moves": 4,
+      "stale": 7
+    },
+    {
+      "attempt": 63,
+      "source": "perturbation",
+      "score": 917.0031279324367,
+      "improved": false,
+      "moves": 3,
+      "stale": 8
+    },
+    {
+      "attempt": 64,
+      "source": "perturbation",
+      "score": 916.031175059952,
+      "improved": false,
+      "moves": 3,
+      "stale": 9
+    },
+    {
+      "attempt": 65,
+      "source": "perturbation",
+      "score": 915.6858513189449,
+      "improved": true,
+      "moves": 3,
+      "stale": 0
+    },
+    {
+      "attempt": 66,
+      "source": "perturbation",
+      "score": 915.6858513189449,
+      "improved": false,
+      "moves": 7,
+      "stale": 1
+    },
+    {
+      "attempt": 67,
+      "source": "perturbation",
+      "score": 915.9830049004274,
+      "improved": false,
+      "moves": 6,
+      "stale": 2
+    },
+    {
+      "attempt": 68,
+      "source": "perturbation",
+      "score": 916.1889271191742,
+      "improved": false,
+      "moves": 6,
+      "stale": 3
+    },
+    {
+      "attempt": 69,
+      "source": "perturbation",
+      "score": 915.6858513189449,
+      "improved": false,
+      "moves": 3,
+      "stale": 4
+    },
+    {
+      "attempt": 70,
+      "source": "perturbation",
+      "score": 915.6858513189449,
+      "improved": false,
+      "moves": 5,
+      "stale": 5
+    },
+    {
+      "attempt": 71,
+      "source": "perturbation",
+      "score": 915.6858513189449,
+      "improved": false,
+      "moves": 2,
+      "stale": 6
+    },
+    {
+      "attempt": 72,
+      "source": "perturbation",
+      "score": 915.6858513189449,
+      "improved": false,
+      "moves": 4,
+      "stale": 7
+    },
+    {
+      "attempt": 73,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": true,
+      "moves": 6,
+      "stale": 0
+    },
+    {
+      "attempt": 74,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 4,
+      "stale": 1
+    },
+    {
+      "attempt": 75,
+      "source": "perturbation",
+      "score": 915.804921280367,
+      "improved": false,
+      "moves": 2,
+      "stale": 2
+    },
+    {
+      "attempt": 76,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 3,
+      "stale": 3
+    },
+    {
+      "attempt": 77,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 4,
+      "stale": 4
+    },
+    {
+      "attempt": 78,
+      "source": "perturbation",
+      "score": 916.125221561881,
+      "improved": false,
+      "moves": 7,
+      "stale": 5
+    },
+    {
+      "attempt": 79,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 4,
+      "stale": 6
+    },
+    {
+      "attempt": 80,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 4,
+      "stale": 7
+    },
+    {
+      "attempt": 81,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 7,
+      "stale": 8
+    },
+    {
+      "attempt": 82,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 5,
+      "stale": 9
+    },
+    {
+      "attempt": 83,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 1,
+      "stale": 10
+    },
+    {
+      "attempt": 84,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 2,
+      "stale": 11
+    },
+    {
+      "attempt": 85,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 2,
+      "stale": 12
+    },
+    {
+      "attempt": 86,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 5,
+      "stale": 13
+    },
+    {
+      "attempt": 87,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 2,
+      "stale": 14
+    },
+    {
+      "attempt": 88,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 4,
+      "stale": 15
+    },
+    {
+      "attempt": 89,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 7,
+      "stale": 16
+    },
+    {
+      "attempt": 90,
+      "source": "perturbation",
+      "score": 915.9825878427692,
+      "improved": false,
+      "moves": 11,
+      "stale": 17
+    },
+    {
+      "attempt": 91,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 6,
+      "stale": 18
+    },
+    {
+      "attempt": 92,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 5,
+      "stale": 19
+    },
+    {
+      "attempt": 93,
+      "source": "perturbation",
+      "score": 915.6221457616515,
+      "improved": false,
+      "moves": 7,
+      "stale": 20
+    }
+  ],
+  "best_history": [
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Kinshasa|Lagos",
+        "Kinshasa|Luanda",
+        "Kinshasa|Nairobi"
+      ],
+      "from": "Africa Cross",
+      "to": "South Atlantic Bridge",
+      "before": 918.2782817224481,
+      "after": 916.6353873423001
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Los Angeles|Mexico City",
+        "Los Angeles|San Francisco"
+      ],
+      "from": "Pacific Crossing",
+      "to": "Alaska",
+      "before": 916.6353873423001,
+      "after": 916.2312584714837
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Cape Town|Porto Alegre"
+      ],
+      "from": "Africa Cross",
+      "to": "SA\u2013Africa Bridge",
+      "before": 916.2312584714837,
+      "after": 916.0173078928162
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Buenos Aires|Porto Alegre",
+        "Buenos Aires|Santiago"
+      ],
+      "from": "SA\u2013Africa Bridge",
+      "to": "South America East",
+      "before": 916.0173078928162,
+      "after": 915.9154415597957
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Cape Town|Pretoria"
+      ],
+      "from": "South Atlantic Bridge",
+      "to": "SA\u2013Africa Bridge",
+      "before": 915.9154415597957,
+      "after": 915.8827025336253
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Antananarivo|Harare",
+        "Antananarivo|Perth",
+        "Harare|Pretoria"
+      ],
+      "from": "South Atlantic Bridge",
+      "to": "SA\u2013Africa Bridge",
+      "before": 915.8827025336253,
+      "after": 915.6221457616515
+    }
+  ],
+  "stopping_rule": {
+    "consecutive_nonimproving_restarts": 20,
+    "final_neighborhood": "connected relocations through 6 tracks, connected exchanges through 3 tracks each way, and full-line merges where enabled"
+  },
+  "final_audit": {
+    "exhausted": true,
+    "candidates_checked": 519,
+    "score": 915.6221457616515,
+    "group_size": 6,
+    "swap_size": 3
+  },
+  "evaluations": {
+    "hits": 64381,
+    "misses": 135047,
+    "maxsize": 150000,
+    "currsize": 135047
+  },
+  "elapsed_seconds": 376.16,
+  "seed": 20261104
+}

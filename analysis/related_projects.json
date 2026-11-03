@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Pocket Planes optimization \u00b7 Evan Diewald",
+    "url": "https://github.com/evandiewald/pocket-planes-optimization",
+    "finding": "Optimizes trips, fleets and airport portfolios using calibrated observations, value iteration and a constrained portfolio model. Inspected the README, portfolio model, value iteration and toy MDP at commit 6f661d1eac4932ca51e9f8450255cd8ff09cee31.",
+    "applied": "Applied reproducible random experiments and separate evaluation seeds. Pocket Planes profit, airport population and delivery bonuses are not assumed to apply to Pocket Trains."
+  },
+  {
+    "title": "Pocket Planes agent simulation \u00b7 kcelebi",
+    "url": "https://github.com/kcelebi/pocket-planes",
+    "finding": "An agent-based Processing simulation separating agents, game state and actions. Inspected its implementation: several optimizer classes are placeholders and flight time is hardcoded, so it is not a verified global optimizer.",
+    "applied": "Useful separation of jobs, vehicles and time for future calibrated simulation; the present tool makes no vehicle-dispatch or earnings claim."
+  },
+  {
+    "title": "Pocket Planes 2.0 route calculator",
+    "url": "https://github.com/veN1ce7/Pocket-Planes-2.0",
+    "finding": "A route-calculator project derived from earlier community calculators. Its route utilities check range, distance and airport eligibility; this is not a complete network-layout solver.",
+    "applied": "Applied the principle that feasibility must be checked independently of the score. Train choice remains separate from this engine-agnostic ownership model."
+  },
+  {
+    "title": "Pocket Planes distance calculations",
+    "url": "https://github.com/daft7/Pocket_Planes_calcs",
+    "finding": "Documents wraparound distance calculations for a changed Pocket Planes map. Geometry and version assumptions can change preferred routes.",
+    "applied": "Stress-tested the eight provisional Pocket Trains distances. No free-flight or wraparound connections were added to the fixed rail map."
+  },
+  {
+    "title": "Recombination: spanning trees and connected partitions",
+    "url": "https://arxiv.org/abs/1911.05725",
+    "finding": "ReCom explores connected partitions by merging neighboring regions and cutting a random spanning tree.",
+    "applied": "Inspired connected two- and three-railroad repartitions on the track line graph, with a weighted planning cap. Our asymmetric annealing proposals are heuristic optimization, not stationary posterior sampling."
+  },
+  {
+    "title": "Pocket Trains game implementations inspected",
+    "url": "https://github.com/JoeyHinckley34/PocketTrains",
+    "finding": "Search also found this game project and TheIceCreamBear/PocketTrains, a clone. Neither was verified as a complete global track-layout solver.",
+    "applied": "No external project code was copied or executed. Layouts and scores here are independently computed from the supplied tracker map."
+  },
+  {
+    "title": "Pocket Trains official App Store version history",
+    "url": "https://apps.apple.com/us/app/pocket-trains-railroad-tycoon/id635931971",
+    "finding": "Version 1.9 introduced Metro Electric and Petabyte Electric with electrified tracks and zero-fuel operation. Later notes describe engine/fuel-car management fixes. This version history does not independently validate the supplied map or its prices.",
+    "applied": "Kept track distance as an explicit routing proxy instead of claiming literal fuel consumption for every engine. Vehicle speed, capacity, electrification and operating costs remain outside the engine-agnostic objective."
+  }
+]

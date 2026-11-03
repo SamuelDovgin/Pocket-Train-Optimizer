@@ -4,10 +4,11 @@
   "private": true,
   "description": "Pocket Trains route-efficiency model and progress checklist",
   "scripts": {
-    "test": "node --check assets/app.js && node --check assets/monte-carlo.js && node --check assets/monte-carlo-worker.js && node --check assets/world-map.js && node --check assets/operating-core.js && node --check assets/operating-worker.js && node --check assets/operating.js && node --test tests/*.test.cjs",
+    "test": "node --check assets/app.js && node --check assets/monte-carlo.js && node --check assets/monte-carlo-worker.js && node --check assets/world-map.js && node --check assets/operating-core.js && node --check assets/operating-worker.js && node --check assets/operating.js && node --check assets/corridor-map-core.js && node --check assets/corridor-lab.js && node --test tests/*.test.cjs",
     "build": "node scripts/build.cjs",
     "start": "python3 -m http.server 8765 --bind 127.0.0.1",
     "map:svg": "node scripts/build-world-map.cjs",
+    "corridors:search": "python3 scripts/corridor_search.py && python3 scripts/add-corridor-loop-examples.py && python3 scripts/build-corridor-candidates.py && node scripts/evaluate-corridors.cjs && python3 scripts/migrate-corridor-reference.py && node scripts/build-corridor-maps.cjs && python3 scripts/render-corridor-maps.py && python3 scripts/document-corridor-search.py",
     "operating:evaluate": "node scripts/evaluate-operating.cjs && node scripts/document-operating.cjs"
   },
   "engines": {

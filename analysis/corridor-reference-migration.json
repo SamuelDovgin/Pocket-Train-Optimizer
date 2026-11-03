@@ -1,0 +1,2428 @@
+{
+  "version": 1,
+  "selection_was_frozen": true,
+  "selected_target": "hubs_a",
+  "basis": "Public reference of 15 owned tracks only; does not read browser saves or assert this is the player\u2019s current game",
+  "operating_fleet": 27,
+  "extra_feeder_routes": [
+    {
+      "id": "F01",
+      "path": [
+        "Budapest",
+        "Kyiv"
+      ],
+      "purpose": "Retained built link outside the optimized operating graph; extra feeder/holding engine may be needed"
+    },
+    {
+      "id": "F02",
+      "path": [
+        "Glasgow",
+        "London"
+      ],
+      "purpose": "Retained built link outside the optimized operating graph; extra feeder/holding engine may be needed"
+    },
+    {
+      "id": "F03",
+      "path": [
+        "Paris",
+        "Milan",
+        "Munich"
+      ],
+      "purpose": "Retained built link outside the optimized operating graph; extra feeder/holding engine may be needed"
+    }
+  ],
+  "target_labels_to_reference_trains": {
+    "F02": "Blue",
+    "R06": "Cyan",
+    "R17": "Green",
+    "R13": "Pink"
+  },
+  "unused_built_tracks_kept": [
+    "Budapest|Kyiv",
+    "Glasgow|London",
+    "Milan|Munich",
+    "Milan|Paris"
+  ],
+  "steps": [
+    {
+      "kind": "BUILD",
+      "track": "Amsterdam|Copenhagen",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 4290,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 1
+    },
+    {
+      "kind": "BUILD",
+      "track": "Copenhagen|Stockholm",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 3315,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 2
+    },
+    {
+      "kind": "BUILD",
+      "track": "Oslo|Stockholm",
+      "owner": "R21",
+      "target_label": "R21",
+      "needs_engine": true,
+      "price_reference": 2925,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 3
+    },
+    {
+      "kind": "BUILD",
+      "track": "Helsinki|Stockholm",
+      "owner": "R21",
+      "target_label": "R21",
+      "needs_engine": false,
+      "price_reference": null,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 4
+    },
+    {
+      "kind": "BUILD",
+      "track": "Helsinki|St. Petersburg",
+      "owner": "R21",
+      "target_label": "R21",
+      "needs_engine": false,
+      "price_reference": 2470,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 5
+    },
+    {
+      "kind": "BUILD",
+      "track": "Budapest|Istanbul",
+      "owner": "Pink",
+      "target_label": "R13",
+      "needs_engine": false,
+      "price_reference": 5005,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 6
+    },
+    {
+      "kind": "BUILD",
+      "track": "Berlin|Minsk",
+      "owner": "R20",
+      "target_label": "R20",
+      "needs_engine": true,
+      "price_reference": 5395,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 7
+    },
+    {
+      "kind": "BUILD",
+      "track": "Minsk|Moscow",
+      "owner": "R20",
+      "target_label": "R20",
+      "needs_engine": false,
+      "price_reference": 4485,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 8
+    },
+    {
+      "kind": "BUILD",
+      "track": "Kyiv|Volgograd",
+      "owner": "R16",
+      "target_label": "R16",
+      "needs_engine": true,
+      "price_reference": 5980,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 9
+    },
+    {
+      "kind": "BUILD",
+      "track": "Glasgow|Reykjavik",
+      "owner": "R15",
+      "target_label": "R15",
+      "needs_engine": true,
+      "price_reference": 30420,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 10
+    },
+    {
+      "kind": "CORRECT OWNERSHIP",
+      "track": "Berlin|Munich",
+      "from": "Green",
+      "to": "R20",
+      "target_label": "R20",
+      "reason": "Target connectivity/alignment; no immediate partial-network earnings gain was established",
+      "checks": [
+        "Keep the physical track built",
+        "Park donor stationary on retained route",
+        "Have recipient engine ready",
+        "Verify live reclaim fee and cash"
+      ],
+      "order": 11
+    },
+    {
+      "kind": "CORRECT OWNERSHIP",
+      "track": "Budapest|Kyiv",
+      "from": "Pink",
+      "to": "F01",
+      "target_label": "F01",
+      "reason": "Target connectivity/alignment; no immediate partial-network earnings gain was established",
+      "checks": [
+        "Keep the physical track built",
+        "Park donor stationary on retained route",
+        "Have recipient engine ready",
+        "Verify live reclaim fee and cash"
+      ],
+      "order": 12
+    },
+    {
+      "kind": "CORRECT OWNERSHIP",
+      "track": "Milan|Munich",
+      "from": "Green",
+      "to": "F03",
+      "target_label": "F03",
+      "reason": "Target connectivity/alignment; no immediate partial-network earnings gain was established",
+      "checks": [
+        "Keep the physical track built",
+        "Park donor stationary on retained route",
+        "Have recipient engine ready",
+        "Verify live reclaim fee and cash"
+      ],
+      "order": 13
+    },
+    {
+      "kind": "CORRECT OWNERSHIP",
+      "track": "Milan|Rome",
+      "from": "Blue",
+      "to": "Green",
+      "target_label": "R17",
+      "reason": "Target connectivity/alignment; no immediate partial-network earnings gain was established",
+      "checks": [
+        "Keep the physical track built",
+        "Park donor stationary on retained route",
+        "Have recipient engine ready",
+        "Verify live reclaim fee and cash"
+      ],
+      "order": 14
+    },
+    {
+      "kind": "CORRECT OWNERSHIP",
+      "track": "Milan|Paris",
+      "from": "Blue",
+      "to": "F03",
+      "target_label": "F03",
+      "reason": "Target connectivity/alignment; no immediate partial-network earnings gain was established",
+      "checks": [
+        "Keep the physical track built",
+        "Park donor stationary on retained route",
+        "Have recipient engine ready",
+        "Verify live reclaim fee and cash"
+      ],
+      "order": 15
+    },
+    {
+      "kind": "CORRECT OWNERSHIP",
+      "track": "London|Paris",
+      "from": "Blue",
+      "to": "Pink",
+      "target_label": "R13",
+      "reason": "Target connectivity/alignment; no immediate partial-network earnings gain was established",
+      "checks": [
+        "Keep the physical track built",
+        "Park donor stationary on retained route",
+        "Have recipient engine ready",
+        "Verify live reclaim fee and cash"
+      ],
+      "order": 16
+    },
+    {
+      "kind": "BUILD",
+      "track": "Dublin|London",
+      "owner": "Pink",
+      "target_label": "R13",
+      "needs_engine": false,
+      "price_reference": 2925,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 17
+    },
+    {
+      "kind": "LICENSE",
+      "region": "Africa",
+      "price_reference": 50000,
+      "checks": [
+        "Verify live license price and save enough cash"
+      ],
+      "order": 18
+    },
+    {
+      "kind": "BUILD",
+      "track": "Casablanca|Madrid",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 4095,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 19
+    },
+    {
+      "kind": "BUILD",
+      "track": "Casablanca|Dakar",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 8450,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 20
+    },
+    {
+      "kind": "BUILD",
+      "track": "Bamako|Dakar",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": true,
+      "price_reference": 3315,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 21
+    },
+    {
+      "kind": "BUILD",
+      "track": "Bamako|Lagos",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 5061,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 22
+    },
+    {
+      "kind": "BUILD",
+      "track": "Kinshasa|Lagos",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 7475,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 23
+    },
+    {
+      "kind": "BUILD",
+      "track": "Kinshasa|Luanda",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 2340,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 24
+    },
+    {
+      "kind": "BUILD",
+      "track": "Harare|Luanda",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 8190,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 25
+    },
+    {
+      "kind": "BUILD",
+      "track": "Harare|Pretoria",
+      "owner": "R07",
+      "target_label": "R07",
+      "needs_engine": true,
+      "price_reference": 3315,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 26
+    },
+    {
+      "kind": "BUILD",
+      "track": "Harare|Zanzibar",
+      "owner": "R07",
+      "target_label": "R07",
+      "needs_engine": false,
+      "price_reference": 5590,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 27
+    },
+    {
+      "kind": "BUILD",
+      "track": "Nairobi|Zanzibar",
+      "owner": "R07",
+      "target_label": "R07",
+      "needs_engine": false,
+      "price_reference": null,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 28
+    },
+    {
+      "kind": "BUILD",
+      "track": "Khartoum|Nairobi",
+      "owner": "R07",
+      "target_label": "R07",
+      "needs_engine": false,
+      "price_reference": 6318,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 29
+    },
+    {
+      "kind": "BUILD",
+      "track": "Cairo|Khartoum",
+      "owner": "R07",
+      "target_label": "R07",
+      "needs_engine": false,
+      "price_reference": 6565,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 30
+    },
+    {
+      "kind": "BUILD",
+      "track": "Antananarivo|Harare",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": null,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 31
+    },
+    {
+      "kind": "BUILD",
+      "track": "Cairo|Tripoli",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": true,
+      "price_reference": 7540,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 32
+    },
+    {
+      "kind": "BUILD",
+      "track": "Algiers|Tripoli",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 4095,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 33
+    },
+    {
+      "kind": "LICENSE",
+      "region": "Asia",
+      "price_reference": 50000,
+      "checks": [
+        "Verify live license price and save enough cash"
+      ],
+      "order": 34
+    },
+    {
+      "kind": "BUILD",
+      "track": "Amman|Cairo",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 2237,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 35
+    },
+    {
+      "kind": "BUILD",
+      "track": "Amman|Baghdad",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 2925,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 36
+    },
+    {
+      "kind": "BUILD",
+      "track": "Baghdad|Tehran",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 3055,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 37
+    },
+    {
+      "kind": "BUILD",
+      "track": "Amman|Riyadh",
+      "owner": "R04",
+      "target_label": "R04",
+      "needs_engine": true,
+      "price_reference": 5850,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 38
+    },
+    {
+      "kind": "BUILD",
+      "track": "Dubai|Riyadh",
+      "owner": "R04",
+      "target_label": "R04",
+      "needs_engine": false,
+      "price_reference": 2925,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 39
+    },
+    {
+      "kind": "BUILD",
+      "track": "Amman|Athens",
+      "owner": "R04",
+      "target_label": "R04",
+      "needs_engine": false,
+      "price_reference": null,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 40
+    },
+    {
+      "kind": "BUILD",
+      "track": "Kabul|Tehran",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 6890,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 41
+    },
+    {
+      "kind": "BUILD",
+      "track": "Kabul|New Delhi",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 2925,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 42
+    },
+    {
+      "kind": "BUILD",
+      "track": "Kolkata|New Delhi",
+      "owner": "R01",
+      "target_label": "R01",
+      "needs_engine": true,
+      "price_reference": 6695,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 43
+    },
+    {
+      "kind": "BUILD",
+      "track": "Bangkok|Kolkata",
+      "owner": "R01",
+      "target_label": "R01",
+      "needs_engine": false,
+      "price_reference": 6565,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 44
+    },
+    {
+      "kind": "BUILD",
+      "track": "Bangkok|Singapore",
+      "owner": "R01",
+      "target_label": "R01",
+      "needs_engine": false,
+      "price_reference": 4940,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 45
+    },
+    {
+      "kind": "BUILD",
+      "track": "Jakarta|Singapore",
+      "owner": "R01",
+      "target_label": "R01",
+      "needs_engine": false,
+      "price_reference": 4030,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 46
+    },
+    {
+      "kind": "BUILD",
+      "track": "Jakarta|Kupang",
+      "owner": "R01",
+      "target_label": "R01",
+      "needs_engine": false,
+      "price_reference": 4550,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 47
+    },
+    {
+      "kind": "BUILD",
+      "track": "Karachi|Tehran",
+      "owner": "R27",
+      "target_label": "R27",
+      "needs_engine": true,
+      "price_reference": 7800,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 48
+    },
+    {
+      "kind": "BUILD",
+      "track": "Karachi|Mumbai",
+      "owner": "R27",
+      "target_label": "R27",
+      "needs_engine": false,
+      "price_reference": 4420,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 49
+    },
+    {
+      "kind": "BUILD",
+      "track": "Bangalore|Mumbai",
+      "owner": "R27",
+      "target_label": "R27",
+      "needs_engine": false,
+      "price_reference": 2990,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 50
+    },
+    {
+      "kind": "BUILD",
+      "track": "Moscow|Perm",
+      "owner": "R20",
+      "target_label": "R20",
+      "needs_engine": false,
+      "price_reference": 7930,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 51
+    },
+    {
+      "kind": "BUILD",
+      "track": "Chengdu|New Delhi",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 9815,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 52
+    },
+    {
+      "kind": "BUILD",
+      "track": "Chengdu|Xi'An",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 4095,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 53
+    },
+    {
+      "kind": "BUILD",
+      "track": "Chengdu|Hanoi",
+      "owner": "R10",
+      "target_label": "R10",
+      "needs_engine": true,
+      "price_reference": 5005,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 54
+    },
+    {
+      "kind": "BUILD",
+      "track": "Hanoi|Hong Kong",
+      "owner": "R10",
+      "target_label": "R10",
+      "needs_engine": false,
+      "price_reference": 3640,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 55
+    },
+    {
+      "kind": "BUILD",
+      "track": "Hong Kong|Manila",
+      "owner": "R10",
+      "target_label": "R10",
+      "needs_engine": false,
+      "price_reference": 13455,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 56
+    },
+    {
+      "kind": "BUILD",
+      "track": "Shanghai|Xi'An",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 5005,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 57
+    },
+    {
+      "kind": "BUILD",
+      "track": "Nagasaki|Shanghai",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 11895,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 58
+    },
+    {
+      "kind": "BUILD",
+      "track": "Nagasaki|Tokyo",
+      "owner": "R02",
+      "target_label": "R02",
+      "needs_engine": false,
+      "price_reference": 3835,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 59
+    },
+    {
+      "kind": "BUILD",
+      "track": "Beijing|Shanghai",
+      "owner": "R24",
+      "target_label": "R24",
+      "needs_engine": true,
+      "price_reference": 4680,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 60
+    },
+    {
+      "kind": "BUILD",
+      "track": "Manado|Manila",
+      "owner": "R10",
+      "target_label": "R10",
+      "needs_engine": false,
+      "price_reference": 5395,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 61
+    },
+    {
+      "kind": "BUILD",
+      "track": "Beijing|Ulan Bator",
+      "owner": "R24",
+      "target_label": "R24",
+      "needs_engine": false,
+      "price_reference": 5980,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 62
+    },
+    {
+      "kind": "BUILD",
+      "track": "Novosibirsk|Perm",
+      "owner": "R20",
+      "target_label": "R20",
+      "needs_engine": false,
+      "price_reference": 10790,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 63
+    },
+    {
+      "kind": "BUILD",
+      "track": "Urumqi|Volgograd",
+      "owner": "R16",
+      "target_label": "R16",
+      "needs_engine": false,
+      "price_reference": 16835,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 64
+    },
+    {
+      "kind": "BUILD",
+      "track": "Beijing|Urumqi",
+      "owner": "R16",
+      "target_label": "R16",
+      "needs_engine": false,
+      "price_reference": 11180,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 65
+    },
+    {
+      "kind": "BUILD",
+      "track": "Beijing|Shenyang",
+      "owner": "R16",
+      "target_label": "R16",
+      "needs_engine": false,
+      "price_reference": 2795,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 66
+    },
+    {
+      "kind": "BUILD",
+      "track": "Seoul|Shenyang",
+      "owner": "R23",
+      "target_label": "R23",
+      "needs_engine": true,
+      "price_reference": 2340,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 67
+    },
+    {
+      "kind": "BUILD",
+      "track": "Shenyang|Vladivostok",
+      "owner": "R16",
+      "target_label": "R16",
+      "needs_engine": false,
+      "price_reference": 2340,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 68
+    },
+    {
+      "kind": "BUILD",
+      "track": "Harbin|Shenyang",
+      "owner": "R23",
+      "target_label": "R23",
+      "needs_engine": false,
+      "price_reference": 2990,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 69
+    },
+    {
+      "kind": "BUILD",
+      "track": "Sendai|Vladivostok",
+      "owner": "R16",
+      "target_label": "R16",
+      "needs_engine": false,
+      "price_reference": 15015,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 70
+    },
+    {
+      "kind": "BUILD",
+      "track": "Harbin|Yakutsk",
+      "owner": "R23",
+      "target_label": "R23",
+      "needs_engine": false,
+      "price_reference": 10010,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 71
+    },
+    {
+      "kind": "BUILD",
+      "track": "Novosibirsk|Yakutsk",
+      "owner": "R20",
+      "target_label": "R20",
+      "needs_engine": false,
+      "price_reference": 19370,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 72
+    },
+    {
+      "kind": "BUILD",
+      "track": "Magadan|Yakutsk",
+      "owner": "R20",
+      "target_label": "R20",
+      "needs_engine": false,
+      "price_reference": 8125,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 73
+    },
+    {
+      "kind": "BUILD",
+      "track": "Anadyr|Magadan",
+      "owner": "R20",
+      "target_label": "R20",
+      "needs_engine": false,
+      "price_reference": 10920,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 74
+    },
+    {
+      "kind": "LICENSE",
+      "region": "North America",
+      "price_reference": 50000,
+      "checks": [
+        "Verify live license price and save enough cash"
+      ],
+      "order": 75
+    },
+    {
+      "kind": "BUILD",
+      "track": "Reykjavik|Tasiilaq",
+      "owner": "R15",
+      "target_label": "R15",
+      "needs_engine": false,
+      "price_reference": 16770,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 76
+    },
+    {
+      "kind": "BUILD",
+      "track": "Nuuk|Tasiilaq",
+      "owner": "R25",
+      "target_label": "R25",
+      "needs_engine": true,
+      "price_reference": 5980,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 77
+    },
+    {
+      "kind": "BUILD",
+      "track": "Goose Bay|Nuuk",
+      "owner": "R25",
+      "target_label": "R25",
+      "needs_engine": false,
+      "price_reference": 22425,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 78
+    },
+    {
+      "kind": "BUILD",
+      "track": "Goose Bay|Montreal",
+      "owner": "R25",
+      "target_label": "R25",
+      "needs_engine": false,
+      "price_reference": 7345,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 79
+    },
+    {
+      "kind": "BUILD",
+      "track": "Montreal|Toronto",
+      "owner": "R25",
+      "target_label": "R25",
+      "needs_engine": false,
+      "price_reference": 3120,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 80
+    },
+    {
+      "kind": "BUILD",
+      "track": "Detroit|Toronto",
+      "owner": "R25",
+      "target_label": "R25",
+      "needs_engine": false,
+      "price_reference": 1560,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 81
+    },
+    {
+      "kind": "BUILD",
+      "track": "Chicago|Detroit",
+      "owner": "R25",
+      "target_label": "R25",
+      "needs_engine": false,
+      "price_reference": 2015,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 82
+    },
+    {
+      "kind": "BUILD",
+      "track": "Chicago|St. Louis",
+      "owner": "R25",
+      "target_label": "R25",
+      "needs_engine": false,
+      "price_reference": 1430,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 83
+    },
+    {
+      "kind": "BUILD",
+      "track": "Denver|St. Louis",
+      "owner": "R05",
+      "target_label": "R05",
+      "needs_engine": true,
+      "price_reference": 5980,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 84
+    },
+    {
+      "kind": "BUILD",
+      "track": "Calgary|Denver",
+      "owner": "R12",
+      "target_label": "R12",
+      "needs_engine": true,
+      "price_reference": 6435,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 85
+    },
+    {
+      "kind": "BUILD",
+      "track": "Calgary|Edmonton",
+      "owner": "R12",
+      "target_label": "R12",
+      "needs_engine": false,
+      "price_reference": 1885,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 86
+    },
+    {
+      "kind": "BUILD",
+      "track": "Calgary|Vancouver",
+      "owner": "R19",
+      "target_label": "R19",
+      "needs_engine": true,
+      "price_reference": 4485,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 87
+    },
+    {
+      "kind": "BUILD",
+      "track": "Calgary|Winnipeg",
+      "owner": "R19",
+      "target_label": "R19",
+      "needs_engine": false,
+      "price_reference": 6110,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 88
+    },
+    {
+      "kind": "BUILD",
+      "track": "Minneapolis|Winnipeg",
+      "owner": "R19",
+      "target_label": "R19",
+      "needs_engine": false,
+      "price_reference": 3120,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 89
+    },
+    {
+      "kind": "BUILD",
+      "track": "New York|St. Louis",
+      "owner": "R05",
+      "target_label": "R05",
+      "needs_engine": false,
+      "price_reference": 6435,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 90
+    },
+    {
+      "kind": "BUILD",
+      "track": "Boston|New York",
+      "owner": "R05",
+      "target_label": "R05",
+      "needs_engine": false,
+      "price_reference": 1235,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 91
+    },
+    {
+      "kind": "BUILD",
+      "track": "Denver|San Francisco",
+      "owner": "R05",
+      "target_label": "R05",
+      "needs_engine": false,
+      "price_reference": 6760,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 92
+    },
+    {
+      "kind": "BUILD",
+      "track": "Anchorage|Vancouver",
+      "owner": "R19",
+      "target_label": "R19",
+      "needs_engine": false,
+      "price_reference": 13000,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 93
+    },
+    {
+      "kind": "BUILD",
+      "track": "Anchorage|Fairbanks",
+      "owner": "R03",
+      "target_label": "R03",
+      "needs_engine": true,
+      "price_reference": 3055,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 94
+    },
+    {
+      "kind": "BUILD",
+      "track": "Anchorage|Nome",
+      "owner": "R19",
+      "target_label": "R19",
+      "needs_engine": false,
+      "price_reference": 7085,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 95
+    },
+    {
+      "kind": "BUILD",
+      "track": "Honolulu|San Francisco",
+      "owner": "R05",
+      "target_label": "R05",
+      "needs_engine": false,
+      "price_reference": 49140,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 96
+    },
+    {
+      "kind": "BUILD",
+      "track": "Lisbon|New York",
+      "owner": "Green",
+      "target_label": "R17",
+      "needs_engine": false,
+      "price_reference": 73320,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 97
+    },
+    {
+      "kind": "BUILD",
+      "track": "New York|Washington DC",
+      "owner": "Green",
+      "target_label": "R17",
+      "needs_engine": false,
+      "price_reference": 2470,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 98
+    },
+    {
+      "kind": "BUILD",
+      "track": "Atlanta|Washington DC",
+      "owner": "Green",
+      "target_label": "R17",
+      "needs_engine": false,
+      "price_reference": 2925,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 99
+    },
+    {
+      "kind": "BUILD",
+      "track": "Atlanta|New Orleans",
+      "owner": "Green",
+      "target_label": "R17",
+      "needs_engine": false,
+      "price_reference": 2925,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 100
+    },
+    {
+      "kind": "BUILD",
+      "track": "Houston|New Orleans",
+      "owner": "Green",
+      "target_label": "R17",
+      "needs_engine": false,
+      "price_reference": 2340,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 101
+    },
+    {
+      "kind": "BUILD",
+      "track": "Houston|Phoenix",
+      "owner": "Green",
+      "target_label": "R17",
+      "needs_engine": false,
+      "price_reference": 6435,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 102
+    },
+    {
+      "kind": "BUILD",
+      "track": "Los Angeles|Phoenix",
+      "owner": "Green",
+      "target_label": "R17",
+      "needs_engine": false,
+      "price_reference": 2665,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 103
+    },
+    {
+      "kind": "LICENSE",
+      "region": "Oceania",
+      "price_reference": 50000,
+      "checks": [
+        "Verify live license price and save enough cash"
+      ],
+      "order": 104
+    },
+    {
+      "kind": "BUILD",
+      "track": "Broome|Kupang",
+      "owner": "R01",
+      "target_label": "R01",
+      "needs_engine": false,
+      "price_reference": 12074,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 105
+    },
+    {
+      "kind": "BUILD",
+      "track": "Broome|Darwin",
+      "owner": "R22",
+      "target_label": "R22",
+      "needs_engine": true,
+      "price_reference": 4030,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 106
+    },
+    {
+      "kind": "BUILD",
+      "track": "Alice Springs|Broome",
+      "owner": "R01",
+      "target_label": "R01",
+      "needs_engine": false,
+      "price_reference": 5525,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 107
+    },
+    {
+      "kind": "BUILD",
+      "track": "Adelaide|Alice Springs",
+      "owner": "R01",
+      "target_label": "R01",
+      "needs_engine": false,
+      "price_reference": 5070,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 108
+    },
+    {
+      "kind": "BUILD",
+      "track": "Broome|Perth",
+      "owner": "R22",
+      "target_label": "R22",
+      "needs_engine": false,
+      "price_reference": 8710,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 109
+    },
+    {
+      "kind": "BUILD",
+      "track": "Antananarivo|Perth",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 83070,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 110
+    },
+    {
+      "kind": "BUILD",
+      "track": "Adelaide|Perth",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 9750,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 111
+    },
+    {
+      "kind": "BUILD",
+      "track": "Adelaide|Melbourne",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 2600,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 112
+    },
+    {
+      "kind": "BUILD",
+      "track": "Melbourne|Sydney",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 2535,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 113
+    },
+    {
+      "kind": "BUILD",
+      "track": "Brisbane|Sydney",
+      "owner": "R26",
+      "target_label": "R26",
+      "needs_engine": true,
+      "price_reference": 2665,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 114
+    },
+    {
+      "kind": "BUILD",
+      "track": "Brisbane|Cairns",
+      "owner": "R26",
+      "target_label": "R26",
+      "needs_engine": false,
+      "price_reference": 5525,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 115
+    },
+    {
+      "kind": "BUILD",
+      "track": "Cairns|Port Moresby",
+      "owner": "R26",
+      "target_label": "R26",
+      "needs_engine": false,
+      "price_reference": null,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 116
+    },
+    {
+      "kind": "BUILD",
+      "track": "Auckland|Sydney",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 28341,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 117
+    },
+    {
+      "kind": "BUILD",
+      "track": "Auckland|Wellington",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 2080,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 118
+    },
+    {
+      "kind": "BUILD",
+      "track": "Christchurch|Wellington",
+      "owner": "R11",
+      "target_label": "R11",
+      "needs_engine": false,
+      "price_reference": 1885,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 119
+    },
+    {
+      "kind": "LICENSE",
+      "region": "South America",
+      "price_reference": 50000,
+      "checks": [
+        "Verify live license price and save enough cash"
+      ],
+      "order": 120
+    },
+    {
+      "kind": "BUILD",
+      "track": "Dakar|Fortaleza",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 34515,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 121
+    },
+    {
+      "kind": "BUILD",
+      "track": "Belem|Fortaleza",
+      "owner": "R14",
+      "target_label": "R14",
+      "needs_engine": true,
+      "price_reference": 3705,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 122
+    },
+    {
+      "kind": "BUILD",
+      "track": "Fortaleza|Salvador",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 4030,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 123
+    },
+    {
+      "kind": "BUILD",
+      "track": "Rio de Janeiro|Salvador",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 4355,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 124
+    },
+    {
+      "kind": "BUILD",
+      "track": "Porto Alegre|Rio de Janeiro",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 4550,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 125
+    },
+    {
+      "kind": "BUILD",
+      "track": "Asuncion|Porto Alegre",
+      "owner": "R08",
+      "target_label": "R08",
+      "needs_engine": true,
+      "price_reference": 3380,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 126
+    },
+    {
+      "kind": "BUILD",
+      "track": "Buenos Aires|Porto Alegre",
+      "owner": "Cyan",
+      "target_label": "R06",
+      "needs_engine": false,
+      "price_reference": 3835,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 127
+    },
+    {
+      "kind": "BUILD",
+      "track": "Arequipa|Asuncion",
+      "owner": "R08",
+      "target_label": "R08",
+      "needs_engine": false,
+      "price_reference": 5785,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 128
+    },
+    {
+      "kind": "BUILD",
+      "track": "Arequipa|Lima",
+      "owner": "R08",
+      "target_label": "R08",
+      "needs_engine": false,
+      "price_reference": 3380,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 129
+    },
+    {
+      "kind": "BUILD",
+      "track": "Arequipa|Santiago",
+      "owner": "R18",
+      "target_label": "R18",
+      "needs_engine": true,
+      "price_reference": 6370,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 130
+    },
+    {
+      "kind": "BUILD",
+      "track": "Arequipa|Manaus",
+      "owner": "R18",
+      "target_label": "R18",
+      "needs_engine": false,
+      "price_reference": 7020,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 131
+    },
+    {
+      "kind": "BUILD",
+      "track": "Belem|Caracas",
+      "owner": "R14",
+      "target_label": "R14",
+      "needs_engine": false,
+      "price_reference": 8190,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 132
+    },
+    {
+      "kind": "BUILD",
+      "track": "Caracas|San Juan",
+      "owner": "R14",
+      "target_label": "R14",
+      "needs_engine": false,
+      "price_reference": 12675,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 133
+    },
+    {
+      "kind": "BUILD",
+      "track": "Havana|San Juan",
+      "owner": "R14",
+      "target_label": "R14",
+      "needs_engine": false,
+      "price_reference": 4225,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 134
+    },
+    {
+      "kind": "BUILD",
+      "track": "Havana|Miami",
+      "owner": "R14",
+      "target_label": "R14",
+      "needs_engine": false,
+      "price_reference": 4290,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 135
+    },
+    {
+      "kind": "BUILD",
+      "track": "Bogota|Caracas",
+      "owner": "R09",
+      "target_label": "R09",
+      "needs_engine": true,
+      "price_reference": 4675,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 136
+    },
+    {
+      "kind": "BUILD",
+      "track": "Bogota|Managua",
+      "owner": "R09",
+      "target_label": "R09",
+      "needs_engine": false,
+      "price_reference": 6045,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 137
+    },
+    {
+      "kind": "BUILD",
+      "track": "Managua|Mexico City",
+      "owner": "R09",
+      "target_label": "R09",
+      "needs_engine": false,
+      "price_reference": 5460,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 138
+    },
+    {
+      "kind": "BUILD",
+      "track": "Punta Arenas|Santiago",
+      "owner": "R18",
+      "target_label": "R18",
+      "needs_engine": false,
+      "price_reference": 11375,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 139
+    },
+    {
+      "kind": "BUILD",
+      "track": "Easter Island|Lima",
+      "owner": "R08",
+      "target_label": "R08",
+      "needs_engine": false,
+      "price_reference": null,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 140
+    },
+    {
+      "kind": "BUILD",
+      "track": "Cape Town|Porto Alegre",
+      "owner": "R08",
+      "target_label": "R08",
+      "needs_engine": false,
+      "price_reference": null,
+      "checks": [
+        "Verify live build/claim prices, engine range and cash"
+      ],
+      "order": 141
+    }
+  ],
+  "unresolved": [],
+  "structural_sequence_complete": true,
+  "final_owner_audit": [
+    {
+      "railroad": "Blue",
+      "tracks": 1,
+      "cities": 2,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Glasgow",
+        "London"
+      ],
+      "track_distance": 54,
+      "image_chord_directness": 1.0
+    },
+    {
+      "railroad": "Cyan",
+      "tracks": 12,
+      "cities": 13,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Buenos Aires",
+        "Stockholm"
+      ],
+      "track_distance": 865,
+      "image_chord_directness": 0.9476797352738578
+    },
+    {
+      "railroad": "F01",
+      "tracks": 1,
+      "cities": 2,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Budapest",
+        "Kyiv"
+      ],
+      "track_distance": 66,
+      "image_chord_directness": 1.0
+    },
+    {
+      "railroad": "F03",
+      "tracks": 2,
+      "cities": 3,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Munich",
+        "Paris"
+      ],
+      "track_distance": 77,
+      "image_chord_directness": 0.5863294360935559
+    },
+    {
+      "railroad": "Green",
+      "tracks": 11,
+      "cities": 12,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Los Angeles",
+        "Rome"
+      ],
+      "track_distance": 834,
+      "image_chord_directness": 0.9432159786030112
+    },
+    {
+      "railroad": "Pink",
+      "tracks": 5,
+      "cities": 6,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Dublin",
+        "Istanbul"
+      ],
+      "track_distance": 255,
+      "image_chord_directness": 0.9443997392911115
+    },
+    {
+      "railroad": "R01",
+      "tracks": 8,
+      "cities": 9,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Adelaide",
+        "New Delhi"
+      ],
+      "track_distance": 635,
+      "image_chord_directness": 0.9266790827179439
+    },
+    {
+      "railroad": "R02",
+      "tracks": 12,
+      "cities": 13,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Algiers",
+        "Tokyo"
+      ],
+      "track_distance": 867,
+      "image_chord_directness": 0.9392463659951233
+    },
+    {
+      "railroad": "R03",
+      "tracks": 1,
+      "cities": 2,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Anchorage",
+        "Fairbanks"
+      ],
+      "track_distance": 47,
+      "image_chord_directness": 1.0
+    },
+    {
+      "railroad": "R04",
+      "tracks": 3,
+      "cities": 4,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Athens",
+        "Dubai"
+      ],
+      "track_distance": 230,
+      "image_chord_directness": 0.9479763725758175
+    },
+    {
+      "railroad": "R05",
+      "tracks": 5,
+      "cities": 6,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Boston",
+        "Honolulu"
+      ],
+      "track_distance": 566,
+      "image_chord_directness": 0.9557351789497878
+    },
+    {
+      "railroad": "R07",
+      "tracks": 5,
+      "cities": 6,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Cairo",
+        "Pretoria"
+      ],
+      "track_distance": 370,
+      "image_chord_directness": 0.9484551002376932
+    },
+    {
+      "railroad": "R08",
+      "tracks": 5,
+      "cities": 6,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Cape Town",
+        "Easter Island"
+      ],
+      "track_distance": 763,
+      "image_chord_directness": 0.9187378646421507
+    },
+    {
+      "railroad": "R09",
+      "tracks": 3,
+      "cities": 4,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Caracas",
+        "Mexico City"
+      ],
+      "track_distance": 246,
+      "image_chord_directness": 0.8681153276685121
+    },
+    {
+      "railroad": "R10",
+      "tracks": 4,
+      "cities": 5,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Chengdu",
+        "Manado"
+      ],
+      "track_distance": 285,
+      "image_chord_directness": 0.8623155351540065
+    },
+    {
+      "railroad": "R11",
+      "tracks": 13,
+      "cities": 14,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Christchurch",
+        "Dakar"
+      ],
+      "track_distance": 1378,
+      "image_chord_directness": 0.9106275926373506
+    },
+    {
+      "railroad": "R12",
+      "tracks": 2,
+      "cities": 3,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Denver",
+        "Edmonton"
+      ],
+      "track_distance": 128,
+      "image_chord_directness": 0.9291635190662586
+    },
+    {
+      "railroad": "R14",
+      "tracks": 5,
+      "cities": 6,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Fortaleza",
+        "Miami"
+      ],
+      "track_distance": 335,
+      "image_chord_directness": 0.9207619574557073
+    },
+    {
+      "railroad": "R15",
+      "tracks": 2,
+      "cities": 3,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Glasgow",
+        "Tasiilaq"
+      ],
+      "track_distance": 242,
+      "image_chord_directness": 0.9606498296520328
+    },
+    {
+      "railroad": "R16",
+      "tracks": 6,
+      "cities": 7,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Kyiv",
+        "Sendai"
+      ],
+      "track_distance": 679,
+      "image_chord_directness": 0.9754405987532583
+    },
+    {
+      "railroad": "R18",
+      "tracks": 3,
+      "cities": 4,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Manaus",
+        "Punta Arenas"
+      ],
+      "track_distance": 381,
+      "image_chord_directness": 0.9656642295138617
+    },
+    {
+      "railroad": "R19",
+      "tracks": 5,
+      "cities": 6,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Minneapolis",
+        "Nome"
+      ],
+      "track_distance": 520,
+      "image_chord_directness": 0.9469424288063696
+    },
+    {
+      "railroad": "R20",
+      "tracks": 8,
+      "cities": 9,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Anadyr",
+        "Munich"
+      ],
+      "track_distance": 1077,
+      "image_chord_directness": 0.9518730834801697
+    },
+    {
+      "railroad": "R21",
+      "tracks": 3,
+      "cities": 4,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Oslo",
+        "St. Petersburg"
+      ],
+      "track_distance": 153,
+      "image_chord_directness": 0.9856478267791721
+    },
+    {
+      "railroad": "R22",
+      "tracks": 2,
+      "cities": 3,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Darwin",
+        "Perth"
+      ],
+      "track_distance": 196,
+      "image_chord_directness": 0.945473516949692
+    },
+    {
+      "railroad": "R23",
+      "tracks": 3,
+      "cities": 4,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Seoul",
+        "Yakutsk"
+      ],
+      "track_distance": 236,
+      "image_chord_directness": 0.8761742402538459
+    },
+    {
+      "railroad": "R24",
+      "tracks": 2,
+      "cities": 3,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Shanghai",
+        "Ulan Bator"
+      ],
+      "track_distance": 164,
+      "image_chord_directness": 0.9839177044458046
+    },
+    {
+      "railroad": "R25",
+      "tracks": 7,
+      "cities": 8,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "St. Louis",
+        "Tasiilaq"
+      ],
+      "track_distance": 445,
+      "image_chord_directness": 0.9635540454852363
+    },
+    {
+      "railroad": "R26",
+      "tracks": 3,
+      "cities": 4,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Port Moresby",
+        "Sydney"
+      ],
+      "track_distance": 196,
+      "image_chord_directness": 0.890404362318922
+    },
+    {
+      "railroad": "R27",
+      "tracks": 3,
+      "cities": 4,
+      "components": 1,
+      "branch_index": 0,
+      "cycles": 0,
+      "endpoints": [
+        "Bangalore",
+        "Tehran"
+      ],
+      "track_distance": 234,
+      "image_chord_directness": 0.983538253154197
+    }
+  ],
+  "reference_review": {
+    "schema": "pocket-trains-configuration-review/v1",
+    "input_source": "explicit-configuration",
+    "scope": "complete",
+    "confirmed_owned_tracks": 15,
+    "physical_network_components": 1,
+    "cities_reached": 14,
+    "coins": null,
+    "licenses": [
+      "Europe"
+    ],
+    "issues": [],
+    "notes": [],
+    "current_lines": [
+      {
+        "railroad": "Blue",
+        "tracks": 4,
+        "cities": 5,
+        "components": 1,
+        "branch_index": 0,
+        "cycles": 0,
+        "endpoints": [
+          "Glasgow",
+          "Rome"
+        ],
+        "track_distance": 168,
+        "image_chord_directness": 0.966529263271056
+      },
+      {
+        "railroad": "Cyan",
+        "tracks": 3,
+        "cities": 4,
+        "components": 1,
+        "branch_index": 0,
+        "cycles": 0,
+        "endpoints": [
+          "Amsterdam",
+          "Madrid"
+        ],
+        "track_distance": 121,
+        "image_chord_directness": 0.9675024369366596
+      },
+      {
+        "railroad": "Green",
+        "tracks": 5,
+        "cities": 6,
+        "components": 1,
+        "branch_index": 0,
+        "cycles": 0,
+        "endpoints": [
+          "Berlin",
+          "Lisbon"
+        ],
+        "track_distance": 193,
+        "image_chord_directness": 0.8817420066029614
+      },
+      {
+        "railroad": "Pink",
+        "tracks": 3,
+        "cities": 4,
+        "components": 1,
+        "branch_index": 0,
+        "cycles": 0,
+        "endpoints": [
+          "Kyiv",
+          "Paris"
+        ],
+        "track_distance": 169,
+        "image_chord_directness": 0.9826637605933981
+      }
+    ],
+    "target_reviews": {
+      "hubs_a": {
+        "label": "Concentrated transfer hubs \u00b7 variant A",
+        "fleet": 27,
+        "service_links": 141,
+        "branch_index": 0,
+        "player_train_for_target": {
+          "R06": "Cyan",
+          "R17": "Green",
+          "R13": "Pink"
+        },
+        "corridor_anchors": {
+          "R06": [
+            "Amsterdam|Paris",
+            "Bordeaux|Madrid",
+            "Bordeaux|Paris"
+          ],
+          "R17": [
+            "Barcelona|Madrid",
+            "Barcelona|Milan",
+            "Lisbon|Madrid"
+          ],
+          "R13": [
+            "Budapest|Munich",
+            "Munich|Paris"
+          ]
+        },
+        "matching_built_tracks": 8,
+        "owner_differences": [
+          {
+            "track": "Milan|Rome",
+            "from": "Blue",
+            "target_label": "R17"
+          },
+          {
+            "track": "Berlin|Munich",
+            "from": "Green",
+            "target_label": "R20"
+          },
+          {
+            "track": "London|Paris",
+            "from": "Blue",
+            "target_label": "R13"
+          }
+        ],
+        "built_links_outside_service_plan": [
+          "Budapest|Kyiv",
+          "Glasgow|London",
+          "Milan|Munich",
+          "Milan|Paris"
+        ],
+        "graph_feasible_corrections": [
+          {
+            "order": 1,
+            "track": "Berlin|Munich",
+            "from": "Green",
+            "to": "NEW TRAIN: R20",
+            "classification": "GRAPH-FEASIBLE, VERIFY IN GAME",
+            "depends_on": null,
+            "checks": [
+              "Verify current reclaim fee, available coins, recipient engine and both train positions in game",
+              "Park Green stationary on its retained connected route before reclaiming",
+              "Provide a usable engine for NEW TRAIN: R20; first claim creates its route"
+            ]
+          },
+          {
+            "order": 2,
+            "track": "Milan|Rome",
+            "from": "Blue",
+            "to": "Green",
+            "classification": "GRAPH-FEASIBLE, VERIFY IN GAME",
+            "depends_on": "Berlin|Munich",
+            "checks": [
+              "Verify current reclaim fee, available coins, recipient engine and both train positions in game",
+              "Park Blue stationary on its retained connected route before reclaiming"
+            ]
+          }
+        ],
+        "deferred_corrections": [
+          {
+            "track": "London|Paris",
+            "from": "Blue",
+            "to": "Pink",
+            "reasons": [
+              "Would disconnect the donor; needs an alternate retained connection or a separately verified batch"
+            ]
+          }
+        ],
+        "next_connected_purchase_candidates": [
+          {
+            "track": "Amsterdam|Copenhagen",
+            "target_label": "R06",
+            "player_railroad": "Cyan",
+            "extends_existing_train": true,
+            "missing_licenses": [],
+            "historical_build_claim_reference": 4290,
+            "checks": [
+              "Verify live build/claim prices and train range; this is a structural frontier, not a profit ranking"
+            ]
+          },
+          {
+            "track": "Budapest|Istanbul",
+            "target_label": "R13",
+            "player_railroad": "Pink",
+            "extends_existing_train": true,
+            "missing_licenses": [],
+            "historical_build_claim_reference": 5005,
+            "checks": [
+              "Verify live build/claim prices and train range; this is a structural frontier, not a profit ranking"
+            ]
+          },
+          {
+            "track": "Berlin|Minsk",
+            "target_label": "R20",
+            "player_railroad": null,
+            "extends_existing_train": false,
+            "missing_licenses": [],
+            "historical_build_claim_reference": 5395,
+            "checks": [
+              "Verify live build/claim prices and train range; this is a structural frontier, not a profit ranking",
+              "Provide an engine for a new railroad before its first claim"
+            ]
+          },
+          {
+            "track": "Glasgow|Reykjavik",
+            "target_label": "R15",
+            "player_railroad": null,
+            "extends_existing_train": false,
+            "missing_licenses": [],
+            "historical_build_claim_reference": 30420,
+            "checks": [
+              "Verify live build/claim prices and train range; this is a structural frontier, not a profit ranking",
+              "Provide an engine for a new railroad before its first claim"
+            ]
+          },
+          {
+            "track": "Kyiv|Volgograd",
+            "target_label": "R16",
+            "player_railroad": null,
+            "extends_existing_train": false,
+            "missing_licenses": [],
+            "historical_build_claim_reference": 5980,
+            "checks": [
+              "Verify live build/claim prices and train range; this is a structural frontier, not a profit ranking",
+              "Provide an engine for a new railroad before its first claim"
+            ]
+          },
+          {
+            "track": "Casablanca|Madrid",
+            "target_label": "R06",
+            "player_railroad": "Cyan",
+            "extends_existing_train": true,
+            "missing_licenses": [
+              "Africa"
+            ],
+            "historical_build_claim_reference": 4095,
+            "checks": [
+              "Verify live build/claim prices and train range; this is a structural frontier, not a profit ranking",
+              "Unlock Africa first"
+            ]
+          },
+          {
+            "track": "Lisbon|New York",
+            "target_label": "R17",
+            "player_railroad": "Green",
+            "extends_existing_train": true,
+            "missing_licenses": [
+              "North America"
+            ],
+            "historical_build_claim_reference": 73320,
+            "checks": [
+              "Verify live build/claim prices and train range; this is a structural frontier, not a profit ranking",
+              "Unlock North America first"
+            ]
+          }
+        ],
+        "purchase_candidate_basis": "Original submitted snapshot; recompute after purchases or corrections",
+        "recommendation_status": "STRUCTURAL REVIEW ONLY",
+        "operational_readiness": "Unverified: engine availability, actual fees, train positions and phase-specific earnings need review",
+        "unused_link_instruction": "Keep existing physical tracks; unused by this target does not mean sell or demolish"
+      }
+    },
+    "limitations": [
+      "Structural candidates, not a demonstrated profit optimum or a game action",
+      "Image directness uses chord lengths in the reference image; actual track curves and measured payouts are not recovered",
+      "Full-world operating results do not establish gains for this partial configuration",
+      "No save, tracker state, game configuration or repository data was modified"
+    ]
+  },
+  "limitations": "A dry-run connectivity sequence, not measured phase-by-phase profit or verified in-game execution. Prices are historical; fees, engines, positions and cash must be checked. Holding/feeder routes are additional to the optimized operating fleet and were not included in its simulated earnings."
+}

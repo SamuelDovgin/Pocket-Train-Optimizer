@@ -7,6 +7,8 @@ description: Review a player's current Pocket Trains network from map screenshot
 
 Turn the player's **actual owned network** into a practical next-session plan: what to retain, which corridor to extend, and which owner changes to perform or defer. Treat “optimal” as best under stated operating and progression assumptions; do not imply a proven game-profit optimum.
 
+If the user requests a clean-slate target before considering their configuration, keep current owners and purchases out of topology selection. Freeze the target first, then run this intake and migration review. The repo’s clean-slate search and evidence are documented in `docs/corridor-search.md`.
+
 ## Establish the current map
 
 Accept a tracker JSON export, map screenshots, a station-by-station route list, or a combination. Read [intake-and-review.md](references/intake-and-review.md) for the supported snapshot format and the distinctions that matter when interpreting screenshots and exports. Use [the example snapshot](assets/current-configuration.example.json) when transcribing a map.
@@ -24,7 +26,9 @@ Locate the Pocket Train Optimizer checkout and read `docs/operating-model.md` pl
 python .agents/skills/pocket-trains-route-coach/scripts/review_configuration.py /path/to/current.json --repo /path/to/Pocket-Train-Optimizer
 ```
 
-Install the checkout's `requirements.txt` if its Python dependencies are missing. The command writes a structural review to stdout only. Put any redirected output or player-specific transcription outside tracked files unless the user asks to save it in the repo. The default comparison includes `corridors38` and `corridors28`; `--target published28` or `--target published38` adds a historical operating baseline when useful.
+Install the checkout's `requirements.txt` if its Python dependencies are missing. The command writes a structural review to stdout only. Put any redirected output or player-specific transcription outside tracked files unless the user asks to save it in the repo. The new clean-slate study has its own recommendation and a separate optional reference checklist; it does not adopt a target into the historical tracker. For the latest clean-slate target, add `--data assets/corridor-data.json`; its `default_targets` selects the tuning-frozen recommendation. Read `assets/corridor-results.json` for the selection scope and compare the actual partial map afterward. `--target` accepts IDs from the selected dataset.
+
+The default operating-data comparison includes `corridors38` and `corridors28`; `--target published28` or `--target published38` adds a historical operating baseline when useful.
 
 Use the result as evidence, not an automatic action queue:
 

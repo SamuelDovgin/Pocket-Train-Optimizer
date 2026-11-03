@@ -278,7 +278,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('configuration', type=Path)
     parser.add_argument('--repo', type=Path, default=None)
-    parser.add_argument('--target', action='append', choices=['corridors38', 'corridors28', 'published28', 'published38'])
+    parser.add_argument('--data', type=Path, default=Path('assets/operating-data.json'), help='Versioned graph/plan JSON, relative to --repo unless absolute')
+    parser.add_argument('--target', action='append', help='Plan ID in the selected dataset; repeat to compare several')
     args = parser.parse_args()
     repo = args.repo or next((p for p in [Path.cwd(), *Path.cwd().parents, *Path(__file__).resolve().parents]
                              if (p / 'assets/operating-data.json').exists()), None)
@@ -286,9 +287,13 @@ def main():
         parser.error('Pass --repo pointing to a Pocket Train Optimizer checkout')
     try:
         raw = json.loads(args.configuration.read_text())
-        world = json.loads((repo / 'assets/operating-data.json').read_text())
+        world = json.loads((repo / args.data).read_text())
         historical = json.loads((repo / 'analysis/world_tracker_data.json').read_text())
-        result = review(raw, world, historical, args.target or ['corridors38', 'corridors28'])
+        targets = args.target or world.get('default_targets') or ['corridors38', 'corridors28']
+        unknown = sorted(set(targets) - set(world['plans']))
+        if unknown:
+            raise ValueError('Unknown target plan: ' + ', '.join(unknown))
+        result = review(raw, world, historical, targets)
     except (OSError, ValueError, TypeError, KeyError) as exc:
         parser.exit(2, 'Configuration could not be reviewed: ' + str(exc) + '\n')
     print(json.dumps(result, indent=2, ensure_ascii=False))

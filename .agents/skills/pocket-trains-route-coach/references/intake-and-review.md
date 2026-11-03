@@ -23,6 +23,8 @@ The format considers Europe unlocked; other licenses follow their explicit compl
 
 ## Repository evidence to use
 
+- `assets/corridor-data.json`, `assets/corridor-results.json`, `docs/corridor-search.md`: clean-slate pressure search, frozen recommendation and all-city candidate layouts. Pass `--data assets/corridor-data.json` to review against its default target. The separate `corridor-reference-migration.json` uses the public 15-track reference; it is not evidence of a player’s latest state.
+
 - `assets/operating-data.json`: 139-city / 191-available-link experimental graph, four service plans, route owners and patrols; contains the pictured Nairobi–Zanzibar addition. Unmapped current-game connections need a data audit, not deletion from the player's input.
 - `assets/map/game-reward-coordinates.json`: approximate reference-image geometry for the payout index. Chord directness uses image distance divided by image path-chord distance. Do not divide pixels by fuel and call that a dimensionless efficiency.
 - `assets/operating-core.js`, `docs/operating-model.md`, `assets/operating-results.json`: current physical service model, assumptions and versioned results. Completed-world results cannot select a partial-map correction's timing.

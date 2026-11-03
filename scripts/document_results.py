@@ -208,6 +208,24 @@ Install `requirements.txt` first when needed. The helper accepts explicit config
 
 '''
 readme=readme.replace('## Current verified results',skill_notes+'## Current verified results',1)
+if (root/'assets/corridor-results.json').exists():
+ clean_data=json.loads((root/'assets/corridor-data.json').read_text())
+ clean_report=json.loads((root/'assets/corridor-results.json').read_text())
+ chosen=clean_data['plans'][clean_report['selection']['recommendation']]
+ clean_notes=f"""## Clean-slate corridor search and examples
+
+[Open the clean-slate study and reference checklist](https://samueldovgin.github.io/Pocket-Train-Optimizer/docs/corridor-search.html).
+
+The current tuning-selected recommendation uses **{chosen['fleet']} trains**, **{chosen['tracks']} connections**, and all **139 cities**, with **zero branches** and **{chosen['cycles']} compact loops**. Every open route has at least 85% chord directness and no turn above 100 degrees. The primary recommendation allows at most two small collector loops; loop-rich cases remain comparisons. Full-track coverage is a separate scenario, not the primary goal.
+
+Search pressures vary straightness, long spans, fleet/attention cost, hub placement and retention of useful network shortcuts. Starting ownership, completed purchases and fixed long spines are excluded from topology selection. Policy/geometry tuning and held-out simulation seeds are separate. This is the best tested eligible candidate under declared preferences, not a measured profit optimum.
+
+Complete example PNG/SVG maps, route lists, actual intersection stations, pressure weights and held-out total/per-train/per-command comparisons are on the study page. The separate optional checklist works backward from the **public 15-track reference** and does not rewrite the historical tracker. Use Route Coach with your actual map and `--data assets/corridor-data.json` when your configuration differs.
+
+See [the reproducible method and full reference sequence](docs/corridor-search.md). Earlier shape-only iteration evidence is retained under `analysis/corridor-iterations/`; a bad operating result is not hidden by a geometric score.
+
+"""
+ readme=readme.replace('## Review your own configuration with the Route Coach skill',clean_notes+'## Review your own configuration with the Route Coach skill',1)
 (root/'README.md').write_text(readme)
 (root/'docs/verification.md').write_text(notes)
 def inline(s):

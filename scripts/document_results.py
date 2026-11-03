@@ -177,8 +177,16 @@ No external project code was copied or executed. These sources inform experiment
 # Distinguish earlier deterministic evidence from the latest MC stopping rule.
 readme=readme.replace('## Search and stopping criteria','## Earlier deterministic search evidence').replace('Each final campaign stops after 20','Each earlier deterministic campaign stops after 20')
 notes=notes.replace('## Evidence and stop rule','## Earlier deterministic search evidence').replace('Final campaigns stop after 20','Earlier deterministic campaigns stop after 20')
-readme=readme.replace('## Trains and progression',extra+'\n## Trains and progression')
-notes=notes.replace('## Progression research',extra+'\n## Progression research')
+map_notes='''## Full completed-world map
+
+The **World map** tab shows all 139 cities and all 190 physical tracks colored by the active completed target, with a Europe inset, numbered owner legend, zoom, owner highlighting and city-label toggle. It includes proposed initial-owner corrections and saved edits without marking purchases or recording claims. Invalid custom ownership is flagged.
+
+[Download the recommended full PNG (5200 × 3900)](https://samueldovgin.github.io/Pocket-Train-Optimizer/assets/map/proposed-completed-world.png) or [open the scalable SVG](https://samueldovgin.github.io/Pocket-Train-Optimizer/assets/map/proposed-completed-world.svg). The prebuilt image is the verified recommended reference; browser exports use the active plan and edits and always include the full target, even when the on-screen view is highlighted or labels are hidden. Follow staged correction cards before changing built-track owners.
+
+This is an approximate geographic diagram, not an exact game screenshot or distance scale. [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) provides public-domain land outlines. Display coordinates never enter routing calculations. See `assets/map/README.md` for rebuilding; image consistency checks catch a stale image after a target change.
+'''
+readme=readme.replace('## Trains and progression',map_notes+'\n'+extra+'\n## Trains and progression')
+notes=notes.replace('## Progression research',map_notes+'\n'+extra+'\n## Progression research')
 (root/'README.md').write_text(readme)
 (root/'docs/verification.md').write_text(notes)
 def inline(s):

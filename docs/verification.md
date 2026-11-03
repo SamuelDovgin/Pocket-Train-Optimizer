@@ -42,6 +42,14 @@ Python tests reproduce every new metric at penalties 0, 20, 40 and 80, check lin
 
 Browser QA verifies that recording a correction leaves the physical track count unchanged, saves across reload, and supports whole-batch undo. It checks plan selection, current versus target route scopes, scenario comparisons and narrow-screen layout. The previous browser file-picker/download automation limit remains: backup parsing/migration is tested in JavaScript, while transferring a save from a downloaded HTML tracker may require manual Export/Import.
 
+## Full completed-world map
+
+The **World map** tab shows all 139 cities and all 190 physical tracks colored by the active completed target, with a Europe inset, numbered owner legend, zoom, owner highlighting and city-label toggle. It includes proposed initial-owner corrections and saved edits without marking purchases or recording claims. Invalid custom ownership is flagged.
+
+[Download the recommended full PNG (5200 × 3900)](https://samueldovgin.github.io/Pocket-Train-Optimizer/assets/map/proposed-completed-world.png) or [open the scalable SVG](https://samueldovgin.github.io/Pocket-Train-Optimizer/assets/map/proposed-completed-world.svg). The prebuilt image is the verified recommended reference; browser exports use the active plan and edits and always include the full target, even when the on-screen view is highlighted or labels are hidden. Follow staged correction cards before changing built-track owners.
+
+This is an approximate geographic diagram, not an exact game screenshot or distance scale. [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) provides public-domain land outlines. Display coordinates never enter routing calculations. See `assets/map/README.md` for rebuilding; image consistency checks catch a stale image after a target change.
+
 ## Monte Carlo search and independent simulation
 
 The latest search evaluated 1,588,500 valid randomized proposals in 24 completed profile campaigns, with 1,411,163 exact scored layouts and 388,422 accepted uphill moves. Counts include repeated layouts across separate campaign caches. Five temperature replicas explore connected track moves, exchanges, random-spanning-tree repartitions of neighboring lines, and variable-count splits/merges. Asymmetric proposal probabilities make this a heuristic optimizer, not a stationary posterior sampler.

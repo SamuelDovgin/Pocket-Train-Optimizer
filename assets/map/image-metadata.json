@@ -1,0 +1,10 @@
+{
+  "svg_sha256": "e08d548c096f8eb55400b4285f73a80f7103c7c8d1fe1e6f47a404d2d8727cd2",
+  "png_sha256": "d7d1d55cd34b7f6df74be9e03a3fde2e5760057d6dff6631b771bad434284e2d",
+  "width": 5200,
+  "height": 3900,
+  "purpose": "Full proposed completed layout, using the verified consolidated reference owners",
+  "geography": "Approximate city locations for display; never used for route distance or optimization",
+  "land_source": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson",
+  "land_license": "https://www.naturalearthdata.com/about/terms-of-use/"
+}

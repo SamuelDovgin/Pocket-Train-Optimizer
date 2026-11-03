@@ -24,7 +24,7 @@ JavaScript tests simulate every remaining purchase in all three layouts, check s
 
 Python tests reproduce all published metrics for every layout and penalty, independently check routes with NetworkX, verify all 15 fixed owners and 38 connected railroads, enforce the 1,100-unit bound, cover the stale-capacity regression, and confirm there is no improving move in the final connected one/two/three-track neighborhood.
 
-Manual browser checks cover checkoff/reload/restore, all views, supported sensitivity values, same-station routing, route scopes, plan selection, export/import, and a narrow viewport. Check the repository's Actions tab for automated run results.
+Manual browser checks cover checkoff/reload/restore, all views, supported sensitivity values, same-station routing, route scopes, plan selection, and a narrow viewport. Browser automation could not complete the download/file-picker checks; backup parsing and old-format migration are regression-tested in JavaScript. Reading the old local HTML tracker was blocked by browser security, so newer progress must be transferred by the user with Export/Import. Check the repository's Actions tab for automated run results.
 
 ## Limits
 

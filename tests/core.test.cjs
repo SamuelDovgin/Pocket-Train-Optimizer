@@ -46,3 +46,12 @@ test('all 9,591 optimized browser-core routes match Python statistics',()=>{
  assert.equal(pairs,9591);const expected=GT.summary.global_heuristic['40'];
  for(const key of Object.keys(totals))assert.ok(Math.abs(totals[key]/pairs-expected['mean_'+key])<1e-9,key);
 });
+test('version 1 backups migrate legacy city IDs, license and coins',()=>{
+ const state=Core.sanitizeSave({version:1,done:{'kyiv-volgograd':true,'asia-license':true},coins:12345},D,'original');
+ assert.equal(state.done['Kyiv|Volgograd'],true);assert.equal(state.done['license-asia'],true);assert.equal(state.balance,12345);assert.equal(state.plan,'original');
+});
+test('version 3 and 4 round-trip preserves progress, owner edits and plan',()=>{
+ const legacy=JSON.parse(fs.readFileSync('tests/fixtures/progress-v3.json'));const state=Core.sanitizeSave(legacy,D,'original');assert.equal(state.done['Kyiv|Volgograd'],true);assert.equal(state.balance,12345);
+ state.plan='advanced';state.owners['Kyiv|Volgograd']='Pink';state.costs['Kyiv|Volgograd']=5900;state.notes['Kyiv|Volgograd']='Check fuel';
+ assert.deepEqual(Core.sanitizeSave(JSON.parse(JSON.stringify({version:4,...state})),D),state);
+});

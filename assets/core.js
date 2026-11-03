@@ -7,6 +7,11 @@ function sanitizeSave(v,D,defaultPlan='advanced'){
  const ids=new Set([...D.edges,...D.licenses].map(x=>x.id)),lines=new Set(D.lines.map(x=>x.name));
  const done=Object.fromEntries([...D.base,...D.done].map(id=>[id,true]));
  for(const [id,value] of Object.entries(v.done))if(ids.has(id)&&typeof value==='boolean')done[id]=value;
+ if(v.version===1||(!v.version&&v.coins!==undefined)){
+  const legacy=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  for(const e of D.edges)if(v.done[legacy(e.a+'-'+e.b)]===true||v.done[legacy(e.b+'-'+e.a)]===true)done[e.id]=true;
+  if(v.done['asia-license']===true)done['license-asia']=true;
+ }
  const owners={},costs={},notes={};
  for(const [id,value] of Object.entries(record(v.owners)?v.owners:{}))if(ids.has(id)&&lines.has(value))owners[id]=value;
  for(const [id,value] of Object.entries(record(v.costs)?v.costs:{}))if(ids.has(id)&&Number.isFinite(value)&&value>=0&&value<=Number.MAX_SAFE_INTEGER)costs[id]=Math.round(value);

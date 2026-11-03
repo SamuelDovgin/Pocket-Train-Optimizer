@@ -108,9 +108,15 @@ function renderGraph(){
 
 function render(){renderStats();document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===UI.view));if(UI.view==='queue')renderQueue();if(UI.view==='railroads')renderLines();if(UI.view==='cities')renderCities();if(UI.view==='lab')renderLab();if(UI.view==='graph')renderGraph();$('completedBlock').style.display=UI.view==='queue'?'':'none';if(UI.view==='queue')renderCompleted();}
 function exportBackup(){const snapshot={product:'Pocket Trains World Tracker',version:4,plan:state.plan,exported:new Date().toISOString(),done:state.done,balance:state.balance,owners:state.owners,costs:state.costs,notes:state.notes};const blob=new Blob([JSON.stringify(snapshot,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='pocket-trains-world-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
-function importBackup(file){const reader=new FileReader();reader.onload=()=>{try{const v=JSON.parse(reader.result);if(typeof v!=='object'||!v||!v.done||typeof v.done!=='object')throw Error('Missing done flags');const good=new Set([...D.edges.map(e=>e.id),...licenseIds]);const next={};for(const id of good)if(Object.hasOwn(v.done,id))next[id]=v.done[id]===true;
-if(v.version===1||(!v.version&&v.coins!==undefined)){for(const t of D.steps){const tok=(x,y)=>oldId(x+'-'+y);if(t.kind==='license'){if(t.region==='Asia'&&v.done['asia-license'])next[t.id]=true;}else if(v.done[tok(t.a,t.b)]||v.done[tok(t.b,t.a)])next[t.id]=true;}}
-state=TrainCore.sanitizeSave({...v,done:next},D,'original');save();render();toast('Backup imported successfully');}catch(e){alert('Could not import this file: '+e.message)}};reader.readAsText(file)}
+function importBackup(file){
+ const reader=new FileReader();
+ reader.onload=()=>{try{
+  const next=TrainCore.sanitizeSave(JSON.parse(reader.result),D,'original');
+  state=next;save();render();toast('Backup imported successfully');
+ }catch(e){alert('Could not import this file: '+e.message)}};
+ reader.onerror=()=>alert('Could not read this backup file. Please try again.');
+ reader.readAsText(file);
+}
 document.addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;
 if(t.dataset.view){UI.view=t.dataset.view;render();return}
 if(t.dataset.goTrack){UI.view='queue';UI.query=t.dataset.goTrack.split('|')[0];UI.mode='all';UI.stage='all';UI.region='all';UI.line='all';UI.showAll=true;render();return}

@@ -68,6 +68,7 @@ class CorridorSearchTests(unittest.TestCase):
     def test_reference_migration_preserves_tracks_and_checks_every_intermediate_owner(self):
         M=json.loads((ROOT/'assets/corridor-reference-migration.json').read_text());H=json.loads((ROOT/'analysis/world_tracker_data.json').read_text());D=self.data
         refs={e['id']:e for e in H['edges']};edges={e['id']:e for e in D['edges']};owners={k:refs[k]['owner'] for k in H['base']+H['done']};initial=set(owners);licenses={'Europe'}
+        self.assertEqual({('|'.join(sorted((t['a'],t['b']))),t['railroad']) for t in M['starting_tracks']},set(owners.items()))
         self.assertTrue(M['selection_was_frozen']);self.assertTrue(M['structural_sequence_complete']);self.assertEqual(M['unresolved'],[])
         for step in M['steps']:
             if step['kind']=='LICENSE':licenses.add(step['region']);continue

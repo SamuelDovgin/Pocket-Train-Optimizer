@@ -4,6 +4,83 @@
   "selected_target": "hubs_a",
   "basis": "Public reference of 15 owned tracks only; does not read browser saves or assert this is the player\u2019s current game",
   "operating_fleet": 27,
+  "starting_tracks": [
+    {
+      "a": "Milan",
+      "b": "Munich",
+      "railroad": "Green"
+    },
+    {
+      "a": "Bordeaux",
+      "b": "Paris",
+      "railroad": "Cyan"
+    },
+    {
+      "a": "Milan",
+      "b": "Rome",
+      "railroad": "Blue"
+    },
+    {
+      "a": "Amsterdam",
+      "b": "Paris",
+      "railroad": "Cyan"
+    },
+    {
+      "a": "Bordeaux",
+      "b": "Madrid",
+      "railroad": "Cyan"
+    },
+    {
+      "a": "Barcelona",
+      "b": "Milan",
+      "railroad": "Green"
+    },
+    {
+      "a": "Paris",
+      "b": "Munich",
+      "railroad": "Pink"
+    },
+    {
+      "a": "Budapest",
+      "b": "Munich",
+      "railroad": "Pink"
+    },
+    {
+      "a": "Milan",
+      "b": "Paris",
+      "railroad": "Blue"
+    },
+    {
+      "a": "Berlin",
+      "b": "Munich",
+      "railroad": "Green"
+    },
+    {
+      "a": "Barcelona",
+      "b": "Madrid",
+      "railroad": "Green"
+    },
+    {
+      "a": "Glasgow",
+      "b": "London",
+      "railroad": "Blue"
+    },
+    {
+      "a": "London",
+      "b": "Paris",
+      "railroad": "Blue"
+    },
+    {
+      "a": "Budapest",
+      "b": "Kyiv",
+      "railroad": "Pink"
+    },
+    {
+      "a": "Lisbon",
+      "b": "Madrid",
+      "railroad": "Green"
+    }
+  ],
   "extra_feeder_routes": [
     {
       "id": "F01",

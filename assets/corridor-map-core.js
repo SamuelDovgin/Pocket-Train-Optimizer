@@ -3,6 +3,7 @@
 'use strict';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const f=n=>Number(n.toFixed(2)),W=2600,H=2200;
+function hubs(data,plan){const nominated=new Set(data.search.hub_sets.community);return [...(plan.metrics.hubs||[])].sort((a,b)=>(b.lines*10+Number(nominated.has(b.city))*2+Number(b.designated))-(a.lines*10+Number(nominated.has(a.city))*2+Number(a.designated))||a.city.localeCompare(b.city))}
 function geometry(data,line){
  const p=line.path,xy=data.reward_geometry.coordinates,loop=p[0]===p.at(-1);let length=0,maxTurn=0;
  for(let i=1;i<p.length;i++)length+=Math.hypot(xy[p[i]][0]-xy[p[i-1]][0],xy[p[i]][1]-xy[p[i-1]][1]);
@@ -14,7 +15,7 @@ function renderSVG(data,plan,options={}){
  const worldPoints=Object.fromEntries(cities.map(c=>[c,[65+coordinates[c][0]*scale,175+coordinates[c][1]*scale]]));
  const xs=eu.map(c=>coordinates[c][0]),ys=eu.map(c=>coordinates[c][1]),minX=Math.min(...xs)-12,minY=Math.min(...ys)-12,dx=Math.max(...xs)-minX+12,dy=Math.max(...ys)-minY+12,s=Math.min(1080/dx,440/dy);
  const euPoints=Object.fromEntries(eu.map(c=>[c,[90+(1080-dx*s)/2+(coordinates[c][0]-minX)*s,1540+(440-dy*s)/2+(coordinates[c][1]-minY)*s]]));
- const lineMap=new Map(plan.lines.map(l=>[l.name,l])),hubCities=new Set((plan.metrics.hubs||[]).filter(h=>h.lines>=3||h.designated).slice(0,12).map(h=>h.city));
+ const lineMap=new Map(plan.lines.map(l=>[l.name,l])),hubCities=new Set(hubs(data,plan).slice(0,12).map(h=>h.city));
  const title=options.title||plan.label,subtitle=`${plan.fleet} trains · ${plan.tracks} selected links · all ${cities.length} cities · no branches · ${plan.cycles} compact loops`;
  let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="corridorTitle corridorDesc"><title id="corridorTitle">${esc(title)}</title><desc id="corridorDesc">Clean-slate candidate drawn in approximate reference-game-map geometry. Colored lines are railroad owners; faint lines are available unused connections. Ringed stations are selected multi-line intersections. No current ownership was used to select the routes.</desc><style>text{font-family:Arial,Helvetica,sans-serif;fill:#e6f0f4} .track{stroke-linecap:round;stroke-linejoin:round}</style><rect width="2600" height="2200" fill="#091521"/><text x="65" y="74" font-size="39" font-weight="700">${esc(title)}</text><text x="65" y="120" font-size="23">${esc(subtitle)}</text><rect x="45" y="150" width="2510" height="1270" rx="18" fill="#102432" stroke="#304e5d"/><text x="80" y="205" font-size="19" fill="#9db7c7">REFERENCE GAME-MAP POSITIONS · SCHEMATIC, NOT A GAME SCREENSHOT</text>`;
  function panel(points,names,box,inset){
@@ -24,7 +25,7 @@ function renderSVG(data,plan,options={}){
   for(const c of names){const [x,y]=points[c];if(hubCities.has(c))out+=`<circle data-hub="${esc(c)}" cx="${f(x)}" cy="${f(y)}" r="11" fill="#102432" stroke="#fff0a5" stroke-width="2.5"/>`;out+=`<circle cx="${f(x)}" cy="${f(y)}" r="4" fill="#091521" stroke="#e4edf2" stroke-width="2"/>`}
   for(const r of labels){const x=f(r.x+3),y=f(r.y+(inset?19:17)),size=inset?19:17;out+=`<path d="M${f(r.cx)},${f(r.cy)}L${f(r.x)},${f(r.y+r.h/2)}" stroke="#627f8e" stroke-width="1"/><text aria-hidden="true" x="${x}" y="${y}" font-size="${size}" style="fill:none;stroke:#102432;stroke-width:4">${esc(r.name)}</text><text data-corridor-city="${esc(r.name)}" x="${x}" y="${y}" font-size="${size}" style="stroke:none">${esc(r.name)}</text>`}
 
-  for(const l of plan.lines){const mine=available.filter(e=>plan.owners[e.id]===l.name);if(!mine.length||(!inset&&mine.every(e=>euPoints[e.a]&&euPoints[e.b])))continue;const candidates=mine.map(e=>({x:(points[e.a][0]+points[e.b][0])/2,y:(points[e.a][1]+points[e.b][1])/2}));const score=p=>labels.filter(r=>Math.abs(p.x-r.x-r.w/2)<r.w/2+18&&Math.abs(p.y-r.y-r.h/2)<r.h/2+15).length*10+badges.filter(r=>Math.hypot(r.x-p.x,r.y-p.y)<40).length*20;const b=candidates.reduce((a,b)=>score(a)<=score(b)?a:b);badges.push(b);out+=`<rect x="${f(b.x-22)}" y="${f(b.y-13)}" width="44" height="26" rx="7" fill="#091521" stroke="${l.color}" stroke-width="2"/><text x="${f(b.x)}" y="${f(b.y+5)}" font-size="16" font-weight="700" text-anchor="middle">${esc(l.name)}</text>`}
+  for(const l of plan.lines){const mine=available.filter(e=>plan.owners[e.id]===l.name);if(!mine.length||(!inset&&mine.every(e=>euPoints[e.a]&&euPoints[e.b])))continue;const candidates=mine.flatMap(e=>{const mx=(points[e.a][0]+points[e.b][0])/2,my=(points[e.a][1]+points[e.b][1])/2;return [[0,0],[0,24],[0,-24],[28,0],[-28,0],[24,24],[-24,-24],[24,-24],[-24,24]].map(([dx,dy])=>({x:mx+dx,y:my+dy,mx,my,offset:Math.hypot(dx,dy)}))});const score=p=>labels.filter(r=>Math.abs(p.x-r.x-r.w/2)<r.w/2+18&&Math.abs(p.y-r.y-r.h/2)<r.h/2+15).length*10+badges.filter(r=>Math.hypot(r.x-p.x,r.y-p.y)<48).length*20+Object.values(points).filter(([x,y])=>Math.hypot(x-p.x,y-p.y)<18).length*20+p.offset/100;const b=candidates.reduce((a,b)=>score(a)<=score(b)?a:b);badges.push(b);out+=`<path d="M${f(b.mx)},${f(b.my)}L${f(b.x)},${f(b.y)}" stroke="${l.color}" stroke-width="1.3"/><rect x="${f(b.x-22)}" y="${f(b.y-13)}" width="44" height="26" rx="7" fill="#091521" stroke="${l.color}" stroke-width="2"/><text x="${f(b.x)}" y="${f(b.y+5)}" font-size="16" font-weight="700" text-anchor="middle">${esc(l.name)}</text>`}
   return out;
  }
  svg+=panel(worldPoints,cities,{x:65,y:220,w:2470,h:1170},false);
@@ -35,5 +36,5 @@ function renderSVG(data,plan,options={}){
  svg+=`<text x="65" y="2100" font-size="20">Bright rings: selected multi-line intersections. Faint gray: unused links, not demolition instructions. Numbers beside routes: track-distance sum.</text><text x="65" y="2137" font-size="19">Paths ≥85% chord directness, ≤100° turns; optional standalone loops ≤4 stations, ≤260 track-distance, ≤170 reference-image pixels in diameter.</text><text x="65" y="2174" font-size="18" fill="#acc3cf">Approximate diagram geometry and synthetic demand. No verified coin conversion or global optimum. Review migration steps separately.</text></svg>`;
  return svg;
 }
-return {renderSVG,geometry,WIDTH:W,HEIGHT:H};
+return {renderSVG,geometry,hubs,WIDTH:W,HEIGHT:H};
 });

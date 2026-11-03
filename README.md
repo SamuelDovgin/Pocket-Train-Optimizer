@@ -8,6 +8,18 @@ An engine-agnostic route-efficiency model and persistent Pocket Trains expansion
 
 The default **Lowest routing score · fewer railroads** target has **28 active railroads**. Two alternatives keep 38 railroads: one permits explicit initial-owner corrections; the other preserves all 15 initial owners. The lowest route score is not proof of highest earnings or shortest waiting time. The site displays branch complexity so this tradeoff is visible.
 
+## Clean-slate corridor search and examples
+
+[Open the clean-slate study and reference checklist](https://samueldovgin.github.io/Pocket-Train-Optimizer/docs/corridor-search.html).
+
+The current tuning-selected recommendation uses **27 trains**, **141 connections**, and all **139 cities**, with **zero branches** and **0 compact loops**. Every open route has at least 85% chord directness and no turn above 100 degrees. The primary recommendation allows at most two small collector loops; loop-rich cases remain comparisons. Full-track coverage is a separate scenario, not the primary goal.
+
+Search pressures vary straightness, long spans, fleet/attention cost, hub placement and retention of useful network shortcuts. Starting ownership, completed purchases and fixed long spines are excluded from topology selection. Policy/geometry tuning and held-out simulation seeds are separate. This is the best tested eligible candidate under declared preferences, not a measured profit optimum.
+
+Complete example PNG/SVG maps, route lists, actual intersection stations, pressure weights and held-out total/per-train/per-command comparisons are on the study page. The separate optional checklist works backward from the **public 15-track reference** and does not rewrite the historical tracker. Use Route Coach with your actual map and `--data assets/corridor-data.json` when your configuration differs.
+
+See [the reproducible method and full reference sequence](docs/corridor-search.md). Earlier shape-only iteration evidence is retained under `analysis/corridor-iterations/`; a bad operating result is not hidden by a geometric score.
+
 ## Review your own configuration with the Route Coach skill
 
 The repository includes [Pocket Trains Route Coach](.agents/skills/pocket-trains-route-coach/SKILL.md). Give the agent your **current owned map** as screenshots, a train-by-train route list, or a tracker JSON export, then ask:

@@ -1,0 +1,1406 @@
+{
+  "model_version": "2026-11-02-a",
+  "method": "All 9,591 unordered city pairs, compare identical hypothetical city-to-city cargo jobs. Routing uses fuel units per segment + transfer penalty, cheapest generalized path. 8 unverified fuel lengths imputed. Simple 1-edge local track ownership changes constrained to preserve 38 connected lines and original 15 completed tracks. This is a lower-bound cargo itinerary, not a discrete-event train fleet simulator.",
+  "assumptions": {
+    "city_pair_sampling": "Uniform across 139 cities, not verified in-game job spawn distribution",
+    "transfer_cost": "Equivalent to 40 fuel units per transfer (sensitivity 0/20/40/80)",
+    "fuel_unverified": {
+      "Rome|Tripoli": 80,
+      "Helsinki|Stockholm": 70,
+      "Antananarivo|Zanzibar": 130,
+      "Antananarivo|Harare": 115,
+      "Cairns|Port Moresby": 70,
+      "Amman|Athens": 95,
+      "Easter Island|Lima": 220,
+      "Cape Town|Porto Alegre": 350
+    },
+    "line_max_fuel_sum": 1100,
+    "preserve_existing_tracks": true,
+    "line_count": 38
+  },
+  "baseline": {
+    "Adelaide|Alice Springs": "Oceania Central",
+    "Adelaide|Melbourne": "Oceania East",
+    "Adelaide|Perth": "Oceania East",
+    "Algiers|Casablanca": "Africa North",
+    "Algiers|Tripoli": "Africa North",
+    "Alice Springs|Broome": "Oceania Central",
+    "Alice Springs|Darwin": "Oceania Central",
+    "Amman|Baghdad": "Euro Balkans",
+    "Amman|Cairo": "Africa North",
+    "Amman|Riyadh": "Africa North",
+    "Amsterdam|Berlin": "Purple",
+    "Amsterdam|Copenhagen": "Cyan",
+    "Amsterdam|Munich": "Purple",
+    "Amsterdam|Paris": "Cyan",
+    "Anadyr|Magadan": "Siberian Far East",
+    "Anchorage|Fairbanks": "Alaska",
+    "Anchorage|Nome": "Alaska",
+    "Anchorage|Vancouver": "Alaska",
+    "Arequipa|Asuncion": "South America Inland",
+    "Arequipa|Lima": "South America West",
+    "Arequipa|Manaus": "South America Inland",
+    "Arequipa|Santiago": "South America West",
+    "Asuncion|Porto Alegre": "South America Inland",
+    "Athens|Budapest": "Euro Balkans",
+    "Atlanta|Miami": "North America South",
+    "Atlanta|New Orleans": "North America South",
+    "Atlanta|Washington DC": "North America South",
+    "Auckland|Sydney": "Oceania Pacific",
+    "Auckland|Wellington": "Oceania Pacific",
+    "Baghdad|Istanbul": "Euro Balkans",
+    "Baghdad|Tehran": "India Express",
+    "Bamako|Dakar": "Africa Sahel",
+    "Bamako|Lagos": "Africa Sahel",
+    "Bangalore|Kolkata": "India Express",
+    "Bangalore|Mumbai": "India Express",
+    "Bangkok|Hanoi": "China Central",
+    "Bangkok|Kolkata": "Asia South",
+    "Bangkok|Singapore": "Asia South",
+    "Barcelona|Madrid": "Green",
+    "Barcelona|Milan": "Green",
+    "Beijing|Shanghai": "Siberian",
+    "Beijing|Shenyang": "China North",
+    "Beijing|Ulan Bator": "Siberian",
+    "Beijing|Urumqi": "China North",
+    "Beijing|Xi'An": "Siberian",
+    "Belem|Caracas": "South America East",
+    "Belem|Fortaleza": "South America East",
+    "Berlin|Budapest": "Euro Balkans",
+    "Berlin|Minsk": "Purple",
+    "Berlin|Munich": "Green",
+    "Bogota|Caracas": "South America West",
+    "Bogota|Lima": "South America West",
+    "Bogota|Managua": "North America East",
+    "Bordeaux|Madrid": "Cyan",
+    "Bordeaux|Milan": "Green",
+    "Bordeaux|Paris": "Cyan",
+    "Boston|Montreal": "North America East",
+    "Boston|New York": "North America East",
+    "Brisbane|Cairns": "Oceania East",
+    "Brisbane|Sydney": "Oceania East",
+    "Broome|Darwin": "Oceania West",
+    "Broome|Perth": "Oceania West",
+    "Budapest|Istanbul": "Euro Balkans",
+    "Budapest|Kyiv": "Pink",
+    "Budapest|Munich": "Pink",
+    "Buenos Aires|Porto Alegre": "South America East",
+    "Buenos Aires|Santiago": "South America East",
+    "Cairns|Darwin": "Oceania Central",
+    "Cairo|Khartoum": "Africa Sahel",
+    "Cairo|Tripoli": "Africa North",
+    "Calgary|Denver": "North America West",
+    "Calgary|Edmonton": "North Canada",
+    "Calgary|Vancouver": "North Canada",
+    "Calgary|Winnipeg": "North America West",
+    "Cape Town|Luanda": "Africa West",
+    "Cape Town|Pretoria": "Africa South",
+    "Caracas|Manaus": "South America Inland",
+    "Caracas|San Juan": "North America South",
+    "Casablanca|Dakar": "Africa Sahel",
+    "Casablanca|Madrid": "Africa North",
+    "Chengdu|Hanoi": "China Central",
+    "Chengdu|Kolkata": "China\u2013India",
+    "Chengdu|New Delhi": "China\u2013India",
+    "Chengdu|Urumqi": "China Central",
+    "Chengdu|Xi'An": "China Central",
+    "Chicago|Detroit": "North America East",
+    "Chicago|Minneapolis": "North America West",
+    "Chicago|St. Louis": "North America East",
+    "Christchurch|Wellington": "Oceania Pacific",
+    "Copenhagen|Oslo": "Europe Nordic",
+    "Copenhagen|Stockholm": "Cyan",
+    "Dakar|Fortaleza": "SA\u2013Africa Bridge",
+    "Denver|Phoenix": "North America West",
+    "Denver|San Francisco": "North America West",
+    "Denver|St. Louis": "North America West",
+    "Detroit|Toronto": "North America East",
+    "Dubai|Riyadh": "Africa North",
+    "Dublin|London": "Blue",
+    "Fortaleza|Salvador": "South America East",
+    "Glasgow|London": "Blue",
+    "Glasgow|Reykjavik": "Arctic Bridge",
+    "Goose Bay|Montreal": "Arctic Bridge",
+    "Goose Bay|Nuuk": "Arctic Bridge",
+    "Harare|Luanda": "Africa Cross",
+    "Harare|Pretoria": "Africa South",
+    "Harare|Zanzibar": "Africa South",
+    "Harbin|Shenyang": "China North",
+    "Harbin|Vladivostok": "China North",
+    "Harbin|Yakutsk": "Siberian Far East",
+    "Havana|Miami": "North America South",
+    "Havana|San Juan": "North America South",
+    "Helsinki|St. Petersburg": "Cyan",
+    "Hanoi|Hong Kong": "China Central",
+    "Hong Kong|Manila": "Southeast Islands",
+    "Hong Kong|Shanghai": "China Central",
+    "Honolulu|San Francisco": "Pacific Crossing",
+    "Houston|Mexico City": "North America East",
+    "Houston|New Orleans": "North America East",
+    "Houston|Phoenix": "North America West",
+    "Istanbul|Kyiv": "Euro Balkans",
+    "Jakarta|Kupang": "Southeast Islands",
+    "Jakarta|Singapore": "Southeast Islands",
+    "Kabul|New Delhi": "Asia South",
+    "Kabul|Tehran": "Asia South",
+    "Karachi|Mumbai": "India Express",
+    "Karachi|New Delhi": "China\u2013India",
+    "Karachi|Tehran": "India Express",
+    "Khartoum|Lagos": "Africa Sahel",
+    "Khartoum|Nairobi": "Africa Sahel",
+    "Kyiv|Minsk": "Euro Balkans",
+    "Kyiv|Moscow": "Purple",
+    "Kyiv|Volgograd": "Pink",
+    "Kolkata|New Delhi": "Asia South",
+    "Broome|Kupang": "Oceania Central",
+    "Kupang|Manado": "Southeast Islands",
+    "Kinshasa|Lagos": "Africa Sahel",
+    "Easter Island|Lima": "Easter Island",
+    "Lisbon|Madrid": "Green",
+    "Lisbon|New York": "Atlantic Link",
+    "London|Paris": "Blue",
+    "Los Angeles|Mexico City": "North America West",
+    "Los Angeles|Phoenix": "North America West",
+    "Los Angeles|San Francisco": "North America West",
+    "Kinshasa|Luanda": "Africa West",
+    "Magadan|Yakutsk": "Siberian Far East",
+    "Manado|Manila": "Southeast Islands",
+    "Managua|Mexico City": "North America East",
+    "Melbourne|Sydney": "Oceania East",
+    "Milan|Munich": "Green",
+    "Milan|Paris": "Blue",
+    "Milan|Rome": "Blue",
+    "Minneapolis|Winnipeg": "North America West",
+    "Minsk|Moscow": "Purple",
+    "Montreal|Toronto": "North America East",
+    "Moscow|Perm": "Siberian",
+    "Moscow|St. Petersburg": "Purple",
+    "Moscow|Volgograd": "Purple",
+    "Nagasaki|Shanghai": "China Central",
+    "Nagasaki|Tokyo": "China North",
+    "New Orleans|St. Louis": "North America East",
+    "New York|St. Louis": "North America East",
+    "New York|Washington DC": "Atlantic Link",
+    "Novosibirsk|Perm": "Siberian",
+    "Novosibirsk|Ulan Bator": "Siberian",
+    "Novosibirsk|Urumqi": "Siberian Far East",
+    "Novosibirsk|Yakutsk": "Siberian Far East",
+    "Nuuk|Tasiilaq": "Arctic Bridge",
+    "Oslo|Stockholm": "Europe Nordic",
+    "Munich|Paris": "Pink",
+    "Porto Alegre|Rio de Janeiro": "South America East",
+    "Cape Town|Porto Alegre": "South Atlantic Bridge",
+    "Punta Arenas|Santiago": "South America West",
+    "Reykjavik|Tasiilaq": "Arctic Bridge",
+    "Rio de Janeiro|Salvador": "South America East",
+    "Rome|Tripoli": "Blue",
+    "San Francisco|Vancouver": "North America West",
+    "Sendai|Tokyo": "China North",
+    "Sendai|Vladivostok": "China North",
+    "Seoul|Shenyang": "China North",
+    "Shanghai|Xi'An": "China Central",
+    "Shenyang|Vladivostok": "China North",
+    "Helsinki|Stockholm": "Cyan",
+    "Tehran|Volgograd": "Asia South",
+    "Urumqi|Volgograd": "Pink",
+    "Antananarivo|Zanzibar": "Africa South",
+    "Antananarivo|Harare": "Africa South",
+    "Cairns|Port Moresby": "Oceania East",
+    "Antananarivo|Perth": "Africa South",
+    "Amman|Athens": "Euro Balkans",
+    "Kinshasa|Nairobi": "Africa Sahel"
+  },
+  "optimized": {
+    "Adelaide|Alice Springs": "Oceania Central",
+    "Adelaide|Melbourne": "Oceania East",
+    "Adelaide|Perth": "Oceania East",
+    "Algiers|Casablanca": "Africa North",
+    "Algiers|Tripoli": "Africa North",
+    "Alice Springs|Broome": "Southeast Islands",
+    "Alice Springs|Darwin": "Oceania Central",
+    "Amman|Baghdad": "Africa North",
+    "Amman|Cairo": "Africa North",
+    "Amman|Riyadh": "Africa North",
+    "Amsterdam|Berlin": "Purple",
+    "Amsterdam|Copenhagen": "Cyan",
+    "Amsterdam|Munich": "Purple",
+    "Amsterdam|Paris": "Cyan",
+    "Anadyr|Magadan": "Siberian Far East",
+    "Anchorage|Fairbanks": "Alaska",
+    "Anchorage|Nome": "Alaska",
+    "Anchorage|Vancouver": "North America West",
+    "Arequipa|Asuncion": "South America Inland",
+    "Arequipa|Lima": "South America West",
+    "Arequipa|Manaus": "South America Inland",
+    "Arequipa|Santiago": "South America West",
+    "Asuncion|Porto Alegre": "South America Inland",
+    "Athens|Budapest": "Euro Balkans",
+    "Atlanta|Miami": "North America South",
+    "Atlanta|New Orleans": "North America South",
+    "Atlanta|Washington DC": "North America South",
+    "Auckland|Sydney": "Oceania East",
+    "Auckland|Wellington": "Oceania Pacific",
+    "Baghdad|Istanbul": "Euro Balkans",
+    "Baghdad|Tehran": "Africa North",
+    "Bamako|Dakar": "Africa Sahel",
+    "Bamako|Lagos": "Africa Sahel",
+    "Bangalore|Kolkata": "India Express",
+    "Bangalore|Mumbai": "India Express",
+    "Bangkok|Hanoi": "China Central",
+    "Bangkok|Kolkata": "Asia South",
+    "Bangkok|Singapore": "Asia South",
+    "Barcelona|Madrid": "Green",
+    "Barcelona|Milan": "Green",
+    "Beijing|Shanghai": "Southeast Islands",
+    "Beijing|Shenyang": "China North",
+    "Beijing|Ulan Bator": "Siberian",
+    "Beijing|Urumqi": "China North",
+    "Beijing|Xi'An": "China Central",
+    "Belem|Caracas": "South America East",
+    "Belem|Fortaleza": "South America East",
+    "Berlin|Budapest": "Euro Balkans",
+    "Berlin|Minsk": "Purple",
+    "Berlin|Munich": "Green",
+    "Bogota|Caracas": "South America East",
+    "Bogota|Lima": "South America West",
+    "Bogota|Managua": "North America East",
+    "Bordeaux|Madrid": "Cyan",
+    "Bordeaux|Milan": "Green",
+    "Bordeaux|Paris": "Cyan",
+    "Boston|Montreal": "North America East",
+    "Boston|New York": "North America East",
+    "Brisbane|Cairns": "Oceania East",
+    "Brisbane|Sydney": "Oceania East",
+    "Broome|Darwin": "Oceania West",
+    "Broome|Perth": "Africa South",
+    "Budapest|Istanbul": "Euro Balkans",
+    "Budapest|Kyiv": "Pink",
+    "Budapest|Munich": "Pink",
+    "Buenos Aires|Porto Alegre": "South America East",
+    "Buenos Aires|Santiago": "South America East",
+    "Cairns|Darwin": "Oceania West",
+    "Cairo|Khartoum": "Africa North",
+    "Cairo|Tripoli": "Africa North",
+    "Calgary|Denver": "North America West",
+    "Calgary|Edmonton": "North Canada",
+    "Calgary|Vancouver": "North Canada",
+    "Calgary|Winnipeg": "North America East",
+    "Cape Town|Luanda": "Africa West",
+    "Cape Town|Pretoria": "Africa South",
+    "Caracas|Manaus": "South America Inland",
+    "Caracas|San Juan": "North America South",
+    "Casablanca|Dakar": "Africa North",
+    "Casablanca|Madrid": "Africa North",
+    "Chengdu|Hanoi": "China Central",
+    "Chengdu|Kolkata": "China\u2013India",
+    "Chengdu|New Delhi": "China\u2013India",
+    "Chengdu|Urumqi": "China Central",
+    "Chengdu|Xi'An": "China Central",
+    "Chicago|Detroit": "North America East",
+    "Chicago|Minneapolis": "North America East",
+    "Chicago|St. Louis": "North America East",
+    "Christchurch|Wellington": "Oceania Pacific",
+    "Copenhagen|Oslo": "Europe Nordic",
+    "Copenhagen|Stockholm": "Cyan",
+    "Dakar|Fortaleza": "SA\u2013Africa Bridge",
+    "Denver|Phoenix": "North America West",
+    "Denver|San Francisco": "North America West",
+    "Denver|St. Louis": "North America West",
+    "Detroit|Toronto": "North America East",
+    "Dubai|Riyadh": "Africa North",
+    "Dublin|London": "Blue",
+    "Fortaleza|Salvador": "South America East",
+    "Glasgow|London": "Blue",
+    "Glasgow|Reykjavik": "Arctic Bridge",
+    "Goose Bay|Montreal": "Arctic Bridge",
+    "Goose Bay|Nuuk": "Arctic Bridge",
+    "Harare|Luanda": "Africa Cross",
+    "Harare|Pretoria": "Africa South",
+    "Harare|Zanzibar": "Africa South",
+    "Harbin|Shenyang": "China North",
+    "Harbin|Vladivostok": "China North",
+    "Harbin|Yakutsk": "Siberian Far East",
+    "Havana|Miami": "North America South",
+    "Havana|San Juan": "North America South",
+    "Helsinki|St. Petersburg": "Cyan",
+    "Hanoi|Hong Kong": "China Central",
+    "Hong Kong|Manila": "Southeast Islands",
+    "Hong Kong|Shanghai": "Southeast Islands",
+    "Honolulu|San Francisco": "Pacific Crossing",
+    "Houston|Mexico City": "North America East",
+    "Houston|New Orleans": "North America East",
+    "Houston|Phoenix": "North America West",
+    "Istanbul|Kyiv": "Euro Balkans",
+    "Jakarta|Kupang": "Southeast Islands",
+    "Jakarta|Singapore": "Southeast Islands",
+    "Kabul|New Delhi": "Asia South",
+    "Kabul|Tehran": "Asia South",
+    "Karachi|Mumbai": "Africa North",
+    "Karachi|New Delhi": "China\u2013India",
+    "Karachi|Tehran": "Africa North",
+    "Khartoum|Lagos": "Africa Sahel",
+    "Khartoum|Nairobi": "Africa North",
+    "Kyiv|Minsk": "Euro Balkans",
+    "Kyiv|Moscow": "Purple",
+    "Kyiv|Volgograd": "Pink",
+    "Kolkata|New Delhi": "Asia South",
+    "Broome|Kupang": "Southeast Islands",
+    "Kupang|Manado": "Southeast Islands",
+    "Kinshasa|Lagos": "Africa Sahel",
+    "Easter Island|Lima": "Easter Island",
+    "Lisbon|Madrid": "Green",
+    "Lisbon|New York": "Green",
+    "London|Paris": "Blue",
+    "Los Angeles|Mexico City": "North America West",
+    "Los Angeles|Phoenix": "North America West",
+    "Los Angeles|San Francisco": "North America West",
+    "Kinshasa|Luanda": "Africa West",
+    "Magadan|Yakutsk": "Siberian Far East",
+    "Manado|Manila": "Southeast Islands",
+    "Managua|Mexico City": "North America East",
+    "Melbourne|Sydney": "Oceania East",
+    "Milan|Munich": "Green",
+    "Milan|Paris": "Blue",
+    "Milan|Rome": "Blue",
+    "Minneapolis|Winnipeg": "North America East",
+    "Minsk|Moscow": "Purple",
+    "Montreal|Toronto": "North America East",
+    "Moscow|Perm": "Purple",
+    "Moscow|St. Petersburg": "Purple",
+    "Moscow|Volgograd": "Purple",
+    "Nagasaki|Shanghai": "China Central",
+    "Nagasaki|Tokyo": "China North",
+    "New Orleans|St. Louis": "North America East",
+    "New York|St. Louis": "Atlantic Link",
+    "New York|Washington DC": "Atlantic Link",
+    "Novosibirsk|Perm": "Purple",
+    "Novosibirsk|Ulan Bator": "Siberian",
+    "Novosibirsk|Urumqi": "Siberian Far East",
+    "Novosibirsk|Yakutsk": "Siberian Far East",
+    "Nuuk|Tasiilaq": "Arctic Bridge",
+    "Oslo|Stockholm": "Europe Nordic",
+    "Munich|Paris": "Pink",
+    "Porto Alegre|Rio de Janeiro": "South America East",
+    "Cape Town|Porto Alegre": "South Atlantic Bridge",
+    "Punta Arenas|Santiago": "South America West",
+    "Reykjavik|Tasiilaq": "Arctic Bridge",
+    "Rio de Janeiro|Salvador": "South America East",
+    "Rome|Tripoli": "Blue",
+    "San Francisco|Vancouver": "North America West",
+    "Sendai|Tokyo": "China North",
+    "Sendai|Vladivostok": "China North",
+    "Seoul|Shenyang": "China North",
+    "Shanghai|Xi'An": "China Central",
+    "Shenyang|Vladivostok": "China North",
+    "Helsinki|Stockholm": "Cyan",
+    "Tehran|Volgograd": "Asia South",
+    "Urumqi|Volgograd": "Pink",
+    "Antananarivo|Zanzibar": "Africa South",
+    "Antananarivo|Harare": "Africa South",
+    "Cairns|Port Moresby": "Oceania West",
+    "Antananarivo|Perth": "Africa South",
+    "Amman|Athens": "Euro Balkans",
+    "Kinshasa|Nairobi": "Africa Sahel"
+  },
+  "history": [
+    {
+      "track": "Casablanca|Dakar",
+      "from": "Africa Sahel",
+      "to": "Africa North",
+      "score_before": 988.016,
+      "score_after": 983.711
+    },
+    {
+      "track": "New York|St. Louis",
+      "from": "North America East",
+      "to": "Atlantic Link",
+      "score_before": 983.711,
+      "score_after": 980.051
+    },
+    {
+      "track": "Amman|Baghdad",
+      "from": "Euro Balkans",
+      "to": "Africa North",
+      "score_before": 980.051,
+      "score_after": 976.724
+    },
+    {
+      "track": "Baghdad|Tehran",
+      "from": "India Express",
+      "to": "Africa North",
+      "score_before": 976.724,
+      "score_after": 973.777
+    },
+    {
+      "track": "Broome|Kupang",
+      "from": "Oceania Central",
+      "to": "Southeast Islands",
+      "score_before": 973.777,
+      "score_after": 971.451
+    },
+    {
+      "track": "Lisbon|New York",
+      "from": "Atlantic Link",
+      "to": "Green",
+      "score_before": 971.451,
+      "score_after": 969.743
+    },
+    {
+      "track": "Cairns|Darwin",
+      "from": "Oceania Central",
+      "to": "Oceania West",
+      "score_before": 969.743,
+      "score_after": 968.421
+    },
+    {
+      "track": "Hong Kong|Shanghai",
+      "from": "China Central",
+      "to": "Southeast Islands",
+      "score_before": 968.421,
+      "score_after": 967.58
+    },
+    {
+      "track": "Broome|Perth",
+      "from": "Oceania West",
+      "to": "Africa South",
+      "score_before": 967.58,
+      "score_after": 966.75
+    },
+    {
+      "track": "Karachi|Tehran",
+      "from": "India Express",
+      "to": "Africa North",
+      "score_before": 966.75,
+      "score_after": 965.973
+    },
+    {
+      "track": "Beijing|Xi'An",
+      "from": "Siberian",
+      "to": "China Central",
+      "score_before": 965.973,
+      "score_after": 965.174
+    },
+    {
+      "track": "Bogota|Caracas",
+      "from": "South America West",
+      "to": "South America East",
+      "score_before": 965.174,
+      "score_after": 964.405
+    },
+    {
+      "track": "Beijing|Shanghai",
+      "from": "Siberian",
+      "to": "Southeast Islands",
+      "score_before": 964.405,
+      "score_after": 963.74
+    },
+    {
+      "track": "Auckland|Sydney",
+      "from": "Oceania Pacific",
+      "to": "Oceania East",
+      "score_before": 963.74,
+      "score_after": 963.185
+    },
+    {
+      "track": "Chicago|Minneapolis",
+      "from": "North America West",
+      "to": "North America East",
+      "score_before": 963.185,
+      "score_after": 962.673
+    },
+    {
+      "track": "Cairns|Port Moresby",
+      "from": "Oceania East",
+      "to": "Oceania West",
+      "score_before": 962.673,
+      "score_after": 962.162
+    },
+    {
+      "track": "Minneapolis|Winnipeg",
+      "from": "North America West",
+      "to": "North America East",
+      "score_before": 962.162,
+      "score_after": 961.661
+    },
+    {
+      "track": "Karachi|Mumbai",
+      "from": "India Express",
+      "to": "Africa North",
+      "score_before": 961.661,
+      "score_after": 961.271
+    },
+    {
+      "track": "Alice Springs|Broome",
+      "from": "Oceania Central",
+      "to": "Southeast Islands",
+      "score_before": 961.271,
+      "score_after": 960.885
+    },
+    {
+      "track": "Cairo|Khartoum",
+      "from": "Africa Sahel",
+      "to": "Africa North",
+      "score_before": 960.885,
+      "score_after": 960.505
+    },
+    {
+      "track": "Moscow|Perm",
+      "from": "Siberian",
+      "to": "Purple",
+      "score_before": 960.505,
+      "score_after": 960.152
+    },
+    {
+      "track": "Novosibirsk|Perm",
+      "from": "Siberian",
+      "to": "Purple",
+      "score_before": 960.152,
+      "score_after": 958.957
+    },
+    {
+      "track": "Calgary|Winnipeg",
+      "from": "North America West",
+      "to": "North America East",
+      "score_before": 958.957,
+      "score_after": 958.612
+    },
+    {
+      "track": "Anchorage|Vancouver",
+      "from": "Alaska",
+      "to": "North America West",
+      "score_before": 958.612,
+      "score_after": 958.233
+    },
+    {
+      "track": "Khartoum|Nairobi",
+      "from": "Africa Sahel",
+      "to": "Africa North",
+      "score_before": 958.233,
+      "score_after": 957.89
+    }
+  ],
+  "results": {
+    "0": {
+      "baseline": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 838.7967886560317,
+        "mean_transfers": 4.231258471483683,
+        "mean_detour": 1.0,
+        "share_direct": 0.05661557710353456,
+        "share_max_one": 0.1605671984151809,
+        "pct_3plus": 0.7097278698780106,
+        "mean_score": 838.7967886560317
+      },
+      "refined": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 838.7967886560317,
+        "mean_transfers": 3.44906683348973,
+        "mean_detour": 1.0,
+        "share_direct": 0.06652069648628924,
+        "share_max_one": 0.201334584506308,
+        "pct_3plus": 0.6271504535502033,
+        "mean_score": 838.7967886560317
+      }
+    },
+    "20": {
+      "baseline": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 842.9963507454905,
+        "mean_transfers": 3.6936711500364927,
+        "mean_detour": 1.0042934343260637,
+        "share_direct": 0.059534980711083305,
+        "share_max_one": 0.17704097591492024,
+        "pct_3plus": 0.6734438536127619,
+        "mean_score": 916.8697737462204
+      },
+      "refined": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 843.1574392659785,
+        "mean_transfers": 2.9307684287352727,
+        "mean_detour": 1.0043065088066845,
+        "share_direct": 0.06975289333750391,
+        "share_max_one": 0.22281305390470232,
+        "pct_3plus": 0.5752267751016578,
+        "mean_score": 901.772807840684
+      }
+    },
+    "40": {
+      "baseline": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 848.702012303201,
+        "mean_transfers": 3.482848503805651,
+        "mean_detour": 1.0103482377828454,
+        "share_direct": 0.061203211343968306,
+        "share_max_one": 0.18632050881034304,
+        "pct_3plus": 0.660098008549682,
+        "mean_score": 988.0159524554269
+      },
+      "refined": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 847.8658116984673,
+        "mean_transfers": 2.7505995203836933,
+        "mean_detour": 1.0097500424244004,
+        "share_direct": 0.07142112397038891,
+        "share_max_one": 0.23407361067667606,
+        "pct_3plus": 0.5473881764153894,
+        "mean_score": 957.889792513815
+      }
+    },
+    "80": {
+      "baseline": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 863.2852674382233,
+        "mean_transfers": 3.240642268793661,
+        "mean_detour": 1.0268446140662457,
+        "share_direct": 0.0629757063914086,
+        "share_max_one": 0.19872797414242518,
+        "pct_3plus": 0.6319466166197477,
+        "mean_score": 1122.5366489417163
+      },
+      "refined": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 854.5295589615264,
+        "mean_transfers": 2.628714419768533,
+        "mean_detour": 1.0188369973994966,
+        "share_direct": 0.07350641226149515,
+        "share_max_one": 0.24950474403086226,
+        "pct_3plus": 0.5117297466374726,
+        "mean_score": 1064.826712543009
+      }
+    }
+  },
+  "sample_jobs": [
+    {
+      "scenario": "baseline",
+      "a": "London",
+      "b": "Rome",
+      "fuel": 114,
+      "transfers": 0,
+      "shortest_fuel": 114.0,
+      "sections": [
+        {
+          "line": "Blue",
+          "route": [
+            "London",
+            "Paris",
+            "Milan",
+            "Rome"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Lisbon",
+      "b": "New York",
+      "fuel": 376,
+      "transfers": 0,
+      "shortest_fuel": 376.0,
+      "sections": [
+        {
+          "line": "Atlantic Link",
+          "route": [
+            "Lisbon",
+            "New York"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Berlin",
+      "b": "Beijing",
+      "fuel": 678,
+      "transfers": 1,
+      "shortest_fuel": 647.0,
+      "sections": [
+        {
+          "line": "Purple",
+          "route": [
+            "Berlin",
+            "Minsk",
+            "Moscow"
+          ]
+        },
+        {
+          "line": "Siberian",
+          "route": [
+            "Moscow",
+            "Perm",
+            "Novosibirsk",
+            "Ulan Bator",
+            "Beijing"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Paris",
+      "b": "Shanghai",
+      "fuel": 781,
+      "transfers": 1,
+      "shortest_fuel": 764.0,
+      "sections": [
+        {
+          "line": "Pink",
+          "route": [
+            "Paris",
+            "Munich",
+            "Budapest",
+            "Kyiv",
+            "Volgograd",
+            "Urumqi"
+          ]
+        },
+        {
+          "line": "China Central",
+          "route": [
+            "Urumqi",
+            "Chengdu",
+            "Xi'An",
+            "Shanghai"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "New York",
+      "b": "Tokyo",
+      "fuel": 1349,
+      "transfers": 3,
+      "shortest_fuel": 1349.0,
+      "sections": [
+        {
+          "line": "Atlantic Link",
+          "route": [
+            "New York",
+            "Lisbon"
+          ]
+        },
+        {
+          "line": "Green",
+          "route": [
+            "Lisbon",
+            "Madrid",
+            "Barcelona",
+            "Milan",
+            "Munich"
+          ]
+        },
+        {
+          "line": "Pink",
+          "route": [
+            "Munich",
+            "Budapest",
+            "Kyiv",
+            "Volgograd",
+            "Urumqi"
+          ]
+        },
+        {
+          "line": "China North",
+          "route": [
+            "Urumqi",
+            "Beijing",
+            "Shenyang",
+            "Vladivostok",
+            "Sendai",
+            "Tokyo"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Sydney",
+      "b": "Paris",
+      "fuel": 1224,
+      "transfers": 4,
+      "shortest_fuel": 1198.0,
+      "sections": [
+        {
+          "line": "Oceania East",
+          "route": [
+            "Sydney",
+            "Melbourne",
+            "Adelaide"
+          ]
+        },
+        {
+          "line": "Oceania Central",
+          "route": [
+            "Adelaide",
+            "Alice Springs",
+            "Broome",
+            "Kupang"
+          ]
+        },
+        {
+          "line": "Southeast Islands",
+          "route": [
+            "Kupang",
+            "Jakarta",
+            "Singapore"
+          ]
+        },
+        {
+          "line": "Asia South",
+          "route": [
+            "Singapore",
+            "Bangkok",
+            "Kolkata",
+            "New Delhi",
+            "Kabul",
+            "Tehran",
+            "Volgograd"
+          ]
+        },
+        {
+          "line": "Pink",
+          "route": [
+            "Volgograd",
+            "Kyiv",
+            "Budapest",
+            "Munich",
+            "Paris"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Cape Town",
+      "b": "Sydney",
+      "fuel": 916,
+      "transfers": 1,
+      "shortest_fuel": 916.0,
+      "sections": [
+        {
+          "line": "Africa South",
+          "route": [
+            "Cape Town",
+            "Pretoria",
+            "Harare",
+            "Antananarivo",
+            "Perth"
+          ]
+        },
+        {
+          "line": "Oceania East",
+          "route": [
+            "Perth",
+            "Adelaide",
+            "Melbourne",
+            "Sydney"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "New Delhi",
+      "b": "Milan",
+      "fuel": 486,
+      "transfers": 2,
+      "shortest_fuel": 460.0,
+      "sections": [
+        {
+          "line": "Asia South",
+          "route": [
+            "New Delhi",
+            "Kabul",
+            "Tehran",
+            "Volgograd"
+          ]
+        },
+        {
+          "line": "Pink",
+          "route": [
+            "Volgograd",
+            "Kyiv",
+            "Budapest",
+            "Munich"
+          ]
+        },
+        {
+          "line": "Green",
+          "route": [
+            "Munich",
+            "Milan"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Kolkata",
+      "b": "Rome",
+      "fuel": 576,
+      "transfers": 4,
+      "shortest_fuel": 576.0,
+      "sections": [
+        {
+          "line": "Asia South",
+          "route": [
+            "Kolkata",
+            "New Delhi",
+            "Kabul",
+            "Tehran"
+          ]
+        },
+        {
+          "line": "India Express",
+          "route": [
+            "Tehran",
+            "Baghdad"
+          ]
+        },
+        {
+          "line": "Euro Balkans",
+          "route": [
+            "Baghdad",
+            "Amman"
+          ]
+        },
+        {
+          "line": "Africa North",
+          "route": [
+            "Amman",
+            "Cairo",
+            "Tripoli"
+          ]
+        },
+        {
+          "line": "Blue",
+          "route": [
+            "Tripoli",
+            "Rome"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Casablanca",
+      "b": "Dakar",
+      "fuel": 130,
+      "transfers": 0,
+      "shortest_fuel": 130.0,
+      "sections": [
+        {
+          "line": "Africa Sahel",
+          "route": [
+            "Casablanca",
+            "Dakar"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Kyiv",
+      "b": "Moscow",
+      "fuel": 78,
+      "transfers": 0,
+      "shortest_fuel": 78.0,
+      "sections": [
+        {
+          "line": "Purple",
+          "route": [
+            "Kyiv",
+            "Moscow"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "a": "Volgograd",
+      "b": "Shanghai",
+      "fuel": 520,
+      "transfers": 1,
+      "shortest_fuel": 503.0,
+      "sections": [
+        {
+          "line": "Pink",
+          "route": [
+            "Volgograd",
+            "Urumqi"
+          ]
+        },
+        {
+          "line": "China Central",
+          "route": [
+            "Urumqi",
+            "Chengdu",
+            "Xi'An",
+            "Shanghai"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "London",
+      "b": "Rome",
+      "fuel": 114,
+      "transfers": 0,
+      "shortest_fuel": 114.0,
+      "sections": [
+        {
+          "line": "Blue",
+          "route": [
+            "London",
+            "Paris",
+            "Milan",
+            "Rome"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Lisbon",
+      "b": "New York",
+      "fuel": 376,
+      "transfers": 0,
+      "shortest_fuel": 376.0,
+      "sections": [
+        {
+          "line": "Green",
+          "route": [
+            "Lisbon",
+            "New York"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Berlin",
+      "b": "Beijing",
+      "fuel": 678,
+      "transfers": 1,
+      "shortest_fuel": 647.0,
+      "sections": [
+        {
+          "line": "Purple",
+          "route": [
+            "Berlin",
+            "Minsk",
+            "Moscow",
+            "Perm",
+            "Novosibirsk"
+          ]
+        },
+        {
+          "line": "Siberian",
+          "route": [
+            "Novosibirsk",
+            "Ulan Bator",
+            "Beijing"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Paris",
+      "b": "Shanghai",
+      "fuel": 781,
+      "transfers": 1,
+      "shortest_fuel": 764.0,
+      "sections": [
+        {
+          "line": "Pink",
+          "route": [
+            "Paris",
+            "Munich",
+            "Budapest",
+            "Kyiv",
+            "Volgograd",
+            "Urumqi"
+          ]
+        },
+        {
+          "line": "China Central",
+          "route": [
+            "Urumqi",
+            "Chengdu",
+            "Xi'An",
+            "Shanghai"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "New York",
+      "b": "Tokyo",
+      "fuel": 1349,
+      "transfers": 2,
+      "shortest_fuel": 1349.0,
+      "sections": [
+        {
+          "line": "Green",
+          "route": [
+            "New York",
+            "Lisbon",
+            "Madrid",
+            "Barcelona",
+            "Milan",
+            "Munich"
+          ]
+        },
+        {
+          "line": "Pink",
+          "route": [
+            "Munich",
+            "Budapest",
+            "Kyiv",
+            "Volgograd",
+            "Urumqi"
+          ]
+        },
+        {
+          "line": "China North",
+          "route": [
+            "Urumqi",
+            "Beijing",
+            "Shenyang",
+            "Vladivostok",
+            "Sendai",
+            "Tokyo"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Sydney",
+      "b": "Paris",
+      "fuel": 1224,
+      "transfers": 4,
+      "shortest_fuel": 1198.0,
+      "sections": [
+        {
+          "line": "Oceania East",
+          "route": [
+            "Sydney",
+            "Melbourne",
+            "Adelaide"
+          ]
+        },
+        {
+          "line": "Oceania Central",
+          "route": [
+            "Adelaide",
+            "Alice Springs"
+          ]
+        },
+        {
+          "line": "Southeast Islands",
+          "route": [
+            "Alice Springs",
+            "Broome",
+            "Kupang",
+            "Jakarta",
+            "Singapore"
+          ]
+        },
+        {
+          "line": "Asia South",
+          "route": [
+            "Singapore",
+            "Bangkok",
+            "Kolkata",
+            "New Delhi",
+            "Kabul",
+            "Tehran",
+            "Volgograd"
+          ]
+        },
+        {
+          "line": "Pink",
+          "route": [
+            "Volgograd",
+            "Kyiv",
+            "Budapest",
+            "Munich",
+            "Paris"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Cape Town",
+      "b": "Sydney",
+      "fuel": 916,
+      "transfers": 1,
+      "shortest_fuel": 916.0,
+      "sections": [
+        {
+          "line": "Africa South",
+          "route": [
+            "Cape Town",
+            "Pretoria",
+            "Harare",
+            "Antananarivo",
+            "Perth"
+          ]
+        },
+        {
+          "line": "Oceania East",
+          "route": [
+            "Perth",
+            "Adelaide",
+            "Melbourne",
+            "Sydney"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "New Delhi",
+      "b": "Milan",
+      "fuel": 486,
+      "transfers": 2,
+      "shortest_fuel": 460.0,
+      "sections": [
+        {
+          "line": "Asia South",
+          "route": [
+            "New Delhi",
+            "Kabul",
+            "Tehran",
+            "Volgograd"
+          ]
+        },
+        {
+          "line": "Pink",
+          "route": [
+            "Volgograd",
+            "Kyiv",
+            "Budapest",
+            "Munich"
+          ]
+        },
+        {
+          "line": "Green",
+          "route": [
+            "Munich",
+            "Milan"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Kolkata",
+      "b": "Rome",
+      "fuel": 576,
+      "transfers": 2,
+      "shortest_fuel": 576.0,
+      "sections": [
+        {
+          "line": "Asia South",
+          "route": [
+            "Kolkata",
+            "New Delhi",
+            "Kabul",
+            "Tehran"
+          ]
+        },
+        {
+          "line": "Africa North",
+          "route": [
+            "Tehran",
+            "Baghdad",
+            "Amman",
+            "Cairo",
+            "Tripoli"
+          ]
+        },
+        {
+          "line": "Blue",
+          "route": [
+            "Tripoli",
+            "Rome"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Casablanca",
+      "b": "Dakar",
+      "fuel": 130,
+      "transfers": 0,
+      "shortest_fuel": 130.0,
+      "sections": [
+        {
+          "line": "Africa North",
+          "route": [
+            "Casablanca",
+            "Dakar"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Kyiv",
+      "b": "Moscow",
+      "fuel": 78,
+      "transfers": 0,
+      "shortest_fuel": 78.0,
+      "sections": [
+        {
+          "line": "Purple",
+          "route": [
+            "Kyiv",
+            "Moscow"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "refined",
+      "a": "Volgograd",
+      "b": "Shanghai",
+      "fuel": 520,
+      "transfers": 1,
+      "shortest_fuel": 503.0,
+      "sections": [
+        {
+          "line": "Pink",
+          "route": [
+            "Volgograd",
+            "Urumqi"
+          ]
+        },
+        {
+          "line": "China Central",
+          "route": [
+            "Urumqi",
+            "Chengdu",
+            "Xi'An",
+            "Shanghai"
+          ]
+        }
+      ]
+    }
+  ]
+}

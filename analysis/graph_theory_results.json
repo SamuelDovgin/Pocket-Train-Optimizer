@@ -1,0 +1,4965 @@
+{
+  "meta": {
+    "city_count": 139,
+    "track_count": 190,
+    "pairs": 9591,
+    "fixed_track_count": 15,
+    "max_total_line_fuel": 1100,
+    "transfer_cost": 40
+  },
+  "owners": {
+    "original": {
+      "Adelaide|Alice Springs": "Oceania Central",
+      "Adelaide|Melbourne": "Oceania East",
+      "Adelaide|Perth": "Oceania East",
+      "Algiers|Casablanca": "Africa North",
+      "Algiers|Tripoli": "Africa North",
+      "Alice Springs|Broome": "Oceania Central",
+      "Alice Springs|Darwin": "Oceania Central",
+      "Amman|Baghdad": "Euro Balkans",
+      "Amman|Cairo": "Africa North",
+      "Amman|Riyadh": "Africa North",
+      "Amsterdam|Berlin": "Purple",
+      "Amsterdam|Copenhagen": "Cyan",
+      "Amsterdam|Munich": "Purple",
+      "Amsterdam|Paris": "Cyan",
+      "Anadyr|Magadan": "Siberian Far East",
+      "Anchorage|Fairbanks": "Alaska",
+      "Anchorage|Nome": "Alaska",
+      "Anchorage|Vancouver": "Alaska",
+      "Arequipa|Asuncion": "South America Inland",
+      "Arequipa|Lima": "South America West",
+      "Arequipa|Manaus": "South America Inland",
+      "Arequipa|Santiago": "South America West",
+      "Asuncion|Porto Alegre": "South America Inland",
+      "Athens|Budapest": "Euro Balkans",
+      "Atlanta|Miami": "North America South",
+      "Atlanta|New Orleans": "North America South",
+      "Atlanta|Washington DC": "North America South",
+      "Auckland|Sydney": "Oceania Pacific",
+      "Auckland|Wellington": "Oceania Pacific",
+      "Baghdad|Istanbul": "Euro Balkans",
+      "Baghdad|Tehran": "India Express",
+      "Bamako|Dakar": "Africa Sahel",
+      "Bamako|Lagos": "Africa Sahel",
+      "Bangalore|Kolkata": "India Express",
+      "Bangalore|Mumbai": "India Express",
+      "Bangkok|Hanoi": "China Central",
+      "Bangkok|Kolkata": "Asia South",
+      "Bangkok|Singapore": "Asia South",
+      "Barcelona|Madrid": "Green",
+      "Barcelona|Milan": "Green",
+      "Beijing|Shanghai": "Siberian",
+      "Beijing|Shenyang": "China North",
+      "Beijing|Ulan Bator": "Siberian",
+      "Beijing|Urumqi": "China North",
+      "Beijing|Xi'An": "Siberian",
+      "Belem|Caracas": "South America East",
+      "Belem|Fortaleza": "South America East",
+      "Berlin|Budapest": "Euro Balkans",
+      "Berlin|Minsk": "Purple",
+      "Berlin|Munich": "Green",
+      "Bogota|Caracas": "South America West",
+      "Bogota|Lima": "South America West",
+      "Bogota|Managua": "North America East",
+      "Bordeaux|Madrid": "Cyan",
+      "Bordeaux|Milan": "Green",
+      "Bordeaux|Paris": "Cyan",
+      "Boston|Montreal": "North America East",
+      "Boston|New York": "North America East",
+      "Brisbane|Cairns": "Oceania East",
+      "Brisbane|Sydney": "Oceania East",
+      "Broome|Darwin": "Oceania West",
+      "Broome|Perth": "Oceania West",
+      "Budapest|Istanbul": "Euro Balkans",
+      "Budapest|Kyiv": "Pink",
+      "Budapest|Munich": "Pink",
+      "Buenos Aires|Porto Alegre": "South America East",
+      "Buenos Aires|Santiago": "South America East",
+      "Cairns|Darwin": "Oceania Central",
+      "Cairo|Khartoum": "Africa Sahel",
+      "Cairo|Tripoli": "Africa North",
+      "Calgary|Denver": "North America West",
+      "Calgary|Edmonton": "North Canada",
+      "Calgary|Vancouver": "North Canada",
+      "Calgary|Winnipeg": "North America West",
+      "Cape Town|Luanda": "Africa West",
+      "Cape Town|Pretoria": "Africa South",
+      "Caracas|Manaus": "South America Inland",
+      "Caracas|San Juan": "North America South",
+      "Casablanca|Dakar": "Africa Sahel",
+      "Casablanca|Madrid": "Africa North",
+      "Chengdu|Hanoi": "China Central",
+      "Chengdu|Kolkata": "China\u2013India",
+      "Chengdu|New Delhi": "China\u2013India",
+      "Chengdu|Urumqi": "China Central",
+      "Chengdu|Xi'An": "China Central",
+      "Chicago|Detroit": "North America East",
+      "Chicago|Minneapolis": "North America West",
+      "Chicago|St. Louis": "North America East",
+      "Christchurch|Wellington": "Oceania Pacific",
+      "Copenhagen|Oslo": "Europe Nordic",
+      "Copenhagen|Stockholm": "Cyan",
+      "Dakar|Fortaleza": "SA\u2013Africa Bridge",
+      "Denver|Phoenix": "North America West",
+      "Denver|San Francisco": "North America West",
+      "Denver|St. Louis": "North America West",
+      "Detroit|Toronto": "North America East",
+      "Dubai|Riyadh": "Africa North",
+      "Dublin|London": "Blue",
+      "Fortaleza|Salvador": "South America East",
+      "Glasgow|London": "Blue",
+      "Glasgow|Reykjavik": "Arctic Bridge",
+      "Goose Bay|Montreal": "Arctic Bridge",
+      "Goose Bay|Nuuk": "Arctic Bridge",
+      "Harare|Luanda": "Africa Cross",
+      "Harare|Pretoria": "Africa South",
+      "Harare|Zanzibar": "Africa South",
+      "Harbin|Shenyang": "China North",
+      "Harbin|Vladivostok": "China North",
+      "Harbin|Yakutsk": "Siberian Far East",
+      "Havana|Miami": "North America South",
+      "Havana|San Juan": "North America South",
+      "Helsinki|St. Petersburg": "Cyan",
+      "Hanoi|Hong Kong": "China Central",
+      "Hong Kong|Manila": "Southeast Islands",
+      "Hong Kong|Shanghai": "China Central",
+      "Honolulu|San Francisco": "Pacific Crossing",
+      "Houston|Mexico City": "North America East",
+      "Houston|New Orleans": "North America East",
+      "Houston|Phoenix": "North America West",
+      "Istanbul|Kyiv": "Euro Balkans",
+      "Jakarta|Kupang": "Southeast Islands",
+      "Jakarta|Singapore": "Southeast Islands",
+      "Kabul|New Delhi": "Asia South",
+      "Kabul|Tehran": "Asia South",
+      "Karachi|Mumbai": "India Express",
+      "Karachi|New Delhi": "China\u2013India",
+      "Karachi|Tehran": "India Express",
+      "Khartoum|Lagos": "Africa Sahel",
+      "Khartoum|Nairobi": "Africa Sahel",
+      "Kyiv|Minsk": "Euro Balkans",
+      "Kyiv|Moscow": "Purple",
+      "Kyiv|Volgograd": "Pink",
+      "Kolkata|New Delhi": "Asia South",
+      "Broome|Kupang": "Oceania Central",
+      "Kupang|Manado": "Southeast Islands",
+      "Kinshasa|Lagos": "Africa Sahel",
+      "Easter Island|Lima": "Easter Island",
+      "Lisbon|Madrid": "Green",
+      "Lisbon|New York": "Atlantic Link",
+      "London|Paris": "Blue",
+      "Los Angeles|Mexico City": "North America West",
+      "Los Angeles|Phoenix": "North America West",
+      "Los Angeles|San Francisco": "North America West",
+      "Kinshasa|Luanda": "Africa West",
+      "Magadan|Yakutsk": "Siberian Far East",
+      "Manado|Manila": "Southeast Islands",
+      "Managua|Mexico City": "North America East",
+      "Melbourne|Sydney": "Oceania East",
+      "Milan|Munich": "Green",
+      "Milan|Paris": "Blue",
+      "Milan|Rome": "Blue",
+      "Minneapolis|Winnipeg": "North America West",
+      "Minsk|Moscow": "Purple",
+      "Montreal|Toronto": "North America East",
+      "Moscow|Perm": "Siberian",
+      "Moscow|St. Petersburg": "Purple",
+      "Moscow|Volgograd": "Purple",
+      "Nagasaki|Shanghai": "China Central",
+      "Nagasaki|Tokyo": "China North",
+      "New Orleans|St. Louis": "North America East",
+      "New York|St. Louis": "North America East",
+      "New York|Washington DC": "Atlantic Link",
+      "Novosibirsk|Perm": "Siberian",
+      "Novosibirsk|Ulan Bator": "Siberian",
+      "Novosibirsk|Urumqi": "Siberian Far East",
+      "Novosibirsk|Yakutsk": "Siberian Far East",
+      "Nuuk|Tasiilaq": "Arctic Bridge",
+      "Oslo|Stockholm": "Europe Nordic",
+      "Munich|Paris": "Pink",
+      "Porto Alegre|Rio de Janeiro": "South America East",
+      "Cape Town|Porto Alegre": "South Atlantic Bridge",
+      "Punta Arenas|Santiago": "South America West",
+      "Reykjavik|Tasiilaq": "Arctic Bridge",
+      "Rio de Janeiro|Salvador": "South America East",
+      "Rome|Tripoli": "Blue",
+      "San Francisco|Vancouver": "North America West",
+      "Sendai|Tokyo": "China North",
+      "Sendai|Vladivostok": "China North",
+      "Seoul|Shenyang": "China North",
+      "Shanghai|Xi'An": "China Central",
+      "Shenyang|Vladivostok": "China North",
+      "Helsinki|Stockholm": "Cyan",
+      "Tehran|Volgograd": "Asia South",
+      "Urumqi|Volgograd": "Pink",
+      "Antananarivo|Zanzibar": "Africa South",
+      "Antananarivo|Harare": "Africa South",
+      "Cairns|Port Moresby": "Oceania East",
+      "Antananarivo|Perth": "Africa South",
+      "Amman|Athens": "Euro Balkans",
+      "Kinshasa|Nairobi": "Africa Sahel"
+    },
+    "refined": {
+      "Adelaide|Alice Springs": "Oceania Central",
+      "Adelaide|Melbourne": "Oceania East",
+      "Adelaide|Perth": "Oceania East",
+      "Algiers|Casablanca": "Africa North",
+      "Algiers|Tripoli": "Africa North",
+      "Alice Springs|Broome": "Southeast Islands",
+      "Alice Springs|Darwin": "Oceania Central",
+      "Amman|Baghdad": "Africa North",
+      "Amman|Cairo": "Africa North",
+      "Amman|Riyadh": "Africa North",
+      "Amsterdam|Berlin": "Purple",
+      "Amsterdam|Copenhagen": "Cyan",
+      "Amsterdam|Munich": "Purple",
+      "Amsterdam|Paris": "Cyan",
+      "Anadyr|Magadan": "Siberian Far East",
+      "Anchorage|Fairbanks": "Alaska",
+      "Anchorage|Nome": "Alaska",
+      "Anchorage|Vancouver": "North America West",
+      "Arequipa|Asuncion": "South America Inland",
+      "Arequipa|Lima": "South America West",
+      "Arequipa|Manaus": "South America Inland",
+      "Arequipa|Santiago": "South America West",
+      "Asuncion|Porto Alegre": "South America Inland",
+      "Athens|Budapest": "Euro Balkans",
+      "Atlanta|Miami": "North America South",
+      "Atlanta|New Orleans": "North America South",
+      "Atlanta|Washington DC": "North America South",
+      "Auckland|Sydney": "Oceania East",
+      "Auckland|Wellington": "Oceania Pacific",
+      "Baghdad|Istanbul": "Euro Balkans",
+      "Baghdad|Tehran": "Africa North",
+      "Bamako|Dakar": "Africa Sahel",
+      "Bamako|Lagos": "Africa Sahel",
+      "Bangalore|Kolkata": "India Express",
+      "Bangalore|Mumbai": "India Express",
+      "Bangkok|Hanoi": "China Central",
+      "Bangkok|Kolkata": "Asia South",
+      "Bangkok|Singapore": "Asia South",
+      "Barcelona|Madrid": "Green",
+      "Barcelona|Milan": "Green",
+      "Beijing|Shanghai": "Southeast Islands",
+      "Beijing|Shenyang": "China North",
+      "Beijing|Ulan Bator": "Siberian",
+      "Beijing|Urumqi": "China North",
+      "Beijing|Xi'An": "China Central",
+      "Belem|Caracas": "South America East",
+      "Belem|Fortaleza": "South America East",
+      "Berlin|Budapest": "Euro Balkans",
+      "Berlin|Minsk": "Purple",
+      "Berlin|Munich": "Green",
+      "Bogota|Caracas": "South America East",
+      "Bogota|Lima": "South America West",
+      "Bogota|Managua": "North America East",
+      "Bordeaux|Madrid": "Cyan",
+      "Bordeaux|Milan": "Green",
+      "Bordeaux|Paris": "Cyan",
+      "Boston|Montreal": "North America East",
+      "Boston|New York": "North America East",
+      "Brisbane|Cairns": "Oceania East",
+      "Brisbane|Sydney": "Oceania East",
+      "Broome|Darwin": "Oceania West",
+      "Broome|Perth": "Africa South",
+      "Budapest|Istanbul": "Euro Balkans",
+      "Budapest|Kyiv": "Pink",
+      "Budapest|Munich": "Pink",
+      "Buenos Aires|Porto Alegre": "South America East",
+      "Buenos Aires|Santiago": "South America East",
+      "Cairns|Darwin": "Oceania West",
+      "Cairo|Khartoum": "Africa North",
+      "Cairo|Tripoli": "Africa North",
+      "Calgary|Denver": "North America West",
+      "Calgary|Edmonton": "North Canada",
+      "Calgary|Vancouver": "North Canada",
+      "Calgary|Winnipeg": "North America East",
+      "Cape Town|Luanda": "Africa West",
+      "Cape Town|Pretoria": "Africa South",
+      "Caracas|Manaus": "South America Inland",
+      "Caracas|San Juan": "North America South",
+      "Casablanca|Dakar": "Africa North",
+      "Casablanca|Madrid": "Africa North",
+      "Chengdu|Hanoi": "China Central",
+      "Chengdu|Kolkata": "China\u2013India",
+      "Chengdu|New Delhi": "China\u2013India",
+      "Chengdu|Urumqi": "China Central",
+      "Chengdu|Xi'An": "China Central",
+      "Chicago|Detroit": "North America East",
+      "Chicago|Minneapolis": "North America East",
+      "Chicago|St. Louis": "North America East",
+      "Christchurch|Wellington": "Oceania Pacific",
+      "Copenhagen|Oslo": "Europe Nordic",
+      "Copenhagen|Stockholm": "Cyan",
+      "Dakar|Fortaleza": "SA\u2013Africa Bridge",
+      "Denver|Phoenix": "North America West",
+      "Denver|San Francisco": "North America West",
+      "Denver|St. Louis": "North America West",
+      "Detroit|Toronto": "North America East",
+      "Dubai|Riyadh": "Africa North",
+      "Dublin|London": "Blue",
+      "Fortaleza|Salvador": "South America East",
+      "Glasgow|London": "Blue",
+      "Glasgow|Reykjavik": "Arctic Bridge",
+      "Goose Bay|Montreal": "Arctic Bridge",
+      "Goose Bay|Nuuk": "Arctic Bridge",
+      "Harare|Luanda": "Africa Cross",
+      "Harare|Pretoria": "Africa South",
+      "Harare|Zanzibar": "Africa South",
+      "Harbin|Shenyang": "China North",
+      "Harbin|Vladivostok": "China North",
+      "Harbin|Yakutsk": "Siberian Far East",
+      "Havana|Miami": "North America South",
+      "Havana|San Juan": "North America South",
+      "Helsinki|St. Petersburg": "Cyan",
+      "Hanoi|Hong Kong": "China Central",
+      "Hong Kong|Manila": "Southeast Islands",
+      "Hong Kong|Shanghai": "Southeast Islands",
+      "Honolulu|San Francisco": "Pacific Crossing",
+      "Houston|Mexico City": "North America East",
+      "Houston|New Orleans": "North America East",
+      "Houston|Phoenix": "North America West",
+      "Istanbul|Kyiv": "Euro Balkans",
+      "Jakarta|Kupang": "Southeast Islands",
+      "Jakarta|Singapore": "Southeast Islands",
+      "Kabul|New Delhi": "Asia South",
+      "Kabul|Tehran": "Asia South",
+      "Karachi|Mumbai": "Africa North",
+      "Karachi|New Delhi": "China\u2013India",
+      "Karachi|Tehran": "Africa North",
+      "Khartoum|Lagos": "Africa Sahel",
+      "Khartoum|Nairobi": "Africa North",
+      "Kyiv|Minsk": "Euro Balkans",
+      "Kyiv|Moscow": "Purple",
+      "Kyiv|Volgograd": "Pink",
+      "Kolkata|New Delhi": "Asia South",
+      "Broome|Kupang": "Southeast Islands",
+      "Kupang|Manado": "Southeast Islands",
+      "Kinshasa|Lagos": "Africa Sahel",
+      "Easter Island|Lima": "Easter Island",
+      "Lisbon|Madrid": "Green",
+      "Lisbon|New York": "Green",
+      "London|Paris": "Blue",
+      "Los Angeles|Mexico City": "North America West",
+      "Los Angeles|Phoenix": "North America West",
+      "Los Angeles|San Francisco": "North America West",
+      "Kinshasa|Luanda": "Africa West",
+      "Magadan|Yakutsk": "Siberian Far East",
+      "Manado|Manila": "Southeast Islands",
+      "Managua|Mexico City": "North America East",
+      "Melbourne|Sydney": "Oceania East",
+      "Milan|Munich": "Green",
+      "Milan|Paris": "Blue",
+      "Milan|Rome": "Blue",
+      "Minneapolis|Winnipeg": "North America East",
+      "Minsk|Moscow": "Purple",
+      "Montreal|Toronto": "North America East",
+      "Moscow|Perm": "Purple",
+      "Moscow|St. Petersburg": "Purple",
+      "Moscow|Volgograd": "Purple",
+      "Nagasaki|Shanghai": "China Central",
+      "Nagasaki|Tokyo": "China North",
+      "New Orleans|St. Louis": "North America East",
+      "New York|St. Louis": "Atlantic Link",
+      "New York|Washington DC": "Atlantic Link",
+      "Novosibirsk|Perm": "Purple",
+      "Novosibirsk|Ulan Bator": "Siberian",
+      "Novosibirsk|Urumqi": "Siberian Far East",
+      "Novosibirsk|Yakutsk": "Siberian Far East",
+      "Nuuk|Tasiilaq": "Arctic Bridge",
+      "Oslo|Stockholm": "Europe Nordic",
+      "Munich|Paris": "Pink",
+      "Porto Alegre|Rio de Janeiro": "South America East",
+      "Cape Town|Porto Alegre": "South Atlantic Bridge",
+      "Punta Arenas|Santiago": "South America West",
+      "Reykjavik|Tasiilaq": "Arctic Bridge",
+      "Rio de Janeiro|Salvador": "South America East",
+      "Rome|Tripoli": "Blue",
+      "San Francisco|Vancouver": "North America West",
+      "Sendai|Tokyo": "China North",
+      "Sendai|Vladivostok": "China North",
+      "Seoul|Shenyang": "China North",
+      "Shanghai|Xi'An": "China Central",
+      "Shenyang|Vladivostok": "China North",
+      "Helsinki|Stockholm": "Cyan",
+      "Tehran|Volgograd": "Asia South",
+      "Urumqi|Volgograd": "Pink",
+      "Antananarivo|Zanzibar": "Africa South",
+      "Antananarivo|Harare": "Africa South",
+      "Cairns|Port Moresby": "Oceania West",
+      "Antananarivo|Perth": "Africa South",
+      "Amman|Athens": "Euro Balkans",
+      "Kinshasa|Nairobi": "Africa Sahel"
+    },
+    "global_heuristic": {
+      "Adelaide|Alice Springs": "Southeast Islands",
+      "Adelaide|Melbourne": "Oceania East",
+      "Adelaide|Perth": "Oceania East",
+      "Algiers|Casablanca": "SA\u2013Africa Bridge",
+      "Algiers|Tripoli": "Africa North",
+      "Alice Springs|Broome": "Southeast Islands",
+      "Alice Springs|Darwin": "Oceania Central",
+      "Amman|Baghdad": "Africa North",
+      "Amman|Cairo": "Africa North",
+      "Amman|Riyadh": "Africa North",
+      "Amsterdam|Berlin": "Cyan",
+      "Amsterdam|Copenhagen": "Cyan",
+      "Amsterdam|Munich": "Pink",
+      "Amsterdam|Paris": "Cyan",
+      "Anadyr|Magadan": "Siberian Far East",
+      "Anchorage|Fairbanks": "Alaska",
+      "Anchorage|Nome": "Alaska",
+      "Anchorage|Vancouver": "Alaska",
+      "Arequipa|Asuncion": "South America Inland",
+      "Arequipa|Lima": "North America East",
+      "Arequipa|Manaus": "South America East",
+      "Arequipa|Santiago": "South America West",
+      "Asuncion|Porto Alegre": "South America Inland",
+      "Athens|Budapest": "Pink",
+      "Atlanta|Miami": "Atlantic Link",
+      "Atlanta|New Orleans": "North America South",
+      "Atlanta|Washington DC": "Atlantic Link",
+      "Auckland|Sydney": "Oceania East",
+      "Auckland|Wellington": "Oceania East",
+      "Baghdad|Istanbul": "Africa North",
+      "Baghdad|Tehran": "Africa North",
+      "Bamako|Dakar": "SA\u2013Africa Bridge",
+      "Bamako|Lagos": "SA\u2013Africa Bridge",
+      "Bangalore|Kolkata": "India Express",
+      "Bangalore|Mumbai": "Africa North",
+      "Bangkok|Hanoi": "Asia South",
+      "Bangkok|Kolkata": "Asia South",
+      "Bangkok|Singapore": "Asia South",
+      "Barcelona|Madrid": "Green",
+      "Barcelona|Milan": "Green",
+      "Beijing|Shanghai": "Southeast Islands",
+      "Beijing|Shenyang": "China North",
+      "Beijing|Ulan Bator": "Siberian",
+      "Beijing|Urumqi": "Pink",
+      "Beijing|Xi'An": "China Central",
+      "Belem|Caracas": "South America East",
+      "Belem|Fortaleza": "South America East",
+      "Berlin|Budapest": "Pink",
+      "Berlin|Minsk": "Purple",
+      "Berlin|Munich": "Green",
+      "Bogota|Caracas": "South America East",
+      "Bogota|Lima": "North America East",
+      "Bogota|Managua": "North America East",
+      "Bordeaux|Madrid": "Cyan",
+      "Bordeaux|Milan": "Blue",
+      "Bordeaux|Paris": "Cyan",
+      "Boston|Montreal": "North America East",
+      "Boston|New York": "North America East",
+      "Brisbane|Cairns": "Oceania West",
+      "Brisbane|Sydney": "Oceania East",
+      "Broome|Darwin": "Southeast Islands",
+      "Broome|Perth": "Southeast Islands",
+      "Budapest|Istanbul": "Africa North",
+      "Budapest|Kyiv": "Pink",
+      "Budapest|Munich": "Pink",
+      "Buenos Aires|Porto Alegre": "South America East",
+      "Buenos Aires|Santiago": "South America East",
+      "Cairns|Darwin": "Southeast Islands",
+      "Cairo|Khartoum": "Africa North",
+      "Cairo|Tripoli": "Africa North",
+      "Calgary|Denver": "Green",
+      "Calgary|Edmonton": "North Canada",
+      "Calgary|Vancouver": "Alaska",
+      "Calgary|Winnipeg": "North America East",
+      "Cape Town|Luanda": "Africa West",
+      "Cape Town|Pretoria": "South Atlantic Bridge",
+      "Caracas|Manaus": "South America East",
+      "Caracas|San Juan": "South America East",
+      "Casablanca|Dakar": "SA\u2013Africa Bridge",
+      "Casablanca|Madrid": "SA\u2013Africa Bridge",
+      "Chengdu|Hanoi": "Southeast Islands",
+      "Chengdu|Kolkata": "China Central",
+      "Chengdu|New Delhi": "Asia South",
+      "Chengdu|Urumqi": "China Central",
+      "Chengdu|Xi'An": "China Central",
+      "Chicago|Detroit": "North America East",
+      "Chicago|Minneapolis": "North America East",
+      "Chicago|St. Louis": "North America East",
+      "Christchurch|Wellington": "Oceania Pacific",
+      "Copenhagen|Oslo": "Cyan",
+      "Copenhagen|Stockholm": "Cyan",
+      "Dakar|Fortaleza": "SA\u2013Africa Bridge",
+      "Denver|Phoenix": "Green",
+      "Denver|San Francisco": "Green",
+      "Denver|St. Louis": "Green",
+      "Detroit|Toronto": "North America East",
+      "Dubai|Riyadh": "Africa North",
+      "Dublin|London": "Blue",
+      "Fortaleza|Salvador": "South America East",
+      "Glasgow|London": "Blue",
+      "Glasgow|Reykjavik": "Blue",
+      "Goose Bay|Montreal": "North America East",
+      "Goose Bay|Nuuk": "Arctic Bridge",
+      "Harare|Luanda": "SA\u2013Africa Bridge",
+      "Harare|Pretoria": "South Atlantic Bridge",
+      "Harare|Zanzibar": "Africa Cross",
+      "Harbin|Shenyang": "China North",
+      "Harbin|Vladivostok": "China North",
+      "Harbin|Yakutsk": "China North",
+      "Havana|Miami": "Atlantic Link",
+      "Havana|San Juan": "South America East",
+      "Helsinki|St. Petersburg": "Cyan",
+      "Hanoi|Hong Kong": "Southeast Islands",
+      "Hong Kong|Manila": "Southeast Islands",
+      "Hong Kong|Shanghai": "Southeast Islands",
+      "Honolulu|San Francisco": "Pacific Crossing",
+      "Houston|Mexico City": "North America East",
+      "Houston|New Orleans": "North America East",
+      "Houston|Phoenix": "North America East",
+      "Istanbul|Kyiv": "Pink",
+      "Jakarta|Kupang": "Asia South",
+      "Jakarta|Singapore": "Asia South",
+      "Kabul|New Delhi": "Asia South",
+      "Kabul|Tehran": "Asia South",
+      "Karachi|Mumbai": "Africa North",
+      "Karachi|New Delhi": "China\u2013India",
+      "Karachi|Tehran": "Africa North",
+      "Khartoum|Lagos": "SA\u2013Africa Bridge",
+      "Khartoum|Nairobi": "Africa North",
+      "Kyiv|Minsk": "Pink",
+      "Kyiv|Moscow": "Pink",
+      "Kyiv|Volgograd": "Pink",
+      "Kolkata|New Delhi": "Asia South",
+      "Broome|Kupang": "Southeast Islands",
+      "Kupang|Manado": "Southeast Islands",
+      "Kinshasa|Lagos": "SA\u2013Africa Bridge",
+      "Easter Island|Lima": "Easter Island",
+      "Lisbon|Madrid": "Green",
+      "Lisbon|New York": "Green",
+      "London|Paris": "Blue",
+      "Los Angeles|Mexico City": "North America West",
+      "Los Angeles|Phoenix": "Green",
+      "Los Angeles|San Francisco": "North America West",
+      "Kinshasa|Luanda": "SA\u2013Africa Bridge",
+      "Magadan|Yakutsk": "Purple",
+      "Manado|Manila": "Southeast Islands",
+      "Managua|Mexico City": "North America East",
+      "Melbourne|Sydney": "Oceania East",
+      "Milan|Munich": "Green",
+      "Milan|Paris": "Blue",
+      "Milan|Rome": "Blue",
+      "Minneapolis|Winnipeg": "North America East",
+      "Minsk|Moscow": "Purple",
+      "Montreal|Toronto": "North America East",
+      "Moscow|Perm": "Purple",
+      "Moscow|St. Petersburg": "Asia South",
+      "Moscow|Volgograd": "Asia South",
+      "Nagasaki|Shanghai": "China Central",
+      "Nagasaki|Tokyo": "China Central",
+      "New Orleans|St. Louis": "North America East",
+      "New York|St. Louis": "Green",
+      "New York|Washington DC": "Atlantic Link",
+      "Novosibirsk|Perm": "Purple",
+      "Novosibirsk|Ulan Bator": "Purple",
+      "Novosibirsk|Urumqi": "China Central",
+      "Novosibirsk|Yakutsk": "Purple",
+      "Nuuk|Tasiilaq": "Blue",
+      "Oslo|Stockholm": "Europe Nordic",
+      "Munich|Paris": "Pink",
+      "Porto Alegre|Rio de Janeiro": "South America East",
+      "Cape Town|Porto Alegre": "South Atlantic Bridge",
+      "Punta Arenas|Santiago": "South America East",
+      "Reykjavik|Tasiilaq": "Blue",
+      "Rio de Janeiro|Salvador": "South America East",
+      "Rome|Tripoli": "Blue",
+      "San Francisco|Vancouver": "North America West",
+      "Sendai|Tokyo": "China Central",
+      "Sendai|Vladivostok": "China North",
+      "Seoul|Shenyang": "China North",
+      "Shanghai|Xi'An": "China Central",
+      "Shenyang|Vladivostok": "China North",
+      "Helsinki|Stockholm": "Cyan",
+      "Tehran|Volgograd": "Asia South",
+      "Urumqi|Volgograd": "Pink",
+      "Antananarivo|Zanzibar": "Africa South",
+      "Antananarivo|Harare": "South Atlantic Bridge",
+      "Cairns|Port Moresby": "Southeast Islands",
+      "Antananarivo|Perth": "South Atlantic Bridge",
+      "Amman|Athens": "Euro Balkans",
+      "Kinshasa|Nairobi": "Africa Sahel"
+    }
+  },
+  "summary": {
+    "original": {
+      "0": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 838.7967886560317,
+        "mean_transfers": 4.228547596705244,
+        "mean_detour": 1.0,
+        "share_direct": 0.05661557710353456,
+        "share_max_one": 0.1606714628297362,
+        "pct_3plus": 0.7089980189761235,
+        "mean_score": 838.7967886560317
+      },
+      "20": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 843.0005213220728,
+        "mean_transfers": 3.693462621207382,
+        "mean_detour": 1.004303823216542,
+        "share_direct": 0.059534980711083305,
+        "share_max_one": 0.17714524032947554,
+        "pct_3plus": 0.6733395891982067,
+        "mean_score": 916.8697737462204
+      },
+      "40": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 848.702012303201,
+        "mean_transfers": 3.482848503805651,
+        "mean_detour": 1.0103482377828454,
+        "share_direct": 0.061203211343968306,
+        "share_max_one": 0.18632050881034304,
+        "pct_3plus": 0.660098008549682,
+        "mean_score": 988.0159524554269
+      },
+      "80": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 863.2936085913877,
+        "mean_transfers": 3.2405380043791054,
+        "mean_detour": 1.026877324470812,
+        "share_direct": 0.0629757063914086,
+        "share_max_one": 0.1988322385569805,
+        "pct_3plus": 0.6319466166197477,
+        "mean_score": 1122.5366489417163
+      }
+    },
+    "refined": {
+      "0": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 838.7967886560317,
+        "mean_transfers": 3.4463559587112917,
+        "mean_detour": 1.0,
+        "share_direct": 0.06652069648628924,
+        "share_max_one": 0.2014388489208633,
+        "pct_3plus": 0.6264206026483161,
+        "mean_score": 838.7967886560317
+      },
+      "20": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 843.245021374205,
+        "mean_transfers": 2.9263893233239497,
+        "mean_detour": 1.004417646613255,
+        "share_direct": 0.06975289333750391,
+        "share_max_one": 0.2234386403920342,
+        "pct_3plus": 0.5740798665415494,
+        "mean_score": 901.772807840684
+      },
+      "40": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 847.8658116984673,
+        "mean_transfers": 2.7505995203836933,
+        "mean_detour": 1.0097500424244004,
+        "share_direct": 0.07142112397038891,
+        "share_max_one": 0.23407361067667606,
+        "pct_3plus": 0.5473881764153894,
+        "mean_score": 957.889792513815
+      },
+      "80": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 854.5629235741841,
+        "mean_transfers": 2.628297362110312,
+        "mean_detour": 1.0188972619715764,
+        "share_direct": 0.07350641226149515,
+        "share_max_one": 0.24960900844541759,
+        "pct_3plus": 0.5116254822229174,
+        "mean_score": 1064.826712543009
+      }
+    },
+    "global_heuristic": {
+      "0": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 838.7967886560317,
+        "mean_transfers": 2.4626212073819205,
+        "mean_detour": 1.0,
+        "share_direct": 0.08591387759357731,
+        "share_max_one": 0.285475967052445,
+        "pct_3plus": 0.4502137420498384,
+        "mean_score": 838.7967886560317
+      },
+      "20": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 841.0507767698884,
+        "mean_transfers": 2.1751642164529246,
+        "mean_detour": 1.0027173985570939,
+        "share_direct": 0.09227400688145136,
+        "share_max_one": 0.3244708580961318,
+        "pct_3plus": 0.3722239599624648,
+        "mean_score": 884.5540610989469
+      },
+      "40": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 844.9780002085288,
+        "mean_transfers": 2.033260348243145,
+        "mean_detour": 1.0071138888168927,
+        "share_direct": 0.09571473256177666,
+        "share_max_one": 0.3413616932540924,
+        "pct_3plus": 0.3340631842352205,
+        "mean_score": 926.3084141382546
+      },
+      "80": {
+        "pairs": 9591,
+        "missing": 0,
+        "mean_fuel": 852.0638098217079,
+        "mean_transfers": 1.904181003023668,
+        "mean_detour": 1.017999816722167,
+        "share_direct": 0.10051089563132103,
+        "share_max_one": 0.374622041497237,
+        "pct_3plus": 0.28849963507454907,
+        "mean_score": 1004.3982900636013
+      }
+    }
+  },
+  "weights": {
+    "original": {
+      "uniform": {
+        "effort": 988.0159524554269,
+        "transfers": 3.482848503805651,
+        "fuel": 848.702012303201
+      },
+      "local": {
+        "effort": 722.9517640737866,
+        "transfers": 2.5856366784072593,
+        "fuel": 619.5262969374962
+      },
+      "global": {
+        "effort": 1096.85503125383,
+        "transfers": 3.8512562814070352,
+        "fuel": 942.8047799975487
+      },
+      "longhaul": {
+        "effort": 1301.4863980716254,
+        "transfers": 4.376492194674013,
+        "fuel": 1126.4267102846648
+      },
+      "shorthaul": {
+        "effort": 718.4260787992496,
+        "transfers": 2.5582864290181364,
+        "fuel": 616.0946216385241
+      }
+    },
+    "refined": {
+      "uniform": {
+        "effort": 957.889792513815,
+        "transfers": 2.7505995203836933,
+        "fuel": 847.8658116984673
+      },
+      "local": {
+        "effort": 702.3483374126918,
+        "transfers": 2.0830398185182974,
+        "fuel": 619.0267446719599
+      },
+      "global": {
+        "effort": 1062.81870327246,
+        "transfers": 3.024708910405687,
+        "fuel": 941.8303468562324
+      },
+      "longhaul": {
+        "effort": 1263.4815197428834,
+        "transfers": 3.4649908172635446,
+        "fuel": 1124.8818870523417
+      },
+      "shorthaul": {
+        "effort": 697.4417761100688,
+        "transfers": 2.0455284552845527,
+        "fuel": 615.6206378986867
+      }
+    },
+    "global_heuristic": {
+      "uniform": {
+        "effort": 926.3084141382546,
+        "transfers": 2.033260348243145,
+        "fuel": 844.9780002085288
+      },
+      "local": {
+        "effort": 681.5786520207748,
+        "transfers": 1.6152468509342726,
+        "fuel": 616.9687779834039
+      },
+      "global": {
+        "effort": 1026.797891898517,
+        "transfers": 2.20490256158843,
+        "fuel": 938.6017894349798
+      },
+      "longhaul": {
+        "effort": 1220.6497933884298,
+        "transfers": 2.509010560146924,
+        "fuel": 1120.2893709825528
+      },
+      "shorthaul": {
+        "effort": 676.240712945591,
+        "transfers": 1.5601000625390868,
+        "fuel": 613.8367104440275
+      }
+    }
+  },
+  "hubs": {
+    "original": [
+      [
+        "Lisbon",
+        2092
+      ],
+      [
+        "New York",
+        1730
+      ],
+      [
+        "Munich",
+        1642
+      ],
+      [
+        "Madrid",
+        1385
+      ],
+      [
+        "Casablanca",
+        1267
+      ],
+      [
+        "Kupang",
+        1239
+      ],
+      [
+        "Dakar",
+        1185
+      ],
+      [
+        "Fortaleza",
+        1134
+      ],
+      [
+        "Volgograd",
+        1072
+      ],
+      [
+        "Baghdad",
+        1038
+      ],
+      [
+        "Urumqi",
+        1028
+      ],
+      [
+        "Singapore",
+        1000
+      ],
+      [
+        "Amman",
+        967
+      ],
+      [
+        "St. Louis",
+        922
+      ],
+      [
+        "Caracas",
+        799
+      ],
+      [
+        "Porto Alegre",
+        757
+      ],
+      [
+        "Paris",
+        658
+      ],
+      [
+        "Perth",
+        629
+      ],
+      [
+        "Cape Town",
+        589
+      ],
+      [
+        "Broome",
+        537
+      ],
+      [
+        "Bogota",
+        528
+      ],
+      [
+        "Hong Kong",
+        516
+      ],
+      [
+        "Moscow",
+        513
+      ],
+      [
+        "Adelaide",
+        505
+      ],
+      [
+        "Tehran",
+        488
+      ],
+      [
+        "Kinshasa",
+        479
+      ],
+      [
+        "Berlin",
+        472
+      ],
+      [
+        "Cairo",
+        470
+      ],
+      [
+        "Washington DC",
+        427
+      ],
+      [
+        "Vancouver",
+        411
+      ],
+      [
+        "Sydney",
+        405
+      ],
+      [
+        "Chengdu",
+        394
+      ],
+      [
+        "Glasgow",
+        372
+      ],
+      [
+        "Arequipa",
+        338
+      ],
+      [
+        "Luanda",
+        323
+      ]
+    ],
+    "refined": [
+      [
+        "New York",
+        2124
+      ],
+      [
+        "Dakar",
+        1501
+      ],
+      [
+        "Madrid",
+        1475
+      ],
+      [
+        "Munich",
+        1430
+      ],
+      [
+        "St. Louis",
+        1297
+      ],
+      [
+        "Fortaleza",
+        1191
+      ],
+      [
+        "Volgograd",
+        1062
+      ],
+      [
+        "Singapore",
+        1026
+      ],
+      [
+        "Urumqi",
+        922
+      ],
+      [
+        "Porto Alegre",
+        736
+      ],
+      [
+        "Bogota",
+        721
+      ],
+      [
+        "Broome",
+        706
+      ],
+      [
+        "Paris",
+        634
+      ],
+      [
+        "Tehran",
+        577
+      ],
+      [
+        "Cape Town",
+        561
+      ],
+      [
+        "Alice Springs",
+        510
+      ],
+      [
+        "Chengdu",
+        499
+      ],
+      [
+        "Berlin",
+        471
+      ],
+      [
+        "Beijing",
+        468
+      ],
+      [
+        "Caracas",
+        465
+      ],
+      [
+        "Kinshasa",
+        463
+      ],
+      [
+        "Adelaide",
+        432
+      ],
+      [
+        "Karachi",
+        420
+      ],
+      [
+        "Washington DC",
+        405
+      ],
+      [
+        "Novosibirsk",
+        362
+      ],
+      [
+        "Glasgow",
+        358
+      ],
+      [
+        "Arequipa",
+        339
+      ],
+      [
+        "Luanda",
+        307
+      ],
+      [
+        "Perth",
+        294
+      ],
+      [
+        "Auckland",
+        272
+      ],
+      [
+        "Anchorage",
+        272
+      ],
+      [
+        "Harare",
+        265
+      ],
+      [
+        "Mexico City",
+        240
+      ],
+      [
+        "Nairobi",
+        240
+      ],
+      [
+        "Hong Kong",
+        210
+      ]
+    ],
+    "global_heuristic": [
+      [
+        "Munich",
+        1599
+      ],
+      [
+        "Madrid",
+        1497
+      ],
+      [
+        "Fortaleza",
+        1283
+      ],
+      [
+        "Tehran",
+        973
+      ],
+      [
+        "Kupang",
+        861
+      ],
+      [
+        "Beijing",
+        814
+      ],
+      [
+        "Volgograd",
+        808
+      ],
+      [
+        "New York",
+        779
+      ],
+      [
+        "Chengdu",
+        737
+      ],
+      [
+        "Paris",
+        720
+      ],
+      [
+        "Algiers",
+        625
+      ],
+      [
+        "Perth",
+        588
+      ],
+      [
+        "Porto Alegre",
+        578
+      ],
+      [
+        "St. Louis",
+        541
+      ],
+      [
+        "Calgary",
+        535
+      ],
+      [
+        "Berlin",
+        515
+      ],
+      [
+        "Arequipa",
+        451
+      ],
+      [
+        "Harare",
+        426
+      ],
+      [
+        "Adelaide",
+        422
+      ],
+      [
+        "Urumqi",
+        373
+      ],
+      [
+        "Bogota",
+        307
+      ],
+      [
+        "Budapest",
+        286
+      ],
+      [
+        "Havana",
+        279
+      ],
+      [
+        "Nairobi",
+        231
+      ],
+      [
+        "Kinshasa",
+        226
+      ],
+      [
+        "Mexico City",
+        205
+      ],
+      [
+        "St. Petersburg",
+        168
+      ],
+      [
+        "Nuuk",
+        168
+      ],
+      [
+        "Tripoli",
+        141
+      ],
+      [
+        "Milan",
+        139
+      ],
+      [
+        "Magadan",
+        137
+      ],
+      [
+        "Wellington",
+        137
+      ],
+      [
+        "Lima",
+        137
+      ],
+      [
+        "San Francisco",
+        137
+      ],
+      [
+        "Goose Bay",
+        134
+      ]
+    ]
+  },
+  "hottracks": {
+    "original": [
+      {
+        "id": "Lisbon|Madrid",
+        "jobs": 2195
+      },
+      {
+        "id": "Milan|Munich",
+        "jobs": 2186
+      },
+      {
+        "id": "Lisbon|New York",
+        "jobs": 2127
+      },
+      {
+        "id": "Barcelona|Milan",
+        "jobs": 2112
+      },
+      {
+        "id": "Barcelona|Madrid",
+        "jobs": 2098
+      },
+      {
+        "id": "Budapest|Munich",
+        "jobs": 2066
+      },
+      {
+        "id": "Budapest|Kyiv",
+        "jobs": 1803
+      },
+      {
+        "id": "Kyiv|Volgograd",
+        "jobs": 1769
+      },
+      {
+        "id": "New York|St. Louis",
+        "jobs": 1345
+      },
+      {
+        "id": "Kabul|Tehran",
+        "jobs": 1339
+      },
+      {
+        "id": "Casablanca|Dakar",
+        "jobs": 1302
+      },
+      {
+        "id": "Kabul|New Delhi",
+        "jobs": 1287
+      },
+      {
+        "id": "Broome|Kupang",
+        "jobs": 1272
+      },
+      {
+        "id": "Dakar|Fortaleza",
+        "jobs": 1225
+      },
+      {
+        "id": "Kolkata|New Delhi",
+        "jobs": 1196
+      },
+      {
+        "id": "Bangkok|Kolkata",
+        "jobs": 1165
+      },
+      {
+        "id": "Bangkok|Singapore",
+        "jobs": 1113
+      },
+      {
+        "id": "Casablanca|Madrid",
+        "jobs": 1113
+      },
+      {
+        "id": "Urumqi|Volgograd",
+        "jobs": 1086
+      },
+      {
+        "id": "Baghdad|Tehran",
+        "jobs": 1084
+      },
+      {
+        "id": "Amman|Cairo",
+        "jobs": 1062
+      },
+      {
+        "id": "Tehran|Volgograd",
+        "jobs": 1041
+      },
+      {
+        "id": "Jakarta|Singapore",
+        "jobs": 1025
+      },
+      {
+        "id": "Amman|Baghdad",
+        "jobs": 984
+      },
+      {
+        "id": "Jakarta|Kupang",
+        "jobs": 953
+      },
+      {
+        "id": "Denver|St. Louis",
+        "jobs": 933
+      },
+      {
+        "id": "Adelaide|Melbourne",
+        "jobs": 818
+      },
+      {
+        "id": "Beijing|Shenyang",
+        "jobs": 785
+      },
+      {
+        "id": "Cairo|Tripoli",
+        "jobs": 773
+      },
+      {
+        "id": "Belem|Fortaleza",
+        "jobs": 727
+      },
+      {
+        "id": "London|Paris",
+        "jobs": 724
+      },
+      {
+        "id": "Alice Springs|Broome",
+        "jobs": 710
+      },
+      {
+        "id": "Antananarivo|Harare",
+        "jobs": 710
+      },
+      {
+        "id": "Algiers|Tripoli",
+        "jobs": 701
+      },
+      {
+        "id": "Algiers|Casablanca",
+        "jobs": 695
+      }
+    ],
+    "refined": [
+      {
+        "id": "Lisbon|Madrid",
+        "jobs": 2195
+      },
+      {
+        "id": "Lisbon|New York",
+        "jobs": 2117
+      },
+      {
+        "id": "Milan|Munich",
+        "jobs": 1972
+      },
+      {
+        "id": "Barcelona|Milan",
+        "jobs": 1917
+      },
+      {
+        "id": "Barcelona|Madrid",
+        "jobs": 1905
+      },
+      {
+        "id": "Budapest|Munich",
+        "jobs": 1833
+      },
+      {
+        "id": "Budapest|Kyiv",
+        "jobs": 1684
+      },
+      {
+        "id": "Kyiv|Volgograd",
+        "jobs": 1651
+      },
+      {
+        "id": "Casablanca|Dakar",
+        "jobs": 1390
+      },
+      {
+        "id": "Kabul|Tehran",
+        "jobs": 1383
+      },
+      {
+        "id": "Amman|Cairo",
+        "jobs": 1339
+      },
+      {
+        "id": "Kabul|New Delhi",
+        "jobs": 1331
+      },
+      {
+        "id": "New York|St. Louis",
+        "jobs": 1324
+      },
+      {
+        "id": "Baghdad|Tehran",
+        "jobs": 1307
+      },
+      {
+        "id": "Broome|Kupang",
+        "jobs": 1286
+      },
+      {
+        "id": "Dakar|Fortaleza",
+        "jobs": 1282
+      },
+      {
+        "id": "Amman|Baghdad",
+        "jobs": 1261
+      },
+      {
+        "id": "Kolkata|New Delhi",
+        "jobs": 1238
+      },
+      {
+        "id": "Casablanca|Madrid",
+        "jobs": 1233
+      },
+      {
+        "id": "Bangkok|Kolkata",
+        "jobs": 1207
+      },
+      {
+        "id": "Bangkok|Singapore",
+        "jobs": 1142
+      },
+      {
+        "id": "Jakarta|Singapore",
+        "jobs": 1048
+      },
+      {
+        "id": "Cairo|Tripoli",
+        "jobs": 1039
+      },
+      {
+        "id": "Tehran|Volgograd",
+        "jobs": 1020
+      },
+      {
+        "id": "Jakarta|Kupang",
+        "jobs": 998
+      },
+      {
+        "id": "Urumqi|Volgograd",
+        "jobs": 994
+      },
+      {
+        "id": "Algiers|Tripoli",
+        "jobs": 925
+      },
+      {
+        "id": "Algiers|Casablanca",
+        "jobs": 921
+      },
+      {
+        "id": "Denver|St. Louis",
+        "jobs": 912
+      },
+      {
+        "id": "Beijing|Shenyang",
+        "jobs": 823
+      },
+      {
+        "id": "Belem|Fortaleza",
+        "jobs": 771
+      },
+      {
+        "id": "London|Paris",
+        "jobs": 719
+      },
+      {
+        "id": "Belem|Caracas",
+        "jobs": 709
+      },
+      {
+        "id": "Karachi|Tehran",
+        "jobs": 702
+      },
+      {
+        "id": "Adelaide|Melbourne",
+        "jobs": 698
+      }
+    ],
+    "global_heuristic": [
+      {
+        "id": "Lisbon|Madrid",
+        "jobs": 2264
+      },
+      {
+        "id": "Lisbon|New York",
+        "jobs": 2186
+      },
+      {
+        "id": "Barcelona|Milan",
+        "jobs": 2150
+      },
+      {
+        "id": "Barcelona|Madrid",
+        "jobs": 2144
+      },
+      {
+        "id": "Budapest|Munich",
+        "jobs": 2128
+      },
+      {
+        "id": "Milan|Munich",
+        "jobs": 2106
+      },
+      {
+        "id": "Kabul|Tehran",
+        "jobs": 1858
+      },
+      {
+        "id": "Kabul|New Delhi",
+        "jobs": 1806
+      },
+      {
+        "id": "Budapest|Kyiv",
+        "jobs": 1797
+      },
+      {
+        "id": "Kyiv|Volgograd",
+        "jobs": 1722
+      },
+      {
+        "id": "Casablanca|Dakar",
+        "jobs": 1536
+      },
+      {
+        "id": "New York|St. Louis",
+        "jobs": 1508
+      },
+      {
+        "id": "Dakar|Fortaleza",
+        "jobs": 1375
+      },
+      {
+        "id": "Baghdad|Tehran",
+        "jobs": 1303
+      },
+      {
+        "id": "Broome|Kupang",
+        "jobs": 1277
+      },
+      {
+        "id": "Kolkata|New Delhi",
+        "jobs": 1247
+      },
+      {
+        "id": "Casablanca|Madrid",
+        "jobs": 1238
+      },
+      {
+        "id": "Bangkok|Kolkata",
+        "jobs": 1214
+      },
+      {
+        "id": "Bangkok|Singapore",
+        "jobs": 1121
+      },
+      {
+        "id": "Amman|Cairo",
+        "jobs": 1120
+      },
+      {
+        "id": "Amman|Baghdad",
+        "jobs": 1106
+      },
+      {
+        "id": "Tehran|Volgograd",
+        "jobs": 1074
+      },
+      {
+        "id": "Jakarta|Singapore",
+        "jobs": 1025
+      },
+      {
+        "id": "Denver|St. Louis",
+        "jobs": 970
+      },
+      {
+        "id": "Jakarta|Kupang",
+        "jobs": 947
+      },
+      {
+        "id": "Urumqi|Volgograd",
+        "jobs": 947
+      },
+      {
+        "id": "Belem|Fortaleza",
+        "jobs": 850
+      },
+      {
+        "id": "Cairo|Tripoli",
+        "jobs": 834
+      },
+      {
+        "id": "Belem|Caracas",
+        "jobs": 786
+      },
+      {
+        "id": "London|Paris",
+        "jobs": 731
+      },
+      {
+        "id": "Beijing|Shenyang",
+        "jobs": 725
+      },
+      {
+        "id": "Algiers|Tripoli",
+        "jobs": 696
+      },
+      {
+        "id": "Adelaide|Melbourne",
+        "jobs": 693
+      },
+      {
+        "id": "Algiers|Casablanca",
+        "jobs": 692
+      },
+      {
+        "id": "Bordeaux|Paris",
+        "jobs": 686
+      }
+    ]
+  },
+  "regions": {
+    "original": {
+      "South America": [
+        [
+          "Fortaleza",
+          1134
+        ],
+        [
+          "Caracas",
+          799
+        ],
+        [
+          "Porto Alegre",
+          757
+        ],
+        [
+          "Bogota",
+          528
+        ],
+        [
+          "Arequipa",
+          338
+        ]
+      ],
+      "Africa": [
+        [
+          "Casablanca",
+          1267
+        ],
+        [
+          "Dakar",
+          1185
+        ],
+        [
+          "Cape Town",
+          589
+        ],
+        [
+          "Kinshasa",
+          479
+        ],
+        [
+          "Cairo",
+          470
+        ],
+        [
+          "Luanda",
+          323
+        ]
+      ],
+      "Asia": [
+        [
+          "Kupang",
+          1239
+        ],
+        [
+          "Baghdad",
+          1038
+        ],
+        [
+          "Urumqi",
+          1028
+        ],
+        [
+          "Singapore",
+          1000
+        ],
+        [
+          "Amman",
+          967
+        ],
+        [
+          "Hong Kong",
+          516
+        ],
+        [
+          "Tehran",
+          488
+        ]
+      ],
+      "North America": [
+        [
+          "New York",
+          1730
+        ],
+        [
+          "St. Louis",
+          922
+        ],
+        [
+          "Washington DC",
+          427
+        ],
+        [
+          "Vancouver",
+          411
+        ]
+      ],
+      "Oceania": [
+        [
+          "Perth",
+          629
+        ],
+        [
+          "Broome",
+          537
+        ],
+        [
+          "Adelaide",
+          505
+        ],
+        [
+          "Sydney",
+          405
+        ]
+      ],
+      "Europe": [
+        [
+          "Lisbon",
+          2092
+        ],
+        [
+          "Munich",
+          1642
+        ],
+        [
+          "Madrid",
+          1385
+        ],
+        [
+          "Volgograd",
+          1072
+        ],
+        [
+          "Paris",
+          658
+        ],
+        [
+          "Moscow",
+          513
+        ],
+        [
+          "Berlin",
+          472
+        ]
+      ]
+    },
+    "refined": {
+      "South America": [
+        [
+          "Fortaleza",
+          1191
+        ],
+        [
+          "Porto Alegre",
+          736
+        ],
+        [
+          "Bogota",
+          721
+        ],
+        [
+          "Caracas",
+          465
+        ],
+        [
+          "Arequipa",
+          339
+        ]
+      ],
+      "Africa": [
+        [
+          "Dakar",
+          1501
+        ],
+        [
+          "Cape Town",
+          561
+        ],
+        [
+          "Kinshasa",
+          463
+        ],
+        [
+          "Luanda",
+          307
+        ],
+        [
+          "Harare",
+          265
+        ],
+        [
+          "Nairobi",
+          240
+        ]
+      ],
+      "Asia": [
+        [
+          "Singapore",
+          1026
+        ],
+        [
+          "Urumqi",
+          922
+        ],
+        [
+          "Tehran",
+          577
+        ],
+        [
+          "Chengdu",
+          499
+        ],
+        [
+          "Beijing",
+          468
+        ],
+        [
+          "Karachi",
+          420
+        ],
+        [
+          "Novosibirsk",
+          362
+        ]
+      ],
+      "North America": [
+        [
+          "New York",
+          2124
+        ],
+        [
+          "St. Louis",
+          1297
+        ],
+        [
+          "Washington DC",
+          405
+        ],
+        [
+          "Anchorage",
+          272
+        ],
+        [
+          "Mexico City",
+          240
+        ]
+      ],
+      "Oceania": [
+        [
+          "Broome",
+          706
+        ],
+        [
+          "Alice Springs",
+          510
+        ],
+        [
+          "Adelaide",
+          432
+        ],
+        [
+          "Perth",
+          294
+        ],
+        [
+          "Auckland",
+          272
+        ]
+      ],
+      "Europe": [
+        [
+          "Madrid",
+          1475
+        ],
+        [
+          "Munich",
+          1430
+        ],
+        [
+          "Volgograd",
+          1062
+        ],
+        [
+          "Paris",
+          634
+        ],
+        [
+          "Berlin",
+          471
+        ],
+        [
+          "Glasgow",
+          358
+        ]
+      ]
+    },
+    "global_heuristic": {
+      "South America": [
+        [
+          "Fortaleza",
+          1283
+        ],
+        [
+          "Porto Alegre",
+          578
+        ],
+        [
+          "Arequipa",
+          451
+        ],
+        [
+          "Bogota",
+          307
+        ],
+        [
+          "Lima",
+          137
+        ]
+      ],
+      "Africa": [
+        [
+          "Algiers",
+          625
+        ],
+        [
+          "Harare",
+          426
+        ],
+        [
+          "Nairobi",
+          231
+        ],
+        [
+          "Kinshasa",
+          226
+        ],
+        [
+          "Tripoli",
+          141
+        ]
+      ],
+      "Asia": [
+        [
+          "Tehran",
+          973
+        ],
+        [
+          "Kupang",
+          861
+        ],
+        [
+          "Beijing",
+          814
+        ],
+        [
+          "Chengdu",
+          737
+        ],
+        [
+          "Urumqi",
+          373
+        ],
+        [
+          "Magadan",
+          137
+        ]
+      ],
+      "North America": [
+        [
+          "New York",
+          779
+        ],
+        [
+          "St. Louis",
+          541
+        ],
+        [
+          "Calgary",
+          535
+        ],
+        [
+          "Havana",
+          279
+        ],
+        [
+          "Mexico City",
+          205
+        ],
+        [
+          "Nuuk",
+          168
+        ],
+        [
+          "San Francisco",
+          137
+        ]
+      ],
+      "Oceania": [
+        [
+          "Perth",
+          588
+        ],
+        [
+          "Adelaide",
+          422
+        ],
+        [
+          "Wellington",
+          137
+        ]
+      ],
+      "Europe": [
+        [
+          "Munich",
+          1599
+        ],
+        [
+          "Madrid",
+          1497
+        ],
+        [
+          "Volgograd",
+          808
+        ],
+        [
+          "Paris",
+          720
+        ],
+        [
+          "Berlin",
+          515
+        ],
+        [
+          "Budapest",
+          286
+        ],
+        [
+          "St. Petersburg",
+          168
+        ]
+      ]
+    }
+  },
+  "physical_edge_betweenness": [
+    {
+      "id": "Baghdad|Tehran",
+      "betweenness": 0.26034824314461474,
+      "fuel": 47
+    },
+    {
+      "id": "Budapest|Munich",
+      "betweenness": 0.2578458971952872,
+      "fuel": 53
+    },
+    {
+      "id": "Kabul|Tehran",
+      "betweenness": 0.23490772599311854,
+      "fuel": 106
+    },
+    {
+      "id": "Kabul|New Delhi",
+      "betweenness": 0.2294859764362423,
+      "fuel": 45
+    },
+    {
+      "id": "Milan|Munich",
+      "betweenness": 0.22823480346157857,
+      "fuel": 26
+    },
+    {
+      "id": "Lisbon|Madrid",
+      "betweenness": 0.2276092169742467,
+      "fuel": 29
+    },
+    {
+      "id": "Barcelona|Milan",
+      "betweenness": 0.2211448232718173,
+      "fuel": 53
+    },
+    {
+      "id": "Lisbon|New York",
+      "betweenness": 0.21947659263893232,
+      "fuel": 376
+    },
+    {
+      "id": "Barcelona|Madrid",
+      "betweenness": 0.2192680638098217,
+      "fuel": 39
+    },
+    {
+      "id": "Dakar|Fortaleza",
+      "betweenness": 0.15483265561463871,
+      "fuel": 176
+    },
+    {
+      "id": "Casablanca|Dakar",
+      "betweenness": 0.1486810551558753,
+      "fuel": 130
+    },
+    {
+      "id": "Baghdad|Istanbul",
+      "betweenness": 0.14294651235533312,
+      "fuel": 106
+    },
+    {
+      "id": "Budapest|Istanbul",
+      "betweenness": 0.14169533938066936,
+      "fuel": 77
+    },
+    {
+      "id": "Broome|Kupang",
+      "betweenness": 0.13408403711813158,
+      "fuel": 60
+    },
+    {
+      "id": "Amman|Baghdad",
+      "betweenness": 0.1299134605359191,
+      "fuel": 45
+    },
+    {
+      "id": "Kolkata|New Delhi",
+      "betweenness": 0.12939213846314251,
+      "fuel": 103
+    },
+    {
+      "id": "Bangkok|Singapore",
+      "betweenness": 0.1289750808049213,
+      "fuel": 76
+    },
+    {
+      "id": "Bangkok|Kolkata",
+      "betweenness": 0.12605567719737254,
+      "fuel": 101
+    },
+    {
+      "id": "Amman|Cairo",
+      "betweenness": 0.1232405380043791,
+      "fuel": 34
+    },
+    {
+      "id": "Jakarta|Singapore",
+      "betweenness": 0.1189656970076113,
+      "fuel": 62
+    },
+    {
+      "id": "Jakarta|Kupang",
+      "betweenness": 0.11083307267229695,
+      "fuel": 70
+    },
+    {
+      "id": "New York|St. Louis",
+      "betweenness": 0.10989469294129912,
+      "fuel": 99
+    },
+    {
+      "id": "Casablanca|Madrid",
+      "betweenness": 0.10582838077364196,
+      "fuel": 63
+    },
+    {
+      "id": "Budapest|Kyiv",
+      "betweenness": 0.10499426545719945,
+      "fuel": 66
+    },
+    {
+      "id": "Belem|Fortaleza",
+      "betweenness": 0.09842560734021479,
+      "fuel": 57
+    },
+    {
+      "id": "Chengdu|New Delhi",
+      "betweenness": 0.09790428526743822,
+      "fuel": 151
+    },
+    {
+      "id": "Belem|Caracas",
+      "betweenness": 0.09196121363778542,
+      "fuel": 126
+    },
+    {
+      "id": "Cairo|Tripoli",
+      "betweenness": 0.08862475237201543,
+      "fuel": 116
+    },
+    {
+      "id": "Denver|St. Louis",
+      "betweenness": 0.08768637264101761,
+      "fuel": 92
+    },
+    {
+      "id": "Beijing|Shenyang",
+      "betweenness": 0.08643519966635387,
+      "fuel": 43
+    },
+    {
+      "id": "New York|Washington DC",
+      "betweenness": 0.08466270461891356,
+      "fuel": 38
+    },
+    {
+      "id": "Algiers|Tripoli",
+      "betweenness": 0.07955374830570326,
+      "fuel": 63
+    },
+    {
+      "id": "Algiers|Casablanca",
+      "betweenness": 0.07913669064748201,
+      "fuel": 75
+    },
+    {
+      "id": "Atlanta|Washington DC",
+      "betweenness": 0.0781983109164842,
+      "fuel": 45
+    },
+    {
+      "id": "London|Paris",
+      "betweenness": 0.07663434469815451,
+      "fuel": 30
+    },
+    {
+      "id": "Adelaide|Melbourne",
+      "betweenness": 0.07173391721405484,
+      "fuel": 40
+    },
+    {
+      "id": "Kinshasa|Luanda",
+      "betweenness": 0.06933583567928266,
+      "fuel": 36
+    },
+    {
+      "id": "Bordeaux|Madrid",
+      "betweenness": 0.06912730685017203,
+      "fuel": 43
+    },
+    {
+      "id": "Alice Springs|Broome",
+      "betweenness": 0.06902304243561672,
+      "fuel": 85
+    },
+    {
+      "id": "Atlanta|New Orleans",
+      "betweenness": 0.06787613387550828,
+      "fuel": 45
+    },
+    {
+      "id": "Urumqi|Volgograd",
+      "betweenness": 0.06777186946095297,
+      "fuel": 259
+    },
+    {
+      "id": "Bordeaux|Paris",
+      "betweenness": 0.06537378792618079,
+      "fuel": 34
+    },
+    {
+      "id": "Fortaleza|Salvador",
+      "betweenness": 0.06516525909707017,
+      "fuel": 62
+    },
+    {
+      "id": "Kyiv|Volgograd",
+      "betweenness": 0.06443540819518298,
+      "fuel": 92
+    },
+    {
+      "id": "Bamako|Dakar",
+      "betweenness": 0.06307997080596392,
+      "fuel": 51
+    },
+    {
+      "id": "Antananarivo|Harare",
+      "betweenness": 0.06266291314774268,
+      "fuel": 115
+    },
+    {
+      "id": "Chengdu|Xi'An",
+      "betweenness": 0.062454384318632046,
+      "fuel": 63
+    },
+    {
+      "id": "Antananarivo|Perth",
+      "betweenness": 0.060056302783859865,
+      "fuel": 426
+    },
+    {
+      "id": "Calgary|Denver",
+      "betweenness": 0.060056302783859865,
+      "fuel": 99
+    },
+    {
+      "id": "Bamako|Lagos",
+      "betweenness": 0.05995203836930455,
+      "fuel": 78
+    },
+    {
+      "id": "Melbourne|Sydney",
+      "betweenness": 0.05880512980919612,
+      "fuel": 39
+    },
+    {
+      "id": "Atlanta|Miami",
+      "betweenness": 0.05724116359086644,
+      "fuel": 55
+    },
+    {
+      "id": "Adelaide|Alice Springs",
+      "betweenness": 0.05661557710353456,
+      "fuel": 78
+    },
+    {
+      "id": "Rio de Janeiro|Salvador",
+      "betweenness": 0.056407048274423936,
+      "fuel": 67
+    },
+    {
+      "id": "Cairo|Khartoum",
+      "betweenness": 0.056094255030758,
+      "fuel": 101
+    },
+    {
+      "id": "Caracas|San Juan",
+      "betweenness": 0.05411323115420707,
+      "fuel": 65
+    },
+    {
+      "id": "Boston|New York",
+      "betweenness": 0.05411323115420707,
+      "fuel": 19
+    },
+    {
+      "id": "Bogota|Lima",
+      "betweenness": 0.052966322594098635,
+      "fuel": 110
+    },
+    {
+      "id": "Bogota|Managua",
+      "betweenness": 0.052445000521322074,
+      "fuel": 93
+    },
+    {
+      "id": "Beijing|Urumqi",
+      "betweenness": 0.051298091961213634,
+      "fuel": 172
+    },
+    {
+      "id": "Harare|Luanda",
+      "betweenness": 0.051089563132103014,
+      "fuel": 126
+    },
+    {
+      "id": "Houston|New Orleans",
+      "betweenness": 0.05077676988843707,
+      "fuel": 36
+    },
+    {
+      "id": "Asuncion|Porto Alegre",
+      "betweenness": 0.05056824105932645,
+      "fuel": 52
+    },
+    {
+      "id": "Havana|Miami",
+      "betweenness": 0.05056824105932645,
+      "fuel": 22
+    },
+    {
+      "id": "Porto Alegre|Rio de Janeiro",
+      "betweenness": 0.0501511834011052,
+      "fuel": 70
+    },
+    {
+      "id": "Glasgow|London",
+      "betweenness": 0.0501511834011052,
+      "fuel": 54
+    },
+    {
+      "id": "Broome|Darwin",
+      "betweenness": 0.04994265457199458,
+      "fuel": 62
+    },
+    {
+      "id": "Moscow|Perm",
+      "betweenness": 0.04962986132832864,
+      "fuel": 122
+    },
+    {
+      "id": "Kinshasa|Lagos",
+      "betweenness": 0.048482952768220205,
+      "fuel": 115
+    },
+    {
+      "id": "Hong Kong|Manila",
+      "betweenness": 0.048482952768220205,
+      "fuel": 69
+    },
+    {
+      "id": "Amsterdam|Paris",
+      "betweenness": 0.04827442393910958,
+      "fuel": 44
+    },
+    {
+      "id": "Chicago|St. Louis",
+      "betweenness": 0.04806589510999896,
+      "fuel": 22
+    },
+    {
+      "id": "Chengdu|Hanoi",
+      "betweenness": 0.04650192889166927,
+      "fuel": 77
+    },
+    {
+      "id": "Havana|San Juan",
+      "betweenness": 0.04639766447711396,
+      "fuel": 65
+    },
+    {
+      "id": "Harare|Pretoria",
+      "betweenness": 0.046293400062558644,
+      "fuel": 51
+    },
+    {
+      "id": "Cape Town|Porto Alegre",
+      "betweenness": 0.04493796267333959,
+      "fuel": 350
+    },
+    {
+      "id": "Arequipa|Asuncion",
+      "betweenness": 0.04452090501511834,
+      "fuel": 89
+    },
+    {
+      "id": "Managua|Mexico City",
+      "betweenness": 0.04452090501511834,
+      "fuel": 84
+    },
+    {
+      "id": "Kyiv|Moscow",
+      "betweenness": 0.04379105411323115,
+      "fuel": 78
+    },
+    {
+      "id": "Bogota|Caracas",
+      "betweenness": 0.04368678969867584,
+      "fuel": 69
+    },
+    {
+      "id": "Novosibirsk|Perm",
+      "betweenness": 0.0433739964550099,
+      "fuel": 166
+    },
+    {
+      "id": "Amsterdam|Copenhagen",
+      "betweenness": 0.0425398811385674,
+      "fuel": 66
+    },
+    {
+      "id": "Anchorage|Vancouver",
+      "betweenness": 0.0425398811385674,
+      "fuel": 200
+    },
+    {
+      "id": "Auckland|Sydney",
+      "betweenness": 0.0425398811385674,
+      "fuel": 141
+    },
+    {
+      "id": "Munich|Paris",
+      "betweenness": 0.04170576582212491,
+      "fuel": 50
+    },
+    {
+      "id": "Calgary|Vancouver",
+      "betweenness": 0.04139297257845897,
+      "fuel": 69
+    },
+    {
+      "id": "Boston|Montreal",
+      "betweenness": 0.04118444374934835,
+      "fuel": 42
+    },
+    {
+      "id": "Cape Town|Pretoria",
+      "betweenness": 0.040037535189239915,
+      "fuel": 95
+    },
+    {
+      "id": "Manado|Manila",
+      "betweenness": 0.039724741945573974,
+      "fuel": 83
+    },
+    {
+      "id": "Glasgow|Reykjavik",
+      "betweenness": 0.0390991554582421,
+      "fuel": 156
+    },
+    {
+      "id": "Khartoum|Nairobi",
+      "betweenness": 0.03878636221457617,
+      "fuel": 97
+    },
+    {
+      "id": "Beijing|Xi'An",
+      "betweenness": 0.03857783338546554,
+      "fuel": 59
+    },
+    {
+      "id": "Arequipa|Lima",
+      "betweenness": 0.038160775727244294,
+      "fuel": 52
+    },
+    {
+      "id": "Cairns|Darwin",
+      "betweenness": 0.03753518923991242,
+      "fuel": 99
+    },
+    {
+      "id": "Hanoi|Hong Kong",
+      "betweenness": 0.0356584297779168,
+      "fuel": 56
+    },
+    {
+      "id": "Beijing|Shanghai",
+      "betweenness": 0.03461578563236367,
+      "fuel": 72
+    },
+    {
+      "id": "Broome|Perth",
+      "betweenness": 0.03430299238869774,
+      "fuel": 134
+    },
+    {
+      "id": "Hong Kong|Shanghai",
+      "betweenness": 0.033885934730476484,
+      "fuel": 60
+    },
+    {
+      "id": "Kinshasa|Nairobi",
+      "betweenness": 0.03378167031592118,
+      "fuel": 125
+    },
+    {
+      "id": "Reykjavik|Tasiilaq",
+      "betweenness": 0.03263476175581274,
+      "fuel": 86
+    },
+    {
+      "id": "Chicago|Minneapolis",
+      "betweenness": 0.03242623292670212,
+      "fuel": 43
+    },
+    {
+      "id": "Kupang|Manado",
+      "betweenness": 0.03200917526848086,
+      "fuel": 74
+    },
+    {
+      "id": "Tehran|Volgograd",
+      "betweenness": 0.03180064643937024,
+      "fuel": 98
+    },
+    {
+      "id": "Shenyang|Vladivostok",
+      "betweenness": 0.030862266708372433,
+      "fuel": 36
+    },
+    {
+      "id": "Buenos Aires|Porto Alegre",
+      "betweenness": 0.030549473464706496,
+      "fuel": 59
+    },
+    {
+      "id": "Harbin|Shenyang",
+      "betweenness": 0.029923886977374622,
+      "fuel": 46
+    },
+    {
+      "id": "Moscow|Volgograd",
+      "betweenness": 0.029923886977374622,
+      "fuel": 88
+    },
+    {
+      "id": "Karachi|Tehran",
+      "betweenness": 0.029715358148263996,
+      "fuel": 120
+    },
+    {
+      "id": "Houston|Phoenix",
+      "betweenness": 0.0288812428318215,
+      "fuel": 99
+    },
+    {
+      "id": "Amman|Riyadh",
+      "betweenness": 0.02856844958815556,
+      "fuel": 90
+    },
+    {
+      "id": "Magadan|Yakutsk",
+      "betweenness": 0.02856844958815556,
+      "fuel": 125
+    },
+    {
+      "id": "Auckland|Wellington",
+      "betweenness": 0.02856844958815556,
+      "fuel": 32
+    },
+    {
+      "id": "Montreal|Toronto",
+      "betweenness": 0.02815139192993431,
+      "fuel": 48
+    },
+    {
+      "id": "Adelaide|Perth",
+      "betweenness": 0.027838598686268375,
+      "fuel": 150
+    },
+    {
+      "id": "Houston|Mexico City",
+      "betweenness": 0.027525805442602438,
+      "fuel": 66
+    },
+    {
+      "id": "Moscow|St. Petersburg",
+      "betweenness": 0.027317276613491814,
+      "fuel": 70
+    },
+    {
+      "id": "Nuuk|Tasiilaq",
+      "betweenness": 0.026795954540715254,
+      "fuel": 92
+    },
+    {
+      "id": "New Orleans|St. Louis",
+      "betweenness": 0.026483161297049317,
+      "fuel": 66
+    },
+    {
+      "id": "Helsinki|Stockholm",
+      "betweenness": 0.026483161297049317,
+      "fuel": 70
+    },
+    {
+      "id": "Helsinki|St. Petersburg",
+      "betweenness": 0.02627463246793869,
+      "fuel": 38
+    },
+    {
+      "id": "Athens|Budapest",
+      "betweenness": 0.025023459493274943,
+      "fuel": 81
+    },
+    {
+      "id": "Copenhagen|Stockholm",
+      "betweenness": 0.024919195078719633,
+      "fuel": 51
+    },
+    {
+      "id": "Novosibirsk|Yakutsk",
+      "betweenness": 0.024710666249609006,
+      "fuel": 298
+    },
+    {
+      "id": "Los Angeles|San Francisco",
+      "betweenness": 0.024502137420498383,
+      "fuel": 57
+    },
+    {
+      "id": "Buenos Aires|Santiago",
+      "betweenness": 0.02429360859138776,
+      "fuel": 78
+    },
+    {
+      "id": "Nagasaki|Shanghai",
+      "betweenness": 0.023772286518611196,
+      "fuel": 61
+    },
+    {
+      "id": "Los Angeles|Mexico City",
+      "betweenness": 0.022833906787613385,
+      "fuel": 159
+    },
+    {
+      "id": "Amman|Athens",
+      "betweenness": 0.022312584714836825,
+      "fuel": 95
+    },
+    {
+      "id": "Detroit|Toronto",
+      "betweenness": 0.0221040558857262,
+      "fuel": 24
+    },
+    {
+      "id": "Goose Bay|Nuuk",
+      "betweenness": 0.021791262642060265,
+      "fuel": 115
+    },
+    {
+      "id": "Caracas|Manaus",
+      "betweenness": 0.020644354081951827,
+      "fuel": 90
+    },
+    {
+      "id": "Karachi|Mumbai",
+      "betweenness": 0.020435825252841204,
+      "fuel": 68
+    },
+    {
+      "id": "Goose Bay|Montreal",
+      "betweenness": 0.01970597435095402,
+      "fuel": 113
+    },
+    {
+      "id": "Minneapolis|Winnipeg",
+      "betweenness": 0.019497445521843394,
+      "fuel": 48
+    },
+    {
+      "id": "Sendai|Vladivostok",
+      "betweenness": 0.01876759461995621,
+      "fuel": 77
+    },
+    {
+      "id": "Milan|Rome",
+      "betweenness": 0.018663330205400896,
+      "fuel": 33
+    },
+    {
+      "id": "Denver|San Francisco",
+      "betweenness": 0.01793347930351371,
+      "fuel": 104
+    },
+    {
+      "id": "Chicago|Detroit",
+      "betweenness": 0.01793347930351371,
+      "fuel": 31
+    },
+    {
+      "id": "Harbin|Yakutsk",
+      "betweenness": 0.0178292148889584,
+      "fuel": 154
+    },
+    {
+      "id": "San Francisco|Vancouver",
+      "betweenness": 0.016786570743405275,
+      "fuel": 90
+    },
+    {
+      "id": "Shanghai|Xi'An",
+      "betweenness": 0.01595245542696278,
+      "fuel": 77
+    },
+    {
+      "id": "Bangkok|Hanoi",
+      "betweenness": 0.01563966218329684,
+      "fuel": 54
+    },
+    {
+      "id": "Berlin|Minsk",
+      "betweenness": 0.015431133354186216,
+      "fuel": 83
+    },
+    {
+      "id": "Amsterdam|Berlin",
+      "betweenness": 0.01511834011052028,
+      "fuel": 46
+    },
+    {
+      "id": "Rome|Tripoli",
+      "betweenness": 0.014492753623188406,
+      "fuel": 80
+    },
+    {
+      "id": "Dubai|Riyadh",
+      "betweenness": 0.014388489208633093,
+      "fuel": 45
+    },
+    {
+      "id": "Anadyr|Magadan",
+      "betweenness": 0.014388489208633093,
+      "fuel": 168
+    },
+    {
+      "id": "Anchorage|Fairbanks",
+      "betweenness": 0.014388489208633093,
+      "fuel": 47
+    },
+    {
+      "id": "Anchorage|Nome",
+      "betweenness": 0.014388489208633093,
+      "fuel": 109
+    },
+    {
+      "id": "Easter Island|Lima",
+      "betweenness": 0.014388489208633093,
+      "fuel": 220
+    },
+    {
+      "id": "Punta Arenas|Santiago",
+      "betweenness": 0.014388489208633093,
+      "fuel": 175
+    },
+    {
+      "id": "Christchurch|Wellington",
+      "betweenness": 0.014388489208633093,
+      "fuel": 29
+    },
+    {
+      "id": "Bangalore|Mumbai",
+      "betweenness": 0.014388489208633093,
+      "fuel": 46
+    },
+    {
+      "id": "Seoul|Shenyang",
+      "betweenness": 0.014388489208633093,
+      "fuel": 36
+    },
+    {
+      "id": "Chengdu|Urumqi",
+      "betweenness": 0.014388489208633093,
+      "fuel": 121
+    },
+    {
+      "id": "Cairns|Port Moresby",
+      "betweenness": 0.014388489208633093,
+      "fuel": 70
+    },
+    {
+      "id": "Calgary|Edmonton",
+      "betweenness": 0.014388489208633093,
+      "fuel": 29
+    },
+    {
+      "id": "Honolulu|San Francisco",
+      "betweenness": 0.014388489208633093,
+      "fuel": 252
+    },
+    {
+      "id": "Dublin|London",
+      "betweenness": 0.014388489208633093,
+      "fuel": 45
+    },
+    {
+      "id": "Los Angeles|Phoenix",
+      "betweenness": 0.01417996037952247,
+      "fuel": 41
+    },
+    {
+      "id": "Arequipa|Manaus",
+      "betweenness": 0.012094672088416223,
+      "fuel": 108
+    },
+    {
+      "id": "Arequipa|Santiago",
+      "betweenness": 0.011990407673860911,
+      "fuel": 98
+    },
+    {
+      "id": "Brisbane|Cairns",
+      "betweenness": 0.011886143259305598,
+      "fuel": 85
+    },
+    {
+      "id": "Berlin|Munich",
+      "betweenness": 0.011677614430194974,
+      "fuel": 46
+    },
+    {
+      "id": "Berlin|Budapest",
+      "betweenness": 0.011156292357418413,
+      "fuel": 58
+    },
+    {
+      "id": "Nagasaki|Tokyo",
+      "betweenness": 0.010843499113752476,
+      "fuel": 59
+    },
+    {
+      "id": "Harare|Zanzibar",
+      "betweenness": 0.010739234699197164,
+      "fuel": 86
+    },
+    {
+      "id": "Khartoum|Lagos",
+      "betweenness": 0.01063497028464185,
+      "fuel": 201
+    },
+    {
+      "id": "Sendai|Tokyo",
+      "betweenness": 0.010217912626420602,
+      "fuel": 28
+    },
+    {
+      "id": "Novosibirsk|Ulan Bator",
+      "betweenness": 0.01011364821186529,
+      "fuel": 146
+    },
+    {
+      "id": "Cape Town|Luanda",
+      "betweenness": 0.009905119382754665,
+      "fuel": 166
+    },
+    {
+      "id": "Amsterdam|Munich",
+      "betweenness": 0.009383797309978105,
+      "fuel": 51
+    },
+    {
+      "id": "Copenhagen|Oslo",
+      "betweenness": 0.009071004066312168,
+      "fuel": 43
+    },
+    {
+      "id": "Minsk|Moscow",
+      "betweenness": 0.009071004066312168,
+      "fuel": 69
+    },
+    {
+      "id": "Novosibirsk|Urumqi",
+      "betweenness": 0.008341153164424981,
+      "fuel": 96
+    },
+    {
+      "id": "Bangalore|Kolkata",
+      "betweenness": 0.008132624335314358,
+      "fuel": 86
+    },
+    {
+      "id": "Beijing|Ulan Bator",
+      "betweenness": 0.008028359920759044,
+      "fuel": 92
+    },
+    {
+      "id": "Calgary|Winnipeg",
+      "betweenness": 0.007402773433427171,
+      "fuel": 94
+    },
+    {
+      "id": "Denver|Phoenix",
+      "betweenness": 0.006985715775205922,
+      "fuel": 80
+    },
+    {
+      "id": "Kyiv|Minsk",
+      "betweenness": 0.006151600458763424,
+      "fuel": 53
+    },
+    {
+      "id": "Brisbane|Sydney",
+      "betweenness": 0.005838807215097487,
+      "fuel": 41
+    },
+    {
+      "id": "Bordeaux|Milan",
+      "betweenness": 0.005838807215097487,
+      "fuel": 55
+    },
+    {
+      "id": "Milan|Paris",
+      "betweenness": 0.005734542800542175,
+      "fuel": 51
+    },
+    {
+      "id": "Chengdu|Kolkata",
+      "betweenness": 0.005421749556876238,
+      "fuel": 94
+    },
+    {
+      "id": "Oslo|Stockholm",
+      "betweenness": 0.005317485142320925,
+      "fuel": 45
+    },
+    {
+      "id": "Karachi|New Delhi",
+      "betweenness": 0.0046918986549890525,
+      "fuel": 54
+    },
+    {
+      "id": "Istanbul|Kyiv",
+      "betweenness": 0.004379105411323116,
+      "fuel": 71
+    },
+    {
+      "id": "Antananarivo|Zanzibar",
+      "betweenness": 0.0036492545094359294,
+      "fuel": 130
+    },
+    {
+      "id": "Harbin|Vladivostok",
+      "betweenness": 0.0016682306328849963,
+      "fuel": 36
+    },
+    {
+      "id": "Alice Springs|Darwin",
+      "betweenness": 0.0005213220727765613,
+      "fuel": 80
+    }
+  ],
+  "articulation_cities": [
+    "Wellington",
+    "Auckland",
+    "Sydney",
+    "Cairns",
+    "Magadan",
+    "Yakutsk",
+    "Shenyang",
+    "London",
+    "San Francisco",
+    "Anchorage",
+    "Vancouver",
+    "Calgary",
+    "Riyadh",
+    "Amman",
+    "Lima",
+    "Santiago"
+  ],
+  "bridge_tracks": [
+    "Amman|Riyadh",
+    "Dubai|Riyadh",
+    "Anadyr|Magadan",
+    "Magadan|Yakutsk",
+    "Anchorage|Fairbanks",
+    "Anchorage|Nome",
+    "Anchorage|Vancouver",
+    "Easter Island|Lima",
+    "Punta Arenas|Santiago",
+    "Auckland|Sydney",
+    "Auckland|Wellington",
+    "Christchurch|Wellington",
+    "Seoul|Shenyang",
+    "Cairns|Port Moresby",
+    "Calgary|Edmonton",
+    "Honolulu|San Francisco",
+    "Dublin|London"
+  ],
+  "complexity": {
+    "original": {
+      "total_branch_excess": 27,
+      "n_branched": 15,
+      "lines": [
+        {
+          "name": "Africa Cross",
+          "length": 126,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Africa North",
+          "length": 486,
+          "stops": 8,
+          "branches": 0,
+          "regions": [
+            "Africa",
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "Africa Sahel",
+          "length": 898,
+          "stops": 8,
+          "branches": 2,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 8
+        },
+        {
+          "name": "Africa South",
+          "length": 903,
+          "stops": 6,
+          "branches": 2,
+          "regions": [
+            "Africa",
+            "Oceania"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "Africa West",
+          "length": 202,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Alaska",
+          "length": 356,
+          "stops": 4,
+          "branches": 1,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 3
+        },
+        {
+          "name": "Arctic Bridge",
+          "length": 562,
+          "stops": 6,
+          "branches": 0,
+          "regions": [
+            "Europe",
+            "North America"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "Asia South",
+          "length": 529,
+          "stops": 7,
+          "branches": 0,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "Atlantic Link",
+          "length": 414,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Europe",
+            "North America"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Blue",
+          "length": 293,
+          "stops": 7,
+          "branches": 1,
+          "regions": [
+            "Africa",
+            "Europe"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "China Central",
+          "length": 569,
+          "stops": 8,
+          "branches": 3,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 8
+        },
+        {
+          "name": "China North",
+          "length": 533,
+          "stops": 9,
+          "branches": 3,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 9
+        },
+        {
+          "name": "China\u2013India",
+          "length": 299,
+          "stops": 4,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 3
+        },
+        {
+          "name": "Cyan",
+          "length": 346,
+          "stops": 8,
+          "branches": 0,
+          "regions": [
+            "Europe"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "Easter Island",
+          "length": 220,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Euro Balkans",
+          "length": 586,
+          "stops": 8,
+          "branches": 2,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 8
+        },
+        {
+          "name": "Europe Nordic",
+          "length": 88,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Europe"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Green",
+          "length": 248,
+          "stops": 7,
+          "branches": 1,
+          "regions": [
+            "Europe"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "India Express",
+          "length": 367,
+          "stops": 6,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "North America East",
+          "length": 630,
+          "stops": 12,
+          "branches": 1,
+          "regions": [
+            "North America",
+            "South America"
+          ],
+          "tracks": 12
+        },
+        {
+          "name": "North America South",
+          "length": 297,
+          "stops": 7,
+          "branches": 1,
+          "regions": [
+            "North America",
+            "South America"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "North America West",
+          "length": 1006,
+          "stops": 12,
+          "branches": 5,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 12
+        },
+        {
+          "name": "North Canada",
+          "length": 98,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Oceania Central",
+          "length": 402,
+          "stops": 6,
+          "branches": 1,
+          "regions": [
+            "Asia",
+            "Oceania"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "Oceania East",
+          "length": 425,
+          "stops": 7,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "Oceania Pacific",
+          "length": 202,
+          "stops": 4,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 3
+        },
+        {
+          "name": "Oceania West",
+          "length": 196,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Pacific Crossing",
+          "length": 252,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Pink",
+          "length": 520,
+          "stops": 6,
+          "branches": 0,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "Purple",
+          "length": 485,
+          "stops": 8,
+          "branches": 2,
+          "regions": [
+            "Europe"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "SA\u2013Africa Bridge",
+          "length": 176,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa",
+            "South America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Siberian",
+          "length": 657,
+          "stops": 7,
+          "branches": 1,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "Siberian Far East",
+          "length": 841,
+          "stops": 6,
+          "branches": 1,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "South America East",
+          "length": 519,
+          "stops": 8,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "South America Inland",
+          "length": 339,
+          "stops": 5,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 4
+        },
+        {
+          "name": "South America West",
+          "length": 504,
+          "stops": 6,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "South Atlantic Bridge",
+          "length": 350,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa",
+            "South America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Southeast Islands",
+          "length": 358,
+          "stops": 6,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 5
+        }
+      ]
+    },
+    "refined": {
+      "total_branch_excess": 29,
+      "n_branched": 15,
+      "lines": [
+        {
+          "name": "Africa Cross",
+          "length": 126,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Africa North",
+          "length": 1094,
+          "stops": 15,
+          "branches": 3,
+          "regions": [
+            "Africa",
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 14
+        },
+        {
+          "name": "Africa Sahel",
+          "length": 570,
+          "stops": 6,
+          "branches": 1,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "Africa South",
+          "length": 1037,
+          "stops": 7,
+          "branches": 2,
+          "regions": [
+            "Africa",
+            "Oceania"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "Africa West",
+          "length": 202,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Alaska",
+          "length": 156,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Arctic Bridge",
+          "length": 562,
+          "stops": 6,
+          "branches": 0,
+          "regions": [
+            "Europe",
+            "North America"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "Asia South",
+          "length": 529,
+          "stops": 7,
+          "branches": 0,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "Atlantic Link",
+          "length": 137,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Blue",
+          "length": 293,
+          "stops": 7,
+          "branches": 1,
+          "regions": [
+            "Africa",
+            "Europe"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "China Central",
+          "length": 568,
+          "stops": 9,
+          "branches": 3,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 8
+        },
+        {
+          "name": "China North",
+          "length": 533,
+          "stops": 9,
+          "branches": 3,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 9
+        },
+        {
+          "name": "China\u2013India",
+          "length": 299,
+          "stops": 4,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 3
+        },
+        {
+          "name": "Cyan",
+          "length": 346,
+          "stops": 8,
+          "branches": 0,
+          "regions": [
+            "Europe"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "Easter Island",
+          "length": 220,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Euro Balkans",
+          "length": 541,
+          "stops": 8,
+          "branches": 2,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "Europe Nordic",
+          "length": 88,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Europe"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Green",
+          "length": 624,
+          "stops": 8,
+          "branches": 1,
+          "regions": [
+            "Europe",
+            "North America"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "India Express",
+          "length": 132,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "North America East",
+          "length": 716,
+          "stops": 15,
+          "branches": 1,
+          "regions": [
+            "North America",
+            "South America"
+          ],
+          "tracks": 14
+        },
+        {
+          "name": "North America South",
+          "length": 297,
+          "stops": 7,
+          "branches": 1,
+          "regions": [
+            "North America",
+            "South America"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "North America West",
+          "length": 1021,
+          "stops": 10,
+          "branches": 5,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 10
+        },
+        {
+          "name": "North Canada",
+          "length": 98,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Oceania Central",
+          "length": 158,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Oceania East",
+          "length": 496,
+          "stops": 7,
+          "branches": 1,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "Oceania Pacific",
+          "length": 61,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Oceania West",
+          "length": 231,
+          "stops": 4,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 3
+        },
+        {
+          "name": "Pacific Crossing",
+          "length": 252,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Pink",
+          "length": 520,
+          "stops": 6,
+          "branches": 0,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "Purple",
+          "length": 773,
+          "stops": 10,
+          "branches": 3,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 9
+        },
+        {
+          "name": "SA\u2013Africa Bridge",
+          "length": 176,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa",
+            "South America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Siberian",
+          "length": 238,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "Siberian Far East",
+          "length": 841,
+          "stops": 6,
+          "branches": 1,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "South America East",
+          "length": 588,
+          "stops": 9,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 8
+        },
+        {
+          "name": "South America Inland",
+          "length": 339,
+          "stops": 5,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 4
+        },
+        {
+          "name": "South America West",
+          "length": 435,
+          "stops": 5,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 4
+        },
+        {
+          "name": "South Atlantic Bridge",
+          "length": 350,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa",
+            "South America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Southeast Islands",
+          "length": 635,
+          "stops": 10,
+          "branches": 1,
+          "regions": [
+            "Asia",
+            "Oceania"
+          ],
+          "tracks": 9
+        }
+      ]
+    },
+    "global_heuristic": {
+      "total_branch_excess": 37,
+      "n_branched": 15,
+      "lines": [
+        {
+          "name": "Africa Cross",
+          "length": 86,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Africa North",
+          "length": 1055,
+          "stops": 15,
+          "branches": 3,
+          "regions": [
+            "Africa",
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 14
+        },
+        {
+          "name": "Africa Sahel",
+          "length": 125,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Africa South",
+          "length": 130,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Africa West",
+          "length": 166,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Africa"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Alaska",
+          "length": 425,
+          "stops": 5,
+          "branches": 1,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 4
+        },
+        {
+          "name": "Arctic Bridge",
+          "length": 115,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Asia South",
+          "length": 1024,
+          "stops": 13,
+          "branches": 2,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 12
+        },
+        {
+          "name": "Atlantic Link",
+          "length": 160,
+          "stops": 5,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 4
+        },
+        {
+          "name": "Blue",
+          "length": 682,
+          "stops": 11,
+          "branches": 2,
+          "regions": [
+            "Africa",
+            "Europe",
+            "North America"
+          ],
+          "tracks": 10
+        },
+        {
+          "name": "China Central",
+          "length": 658,
+          "stops": 10,
+          "branches": 2,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 9
+        },
+        {
+          "name": "China North",
+          "length": 428,
+          "stops": 7,
+          "branches": 4,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "China\u2013India",
+          "length": 54,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Cyan",
+          "length": 435,
+          "stops": 10,
+          "branches": 2,
+          "regions": [
+            "Europe"
+          ],
+          "tracks": 9
+        },
+        {
+          "name": "Easter Island",
+          "length": 220,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Euro Balkans",
+          "length": 95,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Europe Nordic",
+          "length": 45,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Europe"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Green",
+          "length": 1084,
+          "stops": 13,
+          "branches": 2,
+          "regions": [
+            "Europe",
+            "North America"
+          ],
+          "tracks": 12
+        },
+        {
+          "name": "India Express",
+          "length": 86,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "North America East",
+          "length": 1090,
+          "stops": 19,
+          "branches": 3,
+          "regions": [
+            "North America",
+            "South America"
+          ],
+          "tracks": 18
+        },
+        {
+          "name": "North America South",
+          "length": 45,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "North America West",
+          "length": 306,
+          "stops": 4,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 3
+        },
+        {
+          "name": "North Canada",
+          "length": 29,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Oceania Central",
+          "length": 80,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Oceania East",
+          "length": 443,
+          "stops": 7,
+          "branches": 1,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 6
+        },
+        {
+          "name": "Oceania Pacific",
+          "length": 29,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Oceania West",
+          "length": 85,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Oceania"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Pacific Crossing",
+          "length": 252,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "North America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Pink",
+          "length": 1084,
+          "stops": 13,
+          "branches": 6,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 12
+        },
+        {
+          "name": "Purple",
+          "length": 1009,
+          "stops": 8,
+          "branches": 1,
+          "regions": [
+            "Asia",
+            "Europe"
+          ],
+          "tracks": 7
+        },
+        {
+          "name": "SA\u2013Africa Bridge",
+          "length": 1051,
+          "stops": 11,
+          "branches": 3,
+          "regions": [
+            "Africa",
+            "Europe",
+            "South America"
+          ],
+          "tracks": 10
+        },
+        {
+          "name": "Siberian",
+          "length": 92,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "Siberian Far East",
+          "length": 168,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "Asia"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "South America East",
+          "length": 1091,
+          "stops": 14,
+          "branches": 2,
+          "regions": [
+            "North America",
+            "South America"
+          ],
+          "tracks": 13
+        },
+        {
+          "name": "South America Inland",
+          "length": 141,
+          "stops": 3,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 2
+        },
+        {
+          "name": "South America West",
+          "length": 98,
+          "stops": 2,
+          "branches": 0,
+          "regions": [
+            "South America"
+          ],
+          "tracks": 1
+        },
+        {
+          "name": "South Atlantic Bridge",
+          "length": 1037,
+          "stops": 6,
+          "branches": 0,
+          "regions": [
+            "Africa",
+            "Oceania",
+            "South America"
+          ],
+          "tracks": 5
+        },
+        {
+          "name": "Southeast Islands",
+          "length": 1079,
+          "stops": 15,
+          "branches": 3,
+          "regions": [
+            "Asia",
+            "Oceania"
+          ],
+          "tracks": 14
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "track_ids": [
+        "New York|St. Louis"
+      ],
+      "from": "Atlantic Link",
+      "to": "Green",
+      "before": 957.889792513815,
+      "after": 952.352413721197
+    },
+    {
+      "track_ids": [
+        "Adelaide|Alice Springs"
+      ],
+      "from": "Oceania Central",
+      "to": "Southeast Islands",
+      "before": 952.352413721197,
+      "after": 950.1469085601084
+    },
+    {
+      "track_ids": [
+        "Kinshasa|Luanda"
+      ],
+      "from": "Africa West",
+      "to": "Africa Sahel",
+      "before": 950.1469085601084,
+      "after": 948.3922427275571
+    },
+    {
+      "track_ids": [
+        "Calgary|Vancouver"
+      ],
+      "from": "North Canada",
+      "to": "North America West",
+      "before": 948.3922427275571,
+      "after": 947.3204045459285
+    },
+    {
+      "track_ids": [
+        "Auckland|Wellington"
+      ],
+      "from": "Oceania Pacific",
+      "to": "Oceania East",
+      "before": 947.3204045459285,
+      "after": 946.7573767073297
+    },
+    {
+      "track_ids": [
+        "Copenhagen|Oslo"
+      ],
+      "from": "Europe Nordic",
+      "to": "Cyan",
+      "before": 946.7573767073297,
+      "after": 946.3987071212595
+    },
+    {
+      "track_ids": [
+        "Brisbane|Cairns"
+      ],
+      "from": "Oceania East",
+      "to": "Oceania West",
+      "before": 946.3987071212595,
+      "after": 946.0619330622459
+    },
+    {
+      "track_ids": [
+        "Glasgow|Reykjavik"
+      ],
+      "from": "Arctic Bridge",
+      "to": "Blue",
+      "before": 946.0619330622459,
+      "after": 945.7485142320926
+    },
+    {
+      "track_ids": [
+        "Jakarta|Singapore"
+      ],
+      "from": "Southeast Islands",
+      "to": "Asia South",
+      "before": 945.7485142320926,
+      "after": 945.4473986028569
+    },
+    {
+      "track_ids": [
+        "Beijing|Urumqi"
+      ],
+      "from": "China North",
+      "to": "Pink",
+      "before": 945.4473986028569,
+      "after": 945.1590032321968
+    },
+    {
+      "track_ids": [
+        "Novosibirsk|Ulan Bator"
+      ],
+      "from": "Siberian",
+      "to": "Purple",
+      "before": 945.1590032321968,
+      "after": 944.9021999791471
+    },
+    {
+      "track_ids": [
+        "Nagasaki|Tokyo"
+      ],
+      "from": "China North",
+      "to": "China Central",
+      "before": 944.9021999791471,
+      "after": 944.6525909707017
+    },
+    {
+      "track_ids": [
+        "Punta Arenas|Santiago"
+      ],
+      "from": "South America West",
+      "to": "South America East",
+      "before": 944.6525909707017,
+      "after": 944.4031904910854
+    },
+    {
+      "track_ids": [
+        "Reykjavik|Tasiilaq"
+      ],
+      "from": "Arctic Bridge",
+      "to": "Blue",
+      "before": 944.4031904910854,
+      "after": 944.1572307371495
+    },
+    {
+      "track_ids": [
+        "Amsterdam|Munich"
+      ],
+      "from": "Purple",
+      "to": "Pink",
+      "before": 944.1572307371495,
+      "after": 943.925450943593
+    },
+    {
+      "track_ids": [
+        "Chengdu|Kolkata"
+      ],
+      "from": "China\u2013India",
+      "to": "China Central",
+      "before": 943.925450943593,
+      "after": 943.697320404546
+    },
+    {
+      "track_ids": [
+        "Chengdu|New Delhi"
+      ],
+      "from": "China\u2013India",
+      "to": "Asia South",
+      "before": 943.697320404546,
+      "after": 942.4184130956105
+    },
+    {
+      "track_ids": [
+        "Jakarta|Kupang"
+      ],
+      "from": "Southeast Islands",
+      "to": "Asia South",
+      "before": 942.4184130956105,
+      "after": 942.1926806380982
+    },
+    {
+      "track_ids": [
+        "Harbin|Yakutsk"
+      ],
+      "from": "Siberian Far East",
+      "to": "China North",
+      "before": 942.1926806380982,
+      "after": 941.9701803774371
+    },
+    {
+      "track_ids": [
+        "Nuuk|Tasiilaq"
+      ],
+      "from": "Arctic Bridge",
+      "to": "Blue",
+      "before": 941.9701803774371,
+      "after": 941.7524762798457
+    },
+    {
+      "track_ids": [
+        "Goose Bay|Montreal"
+      ],
+      "from": "Arctic Bridge",
+      "to": "North America East",
+      "before": 941.7524762798457,
+      "after": 941.5349807110833
+    },
+    {
+      "track_ids": [
+        "Denver|St. Louis"
+      ],
+      "from": "North America West",
+      "to": "Green",
+      "before": 941.5349807110833,
+      "after": 941.317485142321
+    },
+    {
+      "track_ids": [
+        "Denver|San Francisco"
+      ],
+      "from": "North America West",
+      "to": "Green",
+      "before": 941.317485142321,
+      "after": 940.535502033156
+    },
+    {
+      "track_ids": [
+        "Calgary|Denver"
+      ],
+      "from": "North America West",
+      "to": "Green",
+      "before": 940.535502033156,
+      "after": 939.8181628610155
+    },
+    {
+      "track_ids": [
+        "Anchorage|Fairbanks"
+      ],
+      "from": "Alaska",
+      "to": "North America West",
+      "before": 939.8181628610155,
+      "after": 939.2551350224169
+    },
+    {
+      "track_ids": [
+        "Denver|Phoenix"
+      ],
+      "from": "North America West",
+      "to": "Green",
+      "before": 939.2551350224169,
+      "after": 938.9073089354604
+    },
+    {
+      "track_ids": [
+        "Harare|Zanzibar"
+      ],
+      "from": "Africa South",
+      "to": "Africa Cross",
+      "before": 938.9073089354604,
+      "after": 938.6939839432802
+    },
+    {
+      "track_ids": [
+        "Harare|Luanda"
+      ],
+      "from": "Africa Cross",
+      "to": "Africa Sahel",
+      "before": 938.6939839432802,
+      "after": 937.1789177353769
+    },
+    {
+      "track_ids": [
+        "Novosibirsk|Urumqi"
+      ],
+      "from": "Siberian Far East",
+      "to": "China Central",
+      "before": 937.1789177353769,
+      "after": 936.9809196121364
+    },
+    {
+      "track_ids": [
+        "Atlanta|Washington DC"
+      ],
+      "from": "North America South",
+      "to": "Atlantic Link",
+      "before": 936.9809196121364,
+      "after": 936.7907413199874
+    },
+    {
+      "track_ids": [
+        "Houston|Phoenix"
+      ],
+      "from": "North America West",
+      "to": "North America East",
+      "before": 936.7907413199874,
+      "after": 936.6407048274424
+    },
+    {
+      "track_ids": [
+        "Bogota|Lima"
+      ],
+      "from": "South America West",
+      "to": "North America East",
+      "before": 936.6407048274424,
+      "after": 936.5028672714003
+    },
+    {
+      "track_ids": [
+        "Arequipa|Lima"
+      ],
+      "from": "South America West",
+      "to": "North America East",
+      "before": 936.5028672714003,
+      "after": 935.6524867062872
+    },
+    {
+      "track_ids": [
+        "Amsterdam|Berlin"
+      ],
+      "from": "Purple",
+      "to": "Cyan",
+      "before": 935.6524867062872,
+      "after": 935.5247627984569
+    },
+    {
+      "track_ids": [
+        "Caracas|Manaus"
+      ],
+      "from": "South America Inland",
+      "to": "South America East",
+      "before": 935.5247627984569,
+      "after": 935.4020435825253
+    },
+    {
+      "track_ids": [
+        "Caracas|San Juan"
+      ],
+      "from": "North America South",
+      "to": "South America East",
+      "before": 935.4020435825253,
+      "after": 935.1947659263893
+    },
+    {
+      "track_ids": [
+        "Broome|Darwin"
+      ],
+      "from": "Oceania West",
+      "to": "Southeast Islands",
+      "before": 935.1947659263893,
+      "after": 935.0732978834324
+    },
+    {
+      "track_ids": [
+        "Cairns|Darwin"
+      ],
+      "from": "Oceania West",
+      "to": "Southeast Islands",
+      "before": 935.0732978834324,
+      "after": 934.5686581169847
+    },
+    {
+      "track_ids": [
+        "Cairns|Port Moresby"
+      ],
+      "from": "Oceania West",
+      "to": "Southeast Islands",
+      "before": 934.5686581169847,
+      "after": 934.0556771973726
+    },
+    {
+      "track_ids": [
+        "Broome|Perth"
+      ],
+      "from": "Africa South",
+      "to": "Southeast Islands",
+      "before": 934.0556771973726,
+      "after": 933.8883328120113
+    },
+    {
+      "track_ids": [
+        "Moscow|Volgograd"
+      ],
+      "from": "Purple",
+      "to": "Asia South",
+      "before": 933.8883328120113,
+      "after": 933.7761443019498
+    },
+    {
+      "track_ids": [
+        "Moscow|St. Petersburg"
+      ],
+      "from": "Purple",
+      "to": "Asia South",
+      "before": 933.7761443019498,
+      "after": 933.2918360963404
+    },
+    {
+      "track_ids": [
+        "Novosibirsk|Yakutsk"
+      ],
+      "from": "Siberian Far East",
+      "to": "Purple",
+      "before": 933.2918360963404,
+      "after": 932.9932228130539
+    },
+    {
+      "track_ids": [
+        "Magadan|Yakutsk"
+      ],
+      "from": "Siberian Far East",
+      "to": "Purple",
+      "before": 932.9932228130539,
+      "after": 932.8918778021061
+    },
+    {
+      "track_ids": [
+        "Cape Town|Pretoria"
+      ],
+      "from": "Africa South",
+      "to": "South Atlantic Bridge",
+      "before": 932.8918778021061,
+      "after": 932.8192055051611
+    },
+    {
+      "track_ids": [
+        "Sendai|Tokyo"
+      ],
+      "from": "China North",
+      "to": "China Central",
+      "before": 932.8192055051611,
+      "after": 932.7471587947034
+    },
+    {
+      "track_ids": [
+        "Havana|San Juan"
+      ],
+      "from": "North America South",
+      "to": "South America East",
+      "before": 932.7471587947034,
+      "after": 932.6859555833594
+    },
+    {
+      "track_ids": [
+        "Harare|Pretoria"
+      ],
+      "from": "Africa South",
+      "to": "South Atlantic Bridge",
+      "before": 932.6859555833594,
+      "after": 932.6327807319362
+    },
+    {
+      "track_ids": [
+        "Kyiv|Minsk"
+      ],
+      "from": "Euro Balkans",
+      "to": "Pink",
+      "before": 932.6327807319362,
+      "after": 932.5923261390888
+    },
+    {
+      "track_ids": [
+        "Bordeaux|Milan"
+      ],
+      "from": "Green",
+      "to": "Blue",
+      "before": 932.5923261390888,
+      "after": 932.5658429777917
+    },
+    {
+      "track_ids": [
+        "Los Angeles|Phoenix"
+      ],
+      "from": "North America West",
+      "to": "Green",
+      "before": 932.5658429777917,
+      "after": 932.3393806693775
+    },
+    {
+      "track_ids": [
+        "Bangalore|Kolkata"
+      ],
+      "from": "India Express",
+      "to": "China Central",
+      "before": 932.3393806693775,
+      "after": 932.3226983630487
+    },
+    {
+      "track_ids": [
+        "Bangkok|Hanoi"
+      ],
+      "from": "China Central",
+      "to": "Asia South",
+      "before": 932.3226983630487,
+      "after": 932.3115420706913
+    },
+    {
+      "track_ids": [
+        "Arequipa|Manaus"
+      ],
+      "from": "South America Inland",
+      "to": "South America East",
+      "before": 932.3115420706913,
+      "after": 932.3048691481597
+    },
+    {
+      "track_ids": [
+        "Kyiv|Moscow"
+      ],
+      "from": "Purple",
+      "to": "Pink",
+      "before": 932.3048691481597,
+      "after": 932.3020540089667
+    },
+    {
+      "track_ids": [
+        "Istanbul|Kyiv"
+      ],
+      "from": "Euro Balkans",
+      "to": "Pink",
+      "before": 932.3020540089667,
+      "after": 932.2883953706599
+    },
+    {
+      "track_ids": [
+        "Antananarivo|Harare",
+        "Antananarivo|Perth"
+      ],
+      "from": "Africa South",
+      "to": "South Atlantic Bridge",
+      "before": 932.2883953706599,
+      "after": 930.8959441142738
+    },
+    {
+      "track_ids": [
+        "Casablanca|Dakar",
+        "Casablanca|Madrid"
+      ],
+      "from": "Africa North",
+      "to": "SA\u2013Africa Bridge",
+      "before": 930.8959441142738,
+      "after": 929.9351475341466
+    },
+    {
+      "track_ids": [
+        "Atlanta|Miami",
+        "Havana|Miami"
+      ],
+      "from": "North America South",
+      "to": "Atlantic Link",
+      "before": 929.9351475341466,
+      "after": 929.4993222813054
+    },
+    {
+      "track_ids": [
+        "Bamako|Dakar",
+        "Bamako|Lagos"
+      ],
+      "from": "Africa Sahel",
+      "to": "SA\u2013Africa Bridge",
+      "before": 929.4993222813054,
+      "after": 929.1721405484308
+    },
+    {
+      "track_ids": [
+        "Khartoum|Lagos",
+        "Kinshasa|Lagos"
+      ],
+      "from": "Africa Sahel",
+      "to": "SA\u2013Africa Bridge",
+      "before": 929.1721405484308,
+      "after": 928.762485663643
+    },
+    {
+      "track_ids": [
+        "Harare|Luanda",
+        "Kinshasa|Luanda"
+      ],
+      "from": "Africa Sahel",
+      "to": "SA\u2013Africa Bridge",
+      "before": 928.762485663643,
+      "after": 928.042435616724
+    },
+    {
+      "track_ids": [
+        "Algiers|Casablanca"
+      ],
+      "from": "Africa North",
+      "to": "SA\u2013Africa Bridge",
+      "before": 928.042435616724,
+      "after": 927.9433844228964
+    },
+    {
+      "track_ids": [
+        "Chengdu|Hanoi",
+        "Hanoi|Hong Kong"
+      ],
+      "from": "China Central",
+      "to": "Southeast Islands",
+      "before": 927.9433844228964,
+      "after": 927.910436867897
+    },
+    {
+      "track_ids": [
+        "Bangalore|Kolkata"
+      ],
+      "from": "China Central",
+      "to": "India Express",
+      "before": 927.910436867897,
+      "after": 927.9087686372641
+    },
+    {
+      "track_ids": [
+        "Baghdad|Istanbul",
+        "Budapest|Istanbul"
+      ],
+      "from": "Euro Balkans",
+      "to": "Africa North",
+      "before": 927.9087686372641,
+      "after": 927.0087582108226,
+      "neighborhood_complete": true
+    },
+    {
+      "track_ids": [
+        "Athens|Budapest",
+        "Berlin|Budapest"
+      ],
+      "from": "Euro Balkans",
+      "to": "Pink",
+      "before": 927.0087582108226,
+      "after": 926.6657282869356,
+      "neighborhood_complete": true
+    },
+    {
+      "track_ids": [
+        "Bangalore|Mumbai"
+      ],
+      "from": "India Express",
+      "to": "Africa North",
+      "before": 926.6657282869356,
+      "after": 926.4277968929205,
+      "neighborhood_complete": true
+    },
+    {
+      "track_ids": [
+        "Anchorage|Fairbanks",
+        "Anchorage|Vancouver",
+        "Calgary|Vancouver"
+      ],
+      "from": "North America West",
+      "to": "Alaska",
+      "before": 926.4277968929205,
+      "after": 926.3084141382546,
+      "neighborhood_complete": true
+    }
+  ],
+  "search_runs": [
+    {
+      "termination": "local_optimum",
+      "group_size": 2,
+      "moves": 3,
+      "elapsed_seconds": 1.53
+    },
+    {
+      "termination": "local_optimum",
+      "group_size": 3,
+      "moves": 1,
+      "elapsed_seconds": 1.0
+    },
+    {
+      "termination": "local_optimum",
+      "group_size": 2,
+      "moves": 0,
+      "elapsed_seconds": 0.35
+    }
+  ],
+  "supplied_score": 927.9087686372641
+}

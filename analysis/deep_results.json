@@ -1,0 +1,3616 @@
+{
+  "version": 2,
+  "cross_seed_audit": {
+    "cycles": [
+      {
+        "cycle": 1,
+        "before": {
+          "rework": 912.1924721092691,
+          "consolidated": 910.3696173495986
+        },
+        "expanded_38_probe": 912.5389427588364,
+        "merged_probe": 910.7557084766969,
+        "after": {
+          "rework": 912.1924721092691,
+          "consolidated": 910.3696173495986
+        },
+        "no_improvement": true
+      }
+    ],
+    "stable": true,
+    "meaning": "No profile improved in the final merge/split cross-seeding cycle; each stored profile also has a completed local neighborhood audit."
+  },
+  "physical_lower_bound": 838.7967886560317,
+  "objective": "Mean fuel + 40 \u00d7 transfers across all 9,591 equally weighted city pairs",
+  "cap": 1100,
+  "cap_is_engine_specification": false,
+  "starting_reference": {
+    "pairs": 91,
+    "missing": 0,
+    "mean_fuel": 117.18681318681318,
+    "mean_transfers": 0.6593406593406593,
+    "mean_detour": 1.0742772466027115,
+    "share_direct": 0.4065934065934066,
+    "share_max_one": 0.9340659340659341,
+    "pct_3plus": 0.0,
+    "mean_score": 143.56043956043956
+  },
+  "profiles": {
+    "searched": {
+      "label": "Deeper search \u00b7 keep starting owners",
+      "owner": {
+        "Adelaide|Alice Springs": "Southeast Islands",
+        "Adelaide|Melbourne": "Southeast Islands",
+        "Adelaide|Perth": "Southeast Islands",
+        "Algiers|Casablanca": "Africa North",
+        "Algiers|Tripoli": "Africa North",
+        "Alice Springs|Broome": "Southeast Islands",
+        "Alice Springs|Darwin": "Oceania Central",
+        "Amman|Athens": "Euro Balkans",
+        "Amman|Baghdad": "Euro Balkans",
+        "Amman|Cairo": "Euro Balkans",
+        "Amman|Riyadh": "Euro Balkans",
+        "Amsterdam|Berlin": "Cyan",
+        "Amsterdam|Copenhagen": "Cyan",
+        "Amsterdam|Munich": "Pink",
+        "Amsterdam|Paris": "Cyan",
+        "Anadyr|Magadan": "Purple",
+        "Anchorage|Fairbanks": "Alaska",
+        "Anchorage|Nome": "Alaska",
+        "Anchorage|Vancouver": "Alaska",
+        "Antananarivo|Harare": "SA\u2013Africa Bridge",
+        "Antananarivo|Perth": "SA\u2013Africa Bridge",
+        "Antananarivo|Zanzibar": "Africa West",
+        "Arequipa|Asuncion": "North America East",
+        "Arequipa|Lima": "North America East",
+        "Arequipa|Manaus": "South America Inland",
+        "Arequipa|Santiago": "South America West",
+        "Asuncion|Porto Alegre": "North America East",
+        "Athens|Budapest": "Pink",
+        "Atlanta|Miami": "Atlantic Link",
+        "Atlanta|New Orleans": "North America East",
+        "Atlanta|Washington DC": "Green",
+        "Auckland|Sydney": "Southeast Islands",
+        "Auckland|Wellington": "Southeast Islands",
+        "Baghdad|Istanbul": "Euro Balkans",
+        "Baghdad|Tehran": "Euro Balkans",
+        "Bamako|Dakar": "Africa North",
+        "Bamako|Lagos": "Africa North",
+        "Bangalore|Kolkata": "India Express",
+        "Bangalore|Mumbai": "Euro Balkans",
+        "Bangkok|Hanoi": "China Central",
+        "Bangkok|Kolkata": "Asia South",
+        "Bangkok|Singapore": "Asia South",
+        "Barcelona|Madrid": "Green",
+        "Barcelona|Milan": "Green",
+        "Beijing|Shanghai": "China Central",
+        "Beijing|Shenyang": "China Central",
+        "Beijing|Ulan Bator": "China Central",
+        "Beijing|Urumqi": "Pink",
+        "Beijing|Xi'An": "Asia South",
+        "Belem|Caracas": "Africa North",
+        "Belem|Fortaleza": "Africa North",
+        "Berlin|Budapest": "Pink",
+        "Berlin|Minsk": "Cyan",
+        "Berlin|Munich": "Green",
+        "Bogota|Caracas": "Africa North",
+        "Bogota|Lima": "North America East",
+        "Bogota|Managua": "North America East",
+        "Bordeaux|Madrid": "Cyan",
+        "Bordeaux|Milan": "Blue",
+        "Bordeaux|Paris": "Cyan",
+        "Boston|Montreal": "Green",
+        "Boston|New York": "Green",
+        "Brisbane|Cairns": "Oceania West",
+        "Brisbane|Sydney": "Oceania East",
+        "Broome|Darwin": "Southeast Islands",
+        "Broome|Kupang": "Southeast Islands",
+        "Broome|Perth": "Southeast Islands",
+        "Budapest|Istanbul": "Pink",
+        "Budapest|Kyiv": "Pink",
+        "Budapest|Munich": "Pink",
+        "Buenos Aires|Porto Alegre": "South America East",
+        "Buenos Aires|Santiago": "South America East",
+        "Cairns|Darwin": "Southeast Islands",
+        "Cairns|Port Moresby": "Southeast Islands",
+        "Cairo|Khartoum": "Euro Balkans",
+        "Cairo|Tripoli": "Euro Balkans",
+        "Calgary|Denver": "Green",
+        "Calgary|Edmonton": "North Canada",
+        "Calgary|Vancouver": "Alaska",
+        "Calgary|Winnipeg": "North America East",
+        "Cape Town|Luanda": "Africa Cross",
+        "Cape Town|Porto Alegre": "SA\u2013Africa Bridge",
+        "Cape Town|Pretoria": "SA\u2013Africa Bridge",
+        "Caracas|Manaus": "North America South",
+        "Caracas|San Juan": "Atlantic Link",
+        "Casablanca|Dakar": "Africa North",
+        "Casablanca|Madrid": "Africa North",
+        "Chengdu|Hanoi": "China Central",
+        "Chengdu|Kolkata": "China\u2013India",
+        "Chengdu|New Delhi": "Asia South",
+        "Chengdu|Urumqi": "Pink",
+        "Chengdu|Xi'An": "Asia South",
+        "Chicago|Detroit": "North America East",
+        "Chicago|Minneapolis": "North America East",
+        "Chicago|St. Louis": "North America East",
+        "Christchurch|Wellington": "Oceania Pacific",
+        "Copenhagen|Oslo": "Cyan",
+        "Copenhagen|Stockholm": "Cyan",
+        "Dakar|Fortaleza": "Africa North",
+        "Denver|Phoenix": "North America West",
+        "Denver|San Francisco": "Pacific Crossing",
+        "Denver|St. Louis": "Green",
+        "Detroit|Toronto": "Green",
+        "Dubai|Riyadh": "Euro Balkans",
+        "Dublin|London": "Blue",
+        "Easter Island|Lima": "Easter Island",
+        "Fortaleza|Salvador": "Africa North",
+        "Glasgow|London": "Blue",
+        "Glasgow|Reykjavik": "Blue",
+        "Goose Bay|Montreal": "Arctic Bridge",
+        "Goose Bay|Nuuk": "Blue",
+        "Hanoi|Hong Kong": "China Central",
+        "Harare|Luanda": "South Atlantic Bridge",
+        "Harare|Pretoria": "SA\u2013Africa Bridge",
+        "Harare|Zanzibar": "Africa South",
+        "Harbin|Shenyang": "China Central",
+        "Harbin|Vladivostok": "China North",
+        "Harbin|Yakutsk": "Purple",
+        "Havana|Miami": "Atlantic Link",
+        "Havana|San Juan": "Atlantic Link",
+        "Helsinki|St. Petersburg": "Cyan",
+        "Helsinki|Stockholm": "Cyan",
+        "Hong Kong|Manila": "China Central",
+        "Hong Kong|Shanghai": "China Central",
+        "Honolulu|San Francisco": "Pacific Crossing",
+        "Houston|Mexico City": "North America East",
+        "Houston|New Orleans": "North America East",
+        "Houston|Phoenix": "North America East",
+        "Istanbul|Kyiv": "Euro Balkans",
+        "Jakarta|Kupang": "Asia South",
+        "Jakarta|Singapore": "Asia South",
+        "Kabul|New Delhi": "Asia South",
+        "Kabul|Tehran": "Asia South",
+        "Karachi|Mumbai": "Euro Balkans",
+        "Karachi|New Delhi": "Asia South",
+        "Karachi|Tehran": "Euro Balkans",
+        "Khartoum|Lagos": "Africa Sahel",
+        "Khartoum|Nairobi": "Euro Balkans",
+        "Kinshasa|Lagos": "South Atlantic Bridge",
+        "Kinshasa|Luanda": "South Atlantic Bridge",
+        "Kinshasa|Nairobi": "South Atlantic Bridge",
+        "Kolkata|New Delhi": "Asia South",
+        "Kupang|Manado": "Southeast Islands",
+        "Kyiv|Minsk": "Cyan",
+        "Kyiv|Moscow": "Cyan",
+        "Kyiv|Volgograd": "Pink",
+        "Lisbon|Madrid": "Green",
+        "Lisbon|New York": "Green",
+        "London|Paris": "Blue",
+        "Los Angeles|Mexico City": "Alaska",
+        "Los Angeles|Phoenix": "North America East",
+        "Los Angeles|San Francisco": "Alaska",
+        "Magadan|Yakutsk": "Purple",
+        "Manado|Manila": "China Central",
+        "Managua|Mexico City": "North America East",
+        "Melbourne|Sydney": "Southeast Islands",
+        "Milan|Munich": "Green",
+        "Milan|Paris": "Blue",
+        "Milan|Rome": "Blue",
+        "Minneapolis|Winnipeg": "North America East",
+        "Minsk|Moscow": "Cyan",
+        "Montreal|Toronto": "Green",
+        "Moscow|Perm": "Cyan",
+        "Moscow|St. Petersburg": "Cyan",
+        "Moscow|Volgograd": "Asia South",
+        "Munich|Paris": "Pink",
+        "Nagasaki|Shanghai": "China Central",
+        "Nagasaki|Tokyo": "China Central",
+        "New Orleans|St. Louis": "North America East",
+        "New York|St. Louis": "Green",
+        "New York|Washington DC": "Green",
+        "Novosibirsk|Perm": "Cyan",
+        "Novosibirsk|Ulan Bator": "China Central",
+        "Novosibirsk|Urumqi": "Siberian Far East",
+        "Novosibirsk|Yakutsk": "Purple",
+        "Nuuk|Tasiilaq": "Blue",
+        "Oslo|Stockholm": "Europe Nordic",
+        "Porto Alegre|Rio de Janeiro": "Africa North",
+        "Punta Arenas|Santiago": "South America East",
+        "Reykjavik|Tasiilaq": "Blue",
+        "Rio de Janeiro|Salvador": "Africa North",
+        "Rome|Tripoli": "Blue",
+        "San Francisco|Vancouver": "Alaska",
+        "Sendai|Tokyo": "China Central",
+        "Sendai|Vladivostok": "China Central",
+        "Seoul|Shenyang": "China Central",
+        "Shanghai|Xi'An": "Siberian",
+        "Shenyang|Vladivostok": "China Central",
+        "Tehran|Volgograd": "Asia South",
+        "Urumqi|Volgograd": "Pink"
+      },
+      "line_count": 38,
+      "summary": {
+        "0": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 838.7967886560317,
+          "mean_transfers": 2.1336669794599104,
+          "mean_detour": 1.0,
+          "share_direct": 0.09873840058388073,
+          "share_max_one": 0.34386403920341985,
+          "pct_3plus": 0.3638828067980398,
+          "mean_score": 838.7967886560317
+        },
+        "20": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 840.0249191950787,
+          "mean_transfers": 1.9362944427067041,
+          "mean_detour": 1.0018732842987206,
+          "share_direct": 0.10301324158064852,
+          "share_max_one": 0.3852570117818788,
+          "pct_3plus": 0.2931915337295381,
+          "mean_score": 878.7508080492128
+        },
+        "40": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 843.7047231779793,
+          "mean_transfers": 1.797935564591805,
+          "mean_detour": 1.0060083112377187,
+          "share_direct": 0.10426441455531227,
+          "share_max_one": 0.40819518298404756,
+          "pct_3plus": 0.25252841205296633,
+          "mean_score": 915.6221457616515
+        },
+        "80": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 848.4923365655302,
+          "mean_transfers": 1.7169221144823272,
+          "mean_detour": 1.0137933752153256,
+          "share_direct": 0.10895631321030133,
+          "share_max_one": 0.43686789698675843,
+          "pct_3plus": 0.22333437597747888,
+          "mean_score": 985.8461057241163
+        }
+      },
+      "initial_changes": [],
+      "correction_schedule": [],
+      "starting_summary": {
+        "pairs": 91,
+        "missing": 0,
+        "mean_fuel": 117.18681318681318,
+        "mean_transfers": 0.6593406593406593,
+        "mean_detour": 1.0742772466027115,
+        "share_direct": 0.4065934065934066,
+        "share_max_one": 0.9340659340659341,
+        "pct_3plus": 0.0,
+        "mean_score": 143.56043956043956
+      },
+      "complexity": {
+        "lines": [
+          {
+            "name": "Africa Cross",
+            "tracks": 1,
+            "fuel": 166,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Africa North",
+            "tracks": 13,
+            "fuel": 1087,
+            "stops": 14,
+            "branches": 3
+          },
+          {
+            "name": "Africa Sahel",
+            "tracks": 1,
+            "fuel": 201,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Africa South",
+            "tracks": 1,
+            "fuel": 86,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Africa West",
+            "tracks": 1,
+            "fuel": 130,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Alaska",
+            "tracks": 7,
+            "fuel": 731,
+            "stops": 8,
+            "branches": 2
+          },
+          {
+            "name": "Arctic Bridge",
+            "tracks": 1,
+            "fuel": 113,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Asia South",
+            "tracks": 13,
+            "fuel": 1076,
+            "stops": 14,
+            "branches": 2
+          },
+          {
+            "name": "Atlantic Link",
+            "tracks": 4,
+            "fuel": 207,
+            "stops": 5,
+            "branches": 0
+          },
+          {
+            "name": "Blue",
+            "tracks": 11,
+            "fuel": 797,
+            "stops": 12,
+            "branches": 2
+          },
+          {
+            "name": "China Central",
+            "tracks": 17,
+            "fuel": 1095,
+            "stops": 17,
+            "branches": 6
+          },
+          {
+            "name": "China North",
+            "tracks": 1,
+            "fuel": 36,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "China\u2013India",
+            "tracks": 1,
+            "fuel": 94,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Cyan",
+            "tracks": 16,
+            "fuel": 1076,
+            "stops": 15,
+            "branches": 5
+          },
+          {
+            "name": "Easter Island",
+            "tracks": 1,
+            "fuel": 220,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Euro Balkans",
+            "tracks": 14,
+            "fuel": 1081,
+            "stops": 15,
+            "branches": 4
+          },
+          {
+            "name": "Europe Nordic",
+            "tracks": 1,
+            "fuel": 45,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Green",
+            "tracks": 15,
+            "fuel": 1075,
+            "stops": 16,
+            "branches": 2
+          },
+          {
+            "name": "India Express",
+            "tracks": 1,
+            "fuel": 86,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "North America East",
+            "tracks": 17,
+            "fuel": 1071,
+            "stops": 18,
+            "branches": 3
+          },
+          {
+            "name": "North America South",
+            "tracks": 1,
+            "fuel": 90,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "North America West",
+            "tracks": 1,
+            "fuel": 80,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "North Canada",
+            "tracks": 1,
+            "fuel": 29,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania Central",
+            "tracks": 1,
+            "fuel": 80,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania East",
+            "tracks": 1,
+            "fuel": 41,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania Pacific",
+            "tracks": 1,
+            "fuel": 29,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania West",
+            "tracks": 1,
+            "fuel": 85,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Pacific Crossing",
+            "tracks": 2,
+            "fuel": 356,
+            "stops": 3,
+            "branches": 0
+          },
+          {
+            "name": "Pink",
+            "tracks": 11,
+            "fuel": 1080,
+            "stops": 12,
+            "branches": 5
+          },
+          {
+            "name": "Purple",
+            "tracks": 4,
+            "fuel": 745,
+            "stops": 5,
+            "branches": 1
+          },
+          {
+            "name": "SA\u2013Africa Bridge",
+            "tracks": 5,
+            "fuel": 1037,
+            "stops": 6,
+            "branches": 0
+          },
+          {
+            "name": "Siberian",
+            "tracks": 1,
+            "fuel": 77,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Siberian Far East",
+            "tracks": 1,
+            "fuel": 96,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "South America East",
+            "tracks": 3,
+            "fuel": 312,
+            "stops": 4,
+            "branches": 0
+          },
+          {
+            "name": "South America Inland",
+            "tracks": 1,
+            "fuel": 108,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "South America West",
+            "tracks": 1,
+            "fuel": 98,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "South Atlantic Bridge",
+            "tracks": 4,
+            "fuel": 402,
+            "stops": 5,
+            "branches": 1
+          },
+          {
+            "name": "Southeast Islands",
+            "tracks": 13,
+            "fuel": 1064,
+            "stops": 13,
+            "branches": 3
+          }
+        ],
+        "branches": 39
+      },
+      "campaign_totals": {
+        "campaigns": 2,
+        "starts": 115,
+        "scored_layout_evaluations": 199153
+      },
+      "search": {
+        "profile": "fixed",
+        "score": 915.6221457616515,
+        "initial_score": 926.3084141382546,
+        "line_count": 38,
+        "fixed_initial_owners": true,
+        "restarts": [
+          {
+            "attempt": 1,
+            "source": "supplied_seed",
+            "score": 917.1281409654885,
+            "improved": false,
+            "moves": 0,
+            "stale": 1
+          },
+          {
+            "attempt": 2,
+            "source": "supplied_seed",
+            "score": 917.1281409654885,
+            "improved": false,
+            "moves": 0,
+            "stale": 2
+          },
+          {
+            "attempt": 3,
+            "source": "supplied_seed",
+            "score": 922.945365446773,
+            "improved": false,
+            "moves": 13,
+            "stale": 3
+          },
+          {
+            "attempt": 4,
+            "source": "supplied_seed",
+            "score": 918.8810343029924,
+            "improved": false,
+            "moves": 63,
+            "stale": 4
+          },
+          {
+            "attempt": 5,
+            "source": "supplied_seed",
+            "score": 919.3745177770827,
+            "improved": false,
+            "moves": 63,
+            "stale": 5
+          },
+          {
+            "attempt": 6,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": true,
+            "moves": 9,
+            "stale": 0
+          },
+          {
+            "attempt": 7,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 8,
+            "stale": 1
+          },
+          {
+            "attempt": 8,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 5,
+            "stale": 2
+          },
+          {
+            "attempt": 9,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 5,
+            "stale": 3
+          },
+          {
+            "attempt": 10,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 2,
+            "stale": 4
+          },
+          {
+            "attempt": 11,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 5,
+            "stale": 5
+          },
+          {
+            "attempt": 12,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 4,
+            "stale": 6
+          },
+          {
+            "attempt": 13,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 6,
+            "stale": 7
+          },
+          {
+            "attempt": 14,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 3,
+            "stale": 8
+          },
+          {
+            "attempt": 15,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 3,
+            "stale": 9
+          },
+          {
+            "attempt": 16,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 5,
+            "stale": 10
+          },
+          {
+            "attempt": 17,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 7,
+            "stale": 11
+          },
+          {
+            "attempt": 18,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 4,
+            "stale": 12
+          },
+          {
+            "attempt": 19,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 5,
+            "stale": 13
+          },
+          {
+            "attempt": 20,
+            "source": "perturbation",
+            "score": 917.0376394536545,
+            "improved": false,
+            "moves": 2,
+            "stale": 14
+          },
+          {
+            "attempt": 21,
+            "source": "perturbation",
+            "score": 916.6897091022834,
+            "improved": true,
+            "moves": 9,
+            "stale": 0
+          },
+          {
+            "attempt": 22,
+            "source": "perturbation",
+            "score": 916.6493587738505,
+            "improved": true,
+            "moves": 10,
+            "stale": 0
+          },
+          {
+            "attempt": 23,
+            "source": "perturbation",
+            "score": 916.6493587738505,
+            "improved": false,
+            "moves": 1,
+            "stale": 1
+          },
+          {
+            "attempt": 24,
+            "source": "perturbation",
+            "score": 916.3991241789178,
+            "improved": true,
+            "moves": 8,
+            "stale": 0
+          },
+          {
+            "attempt": 25,
+            "source": "perturbation",
+            "score": 917.2092586800126,
+            "improved": false,
+            "moves": 8,
+            "stale": 1
+          },
+          {
+            "attempt": 26,
+            "source": "perturbation",
+            "score": 916.3991241789178,
+            "improved": false,
+            "moves": 6,
+            "stale": 2
+          },
+          {
+            "attempt": 27,
+            "source": "perturbation",
+            "score": 917.4587634240434,
+            "improved": false,
+            "moves": 5,
+            "stale": 3
+          },
+          {
+            "attempt": 28,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": true,
+            "moves": 5,
+            "stale": 0
+          },
+          {
+            "attempt": 29,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 5,
+            "stale": 1
+          },
+          {
+            "attempt": 30,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 3,
+            "stale": 2
+          },
+          {
+            "attempt": 31,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 3,
+            "stale": 3
+          },
+          {
+            "attempt": 32,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 5,
+            "stale": 4
+          },
+          {
+            "attempt": 33,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 3,
+            "stale": 5
+          },
+          {
+            "attempt": 34,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 6,
+            "stale": 6
+          },
+          {
+            "attempt": 35,
+            "source": "perturbation",
+            "score": 916.6404962986132,
+            "improved": false,
+            "moves": 5,
+            "stale": 7
+          },
+          {
+            "attempt": 36,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 2,
+            "stale": 8
+          },
+          {
+            "attempt": 37,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 4,
+            "stale": 9
+          },
+          {
+            "attempt": 38,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 3,
+            "stale": 10
+          },
+          {
+            "attempt": 39,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 2,
+            "stale": 11
+          },
+          {
+            "attempt": 40,
+            "source": "perturbation",
+            "score": 916.3902617036805,
+            "improved": false,
+            "moves": 3,
+            "stale": 12
+          },
+          {
+            "attempt": 41,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": true,
+            "moves": 15,
+            "stale": 0
+          },
+          {
+            "attempt": 42,
+            "source": "perturbation",
+            "score": 917.3328120112606,
+            "improved": false,
+            "moves": 9,
+            "stale": 1
+          },
+          {
+            "attempt": 43,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": false,
+            "moves": 2,
+            "stale": 2
+          },
+          {
+            "attempt": 44,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": false,
+            "moves": 2,
+            "stale": 3
+          },
+          {
+            "attempt": 45,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": false,
+            "moves": 4,
+            "stale": 4
+          },
+          {
+            "attempt": 46,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": false,
+            "moves": 5,
+            "stale": 5
+          },
+          {
+            "attempt": 47,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": false,
+            "moves": 2,
+            "stale": 6
+          },
+          {
+            "attempt": 48,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": false,
+            "moves": 9,
+            "stale": 7
+          },
+          {
+            "attempt": 49,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": false,
+            "moves": 2,
+            "stale": 8
+          },
+          {
+            "attempt": 50,
+            "source": "perturbation",
+            "score": 916.3019497445522,
+            "improved": false,
+            "moves": 4,
+            "stale": 9
+          },
+          {
+            "attempt": 51,
+            "source": "perturbation",
+            "score": 916.2512772390783,
+            "improved": true,
+            "moves": 8,
+            "stale": 0
+          },
+          {
+            "attempt": 52,
+            "source": "perturbation",
+            "score": 916.2512772390783,
+            "improved": false,
+            "moves": 4,
+            "stale": 1
+          },
+          {
+            "attempt": 53,
+            "source": "perturbation",
+            "score": 916.2512772390783,
+            "improved": false,
+            "moves": 2,
+            "stale": 2
+          },
+          {
+            "attempt": 54,
+            "source": "perturbation",
+            "score": 916.1778750912314,
+            "improved": true,
+            "moves": 6,
+            "stale": 0
+          },
+          {
+            "attempt": 55,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": true,
+            "moves": 9,
+            "stale": 0
+          },
+          {
+            "attempt": 56,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": false,
+            "moves": 2,
+            "stale": 1
+          },
+          {
+            "attempt": 57,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": false,
+            "moves": 2,
+            "stale": 2
+          },
+          {
+            "attempt": 58,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": false,
+            "moves": 2,
+            "stale": 3
+          },
+          {
+            "attempt": 59,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": false,
+            "moves": 2,
+            "stale": 4
+          },
+          {
+            "attempt": 60,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": false,
+            "moves": 3,
+            "stale": 5
+          },
+          {
+            "attempt": 61,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": false,
+            "moves": 6,
+            "stale": 6
+          },
+          {
+            "attempt": 62,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": false,
+            "moves": 4,
+            "stale": 7
+          },
+          {
+            "attempt": 63,
+            "source": "perturbation",
+            "score": 917.0031279324367,
+            "improved": false,
+            "moves": 3,
+            "stale": 8
+          },
+          {
+            "attempt": 64,
+            "source": "perturbation",
+            "score": 916.031175059952,
+            "improved": false,
+            "moves": 3,
+            "stale": 9
+          },
+          {
+            "attempt": 65,
+            "source": "perturbation",
+            "score": 915.6858513189449,
+            "improved": true,
+            "moves": 3,
+            "stale": 0
+          },
+          {
+            "attempt": 66,
+            "source": "perturbation",
+            "score": 915.6858513189449,
+            "improved": false,
+            "moves": 7,
+            "stale": 1
+          },
+          {
+            "attempt": 67,
+            "source": "perturbation",
+            "score": 915.9830049004274,
+            "improved": false,
+            "moves": 6,
+            "stale": 2
+          },
+          {
+            "attempt": 68,
+            "source": "perturbation",
+            "score": 916.1889271191742,
+            "improved": false,
+            "moves": 6,
+            "stale": 3
+          },
+          {
+            "attempt": 69,
+            "source": "perturbation",
+            "score": 915.6858513189449,
+            "improved": false,
+            "moves": 3,
+            "stale": 4
+          },
+          {
+            "attempt": 70,
+            "source": "perturbation",
+            "score": 915.6858513189449,
+            "improved": false,
+            "moves": 5,
+            "stale": 5
+          },
+          {
+            "attempt": 71,
+            "source": "perturbation",
+            "score": 915.6858513189449,
+            "improved": false,
+            "moves": 2,
+            "stale": 6
+          },
+          {
+            "attempt": 72,
+            "source": "perturbation",
+            "score": 915.6858513189449,
+            "improved": false,
+            "moves": 4,
+            "stale": 7
+          },
+          {
+            "attempt": 73,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": true,
+            "moves": 6,
+            "stale": 0
+          },
+          {
+            "attempt": 74,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 4,
+            "stale": 1
+          },
+          {
+            "attempt": 75,
+            "source": "perturbation",
+            "score": 915.804921280367,
+            "improved": false,
+            "moves": 2,
+            "stale": 2
+          },
+          {
+            "attempt": 76,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 3,
+            "stale": 3
+          },
+          {
+            "attempt": 77,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 4,
+            "stale": 4
+          },
+          {
+            "attempt": 78,
+            "source": "perturbation",
+            "score": 916.125221561881,
+            "improved": false,
+            "moves": 7,
+            "stale": 5
+          },
+          {
+            "attempt": 79,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 4,
+            "stale": 6
+          },
+          {
+            "attempt": 80,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 4,
+            "stale": 7
+          },
+          {
+            "attempt": 81,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 7,
+            "stale": 8
+          },
+          {
+            "attempt": 82,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 5,
+            "stale": 9
+          },
+          {
+            "attempt": 83,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 1,
+            "stale": 10
+          },
+          {
+            "attempt": 84,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 2,
+            "stale": 11
+          },
+          {
+            "attempt": 85,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 2,
+            "stale": 12
+          },
+          {
+            "attempt": 86,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 5,
+            "stale": 13
+          },
+          {
+            "attempt": 87,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 2,
+            "stale": 14
+          },
+          {
+            "attempt": 88,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 4,
+            "stale": 15
+          },
+          {
+            "attempt": 89,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 7,
+            "stale": 16
+          },
+          {
+            "attempt": 90,
+            "source": "perturbation",
+            "score": 915.9825878427692,
+            "improved": false,
+            "moves": 11,
+            "stale": 17
+          },
+          {
+            "attempt": 91,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 6,
+            "stale": 18
+          },
+          {
+            "attempt": 92,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 5,
+            "stale": 19
+          },
+          {
+            "attempt": 93,
+            "source": "perturbation",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 7,
+            "stale": 20
+          }
+        ],
+        "stopping_rule": {
+          "consecutive_nonimproving_restarts": 20,
+          "final_neighborhood": "connected relocations through 6 tracks, connected exchanges through 3 tracks each way, and full-line merges where enabled"
+        },
+        "final_audit": {
+          "exhausted": true,
+          "candidates_checked": 519,
+          "score": 915.6221457616515,
+          "group_size": 6,
+          "swap_size": 3
+        },
+        "evaluations": {
+          "hits": 64381,
+          "misses": 135047,
+          "maxsize": 150000,
+          "currsize": 135047
+        },
+        "elapsed_seconds": 376.16,
+        "seed": 20261104
+      },
+      "deferred_tracks": [],
+      "deferral_known_cost": 0,
+      "deferral_penalties": {
+        "0": 838.7967886560317,
+        "20": 878.7508080492128,
+        "40": 915.6221457616515,
+        "80": 985.8461057241163
+      },
+      "retained_track_count": 190
+    },
+    "rework": {
+      "label": "Deeper search \u00b7 allow starting corrections",
+      "owner": {
+        "Adelaide|Alice Springs": "Southeast Islands",
+        "Adelaide|Melbourne": "Southeast Islands",
+        "Adelaide|Perth": "Southeast Islands",
+        "Algiers|Casablanca": "Cyan",
+        "Algiers|Tripoli": "North America South",
+        "Alice Springs|Broome": "Southeast Islands",
+        "Alice Springs|Darwin": "Oceania Central",
+        "Amman|Athens": "North America South",
+        "Amman|Baghdad": "North America South",
+        "Amman|Cairo": "North America South",
+        "Amman|Riyadh": "North America South",
+        "Amsterdam|Berlin": "Purple",
+        "Amsterdam|Copenhagen": "Cyan",
+        "Amsterdam|Munich": "Pink",
+        "Amsterdam|Paris": "Cyan",
+        "Anadyr|Magadan": "China North",
+        "Anchorage|Fairbanks": "Alaska",
+        "Anchorage|Nome": "Alaska",
+        "Anchorage|Vancouver": "Alaska",
+        "Antananarivo|Harare": "South Atlantic Bridge",
+        "Antananarivo|Perth": "South Atlantic Bridge",
+        "Antananarivo|Zanzibar": "Africa South",
+        "Arequipa|Asuncion": "North America East",
+        "Arequipa|Lima": "North America East",
+        "Arequipa|Manaus": "South America West",
+        "Arequipa|Santiago": "South America West",
+        "Asuncion|Porto Alegre": "North America East",
+        "Athens|Budapest": "Pink",
+        "Atlanta|Miami": "South America West",
+        "Atlanta|New Orleans": "North America East",
+        "Atlanta|Washington DC": "Green",
+        "Auckland|Sydney": "Southeast Islands",
+        "Auckland|Wellington": "Southeast Islands",
+        "Baghdad|Istanbul": "North Canada",
+        "Baghdad|Tehran": "North America South",
+        "Bamako|Dakar": "Cyan",
+        "Bamako|Lagos": "Africa Sahel",
+        "Bangalore|Kolkata": "Oceania East",
+        "Bangalore|Mumbai": "North America South",
+        "Bangkok|Hanoi": "Asia South",
+        "Bangkok|Kolkata": "Asia South",
+        "Bangkok|Singapore": "Asia South",
+        "Barcelona|Madrid": "Green",
+        "Barcelona|Milan": "Green",
+        "Beijing|Shanghai": "China Central",
+        "Beijing|Shenyang": "China North",
+        "Beijing|Ulan Bator": "Purple",
+        "Beijing|Urumqi": "China North",
+        "Beijing|Xi'An": "China Central",
+        "Belem|Caracas": "Cyan",
+        "Belem|Fortaleza": "Cyan",
+        "Berlin|Budapest": "SA\u2013Africa Bridge",
+        "Berlin|Minsk": "Purple",
+        "Berlin|Munich": "Purple",
+        "Bogota|Caracas": "North America East",
+        "Bogota|Lima": "North America East",
+        "Bogota|Managua": "North America East",
+        "Bordeaux|Madrid": "Cyan",
+        "Bordeaux|Milan": "Africa North",
+        "Bordeaux|Paris": "Cyan",
+        "Boston|Montreal": "Green",
+        "Boston|New York": "Green",
+        "Brisbane|Cairns": "Atlantic Link",
+        "Brisbane|Sydney": "Oceania West",
+        "Broome|Darwin": "Southeast Islands",
+        "Broome|Kupang": "Southeast Islands",
+        "Broome|Perth": "Southeast Islands",
+        "Budapest|Istanbul": "Africa Cross",
+        "Budapest|Kyiv": "Pink",
+        "Budapest|Munich": "Pink",
+        "Buenos Aires|Porto Alegre": "South America West",
+        "Buenos Aires|Santiago": "South America West",
+        "Cairns|Darwin": "Southeast Islands",
+        "Cairns|Port Moresby": "Southeast Islands",
+        "Cairo|Khartoum": "North America South",
+        "Cairo|Tripoli": "North America South",
+        "Calgary|Denver": "Green",
+        "Calgary|Edmonton": "Green",
+        "Calgary|Vancouver": "Alaska",
+        "Calgary|Winnipeg": "South America Inland",
+        "Cape Town|Luanda": "Africa Sahel",
+        "Cape Town|Porto Alegre": "South Atlantic Bridge",
+        "Cape Town|Pretoria": "South Atlantic Bridge",
+        "Caracas|Manaus": "South America West",
+        "Caracas|San Juan": "South America West",
+        "Casablanca|Dakar": "Cyan",
+        "Casablanca|Madrid": "Cyan",
+        "Chengdu|Hanoi": "China Central",
+        "Chengdu|Kolkata": "India Express",
+        "Chengdu|New Delhi": "China Central",
+        "Chengdu|Urumqi": "China Central",
+        "Chengdu|Xi'An": "China Central",
+        "Chicago|Detroit": "North America East",
+        "Chicago|Minneapolis": "North America East",
+        "Chicago|St. Louis": "North America East",
+        "Christchurch|Wellington": "Southeast Islands",
+        "Copenhagen|Oslo": "Europe Nordic",
+        "Copenhagen|Stockholm": "Asia South",
+        "Dakar|Fortaleza": "Cyan",
+        "Denver|Phoenix": "North America West",
+        "Denver|San Francisco": "Siberian Far East",
+        "Denver|St. Louis": "Green",
+        "Detroit|Toronto": "Green",
+        "Dubai|Riyadh": "North America South",
+        "Dublin|London": "Pink",
+        "Easter Island|Lima": "Easter Island",
+        "Fortaleza|Salvador": "Cyan",
+        "Glasgow|London": "Pink",
+        "Glasgow|Reykjavik": "Pink",
+        "Goose Bay|Montreal": "Arctic Bridge",
+        "Goose Bay|Nuuk": "Arctic Bridge",
+        "Hanoi|Hong Kong": "China Central",
+        "Harare|Luanda": "Africa Sahel",
+        "Harare|Pretoria": "South Atlantic Bridge",
+        "Harare|Zanzibar": "Africa Sahel",
+        "Harbin|Shenyang": "China North",
+        "Harbin|Vladivostok": "China\u2013India",
+        "Harbin|Yakutsk": "China North",
+        "Havana|Miami": "South America West",
+        "Havana|San Juan": "South America West",
+        "Helsinki|St. Petersburg": "Asia South",
+        "Helsinki|Stockholm": "Asia South",
+        "Hong Kong|Manila": "China Central",
+        "Hong Kong|Shanghai": "China Central",
+        "Honolulu|San Francisco": "Siberian Far East",
+        "Houston|Mexico City": "North America East",
+        "Houston|New Orleans": "North America East",
+        "Houston|Phoenix": "North America East",
+        "Istanbul|Kyiv": "Africa West",
+        "Jakarta|Kupang": "Asia South",
+        "Jakarta|Singapore": "Asia South",
+        "Kabul|New Delhi": "Asia South",
+        "Kabul|Tehran": "Asia South",
+        "Karachi|Mumbai": "North America South",
+        "Karachi|New Delhi": "China Central",
+        "Karachi|Tehran": "North America South",
+        "Khartoum|Lagos": "Africa Sahel",
+        "Khartoum|Nairobi": "North America South",
+        "Kinshasa|Lagos": "Africa Sahel",
+        "Kinshasa|Luanda": "Africa Sahel",
+        "Kinshasa|Nairobi": "Africa Sahel",
+        "Kolkata|New Delhi": "Asia South",
+        "Kupang|Manado": "Southeast Islands",
+        "Kyiv|Minsk": "Pacific Crossing",
+        "Kyiv|Moscow": "Euro Balkans",
+        "Kyiv|Volgograd": "Pink",
+        "Lisbon|Madrid": "Green",
+        "Lisbon|New York": "Green",
+        "London|Paris": "Pink",
+        "Los Angeles|Mexico City": "Alaska",
+        "Los Angeles|Phoenix": "North America East",
+        "Los Angeles|San Francisco": "Alaska",
+        "Magadan|Yakutsk": "China North",
+        "Manado|Manila": "China Central",
+        "Managua|Mexico City": "North America East",
+        "Melbourne|Sydney": "Southeast Islands",
+        "Milan|Munich": "Green",
+        "Milan|Paris": "Blue",
+        "Milan|Rome": "Green",
+        "Minneapolis|Winnipeg": "North America East",
+        "Minsk|Moscow": "Purple",
+        "Montreal|Toronto": "Green",
+        "Moscow|Perm": "Purple",
+        "Moscow|St. Petersburg": "Asia South",
+        "Moscow|Volgograd": "Asia South",
+        "Munich|Paris": "Pink",
+        "Nagasaki|Shanghai": "China Central",
+        "Nagasaki|Tokyo": "China Central",
+        "New Orleans|St. Louis": "North America East",
+        "New York|St. Louis": "Green",
+        "New York|Washington DC": "Green",
+        "Novosibirsk|Perm": "Purple",
+        "Novosibirsk|Ulan Bator": "Purple",
+        "Novosibirsk|Urumqi": "Oceania Pacific",
+        "Novosibirsk|Yakutsk": "Purple",
+        "Nuuk|Tasiilaq": "Arctic Bridge",
+        "Oslo|Stockholm": "South America East",
+        "Porto Alegre|Rio de Janeiro": "Cyan",
+        "Punta Arenas|Santiago": "South America West",
+        "Reykjavik|Tasiilaq": "Pink",
+        "Rio de Janeiro|Salvador": "Cyan",
+        "Rome|Tripoli": "North America South",
+        "San Francisco|Vancouver": "Alaska",
+        "Sendai|Tokyo": "Siberian",
+        "Sendai|Vladivostok": "China North",
+        "Seoul|Shenyang": "China North",
+        "Shanghai|Xi'An": "China Central",
+        "Shenyang|Vladivostok": "China North",
+        "Tehran|Volgograd": "Asia South",
+        "Urumqi|Volgograd": "Pink"
+      },
+      "line_count": 38,
+      "summary": {
+        "0": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 838.7967886560317,
+          "mean_transfers": 2.3938066937754146,
+          "mean_detour": 1.0,
+          "share_direct": 0.10009383797309979,
+          "share_max_one": 0.33687832342821394,
+          "pct_3plus": 0.3813992284433323,
+          "mean_score": 838.7967886560317
+        },
+        "20": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 843.455322698363,
+          "mean_transfers": 1.7574809717443436,
+          "mean_detour": 1.0049524611480143,
+          "share_direct": 0.10353456365342509,
+          "share_max_one": 0.41924721092691064,
+          "pct_3plus": 0.2278177458033573,
+          "mean_score": 878.6049421332499
+        },
+        "40": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 846.06798039829,
+          "mean_transfers": 1.6531122927744761,
+          "mean_detour": 1.0086478566974308,
+          "share_direct": 0.10593264518819727,
+          "share_max_one": 0.4477113961005109,
+          "pct_3plus": 0.1842352205192368,
+          "mean_score": 912.1924721092691
+        },
+        "80": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 848.3528307788552,
+          "mean_transfers": 1.615368574705453,
+          "mean_detour": 1.0124915256368183,
+          "share_direct": 0.10968616411218851,
+          "share_max_one": 0.45938901053070585,
+          "pct_3plus": 0.17130643311437807,
+          "mean_score": 977.5823167552915
+        }
+      },
+      "initial_changes": [
+        {
+          "track": "Berlin|Munich",
+          "from": "Green",
+          "to": "Purple",
+          "original_claim_reference": 690
+        },
+        {
+          "track": "Glasgow|London",
+          "from": "Blue",
+          "to": "Pink",
+          "original_claim_reference": 810
+        },
+        {
+          "track": "London|Paris",
+          "from": "Blue",
+          "to": "Pink",
+          "original_claim_reference": 450
+        },
+        {
+          "track": "Milan|Rome",
+          "from": "Blue",
+          "to": "Green",
+          "original_claim_reference": 495
+        }
+      ],
+      "correction_schedule": [
+        {
+          "track_ids": [
+            "Berlin|Munich"
+          ],
+          "from": "Green",
+          "to": "Purple",
+          "minimum_stage": 1,
+          "requires": [
+            "Kyiv|Volgograd",
+            "Amsterdam|Berlin",
+            "Berlin|Minsk",
+            "Minsk|Moscow"
+          ],
+          "phase_effects": [
+            {
+              "stage": 0,
+              "pairs": 91,
+              "before": 143.56043956043956,
+              "after": 146.04395604395606,
+              "gain": -2.483516483516496
+            },
+            {
+              "stage": 1,
+              "pairs": 136,
+              "before": 188.59558823529412,
+              "after": 187.47794117647058,
+              "gain": 1.117647058823536
+            },
+            {
+              "stage": 2,
+              "pairs": 1540,
+              "before": 549.9584415584416,
+              "after": 548.8792207792208,
+              "gain": 1.0792207792208046
+            },
+            {
+              "stage": 3,
+              "pairs": 1891,
+              "before": 527.7609730301427,
+              "after": 527.688524590164,
+              "gain": 0.07244843997875705
+            },
+            {
+              "stage": 4,
+              "pairs": 3003,
+              "before": 604.2477522477523,
+              "after": 604.2321012321013,
+              "gain": 0.015651015650973932
+            },
+            {
+              "stage": 5,
+              "pairs": 4095,
+              "before": 707.4004884004884,
+              "after": 707.389010989011,
+              "gain": 0.011477411477358146
+            },
+            {
+              "stage": 6,
+              "pairs": 7140,
+              "before": 914.1535014005602,
+              "after": 914.3093837535014,
+              "gain": -0.15588235294114838
+            },
+            {
+              "stage": 7,
+              "pairs": 8911,
+              "before": 929.3942318482774,
+              "after": 929.5225002805521,
+              "gain": -0.12826843227469453
+            },
+            {
+              "stage": 8,
+              "pairs": 9591,
+              "before": 916.9808153477218,
+              "after": 917.1032217704097,
+              "gain": -0.1224064226879591
+            }
+          ],
+          "timing_reason": "First tested construction stage with a positive matched-job routing benefit; claim fees are not included."
+        },
+        {
+          "track_ids": [
+            "Glasgow|London",
+            "London|Paris"
+          ],
+          "from": "Blue",
+          "to": "Pink",
+          "minimum_stage": 0,
+          "requires": [],
+          "phase_effects": [
+            {
+              "stage": 0,
+              "pairs": 91,
+              "before": 143.56043956043956,
+              "after": 142.63736263736263,
+              "gain": 0.923076923076934
+            },
+            {
+              "stage": 1,
+              "pairs": 136,
+              "before": 188.59558823529412,
+              "after": 187.38970588235293,
+              "gain": 1.2058823529411882
+            },
+            {
+              "stage": 2,
+              "pairs": 1540,
+              "before": 549.9584415584416,
+              "after": 548.1376623376624,
+              "gain": 1.8207792207791726
+            },
+            {
+              "stage": 3,
+              "pairs": 1891,
+              "before": 527.7609730301427,
+              "after": 524.2120571126388,
+              "gain": 3.548915917503905
+            },
+            {
+              "stage": 4,
+              "pairs": 3003,
+              "before": 604.2477522477523,
+              "after": 601.973692973693,
+              "gain": 2.2740592740592547
+            },
+            {
+              "stage": 5,
+              "pairs": 4095,
+              "before": 707.4004884004884,
+              "after": 705.2249084249084,
+              "gain": 2.1755799755799217
+            },
+            {
+              "stage": 6,
+              "pairs": 7140,
+              "before": 914.1535014005602,
+              "after": 912.7432773109243,
+              "gain": 1.4102240896359035
+            },
+            {
+              "stage": 7,
+              "pairs": 8911,
+              "before": 929.3942318482774,
+              "after": 928.2014364268881,
+              "gain": 1.1927954213892917
+            },
+            {
+              "stage": 8,
+              "pairs": 9591,
+              "before": 916.9808153477218,
+              "after": 913.6067146282974,
+              "gain": 3.374100719424405
+            }
+          ],
+          "timing_reason": "First tested construction stage with a positive matched-job routing benefit; claim fees are not included."
+        },
+        {
+          "track_ids": [
+            "Milan|Rome"
+          ],
+          "from": "Blue",
+          "to": "Green",
+          "minimum_stage": 0,
+          "requires": [],
+          "phase_effects": [
+            {
+              "stage": 0,
+              "pairs": 91,
+              "before": 143.56043956043956,
+              "after": 142.6813186813187,
+              "gain": 0.879120879120876
+            },
+            {
+              "stage": 1,
+              "pairs": 136,
+              "before": 188.59558823529412,
+              "after": 187.0,
+              "gain": 1.595588235294116
+            },
+            {
+              "stage": 2,
+              "pairs": 1540,
+              "before": 549.9584415584416,
+              "after": 548.8045454545454,
+              "gain": 1.1538961038961588
+            },
+            {
+              "stage": 3,
+              "pairs": 1891,
+              "before": 527.7609730301427,
+              "after": 526.8323638286621,
+              "gain": 0.92860920148064
+            },
+            {
+              "stage": 4,
+              "pairs": 3003,
+              "before": 604.2477522477523,
+              "after": 603.7512487512488,
+              "gain": 0.4965034965034647
+            },
+            {
+              "stage": 5,
+              "pairs": 4095,
+              "before": 707.4004884004884,
+              "after": 707.0363858363859,
+              "gain": 0.3641025641024953
+            },
+            {
+              "stage": 6,
+              "pairs": 7140,
+              "before": 914.1535014005602,
+              "after": 912.2063025210084,
+              "gain": 1.94719887955182
+            },
+            {
+              "stage": 7,
+              "pairs": 8911,
+              "before": 929.3942318482774,
+              "after": 927.9710470205364,
+              "gain": 1.4231848277410108
+            },
+            {
+              "stage": 8,
+              "pairs": 9591,
+              "before": 916.9808153477218,
+              "after": 915.7534146595767,
+              "gain": 1.2274006881450532
+            }
+          ],
+          "timing_reason": "First tested construction stage with a positive matched-job routing benefit; claim fees are not included."
+        }
+      ],
+      "starting_summary": {
+        "pairs": 91,
+        "missing": 0,
+        "mean_fuel": 117.6923076923077,
+        "mean_transfers": 0.6483516483516484,
+        "mean_detour": 1.0776561613633031,
+        "share_direct": 0.4175824175824176,
+        "share_max_one": 0.9340659340659341,
+        "pct_3plus": 0.0,
+        "mean_score": 143.62637362637363
+      },
+      "complexity": {
+        "lines": [
+          {
+            "name": "Africa Cross",
+            "tracks": 1,
+            "fuel": 77,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Africa North",
+            "tracks": 1,
+            "fuel": 55,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Africa Sahel",
+            "tracks": 8,
+            "fuel": 933,
+            "stops": 9,
+            "branches": 3
+          },
+          {
+            "name": "Africa South",
+            "tracks": 1,
+            "fuel": 130,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Africa West",
+            "tracks": 1,
+            "fuel": 71,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Alaska",
+            "tracks": 7,
+            "fuel": 731,
+            "stops": 8,
+            "branches": 2
+          },
+          {
+            "name": "Arctic Bridge",
+            "tracks": 3,
+            "fuel": 320,
+            "stops": 4,
+            "branches": 0
+          },
+          {
+            "name": "Asia South",
+            "tracks": 14,
+            "fuel": 1032,
+            "stops": 15,
+            "branches": 1
+          },
+          {
+            "name": "Atlantic Link",
+            "tracks": 1,
+            "fuel": 85,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Blue",
+            "tracks": 1,
+            "fuel": 51,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "China Central",
+            "tracks": 14,
+            "fuel": 1062,
+            "stops": 13,
+            "branches": 6
+          },
+          {
+            "name": "China North",
+            "tracks": 9,
+            "fuel": 857,
+            "stops": 10,
+            "branches": 2
+          },
+          {
+            "name": "China\u2013India",
+            "tracks": 1,
+            "fuel": 36,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Cyan",
+            "tracks": 14,
+            "fuel": 1064,
+            "stops": 15,
+            "branches": 3
+          },
+          {
+            "name": "Easter Island",
+            "tracks": 1,
+            "fuel": 220,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Euro Balkans",
+            "tracks": 1,
+            "fuel": 78,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Europe Nordic",
+            "tracks": 1,
+            "fuel": 43,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Green",
+            "tracks": 16,
+            "fuel": 1091,
+            "stops": 17,
+            "branches": 3
+          },
+          {
+            "name": "India Express",
+            "tracks": 1,
+            "fuel": 94,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "North America East",
+            "tracks": 17,
+            "fuel": 1046,
+            "stops": 18,
+            "branches": 4
+          },
+          {
+            "name": "North America South",
+            "tracks": 14,
+            "fuel": 1047,
+            "stops": 15,
+            "branches": 4
+          },
+          {
+            "name": "North America West",
+            "tracks": 1,
+            "fuel": 80,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "North Canada",
+            "tracks": 1,
+            "fuel": 106,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania Central",
+            "tracks": 1,
+            "fuel": 80,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania East",
+            "tracks": 1,
+            "fuel": 86,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania Pacific",
+            "tracks": 1,
+            "fuel": 96,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania West",
+            "tracks": 1,
+            "fuel": 41,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Pacific Crossing",
+            "tracks": 1,
+            "fuel": 53,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Pink",
+            "tracks": 12,
+            "fuel": 1023,
+            "stops": 13,
+            "branches": 3
+          },
+          {
+            "name": "Purple",
+            "tracks": 9,
+            "fuel": 1068,
+            "stops": 10,
+            "branches": 2
+          },
+          {
+            "name": "SA\u2013Africa Bridge",
+            "tracks": 1,
+            "fuel": 58,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Siberian",
+            "tracks": 1,
+            "fuel": 28,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Siberian Far East",
+            "tracks": 2,
+            "fuel": 356,
+            "stops": 3,
+            "branches": 0
+          },
+          {
+            "name": "South America East",
+            "tracks": 1,
+            "fuel": 45,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "South America Inland",
+            "tracks": 1,
+            "fuel": 94,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "South America West",
+            "tracks": 10,
+            "fuel": 815,
+            "stops": 11,
+            "branches": 1
+          },
+          {
+            "name": "South Atlantic Bridge",
+            "tracks": 5,
+            "fuel": 1037,
+            "stops": 6,
+            "branches": 0
+          },
+          {
+            "name": "Southeast Islands",
+            "tracks": 14,
+            "fuel": 1093,
+            "stops": 14,
+            "branches": 3
+          }
+        ],
+        "branches": 37
+      },
+      "campaign_totals": {
+        "campaigns": 4,
+        "starts": 92,
+        "scored_layout_evaluations": 183034
+      },
+      "search": {
+        "profile": "rework",
+        "score": 912.1924721092691,
+        "initial_score": 926.3084141382546,
+        "line_count": 38,
+        "fixed_initial_owners": false,
+        "restarts": [
+          {
+            "attempt": 1,
+            "source": "supplied_seed",
+            "score": 915.6221457616515,
+            "improved": false,
+            "moves": 0,
+            "stale": 1
+          },
+          {
+            "attempt": 2,
+            "source": "supplied_seed",
+            "score": 914.9883223855699,
+            "improved": true,
+            "moves": 0,
+            "stale": 0
+          },
+          {
+            "attempt": 3,
+            "source": "supplied_seed",
+            "score": 912.2614951517047,
+            "improved": true,
+            "moves": 0,
+            "stale": 0
+          },
+          {
+            "attempt": 4,
+            "source": "perturbation",
+            "score": 913.46189135648,
+            "improved": false,
+            "moves": 9,
+            "stale": 1
+          },
+          {
+            "attempt": 5,
+            "source": "perturbation",
+            "score": 912.2614951517047,
+            "improved": false,
+            "moves": 5,
+            "stale": 2
+          },
+          {
+            "attempt": 6,
+            "source": "perturbation",
+            "score": 912.2614951517047,
+            "improved": false,
+            "moves": 4,
+            "stale": 3
+          },
+          {
+            "attempt": 7,
+            "source": "perturbation",
+            "score": 912.2169742466896,
+            "improved": true,
+            "moves": 5,
+            "stale": 0
+          },
+          {
+            "attempt": 8,
+            "source": "perturbation",
+            "score": 912.9647586278803,
+            "improved": false,
+            "moves": 5,
+            "stale": 1
+          },
+          {
+            "attempt": 9,
+            "source": "perturbation",
+            "score": 912.2169742466896,
+            "improved": false,
+            "moves": 5,
+            "stale": 2
+          },
+          {
+            "attempt": 10,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": true,
+            "moves": 8,
+            "stale": 0
+          },
+          {
+            "attempt": 11,
+            "source": "perturbation",
+            "score": 912.4950474403087,
+            "improved": false,
+            "moves": 8,
+            "stale": 1
+          },
+          {
+            "attempt": 12,
+            "source": "perturbation",
+            "score": 912.9074131998749,
+            "improved": false,
+            "moves": 9,
+            "stale": 2
+          },
+          {
+            "attempt": 13,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 3,
+            "stale": 3
+          },
+          {
+            "attempt": 14,
+            "source": "perturbation",
+            "score": 912.9938483995412,
+            "improved": false,
+            "moves": 10,
+            "stale": 4
+          },
+          {
+            "attempt": 15,
+            "source": "perturbation",
+            "score": 913.7902199979147,
+            "improved": false,
+            "moves": 8,
+            "stale": 5
+          },
+          {
+            "attempt": 16,
+            "source": "perturbation",
+            "score": 912.8430820560942,
+            "improved": false,
+            "moves": 6,
+            "stale": 6
+          },
+          {
+            "attempt": 17,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 4,
+            "stale": 7
+          },
+          {
+            "attempt": 18,
+            "source": "perturbation",
+            "score": 912.5028672714003,
+            "improved": false,
+            "moves": 4,
+            "stale": 8
+          },
+          {
+            "attempt": 19,
+            "source": "perturbation",
+            "score": 912.571160462934,
+            "improved": false,
+            "moves": 4,
+            "stale": 9
+          },
+          {
+            "attempt": 20,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 3,
+            "stale": 10
+          },
+          {
+            "attempt": 21,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 5,
+            "stale": 11
+          },
+          {
+            "attempt": 22,
+            "source": "perturbation",
+            "score": 912.9074131998749,
+            "improved": false,
+            "moves": 6,
+            "stale": 12
+          },
+          {
+            "attempt": 23,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 10,
+            "stale": 13
+          },
+          {
+            "attempt": 24,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 9,
+            "stale": 14
+          },
+          {
+            "attempt": 25,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 4,
+            "stale": 15
+          },
+          {
+            "attempt": 26,
+            "source": "perturbation",
+            "score": 912.9674695026588,
+            "improved": false,
+            "moves": 4,
+            "stale": 16
+          },
+          {
+            "attempt": 27,
+            "source": "perturbation",
+            "score": 912.5028672714003,
+            "improved": false,
+            "moves": 5,
+            "stale": 17
+          },
+          {
+            "attempt": 28,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 4,
+            "stale": 18
+          },
+          {
+            "attempt": 29,
+            "source": "perturbation",
+            "score": 912.1924721092691,
+            "improved": false,
+            "moves": 3,
+            "stale": 19
+          },
+          {
+            "attempt": 30,
+            "source": "perturbation",
+            "score": 912.5264310290897,
+            "improved": false,
+            "moves": 9,
+            "stale": 20
+          }
+        ],
+        "stopping_rule": {
+          "consecutive_nonimproving_restarts": 20,
+          "final_neighborhood": "connected relocations through 6 tracks, connected exchanges through 3 tracks each way, and full-line merges where enabled"
+        },
+        "final_audit": {
+          "exhausted": true,
+          "candidates_checked": 515,
+          "score": 912.1924721092691,
+          "group_size": 6,
+          "swap_size": 3
+        },
+        "evaluations": {
+          "hits": 15847,
+          "misses": 36939,
+          "maxsize": 150000,
+          "currsize": 36939
+        },
+        "elapsed_seconds": 98.61,
+        "seed": 20261107
+      },
+      "deferred_tracks": [],
+      "deferral_known_cost": 0,
+      "deferral_penalties": {
+        "0": 838.7967886560317,
+        "20": 878.6049421332499,
+        "40": 912.1924721092691,
+        "80": 977.5823167552915
+      },
+      "retained_track_count": 190
+    },
+    "consolidated": {
+      "label": "Experimental \u00b7 fewer railroads",
+      "owner": {
+        "Adelaide|Alice Springs": "Southeast Islands",
+        "Adelaide|Melbourne": "Southeast Islands",
+        "Adelaide|Perth": "Africa South",
+        "Algiers|Casablanca": "Cyan",
+        "Algiers|Tripoli": "North America South",
+        "Alice Springs|Broome": "Southeast Islands",
+        "Alice Springs|Darwin": "Oceania Central",
+        "Amman|Athens": "North America South",
+        "Amman|Baghdad": "North America South",
+        "Amman|Cairo": "North America South",
+        "Amman|Riyadh": "North America South",
+        "Amsterdam|Berlin": "Purple",
+        "Amsterdam|Copenhagen": "Asia South",
+        "Amsterdam|Munich": "Pink",
+        "Amsterdam|Paris": "Cyan",
+        "Anadyr|Magadan": "China North",
+        "Anchorage|Fairbanks": "Alaska",
+        "Anchorage|Nome": "Alaska",
+        "Anchorage|Vancouver": "Alaska",
+        "Antananarivo|Harare": "Africa South",
+        "Antananarivo|Perth": "Africa South",
+        "Antananarivo|Zanzibar": "Africa South",
+        "Arequipa|Asuncion": "South Atlantic Bridge",
+        "Arequipa|Lima": "South Atlantic Bridge",
+        "Arequipa|Manaus": "South America West",
+        "Arequipa|Santiago": "South Atlantic Bridge",
+        "Asuncion|Porto Alegre": "South Atlantic Bridge",
+        "Athens|Budapest": "Pink",
+        "Atlanta|Miami": "South America West",
+        "Atlanta|New Orleans": "North America East",
+        "Atlanta|Washington DC": "Green",
+        "Auckland|Sydney": "Southeast Islands",
+        "Auckland|Wellington": "Southeast Islands",
+        "Baghdad|Istanbul": "Pink",
+        "Baghdad|Tehran": "North America South",
+        "Bamako|Dakar": "Cyan",
+        "Bamako|Lagos": "Africa Sahel",
+        "Bangalore|Kolkata": "Oceania East",
+        "Bangalore|Mumbai": "North America South",
+        "Bangkok|Hanoi": "China Central",
+        "Bangkok|Kolkata": "Asia South",
+        "Bangkok|Singapore": "Asia South",
+        "Barcelona|Madrid": "Green",
+        "Barcelona|Milan": "Green",
+        "Beijing|Shanghai": "China North",
+        "Beijing|Shenyang": "China North",
+        "Beijing|Ulan Bator": "China North",
+        "Beijing|Urumqi": "China North",
+        "Beijing|Xi'An": "China Central",
+        "Belem|Caracas": "Cyan",
+        "Belem|Fortaleza": "Cyan",
+        "Berlin|Budapest": "Pink",
+        "Berlin|Minsk": "Purple",
+        "Berlin|Munich": "Purple",
+        "Bogota|Caracas": "Cyan",
+        "Bogota|Lima": "North America East",
+        "Bogota|Managua": "North America East",
+        "Bordeaux|Madrid": "Cyan",
+        "Bordeaux|Milan": "Blue",
+        "Bordeaux|Paris": "Cyan",
+        "Boston|Montreal": "Green",
+        "Boston|New York": "Green",
+        "Brisbane|Cairns": "Southeast Islands",
+        "Brisbane|Sydney": "Southeast Islands",
+        "Broome|Darwin": "Southeast Islands",
+        "Broome|Kupang": "Southeast Islands",
+        "Broome|Perth": "Southeast Islands",
+        "Budapest|Istanbul": "Pink",
+        "Budapest|Kyiv": "Pink",
+        "Budapest|Munich": "Pink",
+        "Buenos Aires|Porto Alegre": "South Atlantic Bridge",
+        "Buenos Aires|Santiago": "South Atlantic Bridge",
+        "Cairns|Darwin": "Southeast Islands",
+        "Cairns|Port Moresby": "Southeast Islands",
+        "Cairo|Khartoum": "North America South",
+        "Cairo|Tripoli": "North America South",
+        "Calgary|Denver": "Green",
+        "Calgary|Edmonton": "Green",
+        "Calgary|Vancouver": "Alaska",
+        "Calgary|Winnipeg": "Alaska",
+        "Cape Town|Luanda": "Africa Sahel",
+        "Cape Town|Porto Alegre": "South Atlantic Bridge",
+        "Cape Town|Pretoria": "South Atlantic Bridge",
+        "Caracas|Manaus": "South America West",
+        "Caracas|San Juan": "South America West",
+        "Casablanca|Dakar": "Cyan",
+        "Casablanca|Madrid": "Cyan",
+        "Chengdu|Hanoi": "China Central",
+        "Chengdu|Kolkata": "Oceania East",
+        "Chengdu|New Delhi": "China Central",
+        "Chengdu|Urumqi": "China Central",
+        "Chengdu|Xi'An": "China Central",
+        "Chicago|Detroit": "North America East",
+        "Chicago|Minneapolis": "North America East",
+        "Chicago|St. Louis": "North America East",
+        "Christchurch|Wellington": "Southeast Islands",
+        "Copenhagen|Oslo": "Asia South",
+        "Copenhagen|Stockholm": "Asia South",
+        "Dakar|Fortaleza": "Cyan",
+        "Denver|Phoenix": "North America East",
+        "Denver|San Francisco": "Alaska",
+        "Denver|St. Louis": "Green",
+        "Detroit|Toronto": "Green",
+        "Dubai|Riyadh": "North America South",
+        "Dublin|London": "Blue",
+        "Easter Island|Lima": "Easter Island",
+        "Fortaleza|Salvador": "Cyan",
+        "Glasgow|London": "Blue",
+        "Glasgow|Reykjavik": "Blue",
+        "Goose Bay|Montreal": "Blue",
+        "Goose Bay|Nuuk": "Blue",
+        "Hanoi|Hong Kong": "China Central",
+        "Harare|Luanda": "Africa Sahel",
+        "Harare|Pretoria": "South Atlantic Bridge",
+        "Harare|Zanzibar": "Africa Sahel",
+        "Harbin|Shenyang": "China North",
+        "Harbin|Vladivostok": "China North",
+        "Harbin|Yakutsk": "China North",
+        "Havana|Miami": "South America West",
+        "Havana|San Juan": "South America West",
+        "Helsinki|St. Petersburg": "Asia South",
+        "Helsinki|Stockholm": "Asia South",
+        "Hong Kong|Manila": "China Central",
+        "Hong Kong|Shanghai": "China Central",
+        "Honolulu|San Francisco": "Alaska",
+        "Houston|Mexico City": "North America East",
+        "Houston|New Orleans": "North America East",
+        "Houston|Phoenix": "North America East",
+        "Istanbul|Kyiv": "Pink",
+        "Jakarta|Kupang": "Asia South",
+        "Jakarta|Singapore": "Asia South",
+        "Kabul|New Delhi": "Asia South",
+        "Kabul|Tehran": "Asia South",
+        "Karachi|Mumbai": "North America South",
+        "Karachi|New Delhi": "China Central",
+        "Karachi|Tehran": "North America South",
+        "Khartoum|Lagos": "Africa Sahel",
+        "Khartoum|Nairobi": "North America South",
+        "Kinshasa|Lagos": "Africa Sahel",
+        "Kinshasa|Luanda": "Africa Sahel",
+        "Kinshasa|Nairobi": "Africa Sahel",
+        "Kolkata|New Delhi": "Asia South",
+        "Kupang|Manado": "Southeast Islands",
+        "Kyiv|Minsk": "Pink",
+        "Kyiv|Moscow": "Pink",
+        "Kyiv|Volgograd": "Pink",
+        "Lisbon|Madrid": "Green",
+        "Lisbon|New York": "Green",
+        "London|Paris": "Blue",
+        "Los Angeles|Mexico City": "North America East",
+        "Los Angeles|Phoenix": "North America East",
+        "Los Angeles|San Francisco": "North America East",
+        "Magadan|Yakutsk": "China North",
+        "Manado|Manila": "China Central",
+        "Managua|Mexico City": "North America East",
+        "Melbourne|Sydney": "Southeast Islands",
+        "Milan|Munich": "Green",
+        "Milan|Paris": "Blue",
+        "Milan|Rome": "Green",
+        "Minneapolis|Winnipeg": "North America East",
+        "Minsk|Moscow": "Purple",
+        "Montreal|Toronto": "Green",
+        "Moscow|Perm": "Purple",
+        "Moscow|St. Petersburg": "Asia South",
+        "Moscow|Volgograd": "Asia South",
+        "Munich|Paris": "Pink",
+        "Nagasaki|Shanghai": "China Central",
+        "Nagasaki|Tokyo": "China Central",
+        "New Orleans|St. Louis": "North America East",
+        "New York|St. Louis": "Green",
+        "New York|Washington DC": "Green",
+        "Novosibirsk|Perm": "Purple",
+        "Novosibirsk|Ulan Bator": "Purple",
+        "Novosibirsk|Urumqi": "Purple",
+        "Novosibirsk|Yakutsk": "Purple",
+        "Nuuk|Tasiilaq": "Blue",
+        "Oslo|Stockholm": "Europe Nordic",
+        "Porto Alegre|Rio de Janeiro": "Cyan",
+        "Punta Arenas|Santiago": "South Atlantic Bridge",
+        "Reykjavik|Tasiilaq": "Blue",
+        "Rio de Janeiro|Salvador": "Cyan",
+        "Rome|Tripoli": "North America South",
+        "San Francisco|Vancouver": "Alaska",
+        "Sendai|Tokyo": "China Central",
+        "Sendai|Vladivostok": "China North",
+        "Seoul|Shenyang": "China North",
+        "Shanghai|Xi'An": "China Central",
+        "Shenyang|Vladivostok": "China North",
+        "Tehran|Volgograd": "Asia South",
+        "Urumqi|Volgograd": "Pink"
+      },
+      "line_count": 20,
+      "summary": {
+        "0": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 838.7967886560317,
+          "mean_transfers": 2.032009175268481,
+          "mean_detour": 1.0,
+          "share_direct": 0.10634970284641852,
+          "share_max_one": 0.3638828067980398,
+          "pct_3plus": 0.32916275675112083,
+          "mean_score": 838.7967886560317
+        },
+        "20": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 840.2643102908977,
+          "mean_transfers": 1.8125325826295486,
+          "mean_detour": 1.0018015641655689,
+          "share_direct": 0.10947763528307788,
+          "share_max_one": 0.41841309561046813,
+          "pct_3plus": 0.24585548952142633,
+          "mean_score": 876.5149619434887
+        },
+        "40": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 844.332707746846,
+          "mean_transfers": 1.6509227400688145,
+          "mean_detour": 1.0060051920453759,
+          "share_direct": 0.11135439474507351,
+          "share_max_one": 0.44458346366385154,
+          "pct_3plus": 0.1876759461995621,
+          "mean_score": 910.3696173495986
+        },
+        "80": {
+          "pairs": 9591,
+          "missing": 0,
+          "mean_fuel": 847.54749244083,
+          "mean_transfers": 1.5947242206235013,
+          "mean_detour": 1.011750172037269,
+          "share_direct": 0.11604629340006256,
+          "share_max_one": 0.4706495673026796,
+          "pct_3plus": 0.166614534459389,
+          "mean_score": 975.1254300907101
+        }
+      },
+      "initial_changes": [
+        {
+          "track": "Berlin|Munich",
+          "from": "Green",
+          "to": "Purple",
+          "original_claim_reference": 690
+        },
+        {
+          "track": "Milan|Rome",
+          "from": "Blue",
+          "to": "Green",
+          "original_claim_reference": 495
+        }
+      ],
+      "correction_schedule": [
+        {
+          "track_ids": [
+            "Berlin|Munich"
+          ],
+          "from": "Green",
+          "to": "Purple",
+          "minimum_stage": 1,
+          "requires": [
+            "Kyiv|Volgograd",
+            "Amsterdam|Berlin",
+            "Berlin|Minsk",
+            "Minsk|Moscow"
+          ],
+          "phase_effects": [
+            {
+              "stage": 0,
+              "pairs": 91,
+              "before": 143.56043956043956,
+              "after": 146.04395604395606,
+              "gain": -2.483516483516496
+            },
+            {
+              "stage": 1,
+              "pairs": 136,
+              "before": 188.59558823529412,
+              "after": 187.47794117647058,
+              "gain": 1.117647058823536
+            },
+            {
+              "stage": 2,
+              "pairs": 1540,
+              "before": 546.4077922077922,
+              "after": 545.5344155844156,
+              "gain": 0.8733766233766573
+            },
+            {
+              "stage": 3,
+              "pairs": 1891,
+              "before": 520.1787414066631,
+              "after": 520.1507139079852,
+              "gain": 0.028027498677943186
+            },
+            {
+              "stage": 4,
+              "pairs": 3003,
+              "before": 598.988344988345,
+              "after": 598.993672993673,
+              "gain": -0.005328005328010477
+            },
+            {
+              "stage": 5,
+              "pairs": 4095,
+              "before": 702.1772893772894,
+              "after": 702.1811965811966,
+              "gain": -0.00390720390714705
+            },
+            {
+              "stage": 6,
+              "pairs": 7140,
+              "before": 909.6906162464986,
+              "after": 909.8553221288515,
+              "gain": -0.16470588235290506
+            },
+            {
+              "stage": 7,
+              "pairs": 8911,
+              "before": 925.5263157894736,
+              "after": 925.6616541353384,
+              "gain": -0.13533834586473859
+            },
+            {
+              "stage": 8,
+              "pairs": 9591,
+              "before": 910.9969763319779,
+              "after": 911.1259514127828,
+              "gain": -0.1289750808049348
+            }
+          ],
+          "timing_reason": "First tested construction stage with a positive matched-job routing benefit; claim fees are not included."
+        },
+        {
+          "track_ids": [
+            "Milan|Rome"
+          ],
+          "from": "Blue",
+          "to": "Green",
+          "minimum_stage": 0,
+          "requires": [],
+          "phase_effects": [
+            {
+              "stage": 0,
+              "pairs": 91,
+              "before": 143.56043956043956,
+              "after": 142.6813186813187,
+              "gain": 0.879120879120876
+            },
+            {
+              "stage": 1,
+              "pairs": 136,
+              "before": 188.59558823529412,
+              "after": 187.0,
+              "gain": 1.595588235294116
+            },
+            {
+              "stage": 2,
+              "pairs": 1540,
+              "before": 546.4077922077922,
+              "after": 545.2538961038961,
+              "gain": 1.1538961038961588
+            },
+            {
+              "stage": 3,
+              "pairs": 1891,
+              "before": 520.1787414066631,
+              "after": 519.1861448968799,
+              "gain": 0.9925965097831977
+            },
+            {
+              "stage": 4,
+              "pairs": 3003,
+              "before": 598.988344988345,
+              "after": 598.5977355977356,
+              "gain": 0.39060939060948385
+            },
+            {
+              "stage": 5,
+              "pairs": 4095,
+              "before": 702.1772893772894,
+              "after": 701.8908424908425,
+              "gain": 0.2864468864469245
+            },
+            {
+              "stage": 6,
+              "pairs": 7140,
+              "before": 909.6906162464986,
+              "after": 908.3890756302521,
+              "gain": 1.3015406162464842
+            },
+            {
+              "stage": 7,
+              "pairs": 8911,
+              "before": 925.5263157894736,
+              "after": 924.6110425317024,
+              "gain": 0.9152732577712186
+            },
+            {
+              "stage": 8,
+              "pairs": 9591,
+              "before": 910.9969763319779,
+              "after": 910.2382441872589,
+              "gain": 0.7587321447189197
+            }
+          ],
+          "timing_reason": "First tested construction stage with a positive matched-job routing benefit; claim fees are not included."
+        }
+      ],
+      "starting_summary": {
+        "pairs": 91,
+        "missing": 0,
+        "mean_fuel": 116.5934065934066,
+        "mean_transfers": 0.7142857142857143,
+        "mean_detour": 1.0700995277698202,
+        "share_direct": 0.37362637362637363,
+        "share_max_one": 0.9120879120879121,
+        "pct_3plus": 0.0,
+        "mean_score": 145.16483516483515
+      },
+      "complexity": {
+        "lines": [
+          {
+            "name": "Africa Sahel",
+            "tracks": 8,
+            "fuel": 933,
+            "stops": 9,
+            "branches": 3
+          },
+          {
+            "name": "Africa South",
+            "tracks": 4,
+            "fuel": 821,
+            "stops": 5,
+            "branches": 1
+          },
+          {
+            "name": "Alaska",
+            "tracks": 8,
+            "fuel": 965,
+            "stops": 9,
+            "branches": 3
+          },
+          {
+            "name": "Asia South",
+            "tracks": 15,
+            "fuel": 1087,
+            "stops": 16,
+            "branches": 1
+          },
+          {
+            "name": "Blue",
+            "tracks": 10,
+            "fuel": 797,
+            "stops": 11,
+            "branches": 1
+          },
+          {
+            "name": "China Central",
+            "tracks": 15,
+            "fuel": 1072,
+            "stops": 15,
+            "branches": 6
+          },
+          {
+            "name": "China North",
+            "tracks": 12,
+            "fuel": 1057,
+            "stops": 12,
+            "branches": 6
+          },
+          {
+            "name": "Cyan",
+            "tracks": 14,
+            "fuel": 1067,
+            "stops": 15,
+            "branches": 3
+          },
+          {
+            "name": "Easter Island",
+            "tracks": 1,
+            "fuel": 220,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Europe Nordic",
+            "tracks": 1,
+            "fuel": 45,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Green",
+            "tracks": 16,
+            "fuel": 1091,
+            "stops": 17,
+            "branches": 3
+          },
+          {
+            "name": "North America East",
+            "tracks": 16,
+            "fuel": 1080,
+            "stops": 16,
+            "branches": 6
+          },
+          {
+            "name": "North America South",
+            "tracks": 14,
+            "fuel": 1047,
+            "stops": 15,
+            "branches": 4
+          },
+          {
+            "name": "Oceania Central",
+            "tracks": 1,
+            "fuel": 80,
+            "stops": 2,
+            "branches": 0
+          },
+          {
+            "name": "Oceania East",
+            "tracks": 2,
+            "fuel": 180,
+            "stops": 3,
+            "branches": 0
+          },
+          {
+            "name": "Pink",
+            "tracks": 13,
+            "fuel": 1095,
+            "stops": 13,
+            "branches": 8
+          },
+          {
+            "name": "Purple",
+            "tracks": 9,
+            "fuel": 1072,
+            "stops": 10,
+            "branches": 3
+          },
+          {
+            "name": "South America West",
+            "tracks": 6,
+            "fuel": 405,
+            "stops": 7,
+            "branches": 0
+          },
+          {
+            "name": "South Atlantic Bridge",
+            "tracks": 10,
+            "fuel": 1099,
+            "stops": 10,
+            "branches": 3
+          },
+          {
+            "name": "Southeast Islands",
+            "tracks": 15,
+            "fuel": 1069,
+            "stops": 15,
+            "branches": 4
+          }
+        ],
+        "branches": 55
+      },
+      "campaign_totals": {
+        "campaigns": 4,
+        "starts": 161,
+        "scored_layout_evaluations": 203663
+      },
+      "search": {
+        "profile": "consolidated",
+        "score": 910.3696173495986,
+        "initial_score": 926.3084141382546,
+        "line_count": 20,
+        "fixed_initial_owners": false,
+        "restarts": [
+          {
+            "attempt": 1,
+            "source": "supplied_seed",
+            "score": 910.7557084766969,
+            "improved": true,
+            "moves": 14,
+            "stale": 0
+          },
+          {
+            "attempt": 2,
+            "source": "supplied_seed",
+            "score": 912.149827963716,
+            "improved": false,
+            "moves": 15,
+            "stale": 1
+          },
+          {
+            "attempt": 3,
+            "source": "supplied_seed",
+            "score": 910.7740590136586,
+            "improved": false,
+            "moves": 0,
+            "stale": 2
+          },
+          {
+            "attempt": 4,
+            "source": "perturbation",
+            "score": 911.2402252111355,
+            "improved": false,
+            "moves": 8,
+            "stale": 3
+          },
+          {
+            "attempt": 5,
+            "source": "perturbation",
+            "score": 911.4031904910854,
+            "improved": false,
+            "moves": 11,
+            "stale": 4
+          },
+          {
+            "attempt": 6,
+            "source": "perturbation",
+            "score": 911.5568762381399,
+            "improved": false,
+            "moves": 9,
+            "stale": 5
+          },
+          {
+            "attempt": 7,
+            "source": "perturbation",
+            "score": 910.8357835470754,
+            "improved": false,
+            "moves": 3,
+            "stale": 6
+          },
+          {
+            "attempt": 8,
+            "source": "perturbation",
+            "score": 910.8254613700344,
+            "improved": false,
+            "moves": 9,
+            "stale": 7
+          },
+          {
+            "attempt": 9,
+            "source": "perturbation",
+            "score": 910.7557084766969,
+            "improved": false,
+            "moves": 5,
+            "stale": 8
+          },
+          {
+            "attempt": 10,
+            "source": "perturbation",
+            "score": 911.0085496819935,
+            "improved": false,
+            "moves": 10,
+            "stale": 9
+          },
+          {
+            "attempt": 11,
+            "source": "perturbation",
+            "score": 911.2195808570535,
+            "improved": false,
+            "moves": 1,
+            "stale": 10
+          },
+          {
+            "attempt": 12,
+            "source": "perturbation",
+            "score": 910.8357835470754,
+            "improved": false,
+            "moves": 9,
+            "stale": 11
+          },
+          {
+            "attempt": 13,
+            "source": "perturbation",
+            "score": 911.4443749348347,
+            "improved": false,
+            "moves": 5,
+            "stale": 12
+          },
+          {
+            "attempt": 14,
+            "source": "perturbation",
+            "score": 910.7557084766969,
+            "improved": false,
+            "moves": 7,
+            "stale": 13
+          },
+          {
+            "attempt": 15,
+            "source": "perturbation",
+            "score": 910.7557084766969,
+            "improved": false,
+            "moves": 4,
+            "stale": 14
+          },
+          {
+            "attempt": 16,
+            "source": "perturbation",
+            "score": 910.7557084766969,
+            "improved": false,
+            "moves": 1,
+            "stale": 15
+          },
+          {
+            "attempt": 17,
+            "source": "perturbation",
+            "score": 910.7557084766969,
+            "improved": false,
+            "moves": 2,
+            "stale": 16
+          },
+          {
+            "attempt": 18,
+            "source": "perturbation",
+            "score": 911.7224481284537,
+            "improved": false,
+            "moves": 6,
+            "stale": 17
+          },
+          {
+            "attempt": 19,
+            "source": "perturbation",
+            "score": 911.4556354916067,
+            "improved": false,
+            "moves": 13,
+            "stale": 18
+          },
+          {
+            "attempt": 20,
+            "source": "perturbation",
+            "score": 910.7557084766969,
+            "improved": false,
+            "moves": 4,
+            "stale": 19
+          },
+          {
+            "attempt": 21,
+            "source": "perturbation",
+            "score": 910.6132832864143,
+            "improved": true,
+            "moves": 16,
+            "stale": 0
+          },
+          {
+            "attempt": 22,
+            "source": "perturbation",
+            "score": 910.6132832864143,
+            "improved": false,
+            "moves": 7,
+            "stale": 1
+          },
+          {
+            "attempt": 23,
+            "source": "perturbation",
+            "score": 911.5968095089146,
+            "improved": false,
+            "moves": 10,
+            "stale": 2
+          },
+          {
+            "attempt": 24,
+            "source": "perturbation",
+            "score": 910.9670524450005,
+            "improved": false,
+            "moves": 7,
+            "stale": 3
+          },
+          {
+            "attempt": 25,
+            "source": "perturbation",
+            "score": 912.0753831717235,
+            "improved": false,
+            "moves": 11,
+            "stale": 4
+          },
+          {
+            "attempt": 26,
+            "source": "perturbation",
+            "score": 914.4071525388385,
+            "improved": false,
+            "moves": 3,
+            "stale": 5
+          },
+          {
+            "attempt": 27,
+            "source": "perturbation",
+            "score": 910.6132832864143,
+            "improved": false,
+            "moves": 3,
+            "stale": 6
+          },
+          {
+            "attempt": 28,
+            "source": "perturbation",
+            "score": 910.6132832864143,
+            "improved": false,
+            "moves": 2,
+            "stale": 7
+          },
+          {
+            "attempt": 29,
+            "source": "perturbation",
+            "score": 910.7497654050673,
+            "improved": false,
+            "moves": 8,
+            "stale": 8
+          },
+          {
+            "attempt": 30,
+            "source": "perturbation",
+            "score": 911.1297049317068,
+            "improved": false,
+            "moves": 6,
+            "stale": 9
+          },
+          {
+            "attempt": 31,
+            "source": "perturbation",
+            "score": 910.8553852570118,
+            "improved": false,
+            "moves": 6,
+            "stale": 10
+          },
+          {
+            "attempt": 32,
+            "source": "perturbation",
+            "score": 911.9465123553331,
+            "improved": false,
+            "moves": 14,
+            "stale": 11
+          },
+          {
+            "attempt": 33,
+            "source": "perturbation",
+            "score": 910.6053591909082,
+            "improved": true,
+            "moves": 3,
+            "stale": 0
+          },
+          {
+            "attempt": 34,
+            "source": "perturbation",
+            "score": 910.6053591909082,
+            "improved": false,
+            "moves": 2,
+            "stale": 1
+          },
+          {
+            "attempt": 35,
+            "source": "perturbation",
+            "score": 910.6053591909082,
+            "improved": false,
+            "moves": 2,
+            "stale": 2
+          },
+          {
+            "attempt": 36,
+            "source": "perturbation",
+            "score": 910.5265352935044,
+            "improved": true,
+            "moves": 7,
+            "stale": 0
+          },
+          {
+            "attempt": 37,
+            "source": "perturbation",
+            "score": 911.4974455218434,
+            "improved": false,
+            "moves": 7,
+            "stale": 1
+          },
+          {
+            "attempt": 38,
+            "source": "perturbation",
+            "score": 910.5516630174121,
+            "improved": false,
+            "moves": 15,
+            "stale": 2
+          },
+          {
+            "attempt": 39,
+            "source": "perturbation",
+            "score": 911.6100510895632,
+            "improved": false,
+            "moves": 5,
+            "stale": 3
+          },
+          {
+            "attempt": 40,
+            "source": "perturbation",
+            "score": 911.9261807944948,
+            "improved": false,
+            "moves": 10,
+            "stale": 4
+          },
+          {
+            "attempt": 41,
+            "source": "perturbation",
+            "score": 911.137629027213,
+            "improved": false,
+            "moves": 8,
+            "stale": 5
+          },
+          {
+            "attempt": 42,
+            "source": "perturbation",
+            "score": 910.5265352935044,
+            "improved": false,
+            "moves": 5,
+            "stale": 6
+          },
+          {
+            "attempt": 43,
+            "source": "perturbation",
+            "score": 912.8213950578668,
+            "improved": false,
+            "moves": 6,
+            "stale": 7
+          },
+          {
+            "attempt": 44,
+            "source": "perturbation",
+            "score": 910.5265352935044,
+            "improved": false,
+            "moves": 6,
+            "stale": 8
+          },
+          {
+            "attempt": 45,
+            "source": "perturbation",
+            "score": 910.9495360233552,
+            "improved": false,
+            "moves": 10,
+            "stale": 9
+          },
+          {
+            "attempt": 46,
+            "source": "perturbation",
+            "score": 910.5265352935044,
+            "improved": false,
+            "moves": 6,
+            "stale": 10
+          },
+          {
+            "attempt": 47,
+            "source": "perturbation",
+            "score": 910.5265352935044,
+            "improved": false,
+            "moves": 4,
+            "stale": 11
+          },
+          {
+            "attempt": 48,
+            "source": "perturbation",
+            "score": 910.5265352935044,
+            "improved": false,
+            "moves": 6,
+            "stale": 12
+          },
+          {
+            "attempt": 49,
+            "source": "perturbation",
+            "score": 910.5265352935044,
+            "improved": false,
+            "moves": 5,
+            "stale": 13
+          },
+          {
+            "attempt": 50,
+            "source": "perturbation",
+            "score": 910.4048587217183,
+            "improved": true,
+            "moves": 12,
+            "stale": 0
+          },
+          {
+            "attempt": 51,
+            "source": "perturbation",
+            "score": 910.4048587217183,
+            "improved": false,
+            "moves": 5,
+            "stale": 1
+          },
+          {
+            "attempt": 52,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": true,
+            "moves": 3,
+            "stale": 0
+          },
+          {
+            "attempt": 53,
+            "source": "perturbation",
+            "score": 910.700135543739,
+            "improved": false,
+            "moves": 10,
+            "stale": 1
+          },
+          {
+            "attempt": 54,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 4,
+            "stale": 2
+          },
+          {
+            "attempt": 55,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 3,
+            "stale": 3
+          },
+          {
+            "attempt": 56,
+            "source": "perturbation",
+            "score": 911.6097382963195,
+            "improved": false,
+            "moves": 9,
+            "stale": 4
+          },
+          {
+            "attempt": 57,
+            "source": "perturbation",
+            "score": 910.5135022416849,
+            "improved": false,
+            "moves": 11,
+            "stale": 5
+          },
+          {
+            "attempt": 58,
+            "source": "perturbation",
+            "score": 911.9194036075487,
+            "improved": false,
+            "moves": 20,
+            "stale": 6
+          },
+          {
+            "attempt": 59,
+            "source": "perturbation",
+            "score": 910.5135022416849,
+            "improved": false,
+            "moves": 12,
+            "stale": 7
+          },
+          {
+            "attempt": 60,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 9,
+            "stale": 8
+          },
+          {
+            "attempt": 61,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 2,
+            "stale": 9
+          },
+          {
+            "attempt": 62,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 4,
+            "stale": 10
+          },
+          {
+            "attempt": 63,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 3,
+            "stale": 11
+          },
+          {
+            "attempt": 64,
+            "source": "perturbation",
+            "score": 910.6256907517464,
+            "improved": false,
+            "moves": 8,
+            "stale": 12
+          },
+          {
+            "attempt": 65,
+            "source": "perturbation",
+            "score": 910.5135022416849,
+            "improved": false,
+            "moves": 10,
+            "stale": 13
+          },
+          {
+            "attempt": 66,
+            "source": "perturbation",
+            "score": 911.4685642790116,
+            "improved": false,
+            "moves": 8,
+            "stale": 14
+          },
+          {
+            "attempt": 67,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 2,
+            "stale": 15
+          },
+          {
+            "attempt": 68,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 4,
+            "stale": 16
+          },
+          {
+            "attempt": 69,
+            "source": "perturbation",
+            "score": 911.2590970701699,
+            "improved": false,
+            "moves": 4,
+            "stale": 17
+          },
+          {
+            "attempt": 70,
+            "source": "perturbation",
+            "score": 910.5135022416849,
+            "improved": false,
+            "moves": 6,
+            "stale": 18
+          },
+          {
+            "attempt": 71,
+            "source": "perturbation",
+            "score": 910.3696173495986,
+            "improved": false,
+            "moves": 4,
+            "stale": 19
+          },
+          {
+            "attempt": 72,
+            "source": "perturbation",
+            "score": 911.2708789490147,
+            "improved": false,
+            "moves": 9,
+            "stale": 20
+          }
+        ],
+        "stopping_rule": {
+          "consecutive_nonimproving_restarts": 20,
+          "final_neighborhood": "connected relocations through 6 tracks, connected exchanges through 3 tracks each way, and full-line merges where enabled"
+        },
+        "final_audit": {
+          "exhausted": true,
+          "candidates_checked": 352,
+          "score": 910.3696173495986,
+          "group_size": 6,
+          "swap_size": 3
+        },
+        "evaluations": {
+          "hits": 27955,
+          "misses": 75296,
+          "maxsize": 150000,
+          "currsize": 75296
+        },
+        "elapsed_seconds": 183.27,
+        "seed": 20261107
+      },
+      "deferred_tracks": [],
+      "deferral_known_cost": 0,
+      "deferral_penalties": {
+        "0": 838.7967886560317,
+        "20": 876.5149619434887,
+        "40": 910.3696173495986,
+        "80": 975.1254300907101
+      },
+      "retained_track_count": 190
+    }
+  },
+  "previous_score": 926.3084141382546,
+  "starting_track_count": 15,
+  "mechanics_sources": [
+    {
+      "title": "Track claiming and ownership guide",
+      "url": "https://gamefaqs.gamespot.com/iphone/733057-pocket-trains/faqs/68009"
+    },
+    {
+      "title": "Community FAQ: claim/switch track ownership",
+      "url": "https://www.reddit.com/r/pockettrains/comments/ihk8yc/"
+    }
+  ]
+}

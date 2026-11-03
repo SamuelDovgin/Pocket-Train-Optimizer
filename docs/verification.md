@@ -1,31 +1,47 @@
-# Verification and changes — November 3, 2026
+# Verification and iterative search — November 3, 2026
 
-The original bundle's all-pairs scores were reproduced before editing: original 988.0159524554269; earlier refinement 957.889792513815; supplied advanced assignment 927.9087686372641 at transfer penalty 40.
+The original bundle and previously published scores were reproduced before the broader search. The previous published target scored 926.3084141382546. The lowest current routing-score target scores **910.369617349599** with **20** railroads. All 9,591 city pairs remain reachable.
 
-The improved assignment scores **926.3084141382546**, a **6.2456%** reduction from the original and **0.1725%** from the supplied advanced assignment. Its mean transfer count is **2.033260348243145**, compared with **3.482848503805651** originally. Every comparison uses the same 9,591 unordered city pairs.
+## Comparison at transfer penalty 40
 
-## Fixes
+| Scenario | Railroads | Fuel/job | Transfers/job | Effort/job | Initial owner changes |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Deeper search · keep starting owners | 38 | 843.70 | 1.798 | 915.62 | 0 |
+| Deeper search · allow starting corrections | 38 | 846.07 | 1.653 | 912.19 | 4 |
+| Experimental · fewer railroads | 20 | 844.33 | 1.651 | 910.37 | 2 |
 
-- Removed a stale, start-of-search line-length check that incorrectly discarded valid ownership moves. Capacity checks now use the current candidate layout.
-- Sorted candidate targets for deterministic search and distinguished time/round limits from fully exhausted local neighborhoods. Continued the supplied solution with connected pair and triple moves.
-- Routes minimize fuel plus transfer friction, then handoffs to resolve equal-score ties. JavaScript and Python use the same rule.
-- Fixed the same-station route return shape, which previously crashed rendering.
-- Replaced a sensitivity slider offering unsupported 60-unit results with the four computed penalties: 0, 20, 40, 80.
-- Connected the recommended owner plan to the checklist and added routing on the full active plan with manual edits.
-- Added construction ordering that checks licenses, physical reachability, and connected ownership. Each next purchase is re-evaluated after checkoff. The order is feasible in this model; it is not an optimized investment/payback schedule.
-- Freeze completed owners when switching plans. Warn when manual edits leave a disconnected or overlong future railroad.
-- Put restored initial tracks back into the unfinished queue; they were previously absent from the step dataset.
-- Validate imported/autosaved values and preserve old backups. Correct the city connection panel's hidden behavior and display current assigned stations instead of obsolete original route text.
-- Add automated verification and GitHub Pages publication.
+The smaller-railroad result trades lower transfer cost against more demanding train duties. Every active railroad is connected, and assigned track-fuel totals stay at or below 1,100. Total assigned fuel is not tank capacity, speed, waiting time or earnings. The plans remain engine-agnostic as requested.
 
-## Checks
+## Changes to your starting configuration
 
-JavaScript tests simulate every remaining purchase in all three layouts, check save validation, restored tracks, same-station/disconnected routing, zero-penalty ties, reverse-route symmetry, built-only routing, and model data synchronization. A full 9,591-pair browser-core evaluation is compared with the Python optimized result.
+- Berlin ↔ Munich: **Green → Purple**.
+- Milan ↔ Rome: **Blue → Green**.
 
-Python tests reproduce all published metrics for every layout and penalty, independently check routes with NetworkX, verify all 15 fixed owners and 38 connected railroads, enforce the 1,100-unit bound, cover the stale-capacity regression, and confirm there is no improving move in the final connected one/two/three-track neighborhood.
+The queue shows each current owner and target owner, groups connected claims into ordered batches, preserves all physical purchase flags, and records completed batches separately. Nothing in your game changes automatically. Undo restores only the tracker record; reverse a game claim separately if you intend to undo it in game.
 
-Manual browser checks cover checkoff/reload/restore, all views, supported sensitivity values, same-station routing, route scopes, plan selection, and a narrow viewport. Browser automation could not complete the download/file-picker checks; backup parsing and old-format migration are regression-tested in JavaScript. Reading the old local HTML tracker was blocked by browser security, so newer progress must be transferred by the user with Export/Import. Check the repository's Actions tab for automated run results.
+- Berlin ↔ Munich: after stage 1 gateway prerequisites.
+- Milan ↔ Rome: starting network.
 
-## Limits
+Timing is based on matched jobs within the same stage's physical network, with earlier scheduled corrections included. Live claim fees and train availability are additional considerations. No track demolition/rebuild, engine sale, or railroad shutdown is assumed. Historical claim prices are references, not asserted live reassignment fees.
 
-The map and prices are inherited from the supplied tracker, not independently measured in the current game. Eight fuel lengths and eight prices are provisional. Transfer friction and job-demand scenarios are assumptions. Branches and long railroads can be awkward to operate. The model does not simulate engine positions, train speed, fuel capacity/regeneration, cargo arrivals, capacity, yard congestion, setup costs, or earnings. A lower modeled routing score does not establish better coins/hour. Browser progress is local; moving devices or origins requires a JSON backup.
+## Evidence and stop rule
+
+Saved campaigns contain 368 starts and 585,850 scored layout evaluations, with separate caches and possible overlap across campaigns. The search includes larger connected relocations, paired exchanges, seeded perturbations, multiple supplied starts, different railroad counts, and merge/split cross-seeding. Final campaigns stop after 20 consecutive non-improving starts, followed by exhaustive scoring of the final connected relocation groups through size six and exchanges through size three each way. Full-line merges are also checked in the variable-count scenario. The larger tested neighborhood contains no improving move at the recorded endpoint. The final merge/split cross-seeding cycle also left both incumbents unchanged.
+
+This is a local-search stopping criterion, not a proof of global optimality. The fuel-only distance lower bound is 838.796789; it ignores transfers and may not be attainable under connected capped ownership. Search scripts, seeds, incumbents, and campaign reports remain in the repository for continuation.
+
+## Track choices and tests
+
+The joint deferral audit preserves all 139 cities and all 9,591 city-pair costs at handoff penalty 40, along with connected railroad ownership. It found no removable future tracks for these targets. The audit does not treat dropping a city or ignoring unreachable jobs as a benefit.
+
+Python tests reproduce every new metric at penalties 0, 20, 40 and 80, check line constraints, re-enumerate the final move neighborhoods, and verify positive phase gains at scheduled correction stages. JavaScript tests compare every route against Python at penalty 40 for all three targets and simulate all 180 remaining purchases plus every correction batch. Tests also cover batch undo, backup migration/history, invalid imports, restored initial tracks, same-station/disconnected routes, tie-breaking, and route symmetry.
+
+Browser QA verifies that recording a correction leaves the physical track count unchanged, saves across reload, and supports whole-batch undo. It checks plan selection, current versus target route scopes, scenario comparisons and narrow-screen layout. The previous browser file-picker/download automation limit remains: backup parsing/migration is tested in JavaScript, while transferring a save from a downloaded HTML tracker may require manual Export/Import.
+
+## Progression research
+
+The [Wiki train table](https://pocket-trains.fandom.com/wiki/Train) and [Reddit progression discussion](https://www.reddit.com/r/pockettrains/comments/g1yviw/) report regular part pools in roughly four-level groups: Steamers 1–4, Express 5–8, Standard 9–12, Zephyr 13–16, Freighter 17–20, Hybrid 21–24. Special availability differs. The [Wiki fuel page](https://pocket-trains.fandom.com/wiki/Fuel) describes fuel-car upgrades; [community straight-line discussion](https://www.reddit.com/r/pockettrains/comments/1rb5ajb/why_straight_lines/) explains why long branched routes can be awkward in practice. These are guidance sources, not a measured simulator or a promise of parts at a given level.
+
+## Remaining limits
+
+Map and costs come from the supplied tracker. Eight fuel lengths and eight prices are unverified. Job probabilities, transfer friction and the 1,100-unit bound are assumptions. Real operation depends on engines, train positions, speed, cargo, yards, refueling and player attention. Lower modeled effort does not prove higher profit. Progress is browser-local and needs a JSON backup to transfer.

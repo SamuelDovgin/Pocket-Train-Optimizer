@@ -1,0 +1,659 @@
+{
+  "profile": "consolidated",
+  "owner": {
+    "Adelaide|Alice Springs": "Southeast Islands",
+    "Adelaide|Melbourne": "Southeast Islands",
+    "Adelaide|Perth": "Southeast Islands",
+    "Algiers|Casablanca": "Cyan",
+    "Algiers|Tripoli": "Blue",
+    "Alice Springs|Broome": "Southeast Islands",
+    "Alice Springs|Darwin": "Oceania Central",
+    "Amman|Athens": "Blue",
+    "Amman|Baghdad": "Blue",
+    "Amman|Cairo": "Blue",
+    "Amman|Riyadh": "Blue",
+    "Amsterdam|Berlin": "Purple",
+    "Amsterdam|Copenhagen": "Cyan",
+    "Amsterdam|Munich": "Pink",
+    "Amsterdam|Paris": "Cyan",
+    "Anadyr|Magadan": "China North",
+    "Anchorage|Fairbanks": "Alaska",
+    "Anchorage|Nome": "Alaska",
+    "Anchorage|Vancouver": "Alaska",
+    "Antananarivo|Harare": "South Atlantic Bridge",
+    "Antananarivo|Perth": "South Atlantic Bridge",
+    "Antananarivo|Zanzibar": "Africa South",
+    "Arequipa|Asuncion": "North America East",
+    "Arequipa|Lima": "North America East",
+    "Arequipa|Manaus": "South America West",
+    "Arequipa|Santiago": "South America West",
+    "Asuncion|Porto Alegre": "North America East",
+    "Athens|Budapest": "Pink",
+    "Atlanta|Miami": "South America West",
+    "Atlanta|New Orleans": "North America East",
+    "Atlanta|Washington DC": "Green",
+    "Auckland|Sydney": "Southeast Islands",
+    "Auckland|Wellington": "Southeast Islands",
+    "Baghdad|Istanbul": "Euro Balkans",
+    "Baghdad|Tehran": "Blue",
+    "Bamako|Dakar": "Africa Sahel",
+    "Bamako|Lagos": "Africa Sahel",
+    "Bangalore|Kolkata": "India Express",
+    "Bangalore|Mumbai": "Blue",
+    "Bangkok|Hanoi": "China Central",
+    "Bangkok|Kolkata": "Asia South",
+    "Bangkok|Singapore": "Asia South",
+    "Barcelona|Madrid": "Green",
+    "Barcelona|Milan": "Green",
+    "Beijing|Shanghai": "China North",
+    "Beijing|Shenyang": "China North",
+    "Beijing|Ulan Bator": "China North",
+    "Beijing|Urumqi": "China North",
+    "Beijing|Xi'An": "China Central",
+    "Belem|Caracas": "Cyan",
+    "Belem|Fortaleza": "Cyan",
+    "Berlin|Budapest": "Pink",
+    "Berlin|Minsk": "Purple",
+    "Berlin|Munich": "Purple",
+    "Bogota|Caracas": "Cyan",
+    "Bogota|Lima": "North America East",
+    "Bogota|Managua": "North America East",
+    "Bordeaux|Madrid": "Cyan",
+    "Bordeaux|Milan": "Africa North",
+    "Bordeaux|Paris": "Cyan",
+    "Boston|Montreal": "Green",
+    "Boston|New York": "Green",
+    "Brisbane|Cairns": "Oceania West",
+    "Brisbane|Sydney": "Oceania West",
+    "Broome|Darwin": "Southeast Islands",
+    "Broome|Kupang": "Southeast Islands",
+    "Broome|Perth": "Southeast Islands",
+    "Budapest|Istanbul": "Euro Balkans",
+    "Budapest|Kyiv": "Pink",
+    "Budapest|Munich": "Pink",
+    "Buenos Aires|Porto Alegre": "South America West",
+    "Buenos Aires|Santiago": "South America West",
+    "Cairns|Darwin": "Southeast Islands",
+    "Cairns|Port Moresby": "Southeast Islands",
+    "Cairo|Khartoum": "Blue",
+    "Cairo|Tripoli": "Blue",
+    "Calgary|Denver": "Green",
+    "Calgary|Edmonton": "Green",
+    "Calgary|Vancouver": "Alaska",
+    "Calgary|Winnipeg": "North America East",
+    "Cape Town|Luanda": "Africa Sahel",
+    "Cape Town|Porto Alegre": "South Atlantic Bridge",
+    "Cape Town|Pretoria": "South Atlantic Bridge",
+    "Caracas|Manaus": "South America West",
+    "Caracas|San Juan": "South America West",
+    "Casablanca|Dakar": "Cyan",
+    "Casablanca|Madrid": "Cyan",
+    "Chengdu|Hanoi": "China Central",
+    "Chengdu|Kolkata": "India Express",
+    "Chengdu|New Delhi": "China Central",
+    "Chengdu|Urumqi": "China Central",
+    "Chengdu|Xi'An": "China Central",
+    "Chicago|Detroit": "North America East",
+    "Chicago|Minneapolis": "North America East",
+    "Chicago|St. Louis": "North America East",
+    "Christchurch|Wellington": "Southeast Islands",
+    "Copenhagen|Oslo": "Europe Nordic",
+    "Copenhagen|Stockholm": "Asia South",
+    "Dakar|Fortaleza": "Cyan",
+    "Denver|Phoenix": "North America West",
+    "Denver|San Francisco": "Alaska",
+    "Denver|St. Louis": "Green",
+    "Detroit|Toronto": "Green",
+    "Dubai|Riyadh": "Blue",
+    "Dublin|London": "Pink",
+    "Easter Island|Lima": "Easter Island",
+    "Fortaleza|Salvador": "Cyan",
+    "Glasgow|London": "Pink",
+    "Glasgow|Reykjavik": "Pink",
+    "Goose Bay|Montreal": "Arctic Bridge",
+    "Goose Bay|Nuuk": "Arctic Bridge",
+    "Hanoi|Hong Kong": "China Central",
+    "Harare|Luanda": "Africa Sahel",
+    "Harare|Pretoria": "South Atlantic Bridge",
+    "Harare|Zanzibar": "Africa Sahel",
+    "Harbin|Shenyang": "China North",
+    "Harbin|Vladivostok": "China North",
+    "Harbin|Yakutsk": "China North",
+    "Havana|Miami": "South America West",
+    "Havana|San Juan": "South America West",
+    "Helsinki|St. Petersburg": "Asia South",
+    "Helsinki|Stockholm": "Asia South",
+    "Hong Kong|Manila": "China Central",
+    "Hong Kong|Shanghai": "China Central",
+    "Honolulu|San Francisco": "Alaska",
+    "Houston|Mexico City": "North America East",
+    "Houston|New Orleans": "North America East",
+    "Houston|Phoenix": "North America East",
+    "Istanbul|Kyiv": "Euro Balkans",
+    "Jakarta|Kupang": "Asia South",
+    "Jakarta|Singapore": "Asia South",
+    "Kabul|New Delhi": "Asia South",
+    "Kabul|Tehran": "Asia South",
+    "Karachi|Mumbai": "Blue",
+    "Karachi|New Delhi": "China Central",
+    "Karachi|Tehran": "Blue",
+    "Khartoum|Lagos": "Africa Sahel",
+    "Khartoum|Nairobi": "Blue",
+    "Kinshasa|Lagos": "Africa Sahel",
+    "Kinshasa|Luanda": "Africa Sahel",
+    "Kinshasa|Nairobi": "Africa Sahel",
+    "Kolkata|New Delhi": "Asia South",
+    "Kupang|Manado": "Southeast Islands",
+    "Kyiv|Minsk": "Pink",
+    "Kyiv|Moscow": "Euro Balkans",
+    "Kyiv|Volgograd": "Pink",
+    "Lisbon|Madrid": "Green",
+    "Lisbon|New York": "Green",
+    "London|Paris": "Pink",
+    "Los Angeles|Mexico City": "Alaska",
+    "Los Angeles|Phoenix": "North America East",
+    "Los Angeles|San Francisco": "Alaska",
+    "Magadan|Yakutsk": "China North",
+    "Manado|Manila": "China Central",
+    "Managua|Mexico City": "North America East",
+    "Melbourne|Sydney": "Southeast Islands",
+    "Milan|Munich": "Green",
+    "Milan|Paris": "Pink",
+    "Milan|Rome": "Green",
+    "Minneapolis|Winnipeg": "North America East",
+    "Minsk|Moscow": "Purple",
+    "Montreal|Toronto": "Green",
+    "Moscow|Perm": "Purple",
+    "Moscow|St. Petersburg": "Asia South",
+    "Moscow|Volgograd": "Asia South",
+    "Munich|Paris": "Pink",
+    "Nagasaki|Shanghai": "China Central",
+    "Nagasaki|Tokyo": "China Central",
+    "New Orleans|St. Louis": "North America East",
+    "New York|St. Louis": "Green",
+    "New York|Washington DC": "Green",
+    "Novosibirsk|Perm": "Purple",
+    "Novosibirsk|Ulan Bator": "Purple",
+    "Novosibirsk|Urumqi": "Purple",
+    "Novosibirsk|Yakutsk": "Purple",
+    "Nuuk|Tasiilaq": "Arctic Bridge",
+    "Oslo|Stockholm": "Asia South",
+    "Porto Alegre|Rio de Janeiro": "Cyan",
+    "Punta Arenas|Santiago": "South America West",
+    "Reykjavik|Tasiilaq": "Arctic Bridge",
+    "Rio de Janeiro|Salvador": "Cyan",
+    "Rome|Tripoli": "Blue",
+    "San Francisco|Vancouver": "Alaska",
+    "Sendai|Tokyo": "China Central",
+    "Sendai|Vladivostok": "China North",
+    "Seoul|Shenyang": "China North",
+    "Shanghai|Xi'An": "China Central",
+    "Shenyang|Vladivostok": "China North",
+    "Tehran|Volgograd": "Asia South",
+    "Urumqi|Volgograd": "Pink"
+  },
+  "score": 910.7740590136586,
+  "initial_score": 926.3084141382546,
+  "line_count": 24,
+  "fixed_initial_owners": false,
+  "initial_owner_changes": [
+    {
+      "track": "Berlin|Munich",
+      "from": "Green",
+      "to": "Purple",
+      "original_claim_reference": 690
+    },
+    {
+      "track": "Glasgow|London",
+      "from": "Blue",
+      "to": "Pink",
+      "original_claim_reference": 810
+    },
+    {
+      "track": "London|Paris",
+      "from": "Blue",
+      "to": "Pink",
+      "original_claim_reference": 450
+    },
+    {
+      "track": "Milan|Paris",
+      "from": "Blue",
+      "to": "Pink",
+      "original_claim_reference": 765
+    },
+    {
+      "track": "Milan|Rome",
+      "from": "Blue",
+      "to": "Green",
+      "original_claim_reference": 495
+    }
+  ],
+  "restarts": [
+    {
+      "attempt": 1,
+      "source": "supplied_seed",
+      "score": 910.898237931394,
+      "improved": true,
+      "moves": 14,
+      "stale": 0
+    },
+    {
+      "attempt": 2,
+      "source": "supplied_seed",
+      "score": 912.149827963716,
+      "improved": false,
+      "moves": 15,
+      "stale": 1
+    },
+    {
+      "attempt": 3,
+      "source": "supplied_seed",
+      "score": 911.0026066103638,
+      "improved": false,
+      "moves": 0,
+      "stale": 2
+    },
+    {
+      "attempt": 4,
+      "source": "perturbation",
+      "score": 910.898237931394,
+      "improved": false,
+      "moves": 2,
+      "stale": 3
+    },
+    {
+      "attempt": 5,
+      "source": "perturbation",
+      "score": 911.0212699405693,
+      "improved": false,
+      "moves": 6,
+      "stale": 4
+    },
+    {
+      "attempt": 6,
+      "source": "perturbation",
+      "score": 910.898237931394,
+      "improved": false,
+      "moves": 2,
+      "stale": 5
+    },
+    {
+      "attempt": 7,
+      "source": "perturbation",
+      "score": 910.898237931394,
+      "improved": false,
+      "moves": 2,
+      "stale": 6
+    },
+    {
+      "attempt": 8,
+      "source": "perturbation",
+      "score": 910.898237931394,
+      "improved": false,
+      "moves": 4,
+      "stale": 7
+    },
+    {
+      "attempt": 9,
+      "source": "perturbation",
+      "score": 910.898237931394,
+      "improved": false,
+      "moves": 1,
+      "stale": 8
+    },
+    {
+      "attempt": 10,
+      "source": "perturbation",
+      "score": 912.0720467104577,
+      "improved": false,
+      "moves": 6,
+      "stale": 9
+    },
+    {
+      "attempt": 11,
+      "source": "perturbation",
+      "score": 911.5652173913044,
+      "improved": false,
+      "moves": 8,
+      "stale": 10
+    },
+    {
+      "attempt": 12,
+      "source": "perturbation",
+      "score": 911.5429048065895,
+      "improved": false,
+      "moves": 6,
+      "stale": 11
+    },
+    {
+      "attempt": 13,
+      "source": "perturbation",
+      "score": 912.0720467104577,
+      "improved": false,
+      "moves": 9,
+      "stale": 12
+    },
+    {
+      "attempt": 14,
+      "source": "perturbation",
+      "score": 911.7607131685955,
+      "improved": false,
+      "moves": 6,
+      "stale": 13
+    },
+    {
+      "attempt": 15,
+      "source": "perturbation",
+      "score": 911.806798039829,
+      "improved": false,
+      "moves": 8,
+      "stale": 14
+    },
+    {
+      "attempt": 16,
+      "source": "perturbation",
+      "score": 910.898237931394,
+      "improved": false,
+      "moves": 4,
+      "stale": 15
+    },
+    {
+      "attempt": 17,
+      "source": "perturbation",
+      "score": 910.898237931394,
+      "improved": false,
+      "moves": 3,
+      "stale": 16
+    },
+    {
+      "attempt": 18,
+      "source": "perturbation",
+      "score": 910.898237931394,
+      "improved": false,
+      "moves": 8,
+      "stale": 17
+    },
+    {
+      "attempt": 19,
+      "source": "perturbation",
+      "score": 911.2679595454072,
+      "improved": false,
+      "moves": 9,
+      "stale": 18
+    },
+    {
+      "attempt": 20,
+      "source": "perturbation",
+      "score": 910.7740590136586,
+      "improved": true,
+      "moves": 8,
+      "stale": 0
+    },
+    {
+      "attempt": 21,
+      "source": "perturbation",
+      "score": 911.4858721718277,
+      "improved": false,
+      "moves": 10,
+      "stale": 1
+    },
+    {
+      "attempt": 22,
+      "source": "perturbation",
+      "score": 910.7740590136586,
+      "improved": false,
+      "moves": 6,
+      "stale": 2
+    },
+    {
+      "attempt": 23,
+      "source": "perturbation",
+      "score": 911.731310603691,
+      "improved": false,
+      "moves": 10,
+      "stale": 3
+    },
+    {
+      "attempt": 24,
+      "source": "perturbation",
+      "score": 910.7740590136586,
+      "improved": false,
+      "moves": 5,
+      "stale": 4
+    },
+    {
+      "attempt": 25,
+      "source": "perturbation",
+      "score": 911.560838285893,
+      "improved": false,
+      "moves": 9,
+      "stale": 5
+    },
+    {
+      "attempt": 26,
+      "source": "perturbation",
+      "score": 911.4270670420185,
+      "improved": false,
+      "moves": 9,
+      "stale": 6
+    },
+    {
+      "attempt": 27,
+      "source": "perturbation",
+      "score": 910.7740590136586,
+      "improved": false,
+      "moves": 9,
+      "stale": 7
+    },
+    {
+      "attempt": 28,
+      "source": "perturbation",
+      "score": 910.7740590136586,
+      "improved": false,
+      "moves": 3,
+      "stale": 8
+    },
+    {
+      "attempt": 29,
+      "source": "perturbation",
+      "score": 910.7740590136586,
+      "improved": false,
+      "moves": 4,
+      "stale": 9
+    },
+    {
+      "attempt": 30,
+      "source": "perturbation",
+      "score": 911.7470545302888,
+      "improved": false,
+      "moves": 7,
+      "stale": 10
+    },
+    {
+      "attempt": 31,
+      "source": "perturbation",
+      "score": 910.9105411323116,
+      "improved": false,
+      "moves": 6,
+      "stale": 11
+    },
+    {
+      "attempt": 32,
+      "source": "perturbation",
+      "score": 911.1347096236054,
+      "improved": false,
+      "moves": 7,
+      "stale": 12
+    },
+    {
+      "attempt": 33,
+      "source": "perturbation",
+      "score": 910.8064852465853,
+      "improved": false,
+      "moves": 10,
+      "stale": 13
+    },
+    {
+      "attempt": 34,
+      "source": "perturbation",
+      "score": 914.1131268897925,
+      "improved": false,
+      "moves": 10,
+      "stale": 14
+    },
+    {
+      "attempt": 35,
+      "source": "perturbation",
+      "score": 911.8102387655093,
+      "improved": false,
+      "moves": 14,
+      "stale": 15
+    },
+    {
+      "attempt": 36,
+      "source": "perturbation",
+      "score": 911.5211135439474,
+      "improved": false,
+      "moves": 15,
+      "stale": 16
+    },
+    {
+      "attempt": 37,
+      "source": "perturbation",
+      "score": 910.7740590136586,
+      "improved": false,
+      "moves": 10,
+      "stale": 17
+    },
+    {
+      "attempt": 38,
+      "source": "perturbation",
+      "score": 911.6906474820144,
+      "improved": false,
+      "moves": 7,
+      "stale": 18
+    },
+    {
+      "attempt": 39,
+      "source": "perturbation",
+      "score": 911.7418413095611,
+      "improved": false,
+      "moves": 8,
+      "stale": 19
+    },
+    {
+      "attempt": 40,
+      "source": "perturbation",
+      "score": 910.7740590136586,
+      "improved": false,
+      "moves": 2,
+      "stale": 20
+    }
+  ],
+  "best_history": [
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Harare|Luanda",
+        "Harare|Zanzibar"
+      ],
+      "from": "Africa South",
+      "to": "Africa Sahel",
+      "before": 920.1920550516109,
+      "after": 918.5920133458451
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Arequipa|Asuncion",
+        "Asuncion|Porto Alegre"
+      ],
+      "from": "South America West",
+      "to": "North America East",
+      "before": 918.5920133458451,
+      "after": 917.6230841413825
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Calgary|Vancouver"
+      ],
+      "from": "North America East",
+      "to": "Alaska",
+      "before": 917.6230841413825,
+      "after": 917.0057345428005
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Buenos Aires|Porto Alegre"
+      ],
+      "from": "South Atlantic Bridge",
+      "to": "South America West",
+      "before": 917.0057345428005,
+      "after": 916.5136065060994
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Atlanta|New Orleans"
+      ],
+      "from": "Green",
+      "to": "North America East",
+      "before": 916.5136065060994,
+      "after": 916.2814096548848
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Milan|Munich"
+      ],
+      "from": "Africa North",
+      "to": "Green",
+      "before": 916.2814096548848,
+      "after": 911.4466687519549
+    },
+    {
+      "kind": "relocate",
+      "tracks": [
+        "Milan|Rome"
+      ],
+      "from": "Blue",
+      "to": "Green",
+      "before": 911.4466687519549,
+      "after": 911.4234177875092
+    },
+    {
+      "kind": "exchange",
+      "a": [
+        "Amsterdam|Berlin"
+      ],
+      "b": [
+        "Amsterdam|Munich"
+      ],
+      "from": "Pink",
+      "to": "Purple",
+      "before": 911.4234177875092,
+      "after": 910.7740590136586
+    }
+  ],
+  "stopping_rule": {
+    "consecutive_nonimproving_restarts": 20,
+    "final_neighborhood": "connected relocations through 6 tracks, connected exchanges through 3 tracks each way, and full-line merges where enabled"
+  },
+  "final_audit": {
+    "exhausted": true,
+    "candidates_checked": 308,
+    "score": 910.7740590136586,
+    "group_size": 6,
+    "swap_size": 3
+  },
+  "evaluations": {
+    "hits": 15543,
+    "misses": 39032,
+    "maxsize": 150000,
+    "currsize": 39032
+  },
+  "elapsed_seconds": 102.53,
+  "seed": 20261106
+}

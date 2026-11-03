@@ -1,0 +1,20 @@
+{
+  "cycles": [
+    {
+      "cycle": 1,
+      "before": {
+        "rework": 912.1924721092691,
+        "consolidated": 910.3696173495986
+      },
+      "expanded_38_probe": 912.5389427588364,
+      "merged_probe": 910.7557084766969,
+      "after": {
+        "rework": 912.1924721092691,
+        "consolidated": 910.3696173495986
+      },
+      "no_improvement": true
+    }
+  ],
+  "stable": true,
+  "meaning": "No profile improved in the final merge/split cross-seeding cycle; each stored profile also has a completed local neighborhood audit."
+}

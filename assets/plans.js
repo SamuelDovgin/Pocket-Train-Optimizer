@@ -3,7 +3,14 @@
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>Number(n).toLocaleString('en-US');
 const options=[['consolidated','Lowest routing score · fewer railroads'],['rework','38 railroads · explicit corrections'],['searched','38 railroads · keep starting owners'],['advanced','Previous 926.31 plan'],['original','Original layout'],['refined','Earlier 25-move refinement']];
-function selector(state){return `<div class="plan-controls"><label for="activePlan" class="small muted">Track ownership plan</label><select id="activePlan">${options.map(([id,name])=>`<option value="${id}" ${state.plan===id?'selected':''}>${esc(name)}</option>`).join('')}</select></div>`}
+function selector(state, corridorTargets={}){
+ const active=state.corridorTarget||state.plan;
+ const entries=values=>values.map(([id,name])=>`<option value="${esc(id)}" ${active===id?'selected':''}>${esc(name)}</option>`).join('');
+ const corridors=Object.entries(corridorTargets).map(([id,target])=>[`corridor:${id}`,`${target.label} · ${target.fleet} trains`]);
+ return `<div class="plan-controls"><label for="activePlan" class="small muted">Track ownership plan</label><select id="activePlan">
+ ${corridors.length?`<optgroup label="Recommended corridor plans">${entries(corridors)}</optgroup>`:''}
+ <optgroup label="Historical plans">${entries(options)}</optgroup></select></div>`;
+}
 function evidence(p){const t=p.campaign_totals||{};return `${fmt(t.starts||0)} retained local-search starts; ${fmt(t.annealing_epochs||0)} annealing rounds and ${fmt(t.valid_randomized_proposals||0)} valid random proposals across ${t.campaigns||1} campaigns. ${p.search.randomized_search?'Each final randomized campaign required 50,000 valid proposals and 25 consecutive non-improving rounds.':'Final local search required '+p.search.stopping_rule.consecutive_nonimproving_restarts+' consecutive non-improving restarts.'} ${p.search.final_audit?.exhausted?fmt(p.search.final_audit.candidates_checked)+' final relocation/exchange candidates checked; no improving move found.':'Audit pending.'}`}
 function review(data,state,queue){
  const p=data.profiles[state.plan];if(!p)return '<div class="hint">A deeper search is available. Choose one of the new search plans above to compare it with your current plan.</div>';

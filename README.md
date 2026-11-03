@@ -12,7 +12,9 @@ The default **Lowest routing score · fewer railroads** target has **28 active r
 
 [Open the clean-slate plans and build checklists](https://samueldovgin.github.io/Pocket-Train-Optimizer/docs/corridor-search.html).
 
-Choose **Connected long routes** or **Original 27 routes** under **Build target**. Each target has a separate saved checklist based on the public 15-track reference. If your game differs, use **Save & transfer → Export JSON backup** in the main tracker and **Download selected target data** on the corridor page. Route Coach accepts the downloaded target data via `--data /path/to/pocket-trains-selected-target.json`.
+In the main **Build queue**, choose **Long-haul hubs**, **Connected Long Routes**, or **Original 27 routes** under **Track ownership plan**. The queue uses the same recorded purchases and owners as the historical options. Selecting a plan proposes changes and checking off a correction updates the recorded owner. The separate study page also has two public-reference checklists with their own progress.
+
+Long-haul hubs tests more direct service with fewer small duties. It covers all 139 cities in 28 routes, with 170 service links and 57 shared stations. Reproduce the search, evaluation, map and live target data with `npm run corridors:long-haul` after the connected refinement.
 
 The connected refinement rewards long routes, through stops and useful alternative tracks. It searches four shortcut pressures from two prior candidates. Ranking combines synthetic reward rates with through-service and long-route coverage. Use the page's connected comparison to see results on fresh seeds. Reproduce the refinement with `npm run corridors:connected` after generating the original corridor study.
 

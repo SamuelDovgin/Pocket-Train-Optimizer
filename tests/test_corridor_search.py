@@ -19,6 +19,7 @@ class CorridorSearchTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data=json.loads((ROOT/'assets/corridor-data.json').read_text())
+        cls.connected=json.loads((ROOT/'assets/connected-corridors.json').read_text())
 
     def test_starting_owners_and_completed_tracks_cannot_change_the_search(self):
         other=copy.deepcopy(self.data);other['plans']={'fake':{'owners':{'Paris|Munich':'Changed'}}};other['base']=['Changed'];other['done']=['Changed']
@@ -31,7 +32,7 @@ class CorridorSearchTests(unittest.TestCase):
 
     def test_every_exported_owner_is_a_simple_path_or_bounded_standalone_loop(self):
         D=self.data;edges={e['id']:e for e in D['edges']};xy=D['reward_geometry']['coordinates']
-        for plan in D['plans'].values():
+        for plan in [*D['plans'].values(), self.connected['plan']]:
             all_ids=[];whole=nx.Graph()
             for line in plan['lines']:
                 path=line['path'];ids=['|'.join(sorted((a,b))) for a,b in zip(path,path[1:])]
@@ -66,7 +67,13 @@ class CorridorSearchTests(unittest.TestCase):
         self.assertGreater(valid,50)
 
     def test_reference_migration_preserves_tracks_and_checks_every_intermediate_owner(self):
-        M=json.loads((ROOT/'assets/corridor-reference-migration.json').read_text());H=json.loads((ROOT/'analysis/world_tracker_data.json').read_text());D=self.data
+        original=json.loads((ROOT/'assets/corridor-reference-migration.json').read_text())
+        for migration in [original, self.connected['migration']]:
+            with self.subTest(target=migration['selected_target']):
+                self.check_reference_migration(migration)
+
+    def check_reference_migration(self, M):
+        H=json.loads((ROOT/'analysis/world_tracker_data.json').read_text());D=self.data
         refs={e['id']:e for e in H['edges']};edges={e['id']:e for e in D['edges']};owners={k:refs[k]['owner'] for k in H['base']+H['done']};initial=set(owners);licenses={'Europe'}
         self.assertEqual({('|'.join(sorted((t['a'],t['b']))),t['railroad']) for t in M['starting_tracks']},set(owners.items()))
         self.assertTrue(M['selection_was_frozen']);self.assertTrue(M['structural_sequence_complete']);self.assertEqual(M['unresolved'],[])
@@ -84,7 +91,7 @@ class CorridorSearchTests(unittest.TestCase):
             for name in set(owners.values()):
                 g=nx.Graph(tuple(k.split('|')) for k,v in owners.items() if v==name);self.assertTrue(nx.is_connected(g))
         self.assertTrue(initial<=set(owners))
-        plan=D['plans'][M['selected_target']]
+        plan=self.connected['plan'] if M['selected_target']==self.connected['winner'] else D['plans'][M['selected_target']]
         for key,name in plan['owners'].items():self.assertEqual(owners[key],M['target_labels_to_reference_trains'].get(name,name))
         for name in set(owners.values()):
             g=nx.Graph(tuple(k.split('|')) for k,v in owners.items() if v==name);self.assertLessEqual(max(dict(g.degree).values()),2)

@@ -10,7 +10,11 @@ The default **Lowest routing score · fewer railroads** target has **28 active r
 
 ## Clean-slate corridor search and examples
 
-[Open the clean-slate study and reference checklist](https://samueldovgin.github.io/Pocket-Train-Optimizer/docs/corridor-search.html).
+[Open the clean-slate plans and build checklists](https://samueldovgin.github.io/Pocket-Train-Optimizer/docs/corridor-search.html).
+
+Choose **Connected long routes** or **Original 27 routes** under **Build target**. Each target has a separate saved checklist based on the public 15-track reference. If your game differs, use **Save & transfer → Export JSON backup** in the main tracker and **Download selected target data** on the corridor page. Route Coach accepts the downloaded target data via `--data /path/to/pocket-trains-selected-target.json`.
+
+The connected refinement rewards long routes, through stops and useful alternative tracks. It searches four shortcut pressures from two prior candidates. Ranking combines synthetic reward rates with through-service and long-route coverage. Use the page's connected comparison to see results on fresh seeds. Reproduce the refinement with `npm run corridors:connected` after generating the original corridor study.
 
 The current tuning-selected recommendation uses **27 trains**, **141 connections**, and all **139 cities**, with **zero branches** and **0 compact loops**. Every open route has at least 85% chord directness and no turn above 100 degrees. The primary recommendation allows at most two small collector loops; loop-rich cases remain comparisons. Full-track coverage is a separate scenario, not the primary goal.
 

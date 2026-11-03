@@ -11,9 +11,8 @@ HELPER=ROOT/'.agents/skills/pocket-trains-route-coach/scripts/review_configurati
 spec=importlib.util.spec_from_file_location('route_coach',HELPER);coach=importlib.util.module_from_spec(spec);spec.loader.exec_module(coach)
 
 
-def main():
-    D=json.loads((ROOT/'assets/corridor-data.json').read_text());R=json.loads((ROOT/'analysis/corridor-results.json').read_text())
-    key=R['selection']['recommendation'];plan=D['plans'][key]
+def migration(D, key):
+    plan=D['plans'][key]
     # This is intentionally the first stage that loads the reference starting state.
     H=json.loads((ROOT/'analysis/world_tracker_data.json').read_text());refs={e['id']:e for e in H['edges']}
     built={k:refs[k]['owner'] for k in H['base']+H['done']}
@@ -91,9 +90,15 @@ def main():
             'unused_built_tracks_kept':extra,'steps':steps,'unresolved':unresolved,'structural_sequence_complete':not unresolved,
             'final_owner_audit':final_audit,'reference_review':structural,
             'limitations':'A dry-run connectivity sequence, not measured phase-by-phase profit or verified in-game execution. Prices are historical; fees, engines, positions and cash must be checked. Holding/feeder routes are additional to the optimized operating fleet and were not included in its simulated earnings.'}
+    return result
+
+
+def main():
+    data = json.loads((ROOT/'assets/corridor-data.json').read_text())
+    result = migration(data, data['selection']['recommendation'])
     (ROOT/'analysis/corridor-reference-migration.json').write_text(json.dumps(result,indent=2))
     (ROOT/'assets/corridor-reference-migration.json').write_text(json.dumps(result,separators=(',',':')))
-    print('Reference migration:',len(steps),'steps;',len(unresolved),'unresolved;',len(feeders),'extra feeder routes')
+    print('Reference migration:',len(result['steps']),'steps;',len(result['unresolved']),'unresolved;',len(result['extra_feeder_routes']),'extra feeder routes')
 
 
 if __name__=='__main__':main()

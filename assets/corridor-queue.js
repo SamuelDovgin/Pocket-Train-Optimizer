@@ -124,7 +124,7 @@
     // Local construction can make later ownership changes feasible.
     const priority = {track: 0, reassign: 1, license: 2};
     for (const license of neededLicenses) {
-      next.push({...license, blocked: readyLicenses.has(license) ? [] : ['Extend your network toward this region first']});
+      next.push({...license, kind: 'license', blocked: readyLicenses.has(license) ? [] : ['Extend your network toward this region first']});
     }
     next.sort((a, b) => Number(Boolean(a.blocked.length)) - Number(Boolean(b.blocked.length)) ||
       priority[a.kind] - priority[b.kind] ||

@@ -39,6 +39,14 @@ for (const [id, target] of Object.entries(data.targets)) test(`live ${id} queue 
   const owner = edge => state.owners[edge.id] || edge.owner;
   state.corridorLabels = Q.chooseLabels(target, graph, state, owner);
   assert.deepEqual(state.owners, {});
+  const licenseIds = new Set(graph.licenses.map(license => license.id));
+  const licenses = Q.actions(target, graph, state, owner).next.filter(step => licenseIds.has(step.id));
+  assert.equal(licenses.length, graph.licenses.length);
+  for (const license of licenses) {
+    assert.equal(license.kind, 'license', license.id);
+    assert.ok(license.region);
+    assert.equal(license.owner, undefined);
+  }
   const original = new Set(Object.keys(state.done));
   const preview = fs.readFileSync(target.map, 'utf8');
   assert.equal((preview.match(/data-corridor-edge=/g) || []).length, target.tracks);
@@ -66,6 +74,10 @@ for (const [id, target] of Object.entries(data.targets)) test(`live ${id} queue 
     }
   }
   assert.equal(Q.actions(target, graph, state, owner).next.length, 0);
+  for (const license of licenses) {
+    assert.equal(state.done[license.id], true);
+    assert.equal(Object.hasOwn(state.owners, license.id), false);
+  }
 });
 
 test('switching corridor targets reuses compatible owners and preserves recorded purchases', () => {

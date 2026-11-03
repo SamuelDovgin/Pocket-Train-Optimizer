@@ -85,7 +85,10 @@ function renderCorridorQueue(){
  const {next,retained}=corridorActions();
  const ready=next.filter(step=>!step.blocked.length);
  const completed=Object.keys(target.owners).filter(trackDone).length;
- const visible=UI.showAll?next:next.slice(0,22);
+ const corrections=next.filter(step=>step.kind==='reassign');
+ const reviewingCorrections=UI.mode==='corrections';
+ const filtered=reviewingCorrections?corrections:next;
+ const visible=UI.showAll?filtered:filtered.slice(0,22);
  $('mainView').innerHTML=`<div class="sectionhead"><div>
  <h2>Build toward ${esc(target.label)}</h2>
  <p class="note">${completed} / ${target.tracks} target tracks built · ${next.length} remaining actions · ${ready.length} ready</p>
@@ -98,18 +101,22 @@ function renderCorridorQueue(){
  <p class="note">A retained track may need a separate holding railroad if its current train serves a main route.</p></details>`:''}
  ${TrainPlans.completedCorrections(state,saveGraph)}
  ${!ready.length&&next.length?'<p class="warning">The current recorded owners block the remaining actions. Review the prerequisites below before making a reclaim in the game.</p>':''}
- <div class="queue">${visible.map(corridorRow).join('')||'<p class="empty">All actions for this target are recorded.</p>'}</div>
- ${next.length>22?`<button id="toggleMore">${UI.showAll?'Show first 22 actions':`Show all ${next.length} actions`}</button>`:''}`;
+ <div class="segment" role="group" aria-label="Filter corridor actions">
+   <button type="button" data-mode="all" aria-pressed="${!reviewingCorrections}" class="${!reviewingCorrections?'active':''}">All actions</button>
+   <button type="button" data-mode="corrections" aria-pressed="${reviewingCorrections}" class="${reviewingCorrections?'active':''}">Existing-track corrections (${corrections.length})</button>
+ </div>
+ <div class="queue">${visible.map(corridorRow).join('')||`<p class="empty">${reviewingCorrections?'No existing-track corrections remain.':'All actions for this target are recorded.'}</p>`}</div>
+ ${filtered.length>22?`<button id="toggleMore">${UI.showAll?'Show first 22 actions':`Show all ${filtered.length} actions`}</button>`:''}`;
 }
 function corridorRow(step,index){
  const license=step.kind==='license';
  const correction=step.kind==='reassign';
  const kind=license?'LICENSE':correction?'CORRECT EXISTING OWNERSHIP':'BUILD';
  const title=license?step.region:`${step.a} ↔ ${step.b}`;
- const detail=license?'Unlock this region before buying its tracks.':correction
-  ? `${step.from} → ${step.to}. Keep the physical track built. Park the donor on a retained track and verify the live reclaim fee.`
+ const detail=license?'Buy this regional license in the game before claiming tracks there. Check the live price and your coin balance.':correction
+  ? `${step.from} → ${step.to}. Keep the physical track built. Park the donor on a retained track. ${step.needsEngine?'Have a train available for the receiving railroad. ':''}Verify the live reclaim fee.`
   : `Owner: ${step.owner}. ${step.needsEngine?'A train is needed for this railroad. ':''}Verify range and the live build price.`;
- return `<div class="task ${index===0&&!step.blocked.length?'next':''}">
+ return `<div class="task ${correction?'correction-task':''} ${index===0&&!step.blocked.length?'next':''}">
   <div class="rank">${index+1}</div>
   <input class="check" type="checkbox" data-corridor-action="${esc(step.id)}"
    aria-label="Record ${esc(kind+' '+title)}" ${step.blocked.length?'disabled':''}>

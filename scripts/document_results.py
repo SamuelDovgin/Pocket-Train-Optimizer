@@ -190,6 +190,24 @@ notes=notes.replace('## Progression research',map_notes+'\n'+extra+'\n## Progres
 audit_note='The inherited 190-track input omits Nairobi–Zanzibar, visible in both supplied human layouts. Historical routing scores below apply only to that input; they do not establish game-map completeness or practical profit. The new [operating model](https://samueldovgin.github.io/Pocket-Train-Optimizer/#operations) adds the pictured link in a separate 191-track experiment with one physical train per railroad. Its job and reward distributions remain assumptions. No experimental ownership plan is automatically applied to the checklist.'
 readme=readme.replace('# Pocket Train Optimizer\n','# Pocket Train Optimizer\n\n'+audit_note+'\n',1)
 notes=notes.replace('## Comparison at transfer penalty 40',audit_note+'\n\n## Comparison at transfer penalty 40',1)
+skill_notes='''## Review your own configuration with the Route Coach skill
+
+The repository includes [Pocket Trains Route Coach](.agents/skills/pocket-trains-route-coach/SKILL.md). Give the agent your **current owned map** as screenshots, a train-by-train route list, or a tracker JSON export, then ask:
+
+> Use $pocket-trains-route-coach to review my current map, show where I should join a corridor plan, and clearly mark what to keep, build next, correct or defer.
+
+Open this checkout in your skill-capable coding agent; if the skill is not discovered, point the agent directly at its `SKILL.md`. The skill includes an [editable configuration example](.agents/skills/pocket-trains-route-coach/assets/current-configuration.example.json) and a read-only structural review helper:
+
+```sh
+python3 .agents/skills/pocket-trains-route-coach/scripts/review_configuration.py /path/to/current.json --repo /path/to/Pocket-Train-Optimizer
+```
+
+Install `requirements.txt` first when needed. The helper accepts explicit configurations and tracker versions 3–5, preserves arbitrary train labels, never adds the author's original tracks, and reports connected purchase candidates, owner differences, graph-feasible corrections and changes that must wait. It prints JSON to stdout without importing a save into the website or changing the game. Keep player-specific files outside the tracked repo unless publishing them is explicitly requested. Fees, cash, engines, train positions and partial-network earnings still need review.
+
+**Which default resembles Reddit?** The Operating simulator previews **38 unbranched corridors** by default: human-inspired long spines, express deliveries and fewer handoffs. It is a constructed candidate, not an exact transcription of the two community maps. The **construction checklist still defaults to the historical branched 28-line routing target**. Experimental corridor selections do not adopt a new checklist or change saved progress; the skill makes any proposed migration explicit.
+
+'''
+readme=readme.replace('## Current verified results',skill_notes+'## Current verified results',1)
 (root/'README.md').write_text(readme)
 (root/'docs/verification.md').write_text(notes)
 def inline(s):

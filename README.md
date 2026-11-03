@@ -8,6 +8,22 @@ An engine-agnostic route-efficiency model and persistent Pocket Trains expansion
 
 The default **Lowest routing score · fewer railroads** target has **28 active railroads**. Two alternatives keep 38 railroads: one permits explicit initial-owner corrections; the other preserves all 15 initial owners. The lowest route score is not proof of highest earnings or shortest waiting time. The site displays branch complexity so this tradeoff is visible.
 
+## Review your own configuration with the Route Coach skill
+
+The repository includes [Pocket Trains Route Coach](.agents/skills/pocket-trains-route-coach/SKILL.md). Give the agent your **current owned map** as screenshots, a train-by-train route list, or a tracker JSON export, then ask:
+
+> Use $pocket-trains-route-coach to review my current map, show where I should join a corridor plan, and clearly mark what to keep, build next, correct or defer.
+
+Open this checkout in your skill-capable coding agent; if the skill is not discovered, point the agent directly at its `SKILL.md`. The skill includes an [editable configuration example](.agents/skills/pocket-trains-route-coach/assets/current-configuration.example.json) and a read-only structural review helper:
+
+```sh
+python3 .agents/skills/pocket-trains-route-coach/scripts/review_configuration.py /path/to/current.json --repo /path/to/Pocket-Train-Optimizer
+```
+
+Install `requirements.txt` first when needed. The helper accepts explicit configurations and tracker versions 3–5, preserves arbitrary train labels, never adds the author's original tracks, and reports connected purchase candidates, owner differences, graph-feasible corrections and changes that must wait. It prints JSON to stdout without importing a save into the website or changing the game. Keep player-specific files outside the tracked repo unless publishing them is explicitly requested. Fees, cash, engines, train positions and partial-network earnings still need review.
+
+**Which default resembles Reddit?** The Operating simulator previews **38 unbranched corridors** by default: human-inspired long spines, express deliveries and fewer handoffs. It is a constructed candidate, not an exact transcription of the two community maps. The **construction checklist still defaults to the historical branched 28-line routing target**. Experimental corridor selections do not adopt a new checklist or change saved progress; the skill makes any proposed migration explicit.
+
 ## Current verified results
 
 Every score compares the same 9,591 unordered city pairs at fuel + 40 per railroad handoff. Lower is better.

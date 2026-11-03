@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pocket Trains Route Coach"
+  short_description: "Review your map and stage route improvements"
+  default_prompt: "Use $pocket-trains-route-coach to review my current Pocket Trains map, find where to join a corridor plan, and clearly stage any ownership corrections."

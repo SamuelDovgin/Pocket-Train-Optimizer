@@ -1,0 +1,17 @@
+{
+  "schema": "pocket-trains-configuration/v1",
+  "coverage": "complete",
+  "notes": "Illustrative three-track network only. Replace every track and train with your actual configuration.",
+  "play_style": "I check in occasionally and prefer long runs with few transfers.",
+  "coins": 20000,
+  "licenses": ["Europe"],
+  "railroads": [
+    {"id": "Train A", "position": "Berlin", "status": "stationary", "engine": "Unknown"},
+    {"id": "Train B", "position": "Copenhagen", "status": "stationary", "engine": "Unknown"}
+  ],
+  "tracks": [
+    {"a": "Amsterdam", "b": "Berlin", "railroad": "Train A"},
+    {"a": "Berlin", "b": "Munich", "railroad": "Train A"},
+    {"a": "Amsterdam", "b": "Copenhagen", "railroad": "Train B"}
+  ]
+}

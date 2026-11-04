@@ -69,12 +69,42 @@ const price=s=>Object.hasOwn(state.costs,s.id)?state.costs[s.id]:s.cost;
 const finished=s=>trackDone(s.id);const purchasedEdges=()=>saveGraph.edges.filter(e=>trackDone(e.id));const reached=()=>new Set(purchasedEdges().flatMap(e=>[e.a,e.b]));
 const pending=()=>activeCorridor()?corridorActions().next:TrainCore.buildQueue(D,state,owner,allowsCorrections()?Object.fromEntries(D.edges.map(e=>[e.id,plannedOwner(e)])):null,DEEP.profiles[state.plan]?.correction_schedule||[]);
 function toast(text){const e=$('toast');e.textContent=text;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',1900)}
-function save(){try{localStorage.setItem(KEY,JSON.stringify({version:5,corridorTarget:state.corridorTarget,corridorLabels:state.corridorLabels,corrections:state.corrections,done:state.done,balance:state.balance,owners:state.owners,costs:state.costs,notes:state.notes,plan:state.plan}));$('saveStatus').textContent='✓ Progress saved in this browser';}catch(e){$('saveStatus').textContent='Browser save unavailable—export a JSON backup.'}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({version:5,corridorTarget:state.corridorTarget,corridorLabels:state.corridorLabels,lastCheckoff:state.lastCheckoff,corrections:state.corrections,done:state.done,balance:state.balance,owners:state.owners,costs:state.costs,notes:state.notes,plan:state.plan}));$('saveStatus').textContent='✓ Progress saved in this browser';}catch(e){$('saveStatus').textContent='Browser save unavailable—export a JSON backup.'}}
 function oldId(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
 function load(){try{const value=localStorage.getItem(KEY);if(value){const v=JSON.parse(value);state=restoreSave(v);if((v.version||0)<5&&state.plan==='advanced')state.plan='consolidated';return}const old=localStorage.getItem(OLD);if(old){const v=JSON.parse(old);if(v.done)for(const s of D.steps){if(s.kind==='license'){if(s.region==='Asia'&&v.done['asia-license'])state.done[s.id]=true;continue}let prev=oldId(s.a+'-'+s.b),alt=oldId(s.b+'-'+s.a);if(v.done[prev]||v.done[alt])state.done[s.id]=true;}if(Number.isFinite(v.coins))state.balance=v.coins;}}catch(e){console.warn('Could not restore existing save.',e)}}
 function getCostStatus(s){return price(s)===null?'Price unverified':`${fmt(price(s))} coins`}
 function lockStageName(s){if(s.kind==='reassign')return 'Ownership correction';const st=s.stage;return ['Existing','Finish Europe','Asia gateway','Asia core + Nordic','Africa','Oceania','North America','South America','Global endgame'][st]||'Endgame'}
-function mark(id,checked){if(checked&&edgeMap.has(id))state.owners[id]=owner(edgeMap.get(id));state.done[id]=checked;save();render();if(checked)toast('Completed — removed from active ranking');}
+function mark(id,checked){
+ const edge=edgeMap.get(id);
+ if(!TrainCore.recordCompletion(state,id,checked,edge?owner(edge):undefined))return;
+ save();
+ render();
+ if(checked)toast('Completed — use Undo last checkoff to reverse it');
+}
+function renderUndo(){
+ const last=state.lastCheckoff;
+ $('undoCheckoff').disabled=!last;
+ if(last?.kind==='completion'){
+  const edge=saveGraph.edges.find(edge=>edge.id===last.id);
+  const label=edge?`${edge.a} ↔ ${edge.b}`:D.licenses.find(license=>license.id===last.id)?.name;
+  $('undoCheckoffStatus').textContent=`${last.afterDone?'Recorded':'Restored to queue'}: ${label}`;
+ }else if(last?.kind==='correction'){
+  const group=state.corrections.filter(item=>item.batchId===last.batchId);
+  const track=group[0]?.trackId.replace('|',' ↔ ');
+  $('undoCheckoffStatus').textContent=group.length===1?`Recorded reclaim: ${track}`:`Recorded reclaims on ${group.length} tracks`;
+ }else{
+  $('undoCheckoffStatus').textContent='For older builds or licenses, open Completed and choose Restore.';
+ }
+}
+function undoCheckoff(){
+ try{
+  const undone=TrainCore.undoLastCheckoff(state);
+  if(!undone)delete state.lastCheckoff;
+  save();
+  render();
+  toast(undone?'Last checkoff undone':'That record has changed. Review Completed or Recorded ownership corrections.');
+ }catch(error){toast(error.message)}
+}
 function lineChip(name){const x=lineMap.get(name);return `<span class="dot" style="background:${x?.color||'#99adc0'}"></span>${esc(name)}`}
 function rowHtml(s,rank){if(s.kind==='reassign')return TrainPlans.correctionHtml(s,rank);const lic=s.kind==='license';const assigned=lic?s.region:owner(s);const info=lic?null:lineMap.get(assigned);const edge=lic?null:edgeMap.get(s.id);const color=lic?'#f2c878':info?.color||'#7bc5d0';const title=lic?s.name:`${s.a} → ${s.b}`;const edit=UI.edit===s.id;return `<div class="task ${rank===1&&UI.stage==='all'&&UI.region==='all'&&UI.line==='all'&&!UI.query&&UI.mode==='all'?'next':''}" style="--rail:${color}"><div class="rank">${rank}</div><input class="check" type="checkbox" data-check="${esc(s.id)}" aria-label="Complete ${esc(title)}"><div class="taskbody"><div class="ttitle">${esc(title)}</div><div class="tags">${lic?'<span class="tag">🌐 License</span>':`<span>${lineChip(assigned)}</span><span class="tag">${s.water?'Sea':'Land'} · ${s.fuel??'?'} fuel</span>`}<span class="tag">${esc(lockStageName(s))}</span>${!lic&&s.tier!=='Network expansion'?`<span class="tag">${esc(s.tier)}</span>`:''}</div><div class="detail">${lic?esc(s.region==='Asia'?'After the Volgograd and Moscow gateways, when train range and cash permit.':s.why):`Reference priority #${s.rank} · ${s.tier==='Network expansion'?'Expands your network or opens a new station':'Optional / completionist connection'}`}</div><div class="queue-status small" style="margin-top:5px">${s.blocked?.length?esc(s.blocked.join(' · ')):'✓ Ready to build · check after purchasing in game'}</div><div class="actions">${!lic?`<button class="tinybtn" data-edit="${esc(s.id)}">${edit?'Close editor':'Edit railroad / cost / note'}</button>`:''}</div>${edit&&!lic?`<div class="taskedit"><label>Owning railroad<select data-owner="${esc(s.id)}">${D.lines.map(l=>`<option ${assigned===l.name?'selected':''}>${esc(l.name)}</option>`).join('')}</select></label><label>Actual total coins<input type="number" min="0" step="1" placeholder="Unknown" data-cost="${esc(s.id)}" value="${price(s)??''}"></label></div><label class="small muted" style="display:block;margin-top:9px">Personal notes<input type="text" data-note="${esc(s.id)}" style="margin-top:5px" placeholder="Engine, fuel car, next steps…" value="${esc(state.notes[s.id]||'')}"></label>`:''}${state.notes[s.id]&&!edit?`<div class="detail" style="color:#d2b98e">Note: ${esc(state.notes[s.id])}</div>`:''}</div><div class="price">${price(s)===null?'<span style="color:#edc37b">Verify</span>':fmt(price(s))}<div class="small muted2">${price(s)===null?'cost':'coins'}</div></div></div>`}
 function renderStats(){const target=activeCorridor(),edgeCount=target||trackDone('Nairobi|Zanzibar')?saveGraph.edges.length:D.edges.length;const ow=purchasedEdges().length;const city=reached().size;const lic=1+licenseIds.filter(trackDone).length;const remain=pending();const known=remain.reduce((sum,x)=>sum+(price(x)||0),0);$('metricTracks').textContent=`${ow} / ${edgeCount}`;$('trackPct').textContent=`${Math.round(ow*100/edgeCount)}% of map`;$('metricCities').textContent=`${city} / ${Object.keys(D.regions).length}`;$('metricQueue').textContent=fmt(remain.length);$('metricLines').textContent=target?.fleet??new Set(D.edges.map(plannedOwner)).size;$('ownedMetric').textContent=`${ow} / ${edgeCount}`;$('licMetric').textContent=`${lic} / 6`;$('worldBar').style.width=`${Math.round((ow+lic)*100/(edgeCount+6))}%`;$('costRemain').textContent=fmt(known);$('nextName').textContent=remain[0]?(remain[0].kind==='license'?remain[0].name:remain[0].kind==='reassign'?'Correct '+remain[0].from+' → '+remain[0].to:remain[0].a+'–'+remain[0].b):'Completed!';$('licenseGap').textContent=fmt(Math.max(0,50000-state.balance));$('balance').value=state.balance;renderMilestones();}
@@ -148,10 +178,7 @@ function recordCorridorAction(id, verifiedOwner=false){
  if(!step){render();return}
  if(verifiedOwner&&!confirm(`Have you already verified in Pocket Trains that ${step.to} owns ${step.a}–${step.b}? This updates the tracker record.`))return;
  if(step.kind==='reassign')TrainCore.applyCorrection(state,step);
- else{
-  state.done[id]=true;
-  if(step.kind==='track')state.owners[id]=step.owner;
- }
+ else TrainCore.recordCompletion(state,id,true,step.kind==='track'?step.owner:undefined);
  save();
  render();
  toast(step.kind==='reassign'?'Recorded owner correction':'Recorded completed action');
@@ -220,8 +247,8 @@ function renderWorldMap(){
  $('mainView').innerHTML=TrainWorldMap.html().replace('<div class="map-toolbar">',planSelector()+warning+'<div class="map-toolbar">');
  TrainWorldMap.mount(D,targets,DEEP.profiles[state.plan]?.label||'Active completed target');
 }
-function render(){if((location.protocol==='http:'||location.protocol==='https:')&&(['map','operations'].includes(UI.view)||['#map','#operations'].includes(location.hash)))history.replaceState(null,'',location.pathname+location.search+(UI.view==='map'?'#map':UI.view==='operations'?'#operations':''));TrainMonteCarlo.cancel();TrainOperating.cancel();document.body.classList.toggle('map-wide',['map','operations'].includes(UI.view));renderStats();document.querySelector('.viewtabs [data-view="map"]').textContent=activeCorridor()?'Target map':'Historical map';document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===UI.view));if(UI.view==='queue')renderQueue();if(UI.view==='railroads')activeCorridor()?renderCorridorMap():renderLines();if(UI.view==='cities')renderCities();if(UI.view==='lab')renderLab();if(UI.view==='graph')renderGraph();if(UI.view==='mc')$('mainView').innerHTML=TrainMonteCarlo.render(MC);if(UI.view==='map')renderWorldMap();if(UI.view==='operations'){$('mainView').innerHTML=TrainOperating.html();TrainOperating.mount();}$('completedBlock').style.display=UI.view==='queue'?'':'none';if(UI.view==='queue')renderCompleted();}
-function exportBackup(){const snapshot={product:'Pocket Trains World Tracker',version:5,plan:state.plan,corridorTarget:state.corridorTarget,corridorLabels:state.corridorLabels,corrections:state.corrections,exported:new Date().toISOString(),done:state.done,balance:state.balance,owners:state.owners,costs:state.costs,notes:state.notes};const blob=new Blob([JSON.stringify(snapshot,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='pocket-trains-world-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function render(){if((location.protocol==='http:'||location.protocol==='https:')&&(['map','operations'].includes(UI.view)||['#map','#operations'].includes(location.hash)))history.replaceState(null,'',location.pathname+location.search+(UI.view==='map'?'#map':UI.view==='operations'?'#operations':''));TrainMonteCarlo.cancel();TrainOperating.cancel();document.body.classList.toggle('map-wide',['map','operations'].includes(UI.view));renderStats();renderUndo();document.querySelector('.viewtabs [data-view="map"]').textContent=activeCorridor()?'Target map':'Historical map';document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===UI.view));if(UI.view==='queue')renderQueue();if(UI.view==='railroads')activeCorridor()?renderCorridorMap():renderLines();if(UI.view==='cities')renderCities();if(UI.view==='lab')renderLab();if(UI.view==='graph')renderGraph();if(UI.view==='mc')$('mainView').innerHTML=TrainMonteCarlo.render(MC);if(UI.view==='map')renderWorldMap();if(UI.view==='operations'){$('mainView').innerHTML=TrainOperating.html();TrainOperating.mount();}$('completedBlock').style.display=UI.view==='queue'?'':'none';if(UI.view==='queue')renderCompleted();}
+function exportBackup(){const snapshot={product:'Pocket Trains World Tracker',version:5,plan:state.plan,corridorTarget:state.corridorTarget,corridorLabels:state.corridorLabels,lastCheckoff:state.lastCheckoff,corrections:state.corrections,exported:new Date().toISOString(),done:state.done,balance:state.balance,owners:state.owners,costs:state.costs,notes:state.notes};const blob=new Blob([JSON.stringify(snapshot,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='pocket-trains-world-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
 function importBackup(file){
  const reader=new FileReader();
  reader.onload=()=>{try{
@@ -244,6 +271,7 @@ if(t.dataset.edit){UI.edit=UI.edit===t.dataset.edit?null:t.dataset.edit;render()
 if(t.dataset.restore){mark(t.dataset.restore,false);return}
 if(t.dataset.city){const node=document.getElementById('city-'+encodeURIComponent(t.dataset.city));if(node){node.hidden=!node.hidden;t.textContent=node.hidden?'View connections':'Hide connections'}return}
 if(t.id==='toggleMore'){UI.showAll=!UI.showAll;render();return}
+if(t.id==='undoCheckoff'){undoCheckoff();return}
 if(t.id==='exportBtn'){exportBackup();return}
 if(t.id==='importBtn'){$('importFile').click();return}
 if(t.id==='resetBtn'){if(confirm('Reset all progress to the 10 original tracks and the 5 expansions you completed? This also resets owner overrides, costs, notes and coin balance. Export a backup first if needed.')){state={done:{...allDoneDefaults},balance:7961,owners:{},costs:{},notes:{},plan:'consolidated',corrections:[]};UI.edit=null;save();render();toast('Reset to initial completed purchases')}return}

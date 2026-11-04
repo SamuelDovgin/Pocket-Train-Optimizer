@@ -55,3 +55,32 @@ test('version 3 and 4 round-trip preserves progress, owner edits and plan',()=>{
  state.plan='advanced';state.owners['Kyiv|Volgograd']='Pink';state.costs['Kyiv|Volgograd']=5900;state.notes['Kyiv|Volgograd']='Check fuel';
  assert.deepEqual(Core.sanitizeSave(JSON.parse(JSON.stringify({version:4,...state})),D),state);
 });
+
+test('the last checkoff survives reload and undo restores the exact build and owner fields',()=>{
+ const state=initial(),id='Amsterdam|Berlin';
+ state.owners[id]='Green';
+ assert.equal(Core.recordCompletion(state,id,true,'Purple'),true);
+ const restored=Core.sanitizeSave(JSON.parse(JSON.stringify({version:5,...state})),D);
+ restored.balance=25000;
+ restored.notes[id]='Keep this note';
+ assert.equal(Core.undoLastCheckoff(restored),true);
+ assert.equal(Object.hasOwn(restored.done,id),false);
+ assert.equal(restored.owners[id],'Green');
+ assert.equal(restored.notes[id],'Keep this note');
+ assert.equal(restored.balance,25000);
+ assert.equal(Core.undoLastCheckoff(restored),false);
+});
+
+test('undo reverses one license or owner correction without changing other builds',()=>{
+ const state=initial(),id='Milan|Rome',license='license-africa';
+ Core.recordCompletion(state,license,true);
+ assert.equal(Core.undoLastCheckoff(state),true);
+ assert.equal(Object.hasOwn(state.done,license),false);
+ const built={...state.done};
+ Core.applyCorrection(state,{id:'reassign-test',kind:'reassign',trackId:id,from:'Blue',to:'Green'});
+ const restored=Core.sanitizeSave(JSON.parse(JSON.stringify({version:5,...state})),D);
+ assert.equal(Core.undoLastCheckoff(restored),true);
+ assert.equal(restored.owners[id],'Blue');
+ assert.deepEqual(restored.done,built);
+ assert.deepEqual(restored.corrections,[]);
+});

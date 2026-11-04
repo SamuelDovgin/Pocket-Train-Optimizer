@@ -17,7 +17,18 @@ function sanitizeSave(v,D,defaultPlan='advanced'){
  for(const [id,value] of Object.entries(record(v.costs)?v.costs:{}))if(ids.has(id)&&Number.isFinite(value)&&value>=0&&value<=Number.MAX_SAFE_INTEGER)costs[id]=Math.round(value);
  for(const [id,value] of Object.entries(record(v.notes)?v.notes:{}))if(ids.has(id)&&typeof value==='string')notes[id]=value.slice(0,500);
  const amount=v.balance??v.coins;
- return {done,balance:Number.isFinite(amount)&&amount>=0?Math.round(amount):7961,owners,costs,notes,plan:['searched','rework','consolidated','advanced','original','refined'].includes(v.plan)?v.plan:defaultPlan,corrections:Array.isArray(v.corrections)?v.corrections.filter(x=>record(x)&&D.edges.some(e=>e.id===x.trackId)&&lines.has(x.from)&&lines.has(x.to)&&x.from!==x.to).map(x=>({trackId:x.trackId,from:x.from,to:x.to,at:typeof x.at==='string'?x.at:'',batchId:typeof x.batchId==='string'?x.batchId:'',cost:Number.isFinite(x.cost)&&x.cost>=0?Math.round(x.cost):null})):[]};
+ const restored={done,balance:Number.isFinite(amount)&&amount>=0?Math.round(amount):7961,owners,costs,notes,plan:['searched','rework','consolidated','advanced','original','refined'].includes(v.plan)?v.plan:defaultPlan,corrections:Array.isArray(v.corrections)?v.corrections.filter(x=>record(x)&&D.edges.some(e=>e.id===x.trackId)&&lines.has(x.from)&&lines.has(x.to)&&x.from!==x.to).map(x=>({trackId:x.trackId,from:x.from,to:x.to,at:typeof x.at==='string'?x.at:'',batchId:typeof x.batchId==='string'?x.batchId:'',cost:Number.isFinite(x.cost)&&x.cost>=0?Math.round(x.cost):null})):[]};
+ const last=v.lastCheckoff;
+ if(record(last)&&last.kind==='completion'&&ids.has(last.id)&&
+   [null,true,false].includes(last.beforeDone)&&typeof last.afterDone==='boolean'&&
+   [last.beforeOwner,last.afterOwner].every(name=>name===null||lines.has(name))){
+  restored.lastCheckoff={kind:'completion',id:last.id,beforeDone:last.beforeDone,
+   afterDone:last.afterDone,beforeOwner:last.beforeOwner,afterOwner:last.afterOwner};
+ }else if(record(last)&&last.kind==='correction'&&typeof last.batchId==='string'&&last.batchId&&
+          restored.corrections.some(item=>item.batchId===last.batchId)){
+  restored.lastCheckoff={kind:'correction',batchId:last.batchId};
+ }
+ return restored;
 }
 function journey(D,imputed,a,b,owner,eligible,penalty){
  if(!Object.hasOwn(D.regions,a)||!Object.hasOwn(D.regions,b)||!Number.isFinite(penalty)||penalty<0)return null;
@@ -124,12 +135,39 @@ function buildQueue(D,state,owner,targets=null,correctionRules=[]){
   return {...s,blocked:now.get(s.id)||[]};
  });
 }
+function recordCompletion(state,id,checked,assignedOwner){
+ if((state.done[id]===true)===checked)return false;
+ const beforeDone=state.done[id]??null,beforeOwner=state.owners[id]??null;
+ state.done[id]=checked;
+ if(checked&&assignedOwner!==undefined)state.owners[id]=assignedOwner;
+ state.lastCheckoff={kind:'completion',id,beforeDone,afterDone:checked,
+  beforeOwner,afterOwner:state.owners[id]??null};
+ return true;
+}
+function undoLastCheckoff(state){
+ const last=state.lastCheckoff;
+ if(!last)return false;
+ if(last.kind==='correction'){
+  const index=state.corrections.findIndex(item=>item.batchId===last.batchId);
+  if(index<0)return false;
+  undoCorrection(state,index);
+  return true;
+ }
+ if(state.done[last.id]!==last.afterDone||(state.owners[last.id]??null)!==last.afterOwner)return false;
+ if(last.beforeDone===null)delete state.done[last.id];
+ else state.done[last.id]=last.beforeDone;
+ if(last.beforeOwner===null)delete state.owners[last.id];
+ else state.owners[last.id]=last.beforeOwner;
+ delete state.lastCheckoff;
+ return true;
+}
 function applyCorrection(state,step){
  const ids=step.trackIds||[step.trackId];
  if(step.kind!=='reassign'||ids.some(id=>state.done[id]!==true))throw Error('Only built tracks can be reassigned');
  state.corrections??=[];
  const at=new Date().toISOString(),batchId=step.id+':'+at;
  for(const trackId of ids){state.owners[trackId]=step.to;state.corrections.push({trackId,from:step.from,to:step.to,at,batchId,cost:null});}
+ state.lastCheckoff={kind:'correction',batchId};
 }
 function undoCorrection(state,index){
  const step=state.corrections?.[index];if(!step)throw Error('Correction not found');
@@ -140,6 +178,7 @@ function undoCorrection(state,index){
  const indexes=new Set(group.map(x=>x.index));
  for(const item of group)state.owners[item.trackId]=item.from;
  state.corrections=state.corrections.filter((x,i)=>!indexes.has(i));
+ if(state.lastCheckoff?.kind==='correction'&&state.lastCheckoff.batchId===step.batchId)delete state.lastCheckoff;
 }
 function auditOwners(D,owner,imputed,{allowEmpty=false}={}){
  const issues=[];
@@ -150,5 +189,5 @@ function auditOwners(D,owner,imputed,{allowEmpty=false}={}){
  }
  return issues;
 }
-return {sanitizeSave,journey,buildQueue,auditOwners,applyCorrection,undoCorrection};
+return {sanitizeSave,journey,buildQueue,auditOwners,recordCompletion,undoLastCheckoff,applyCorrection,undoCorrection};
 });

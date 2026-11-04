@@ -11,6 +11,7 @@
     "corridors:search": "python3 scripts/corridor_search.py && python3 scripts/add-corridor-loop-examples.py && python3 scripts/build-corridor-candidates.py && node scripts/evaluate-corridors.cjs && python3 scripts/migrate-corridor-reference.py && node scripts/build-corridor-maps.cjs && python3 scripts/render-corridor-maps.py && python3 scripts/document-corridor-search.py",
     "corridors:connected": "set -e; candidates=$(mktemp); trap 'rm -f \"$candidates\"' EXIT; python3 scripts/search-connected-corridors.py > \"$candidates\"; node scripts/evaluate-connected-corridors.cjs < \"$candidates\"; python3 scripts/package-connected-corridors.py",
     "corridors:long-haul": "set -e; candidates=$(mktemp); trap 'rm -f \"$candidates\"' EXIT; python3 scripts/search-long-haul-corridors.py > \"$candidates\"; node scripts/evaluate-long-haul-corridors.cjs < \"$candidates\"; python3 scripts/build-corridor-targets.py",
+    "corridors:average": "set -e; candidates=$(mktemp); trap 'rm -f \"$candidates\"' EXIT; python3 scripts/search-average-corridors.py --pool \"$candidates\"; node scripts/screen-average-corridors.cjs \"$candidates\"; python3 scripts/build-corridor-targets.py; node scripts/compare-corridor-plans.cjs",
     "corridors:compare": "node scripts/compare-corridor-plans.cjs",
     "operating:evaluate": "node scripts/evaluate-operating.cjs && node scripts/document-operating.cjs"
   },

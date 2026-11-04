@@ -14,6 +14,8 @@
     refueling: 'Generic fuel limit', high_capacity: 'High capacity',
   };
   const goals = {
+    meanDistance: {title: 'Longest average route', value: v => `${number(v)} track-distance mean`},
+    twoStop: {title: 'Fewest two-station duties', value: v => `${v} two-station duties`, lower: true},
     medianDistance: {title: 'Longest typical route', value: v => `${number(v)} track-distance median`},
     longest: {title: 'Longest single route', value: v => `${number(v)} track-distance`},
     throughHubs: {title: 'Most long-route hubs', value: v => `${v} shared cities on long through routes`},
@@ -28,13 +30,13 @@
     perDispatch: {title: 'Best reward per dispatch', value: v => `${number(v)} reward index`, operating: true},
     transfers: {title: 'Fewest handoffs', value: v => `${number(v)} handoffs per delivered car`, lower: true, operating: true},
   };
-  const spotlight = ['medianDistance', 'throughHubs', 'short', 'links', 'trains',
+  const spotlight = ['meanDistance', 'medianDistance', 'throughHubs', 'short', 'links', 'trains',
     'total', 'perTrain', 'perDispatch', 'transfers'];
   const tableMetrics = {
     network: [
       ['trains', 'Trains'], ['links', 'Links'], ['cities', 'Cities'], ['hubs', 'Shared cities'],
       ['throughHubs', 'Long-route hubs'], ['through', 'Through cities'], ['short', 'Short duties'],
-      ['loops', 'Loops'], ['medianDistance', 'Median distance'], ['longest', 'Longest route'], ['directness', 'Directness'],
+      ['twoStop', 'Two-stop duties'], ['loops', 'Loops'], ['meanDistance', 'Average distance'], ['medianDistance', 'Median distance'], ['longest', 'Longest route'], ['directness', 'Directness'],
     ],
     operating: [
       ['trains', 'Trains'], ['total', 'Total index'], ['perTrain', 'Per train index'],
@@ -43,7 +45,7 @@
   };
 
   try {
-    const response = await fetch('../assets/corridor-comparison.json?v=compare1');
+    const response = await fetch('../assets/corridor-comparison.json?v=average1');
     if (!response.ok) throw Error('Comparison data is unavailable.');
     const report = await response.json();
     const baseline = report.plans.find(plan => plan.id === report.baseline);
@@ -124,7 +126,7 @@
       </div>
       <div id="compare-table" class="labscroll"></div>
       <details class="compare-method"><summary>Definitions and simulation settings</summary>
-        <p class="note">A short duty serves fewer than five stops or runs a compact loop. A through city is an interior stop on a path or a stop on a loop. A long-route hub is shared by multiple trains and is an interior stop on a path with at least five stops. Median distance measures track-distance, while directness compares straight endpoint span with summed map chords on open paths.</p>
+        <p class="note">A short duty serves fewer than five stops or runs a compact loop. A through city is an interior stop on a path or a stop on a loop. A long-route hub is shared by multiple trains and is an interior stop on a path with at least five stops. Average distance divides total service track-distance by the number of trains. Median is the middle duty by track-distance. Directness compares straight endpoint span with summed map chords on open paths.</p>
         <p class="note">${report.simulations} runs. Each layout uses the same ${scenarioKeys.length} settings, ${report.seeds.length} fresh seeds per setting, and the same patrol and express-loading rules. Reward indices are relative to Connected Long Routes, which equals 100 in each setting. The across-settings view gives equal weight to each setting's ratio via a geometric mean. Handoffs use the arithmetic mean. The model uses synthetic jobs and generic trains, so reward is a simulation index rather than net in-game coins.</p>
         <p><a href="../assets/corridor-comparison.json" download>Download data and scenario settings</a></p>
       </details>`;

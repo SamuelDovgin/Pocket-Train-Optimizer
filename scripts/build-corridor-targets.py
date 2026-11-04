@@ -15,12 +15,21 @@ def main():
     data = read('corridor-data')
     connected = read('connected-corridors')
     long_haul = read('long-haul-corridors')
+    average = read('average-corridors')
     original = read('corridor-reference-migration')
     sparse_id = original['selected_target']
     data['plans'][long_haul['winner']] = long_haul['plan']
-    migration = import_module('migrate-corridor-reference').migration(data, long_haul['winner'])
+    data['plans'][average['winner']] = average['plan']
+    balanced = average['balanced']
+    data['plans'][balanced['id']] = balanced['plan']
+    migrate = import_module('migrate-corridor-reference').migration
+    migration = migrate(data, long_haul['winner'])
+    average_migration = migrate(data, average['winner'])
+    balanced_migration = migrate(data, balanced['id'])
     profiles = [
         ('long-haul', 'Long-haul hubs', long_haul['plan'], migration, 'long-haul'),
+        ('balanced-three', 'Balanced · 3+ stops', balanced['plan'], balanced_migration, 'balanced-three'),
+        ('longer-average', 'Longer average routes', average['plan'], average_migration, 'longer-average'),
         ('connected', 'Connected Long Routes', connected['plan'], connected['migration'], 'connected'),
         ('sparse', 'Original 27 routes', data['plans'][sparse_id], original, sparse_id),
     ]

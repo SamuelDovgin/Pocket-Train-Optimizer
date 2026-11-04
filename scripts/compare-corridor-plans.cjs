@@ -6,13 +6,19 @@ const data = require('../assets/corridor-data.json');
 const original = require('../assets/corridor-results.json');
 const connected = require('../assets/connected-corridors.json');
 const longHaul = require('../assets/long-haul-corridors.json');
+const average = require('../assets/average-corridors.json');
 
+const alaskaNote = 'One local exception: Fairbanks–Anchorage–Nome falls below 85% directness. All routes have at least three stops.';
 const layouts = original.selection.display_examples.map(id => ({id, plan: data.plans[id],
   label: id === original.selection.recommendation ? 'Original 27 routes' : data.plans[id].pressure.label,
   map: id, build: id === original.selection.recommendation ? 'sparse' : null}));
 layouts.push(
   {id: connected.winner, plan: connected.plan, label: 'Connected Long Routes', map: 'connected', build: 'connected'},
   {id: longHaul.winner, plan: longHaul.plan, label: 'Long-haul hubs', map: 'long-haul', build: 'long-haul'},
+  {id: average.winner, plan: average.plan, label: 'Longer average routes', map: 'longer-average',
+    build: 'longer-average', shapeNote: alaskaNote},
+  {id: average.balanced.id, plan: average.balanced.plan, label: 'Balanced · 3+ stops', map: 'balanced-three',
+    build: 'balanced-three', shapeNote: alaskaNote},
   ...Object.entries(data.benchmarks).map(([id, plan]) => ({
     id, plan, label: id === 'reference38' ? 'Earlier 38 corridors' : 'Earlier 28 corridors', map: id, benchmark: true,
   }))
@@ -65,6 +71,7 @@ function geometry(plan, model) {
       through: through.size, throughHubs: hubs.filter(hub => longThrough.has(hub.city)).length,
       short: lines.filter(line => line.kind === 'loop' || line.path.length < 5).length,
       loops: lines.filter(line => line.kind === 'loop').length,
+      twoStop: lines.filter(line => line.path.length === 2).length,
       medianDistance: mean([lengths[Math.floor((lengths.length - 1) / 2)], lengths[Math.floor(lengths.length / 2)]]),
       meanDistance: mean(lengths),
       directness: paths.reduce((sum, row) => sum + row.span, 0) / paths.reduce((sum, row) => sum + row.chordLength, 0),
@@ -73,13 +80,13 @@ function geometry(plan, model) {
   };
 }
 
-const plans = layouts.map(({id, plan, label, map, build, benchmark}) => {
+const plans = layouts.map(({id, plan, label, map, build, benchmark, shapeNote}) => {
   const model = C.compile(data, plan);
   const {shape, mapPlan} = geometry(plan, model);
-  if (benchmark) {
+  if (benchmark || shapeNote) {
     fs.writeFileSync(`assets/corridor-maps/${map}.svg`, MapCore.renderSVG(data, mapPlan, {
       title: label.toUpperCase(),
-      shapeNote: 'Earlier corridor benchmark. Geometry predates the later path directness and turn limits.',
+      shapeNote: shapeNote || 'Earlier corridor benchmark. Geometry predates the later path directness and turn limits.',
     }));
   }
   const results = Object.fromEntries(Object.entries(scenarios).map(([name, options]) => {

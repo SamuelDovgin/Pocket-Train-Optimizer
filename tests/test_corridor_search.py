@@ -20,6 +20,7 @@ class CorridorSearchTests(unittest.TestCase):
     def setUpClass(cls):
         cls.data=json.loads((ROOT/'assets/corridor-data.json').read_text())
         cls.connected=json.loads((ROOT/'assets/connected-corridors.json').read_text())
+        cls.average=json.loads((ROOT/'assets/average-corridors.json').read_text())
 
     def test_starting_owners_and_completed_tracks_cannot_change_the_search(self):
         other=copy.deepcopy(self.data);other['plans']={'fake':{'owners':{'Paris|Munich':'Changed'}}};other['base']=['Changed'];other['done']=['Changed']
@@ -32,7 +33,8 @@ class CorridorSearchTests(unittest.TestCase):
 
     def test_every_exported_owner_is_a_simple_path_or_bounded_standalone_loop(self):
         D=self.data;edges={e['id']:e for e in D['edges']};xy=D['reward_geometry']['coordinates']
-        for plan in [*D['plans'].values(), self.connected['plan']]:
+        average_plans = [self.average['plan'], self.average['balanced']['plan']]
+        for plan in [*D['plans'].values(), self.connected['plan'], *average_plans]:
             all_ids=[];whole=nx.Graph()
             for line in plan['lines']:
                 path=line['path'];ids=['|'.join(sorted((a,b))) for a,b in zip(path,path[1:])]
@@ -47,7 +49,10 @@ class CorridorSearchTests(unittest.TestCase):
                 else:
                     self.assertEqual(len(path),len(set(path)));self.assertTrue(nx.is_tree(g))
                     length=sum(math.dist(xy[a],xy[b]) for a,b in zip(path,path[1:]))
-                    self.assertGreaterEqual(math.dist(xy[path[0]],xy[path[-1]])/length,.85-1e-9)
+                    alaska_exception = plan in average_plans and path in (
+                        ['Fairbanks','Anchorage','Nome'], ['Nome','Anchorage','Fairbanks'])
+                    if not alaska_exception:
+                        self.assertGreaterEqual(math.dist(xy[path[0]],xy[path[-1]])/length,.85-1e-9)
                     for a,b,c in zip(path,path[1:],path[2:]):
                         u=[xy[b][i]-xy[a][i] for i in range(2)];v=[xy[c][i]-xy[b][i] for i in range(2)]
                         cosine=sum(u[i]*v[i] for i in range(2))/(math.hypot(*u)*math.hypot(*v))
@@ -56,6 +61,14 @@ class CorridorSearchTests(unittest.TestCase):
             self.assertEqual(len(all_ids),len(set(all_ids)));self.assertEqual(set(whole),set(D['cities']));self.assertTrue(nx.is_connected(whole))
             self.assertEqual(plan['tracks'],len(all_ids));self.assertEqual(plan['fleet'],len(plan['lines']))
             if plan['pressure']['full']:self.assertEqual(set(all_ids),set(edges))
+
+    def test_average_distance_target_has_no_two_stop_duties(self):
+        plan = self.average['plan']
+        for candidate in [plan, self.average['balanced']['plan']]:
+            self.assertTrue(all(len(set(line['path'])) >= 3 and line['kind'] == 'path' for line in candidate['lines']))
+            self.assertTrue(any(line['path'] == ['Fairbanks', 'Anchorage', 'Nome'] for line in candidate['lines']))
+        distance = sum(line['length'] for line in plan['lines']) / plan['fleet']
+        self.assertEqual(distance, max(row['mean_distance'] for row in self.average['candidates'].values()))
 
     def test_randomized_moves_preserve_coverage_and_shape(self):
         search=module.CorridorSearch(self.data);w=next(p for p in module.PRESSURES if p.key=='network_long');rng=random.Random(189)

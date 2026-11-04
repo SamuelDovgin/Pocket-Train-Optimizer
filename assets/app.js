@@ -159,8 +159,12 @@ function corridorRow(step,index){
 }
 function renderCorridorMap(){
  const target=activeCorridor();
+ const averageDistance=target.lines.reduce((total,line)=>total+line.length,0)/target.lines.length;
+ const fewestStops=Math.min(...target.lines.map(line=>new Set(line.path).size));
  $('mainView').innerHTML=`<h2>${esc(target.label)} · finished layout</h2>
- ${planSelector()}<div class="btnrow">
+ ${planSelector()}<p class="note">${target.cities} stations served · ${averageDistance.toFixed(1)} average track-distance · at least ${fewestStops} stops per train</p>
+ ${['corridor:longer-average','corridor:balanced-three'].includes(state.corridorTarget)?'<p class="note">Fairbanks–Anchorage–Nome is a local exception to the straightness rule.</p>':''}
+ <div class="btnrow">
  <button type="button" data-view="queue">Back to build queue</button>
  <a href="${esc(target.map)}" target="_blank" rel="noopener">Open full-size map</a>
  <a href="${esc(target.map)}" download>Download SVG</a></div>

@@ -12,6 +12,8 @@ The default **Lowest routing score · fewer railroads** target has **28 active r
 
 [Open the clean-slate plans and build checklists](https://samueldovgin.github.io/Pocket-Train-Optimizer/docs/corridor-search.html).
 
+**Final map** records a larger search with operating screens, independent validation seeds and stress tests. The challenger must beat a fixed promotion gate against Balanced · 3+ stops. The report keeps the tested geometry separate from the browser’s existing build records. Run `npm run corridors:final` to reproduce the final study.
+
 **Compare plans** ranks every published corridor layout and both earlier corridor benchmarks under shared simulation settings. It shows leaders by priority, a weighted mix for long routes and useful hubs, and links to each full map. Rebuild the comparison with `npm run corridors:compare` after the corridor studies.
 
 In the main **Build queue**, choose **Long-haul hubs**, **Balanced · 3+ stops**, **Longer average routes**, **Connected Long Routes**, or **Original 27 routes** under **Track ownership plan**. The queue uses the same recorded purchases and owners as the historical options. Selecting a plan proposes changes and checking off a correction updates the recorded owner. The separate study page also has two public-reference checklists with their own progress.

@@ -44,8 +44,70 @@
     ],
   };
 
+  function showFinal(report) {
+    const box = document.getElementById('final-map');
+    const shape = report.shapes[report.winner];
+    const previous = report.shapes.balanced_reference;
+    const target = report.accepted ? 'final' : 'balanced-three';
+    const label = report.accepted ? 'Final · 3+ stops' : 'Balanced · 3+ stops';
+    const validation = report.stages.find(stage => stage.name === 'Fresh paired validation');
+    const challenger = validation.summary.find(row => row.id === report.challenger);
+    const proposals = report.search.runs.reduce((sum, row) => sum + row.proposals, 0) +
+      report.search.localProposals + report.search.refinedProposals;
+    const change = ratio => `${ratio >= 1 ? '+' : '−'}${number(Math.abs(ratio - 1) * 100)}%`;
+    const metrics = [['total', 'Total reward'], ['perTrain', 'Reward per train'], ['perDispatch', 'Reward per dispatch']];
+    const stressNames = {basic_trains: 'Starter-sized trains', small_yards: 'Small yards',
+      distance_weighted_jobs: 'Distance-weighted jobs', cargo_dispatch: 'Cargo-led dispatch'};
+    const settingsRows = [report.validation, report.stress].flatMap(results =>
+      Object.entries(results[report.challenger]).map(([id, trials]) => {
+        const baseline = results.balanced_reference[id];
+        const ratio = column => mean(trials.map(row => row[column])) / mean(baseline.map(row => row[column]));
+        return `<tr><th scope="row">${escape(settings[id] || stressNames[id] || id)}</th>
+          ${metrics.map((_, column) => `<td>${change(ratio(column))}</td>`).join('')}</tr>`;
+      }));
+    box.innerHTML = `<div class="eyebrow">Final recommendation</div>
+      <h2>${escape(label)}</h2>
+      <p>${shape.cities} stations · ${shape.trains} service trains · ${shape.links} active links · ${shape.hubs} shared stations · ${number(shape.meanDistance)} average track-distance. Every service train has at least three stops.</p>
+      ${report.accepted?`<p class="note">Balanced used ${previous.trains} trains. The final map's average duty is ${number(shape.meanDistance)} versus ${number(previous.meanDistance)}, and its median duty is ${number(shape.medianDistance)} versus ${number(previous.medianDistance)}.</p>`:''}
+      <p class="note">${number(proposals)} route proposals, ${number(report.uniqueCandidates)} distinct layouts screened and ${number(report.simulations)} simulations. One challenger was selected before fresh validation. ${report.accepted?'The challenger passed the promotion rules.':'Balanced remains the final map after the challenger fell short of the promotion rules.'}</p>
+      <div class="btnrow"><a href="../?target=${target}">Build toward this map</a>
+      <a href="../assets/corridor-maps/${target}.svg" target="_blank" rel="noopener">Open full map</a>
+      <a href="#compare-plans">Compare the layouts</a></div>
+      <div class="labscroll"><table class="labtable">
+        <caption>Frozen challenger vs. Balanced · 3+ stops, using ${validation.seeds.length} fresh seeds per setting</caption>
+        <thead><tr><th scope="col">Simulated metric</th><th scope="col">Change</th><th scope="col">95% resampling interval</th></tr></thead>
+        <tbody>${metrics.map(([key, name]) => `<tr><th scope="row">${name}</th><td>${change(challenger[key])}</td>
+          <td>${report.uncertainty[key].map(change).join(' to ')}</td></tr>`).join('')}</tbody>
+      </table></div>
+      <p class="note">The model uses synthetic jobs. These intervals describe variation across simulated seeds. Fairbanks–Anchorage–Nome remains the local straightness exception.</p>
+      <details><summary>Results by operating setting</summary>
+        <div class="labscroll"><table class="labtable">
+          <thead><tr><th scope="col">Setting</th>${metrics.map(([, name]) => `<th scope="col">${name}</th>`).join('')}</tr></thead>
+          <tbody>${settingsRows.join('')}</tbody>
+        </table></div>
+      </details>
+      <details><summary>Search stages and promotion rules</summary>
+        <p class="note">Screening weighted total reward 25%, reward per train 15%, reward per dispatch 25%, average distance 15%, shared stations 8%, through cities 5%, and fewer short duties 7%. A short duty has fewer than five stops.</p>
+        <p class="note">To replace Balanced, the challenger had to improve the validation mix by at least 1.5%, retain at least 97% of total reward, and match or beat reward per dispatch with a 95% resampling lower bound of at least 99% of baseline. The stress settings also required at least 95% of baseline reward per dispatch across starter-sized trains, small yards, distance-weighted jobs and cargo-led dispatch.</p>
+        <ul>${report.stages.map(stage => `<li>${escape(stage.name)} · ${number(stage.simulations)} simulations</li>`).join('')}</ul>
+        <a href="../assets/final-corridors.json" download>Download results, seed sets and search metadata</a>
+      </details>`;
+  }
+
+  fetch('../assets/final-corridors.json?v=final1')
+    .then(response => {
+      if (!response.ok) throw Error('Final report unavailable');
+      return response.json();
+    })
+    .then(showFinal)
+    .catch(error => {
+      document.getElementById('final-map').querySelector('[role="status"]').textContent =
+        'The final map results could not load. Reload the page to retry.';
+      console.error(error);
+    });
+
   try {
-    const response = await fetch('../assets/corridor-comparison.json?v=average1');
+    const response = await fetch('../assets/corridor-comparison.json?v=final1');
     if (!response.ok) throw Error('Comparison data is unavailable.');
     const report = await response.json();
     const baseline = report.plans.find(plan => plan.id === report.baseline);
@@ -86,7 +148,7 @@
       <h2>Compare the proposed layouts</h2>
       <p>Compare ${report.plans.length} published layouts and benchmarks under the same settings and dispatch rules.</p>
       <article class="labcard compare-pick">
-        <div class="eyebrow">My pick for your priorities</div>
+        <div class="eyebrow">Leader on the layout comparison weights</div>
         <h3>${escape(pick.label)}</h3>
         <p>${shape.cities} cities · ${shape.trains} trains · ${shape.links} active links · ${shape.hubs} shared stations · ${shape.short} short duties</p>
         <p class="note">Compared with ${escape(baseline.label)}, see the tradeoffs across route length, transfers and workload.</p>

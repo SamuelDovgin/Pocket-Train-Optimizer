@@ -21,6 +21,7 @@ class CorridorSearchTests(unittest.TestCase):
         cls.data=json.loads((ROOT/'assets/corridor-data.json').read_text())
         cls.connected=json.loads((ROOT/'assets/connected-corridors.json').read_text())
         cls.average=json.loads((ROOT/'assets/average-corridors.json').read_text())
+        cls.final=json.loads((ROOT/'assets/final-corridors.json').read_text())
 
     def test_starting_owners_and_completed_tracks_cannot_change_the_search(self):
         other=copy.deepcopy(self.data);other['plans']={'fake':{'owners':{'Paris|Munich':'Changed'}}};other['base']=['Changed'];other['done']=['Changed']
@@ -33,7 +34,8 @@ class CorridorSearchTests(unittest.TestCase):
 
     def test_every_exported_owner_is_a_simple_path_or_bounded_standalone_loop(self):
         D=self.data;edges={e['id']:e for e in D['edges']};xy=D['reward_geometry']['coordinates']
-        average_plans = [self.average['plan'], self.average['balanced']['plan']]
+        average_plans = [self.average['plan'], self.average['balanced']['plan'],
+                         self.final['plan'], self.final['challengerPlan']]
         for plan in [*D['plans'].values(), self.connected['plan'], *average_plans]:
             all_ids=[];whole=nx.Graph()
             for line in plan['lines']:
@@ -64,11 +66,35 @@ class CorridorSearchTests(unittest.TestCase):
 
     def test_average_distance_target_has_no_two_stop_duties(self):
         plan = self.average['plan']
-        for candidate in [plan, self.average['balanced']['plan']]:
+        for candidate in [plan, self.average['balanced']['plan'], self.final['plan'], self.final['challengerPlan']]:
             self.assertTrue(all(len(set(line['path'])) >= 3 and line['kind'] == 'path' for line in candidate['lines']))
             self.assertTrue(any(line['path'] == ['Fairbanks', 'Anchorage', 'Nome'] for line in candidate['lines']))
         distance = sum(line['length'] for line in plan['lines']) / plan['fleet']
         self.assertEqual(distance, max(row['mean_distance'] for row in self.average['candidates'].values()))
+
+    def test_final_gate_uses_only_the_frozen_challenger_and_fresh_seeds(self):
+        final = self.final
+        stages = {stage['name']: stage for stage in final['stages']}
+        tuning = stages['Final tuning']
+        validation = stages['Fresh paired validation']
+        stress = stages['Additional stress settings']
+        prior_seeds = {seed for name, stage in stages.items()
+                       if name not in ('Fresh paired validation', 'Additional stress settings')
+                       for seed in stage['seeds']}
+        self.assertTrue(prior_seeds.isdisjoint(validation['seeds']))
+        self.assertTrue(set(stress['seeds']).isdisjoint(prior_seeds | set(validation['seeds'])))
+        challenger = next(row for row in tuning['summary'] if row['id'] != 'balanced_reference')
+        self.assertEqual(final['challenger'], challenger['id'])
+        result = next(row for row in validation['summary'] if row['id'] == final['challenger'])
+        stress_result = next(row for row in stress['summary'] if row['id'] == final['challenger'])
+        gate = final['gate']
+        accepted = (result['score'] >= gate['mix'] and result['total'] >= gate['total'] and
+                    result['perDispatch'] >= gate['perDispatch'] and
+                    final['uncertainty']['perDispatch'][0] >= gate['perDispatchLower'] and
+                    stress_result['perDispatch'] >= gate['stressPerDispatch'])
+        self.assertEqual(final['accepted'], accepted)
+        self.assertEqual(final['winner'], final['challenger'] if accepted else 'balanced_reference')
+        self.assertEqual(final['simulations'], sum(stage['simulations'] for stage in final['stages']))
 
     def test_randomized_moves_preserve_coverage_and_shape(self):
         search=module.CorridorSearch(self.data);w=next(p for p in module.PRESSURES if p.key=='network_long');rng=random.Random(189)

@@ -163,7 +163,7 @@ function renderCorridorMap(){
  const fewestStops=Math.min(...target.lines.map(line=>new Set(line.path).size));
  $('mainView').innerHTML=`<h2>${esc(target.label)} · finished layout</h2>
  ${planSelector()}<p class="note">${target.cities} stations served · ${averageDistance.toFixed(1)} average track-distance · at least ${fewestStops} stops per train</p>
- ${['corridor:longer-average','corridor:balanced-three'].includes(state.corridorTarget)?'<p class="note">Fairbanks–Anchorage–Nome is a local exception to the straightness rule.</p>':''}
+ ${target.alaska_exception?'<p class="note">Fairbanks–Anchorage–Nome is a local exception to the straightness rule.</p>':''}
  <div class="btnrow">
  <button type="button" data-view="queue">Back to build queue</button>
  <a href="${esc(target.map)}" target="_blank" rel="noopener">Open full-size map</a>

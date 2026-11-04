@@ -7,6 +7,7 @@ const original = require('../assets/corridor-results.json');
 const connected = require('../assets/connected-corridors.json');
 const longHaul = require('../assets/long-haul-corridors.json');
 const average = require('../assets/average-corridors.json');
+const final = fs.existsSync('assets/final-corridors.json') ? require('../assets/final-corridors.json') : null;
 
 const alaskaNote = 'One local exception: Fairbanks–Anchorage–Nome falls below 85% directness. All routes have at least three stops.';
 const layouts = original.selection.display_examples.map(id => ({id, plan: data.plans[id],
@@ -23,6 +24,11 @@ layouts.push(
     id, plan, label: id === 'reference38' ? 'Earlier 38 corridors' : 'Earlier 28 corridors', map: id, benchmark: true,
   }))
 );
+
+if (final?.accepted) layouts.unshift({
+  id: final.winner, plan: final.plan, label: 'Final · 3+ stops', map: 'final',
+  build: 'final', shapeNote: alaskaNote,
+});
 
 const seeds = [2043019, 2043521, 2044117, 2044631, 2045233, 2045827, 2046361, 2046983];
 const scenarios = Object.fromEntries(Object.entries(original.evaluation).map(([name, row]) => [name, row.options]));

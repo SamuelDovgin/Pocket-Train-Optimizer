@@ -6,7 +6,7 @@ const options=[['consolidated','Lowest routing score · fewer railroads'],['rewo
 function selector(state, corridorTargets={}){
  const active=state.corridorTarget||state.plan;
  const entries=values=>values.map(([id,name])=>`<option value="${esc(id)}" ${active===id?'selected':''}>${esc(name)}</option>`).join('');
- const corridors=Object.entries(corridorTargets).map(([id,target])=>[`corridor:${id}`,`${target.label} · ${target.fleet} trains`]);
+ const corridors=Object.entries(corridorTargets).map(([id,target])=>[`corridor:${id}`,`${target.label} · ${target.fleet} trains${target.final&&id!=='final'?' (final pick)':''}`]);
  return `<div class="plan-controls"><label for="activePlan" class="small muted">Track ownership plan</label><select id="activePlan">
  ${corridors.length?`<optgroup label="Recommended corridor plans">${entries(corridors)}</optgroup>`:''}
  <optgroup label="Historical plans">${entries(options)}</optgroup></select></div>`;
